@@ -2,7 +2,7 @@
 
 Teaching resources and programming projects for Paul Baumgarten
 
-[](img/welcome-to-my-classroom-3.jpg)
+![](img/welcome-to-my-classroom-3.jpg)
 
 ## Teaching resources
 
