@@ -1,4 +1,3 @@
-# Welcome to pbaumgarten.com
 
 Teaching resources and programming projects for Paul Baumgarten
 
