@@ -29,7 +29,7 @@
             targeturl += "/master/README.md"
         }
         targeturl = targeturl.replace("/blob/", "/raw/");
-        fetch(targeturl, { mode: 'cors' })
+        fetch(targeturl)
             .then(function(received) {
                 if (received.ok) {
                     return received.text();
