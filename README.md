@@ -11,7 +11,7 @@ Teaching resources and programming projects for Paul Baumgarten
 * [Learn Java](https://github.com/paulbaumgarten/java-notes)
 * [Learn Javascript](https://github.com/paulbaumgarten/javascript-notes)
 * [Learn Python with the Microbit](https://github.com/paulbaumgarten/microbit-notes)
-* [Learn Raspberry Pi](https://github.com/paulbaumgarten/raspberrypi-nontes)
+* [Learn Raspberry Pi](https://github.com/paulbaumgarten/raspberrypi-notes)
 * [Full repositories list...](https://github.com/paulbaumgarten?tab=repositories)
 
 ## About me
