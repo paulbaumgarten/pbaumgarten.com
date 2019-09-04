@@ -23,15 +23,22 @@
     </script>
     <script>
         var myurl = new URL(window.location.href);
-        
+
         var targeturl = prompt("URL of markdown presentation:");
         if (! targeturl.endsWith(".md")) {
             targeturl += "/master/README.md"
         }
         targeturl = targeturl.replace("/blob/", "/raw/");
-        var slideshow = remark.create({
-            sourceUrl: targeturl
-        });
+        fetch(targeturl, { mode: 'cors' })
+            .then(function(received) {
+                if (received.ok) {
+                    return received.text();
+                }
+            })
+            .then(function(info) {
+                document.getElementById('source').innerHTML;
+                var slideshow = remark.create();
+            });
     </script>
   </body>
 </html>
