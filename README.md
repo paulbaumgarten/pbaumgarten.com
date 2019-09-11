@@ -5,13 +5,13 @@ Teaching resources and programming projects for Paul Baumgarten
 
 ## Teaching resources
 
-* [Computer Science: International Baccalaureate](https://github.com/paulbaumgarten/ib-compsci-notes)
-* [Computer Science: Cambridge iGCSE](https://github.com/paulbaumgarten/igcse-compsci-notes)
-* [Learn Python](https://github.com/paulbaumgarten/python-notes)
-* [Learn Java](https://github.com/paulbaumgarten/java-notes)
-* [Learn Javascript](https://github.com/paulbaumgarten/javascript-notes)
-* [Learn Python with the Microbit](https://github.com/paulbaumgarten/microbit-notes)
-* [Learn Raspberry Pi](https://github.com/paulbaumgarten/raspberrypi-notes)
+* [Computer Science: International Baccalaureate](https://pbaumgarten.com/ib-compsci-notes)
+* [Computer Science: Cambridge iGCSE](https://pbaumgarten.com/igcse-compsci-notes)
+* [Learn Python](https://pbaumgarten.com/python-notes)
+* [Learn Java](https://pbaumgarten.com/java-notes)
+* [Learn Javascript](https://pbaumgarten.com/javascript-notes)
+* [Learn Python with the Microbit](https://pbaumgarten.com/microbit-notes)
+* [Learn Raspberry Pi](https://pbaumgarten.com/raspberrypi-notes)
 * [Full repositories list...](https://github.com/paulbaumgarten?tab=repositories)
 
 ## About me
