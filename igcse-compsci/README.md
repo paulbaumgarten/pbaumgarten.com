@@ -4,45 +4,27 @@ My teaching notes for the Cambridge iGCSE Computer Science course.
 
 ## Work in progress
 
-These notes will be updated over the 2019-2021 period, unit by unit as they are taught.
+* These notes will be updated over the 2019-2021 period, unit by unit as they are taught.
 
 ## Youtube lessons
 
-My students are reminded I have a number of videos revelant to this course on [my Youtube channel](https://youtube.com/pbaumgarten)
+* My students are reminded I have a number of videos revelant to this course on [my Youtube channel](https://youtube.com/pbaumgarten)
 
-## Topics overview
+## Units
 
-* 1.1 Data representation 
-    (binary, hexadecimal, data storage)
-* 1.2 Communication & internet 
-    (data transmission, security, internet)
-* 1.3 Hardware & software 
-    (logic, architecture, fetch-execute, input, output, memory, os, languages)
-* 1.4 Security
-* 1.5 Ethics
-* 2.1 Algorithm design and problem-solving
-* 2.2 Programming & data structures
-* 2.3 Databases
+* [Unit 1 Programming](unit-1-programming.md)
+* [Unit 2 Algorithms](unit-2-algorithms.md)
+* [Unit 3 Data & logic](unit-3-data-and-logic.md)
+* [Unit 4 Hardware & software](unit-4-hardware-and-software.md)
+* [Unit 5 Databases](unit-5-databases.md)
+* [Unit 6 Networks](unit-6-networks.md)
+* [Unit 7 Pre-release material](unit-7-pre-release-material.md)
 
 ## Assessment overview
 
-Paper 1
-
-* 75 marks worth 60% of course
-* Section 1 of content (theory)
-
-Paper 2
-
-* 50 marks worth 40% of course
-* 20 marks set on pre-release material
-* Section 2 of content (problem solving & programming)
-
-Both papers are
-
-* 1 hour 45 minutes each
-* All questions are compulsory
-* Short answer and structured questions
-* No calculators 
+* Paper 1: Section 1 of content (theory); Out of 75 marks with 60% weighting
+* Paper 2: Section 2 of content (problem solving & programming); out of 50 marks with 40% weighting; 20 marks will be based on the pre-release material
+* Both papers will be 1h 45m, comprising short answer & structured questions, no calculator, all questions compulsory.
 
 ## Textbook
 
