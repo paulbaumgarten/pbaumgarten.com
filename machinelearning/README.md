@@ -1,2 +1,4 @@
-# machinelearning-notes
- Machine Learning notes
+# Machine Learning notes
+
+> Work in progress
+

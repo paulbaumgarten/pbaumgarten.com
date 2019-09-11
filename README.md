@@ -5,13 +5,13 @@ Teaching resources and programming projects for Paul Baumgarten
 
 ## Teaching resources
 
-* [Computer Science: International Baccalaureate](https://pbaumgarten.com/ib-compsci-notes)
-* [Computer Science: Cambridge iGCSE](https://pbaumgarten.com/igcse-compsci-notes)
-* [Learn Python](https://pbaumgarten.com/python-notes)
-* [Learn Java](https://pbaumgarten.com/java-notes)
-* [Learn Javascript](https://pbaumgarten.com/javascript-notes)
-* [Learn Python with the Microbit](https://pbaumgarten.com/microbit-notes)
-* [Learn Raspberry Pi](https://pbaumgarten.com/raspberrypi-notes)
+* [Computer Science: International Baccalaureate](https://pbaumgarten.com/ib-compsci)
+* [Computer Science: Cambridge iGCSE](https://pbaumgarten.com/igcse-compsci)
+* [Learn Python](https://pbaumgarten.com/python)
+* [Learn Java](https://pbaumgarten.com/java)
+* [Learn Javascript](https://pbaumgarten.com/javascript)
+* [Learn Python with the Microbit](https://pbaumgarten.com/microbit)
+* [Learn Raspberry Pi](https://pbaumgarten.com/raspberrypi)
 * [Full repositories list...](https://github.com/paulbaumgarten?tab=repositories)
 
 ## About me
@@ -27,7 +27,7 @@ Whether you are here because you have to be (ie: a student of mine), or are just
 More [about me](img/paul-baumgarten-about-me-2019.pdf).
 
 Paul Baumgarten  
-August 2019
+September 2019
 
 [![](img/icon-youtube-48.png)](https://youtube.com/pbaumgarten)
 [![](img/icon-twitter-48.png)](https://twitter.com/pbaumgarten)

@@ -250,58 +250,9 @@ Duke University have identified a 7 step process to learning problem solving wit
 6. Run test cases
 7. Debug any failed test cases
 
-> Duke University (2018), "Programming Foundations with JavaScript, HTML and CSS: A seven step approach to solving programming problems"
-> https://www.coursera.org/lecture/duke-programming-web/a-seven-step-approach-to-solving-programming-problems-AEy5M
+(from Duke University (2018), "Programming Foundations with JavaScript, HTML and CSS: A seven step approach to solving programming problems" available [online](https://www.coursera.org/lecture/duke-programming-web/a-seven-step-approach-to-solving-programming-problems-AEy5M))
 
-### Step 1. Work example by hand
-
-Solve a small instance of the problem by hand - something manageable.
-
-If you have problems with this step it is usually due to one of two reasons:  
-
-* perhaps the problem is unclear and the problem statement needs clarifying/refining. ie you aren't exactly sure what it is you are trying to solve
-* lack of domain knowledge. You are trying to solve a problem that requires expertise in another field that you lack (eg: business accounting software would need a detailed understanding of tax laws etc) 
-
-### Step 2. Write down what you did
-
-How did you solve the small instance of the problem in step 1? Write it down. 
-There are a lot of things that we do without consciously thinking about them. The aim here is to realise what those things are and write them down. 
-Computers, unlike humans, need every step spelt out.
-
-### Step 3. Find patterns
-
-Look at your steps written from step 2 and seek to find patterns that would allow those steps to be used to solve similar small scale versions of the problem.
-
-Look for repetition (doing the same sets of steps over and over)
-
-Conditions (sometimes you do something, sometimes you don't - what conditions cause you to make this decision)
-
-Values (maybe you used a particular number because it related to your problem in some way. Why did you use the number(s) you did?)
-
-Difficulties in this step mean returning to step 1 & 2 for different versions of the problem and further refine your written steps.
-
-### Step 4. Check by hand & buddy check
-
-Check your algorithm works with alternative versions of the problem (still checking by hand, small scale versions of the problem)..
-
-Give it to someone else without explaining the expected outcome, and see if they do it correctly. If not, it is likely there are assumptions in your steps that you have not properly articulated. You need to return to step 2.
-
-### Step 5. Translate to code
-
-Only now that you have a detailed understanding of the procedure that solves your problem should you move on to attempting to turn it into code using a programming language.
-
-### Step 6. Run test cases
-
-Execute your program using sample test cases. Again, start with small versions of the problem and then scale up.
-
-### Step 7. Debug any failed test cases
-
-As you test sample problems, there are two main causes of issues:
-
-* Algorithmic problem? Return to step 3 and adjust your written procedure.
-* Implementation problem? Return to step 5 and adjust your code so it properly reflects your procedure.
-
-### Practice the 7 step process
+## Practice the 7 step process
 
 Exercise 1: The green screen problem
 
@@ -316,8 +267,6 @@ Exercise 2:
 * Do not show your neighbour your problem - you are to use your neighbour as your buddy check in step 4 so they can’t know in advance what your procedure is supposed to achieve. 
 * For today: We'll stop after you achieve success at step 4 (ie: clear written instructions correctly interpreted by another)
 
----
-
 ## Documenting program design
 
 There are three key strategies this course would like you to be familiar with for articulating and testing algorithms. They are:
@@ -326,7 +275,7 @@ There are three key strategies this course would like you to be familiar with fo
 * Flow charts
 * Trace tables
 
-### Pseudo code
+## Pseudo code
 
 There are a lot of different computer programming languages available, each serving different needs. Algorithms, however, are universal. A programmer who uses one language, should be able to communicate how to create an algorithm to another programmer who uses a completely different language without knowing anything about it!
 
@@ -352,8 +301,8 @@ Given the statements made above about there not being a "correct" way to write i
 
 The following comes from the IB documents
 
-* "Approved notation for developing pseudocode" available at [https://pbaumgarten.com/dp-compsci/dp-compsci-ib-pseudocode-flowcharts.pdf](https://pbaumgarten.com/dp-compsci/dp-compsci-ib-pseudocode-flowcharts.pdf)
-* "Pseudocode in Examinations" available at [https://pbaumgarten.com/dp-compsci/dp-compsci-ib-pseudocode-in-detail.pdf](https://pbaumgarten.com/dp-compsci/dp-compsci-ib-pseudocode-in-detail.pdf)
+* "Approved notation for developing pseudocode" available at [https://pbaumgarten.com/ib-compsci/ib-compsci-pseudocode-flowcharts.pdf](https://pbaumgarten.com/ib-compsci/ib-compsci-pseudocode-flowcharts.pdf)
+* "Pseudocode in Examinations" available at [https://pbaumgarten.com/ib-compsci/ib-compsci-pseudocode-in-detail.pdf](https://pbaumgarten.com/ib-compsci/ib-compsci-pseudocode-in-detail.pdf)
 
 ![](img/ib-pseudo-code-approved-notation-both.jpg)
 ![](img/ib-pseudo-code-strings-arrays-collections.jpg)
@@ -917,80 +866,18 @@ Regardless of the programming language you learn, there are core constructs that
 
 # Debugging programs
 
-We're going to do sone programming practice shortly, so, before we do let's review some useful strategies to debug our programs. The following excellent advice comes verbatum from a reddit post (source linked at the end).
+We're going to do sone programming practice shortly, so, before we do let's review some useful strategies to debug our programs. 
 
 1. Print things a lot
-
-    On every single line of code, you should have a sense of what all of the variables values’ are. If you’re not sure, print them out!
-    Then when you run your program, you can look at the console and see how the values might be changing or getting set to null values in ways you’re not expecting.
-
 2. Start with code that already works
-
-    When in doubt, start with someone else’s existing code that already works. If you’re a beginner, you’re still more of a Hacker than an Engineer, and so it’s better to start with an existing structure and tweak it to meet your needs.
-
-    Make sure you run the code you find before you make any changes to verify that it works properly and does what it claims to do. Then make small changes to the existing code and test it often to see if your changes have introduced bugs.
-
 3. Run your code every time you make a small change
-
-    Do not start with a blank file, sit down and code for an hour and then run your code for the first time. You’ll be endlessly confused with all of the little errors you may have created that are now stacked on top of each other. It’ll take you forever to peel back all the layers and figure out what is going on.
-
-    Plus, every time you run your code, you’re getting feedback on your work. Is it getting closer to what you want, or is it suddenly failing?
-
 4. Read the error message
-
-    It’s really easy to throw your hands up and say “my code has an error” and feel lost when you see a stacktrace. But in my experience, about 2/3rds of error messages you’ll see are fairly accurate and descriptive.
-
-    The error message does its best to tell you what went wrong. At the very least, it will tell you what line number it got to in your program before crashing, which gives you a great clue for places to start hunting for bugs.
-
 5. Google the error message
-
-    If you can’t seem to figure out what your error message is trying to tell you, your best bet is to copy and paste the last line of the stacktrace into Google. Chances are, you’ll get a few stackoverflow.com results, where people have asked similar questions and gotten explanations and answers.
-
-    This can sometimes be hit-or-miss, depending on how specific or generic your error is. Make sure you try to read the code in the question and see if it’s similar to yours – make sure it’s the same language! Then read through the comments and the first 2-3 answers to see if any of them work for you.
-
 6. Guess and Check
-
-    If you’re not 100% sure how to fix something, be open to trying 2 or 3 things to see what happens. You should be running your code often (see 3), so you’ll get feedback quickly. Does this fix my error? No? Okay, let’s go back and try something else.
-
-    Trying a few things on your own is important because if you go to ask someone else for help (see 10), one of the first things they’ll ask you for is to list 2-3 things you’ve tried already. This helps save everyone time by avoiding suggestions you’ve already tried, and shows that you’re committed to solving your problem and not just looking for someone else to give you free, working code.
-
 7. Comment-out code
-
-    Every programming language has a concept of a comment, which is a way for developers to leave notes in the code, without the language runtime trying to execute the notes as programming instructions.
-
-    You can take advantage of this language feature by temporarily “commenting out” code that you don’t want to lose track of, but that you just don’t want running right now. This works by basically just putting the “comment character” for your language at the start (and sometimes at the end) of the lines that you’re commenting out.
-
-    Just make sure you don’t comment out some code that sets variables that your program is using later on – the commented-out code is skipped entirely, so statements that run later on won’t have access to any variables that are set or updated in the commented out sections.
-
-    And of course, make sure you remove the comment characters so that it turns back into instructions when you’re done testing the other sections.
-
 8. If you’re not sure where the problem is, do a binary search
-
-    The more code you have that’s running, the more places you have to check for an error. Especially as your project grows past a few dozen lines, it can get more and more difficult to find out where errors are happening. Your stack trace and error message should give you a clue as to where things are going wrong, but sometimes they’re not too helpful.
-
-    In that case, it’s helpful to do a binary search to hone in on the section of code that’s misbehaving.
-
-    At a high level, a binary search involves splitting something in half and searching each of the halves for what you’re looking for. Once you decide which half it’s in, you repeat the process again on that half. This is one of the quickest ways to hone in on where something is, in an otherwise large list of instructions.
-
-    For finding bugs in your script or web app, just run the first half of your code, comment out the second half, and then print the half-way done results. If those look right, then the first half of your code is running fine and the problem you’re encountering must be in the second half. If there’s a problem with the half-way done results, then the error is occurring somewhere in the first half.
-
-    Repeat this process over and over, and you’ll be able to quickly hone in on the 2 or 3 lines that seem to be leading your program astray.
-
-    You may have noticed that this method combines a lot of the earlier steps of printing variables out, commenting code out and reading the error messages looking for line numbers. 👍
-
 9. Take a break and walk away from the keyboard
-
-    It’s really easy to get caught up in the details of your current implementation. You get bogged down in little details and start to lose sight of the forest through the trees.
-
-    In cases where I feel like I’ve been spinning my wheels for the last 20 or 30 minutes, I try to step away from the code and do some other activity for a little while before coming back. I’ll go get a drink of water, meander around a bit or have a snack. It’s a great way to reset your mind, pull back and start to think of another approach.
-
-    I realize that it’s also seemingly unsatisfying if you haven’t tried it. “If I walk away now, I’ll forget all of these details! I’ll have to start all over again. Plus I don’t feel satisfied leaving code in a broken state. What if I never fix it and I’m a failure. I can’t leave until it’s working again.” I used to think all of those things as well.
-
-    But it has become one of my favorites tips and has helped me past dozens of bugs over the years. If you try it you might be surprised just how helpful that can be.
-
 10. How to ask for help
-
-    Okay okay, so you’ve really tried everything and it seems like nothing is working. Now you feel like you’re really ready to ask someone else for help.
 
     Before asking anyone about a bug in your code, it’s important that you make sure you have all of the following components of an excellent question:
 
@@ -998,12 +885,7 @@ We're going to do sone programming practice shortly, so, before we do let's revi
     2. Show the code that’s giving the error
     3. Show the entire stack trace including the error message
     4. Explain 2-3 things that you’ve tried already and why they didn’t work
-
-    Sometimes, in the simple process of going through these items in your mind and writing them down, a new solution becomes obvious. I call this the “Stack Overflow” effect.
-
-    Over the years, the times when I’ve really felt like I couldn’t figure something out and need to ask for help, simply writing each of these 4 things down makes it suddenly obvious what the problem is, or something new that I can try. I’ve abandoned many Stack Overflow question form boxes when the act of asking a good question makes the answer obvious.
-    Hope this helps some of you who aren't sure what to do when you feel stuck!
-
+    
 Source: [hartleybrody (2016)](https://www.reddit.com/r/learnprogramming/comments/5ebip6/ive_been_teaching_an_online_coding_class_and_have/)
 
 ---

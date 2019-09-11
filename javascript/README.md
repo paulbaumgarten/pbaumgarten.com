@@ -32,6 +32,8 @@ Lessons
 
 # Chapter 2 - HTML
 
+> Coming soon
+
 * 2.1 - Introduction to HTML
 * 2.2 - A tags
 * 2.3 - DIV, SPAN tags
@@ -41,6 +43,8 @@ Lessons
 * 2.7 - Tables
 
 # Chapter 3 - CSS
+
+> Coming soon
 
 * 3.1 - Selectors
 * 3.2 - Boiler plate
@@ -54,6 +58,8 @@ Lessons
 
 # Chapter 4 - Javascript exercises with HTML & CSS
 
+> Coming soon
+
 * 4.1 - Document object model functions & properties
 * 4.2 - Event handlers
 * 4.3 - Basic form tasks (validation, send)
@@ -61,6 +67,8 @@ Lessons
 * 4.5 - Local storage
 
 # Chapter 5 - Firebase
+
+> Coming soon
 
 * 5.1 - Firebase authentication - see [online demo](htps://authdemo.jigsawapps.net/)
 * 5.2 - Firebase database - see [online demo](htps://notekeeper.jigsawapps.net/)
@@ -79,6 +87,8 @@ Appendum: Use the following firebase database rules
 ```
 
 # Chapter 6 - Canvas
+
+> Coming soon
 
 * 6.1 - Coordinate system
 * 6.2 - Hello canvas!
@@ -142,3 +152,7 @@ Javascript Games: A youtube series that looks quite good:
 * [Javascript Games series: Flappy bird](https://www.youtube.com/watch?v=L07i4g-zhDA&index=3&list=PLt4757glfbhHkfz7dqojMbnBdgUnFih4B&t=0s)
 * [Javascript Games series: Snake](https://www.youtube.com/watch?v=9TcU2C1AACw&index=4&list=PLt4757glfbhHkfz7dqojMbnBdgUnFih4B&t=0s)
 * [Javascript Games series: Tetris](https://www.youtube.com/watch?v=HEsAr2Yt2do&index=5&list=PLt4757glfbhHkfz7dqojMbnBdgUnFih4B&t=0s)
+
+# Author
+
+(C) Paul Baumgarten 2019

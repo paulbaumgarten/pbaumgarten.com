@@ -1,10 +1,13 @@
 # Microbit
 
+<img src="img/microbit-logo.png" style="float:right">
+
 Got yourself a Microbit? Awesome! They're a great way to learn Python!
 
-## Get the editor
+## Get setup
 
 * [Download and install Mu editor](https://codewith.mu/)
+* [Download and print my handy reference sheet](microbit-reference-sheet.pdf)
 
 ## Lessons
 
@@ -90,3 +93,7 @@ The following links take you to the various sections of the [official Microbit P
 * [Other editors and languages you can program the Microbit with](https://microbit.org/code-alternative-editors/)
 * [Microbit API](https://microbit-micropython.readthedocs.io/en/latest/microbit.html)
 * [Awesome microbit resources list](https://github.com/carlosperate/awesome-microbit)
+
+## Author
+
+(C) Paul Baumgarten 2019

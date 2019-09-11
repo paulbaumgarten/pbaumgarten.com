@@ -1,5 +1,7 @@
 # Learning Python notes
 
+<img src="img/python-logo.png" style="float:right">
+
 This represents my extensive and continually growing set of notes for learning the Python programming language. I use these notes extensively with my students and they are frequently updated. I welcome your feedback or suggestions on how they may be improved.
 
 Supplemental to these notes, I have a range of Python videos on Youtube at [https://youtube.com/pbaumgarten](https://youtube.com/pbaumgarten).
@@ -28,7 +30,31 @@ This is the place to start if you are brand new to Python. I have introdutory vi
 
 If you know the basics of Python and wish to experiement with a new package or technique, look through the other tutorials to find something of interest to you.
 
-* [Learn Python github repository](https://github.com/paulbaumgarten/learn-python/)
+* [Audio (recording, playback, detect frequency etc)](audio.md)
+* [Databases](databases.md)
+* [EXE with PyInstaller](exe-with-pyinstaller.md)
+* [Flask webserver](flask-webserver.md)
+* [Google searching](google-searching.md) (through the API)
+* [GUI with PySimpleGUI](gui-with-pysimplegui.md)
+* [GUI with TKinter](gui-with-tkinter.md)
+* [Lego EV3](lego-ev3.md)
+* [Networking with sockets](networking-with-sockets.md)
+* [Nginx setup for Flask](nginx-setup-for-flask.md)
+* [Numpy](numpy-quick-start.md)
+* [OpenCV face detection](opencv-face-detection.md)
+* [Pillow image library](pillow-image-library.md)
+* [Publish a package to PyPi](publish-package-to-pypi.md)
+* [Pygame](pygame.md)
+* [QR Codes](qr-codes.md)
+* [Requests](requests.md)
+* [Slack social platform](slack-social-platform.md)
+* [Telegram social platform](telegram-social-platform.md)
+* [Text to speech](text-to-speech.md)
+* [Threading](threading.md)
+* [Turtle](turtle.md)
+* [Web scraping](web-scraping.md) with beautifulsoap4
+* [Windows services howto](windows-service-howto.docx)
+* [Youtube downloading](youtube-downloading-howto.md)
 
 ## Author
 

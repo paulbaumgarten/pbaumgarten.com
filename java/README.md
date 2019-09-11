@@ -51,9 +51,6 @@ Software
 * [IntelliJ IDEA](https://www.jetbrains.com/idea/)
 * [Android studio](https://developer.android.com/studio/index.html)
 
-University of Helsinki
+# Author
 
-* [Online Java course](http://mooc.fi/courses/2013/programming-part-1/)
-* [Google suppport group](https://groups.google.com/forum/#!forum/moocfi)
-* [Suggested answers to exercises](https://github.com/giusepped/oo-programming-java-part-I-Helsinki) (not recommended. ask your classmates or me for help instead)
-
+(C) Paul Baumgarten 2019

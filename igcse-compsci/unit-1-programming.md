@@ -43,7 +43,7 @@ Note: In Python the `#` is used to donote a comment follows.
 
 Rather than reproducing all my Learning Python notes (and risk updating one set, not the other, and getting things out of sync),  we will work through my existing Python notes repository
 
-* [https://github.com/paulbaumgarten/python-notes/](https://github.com/paulbaumgarten/python-notes/)
+* [https://pbaumgarten.com/python](https://pbaumgarten.com/python)
 
 You should complete all the 100-series tutorials and problem sets.
 
