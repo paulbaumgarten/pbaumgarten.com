@@ -250,6 +250,14 @@ for (int[] row : a ) {
 
 # Problem set: Arrays and ArrayLists
 
+For some introductory level questions, I recommend solving the problem sets on coding bat:
+
+* [Array-1 coding.bat problems (no loops)](https://codingbat.com/java/Array-1)
+* [Array-2 coding.bat problems (require 1 loop)](https://codingbat.com/java/Array-2)
+* [Array-3 coding.bat problems (require 2 loops & complex logic)](https://codingbat.com/java/Array-3)
+
+Be warned, a number of the questions in the main problem set are quite challenging for new programmers. Do not worry if you feel some of them are beyond you if you are at the beginning stags of learning to program. Revisit the questions you can't do after you have been programming consistently for about 12 months.
+
 Note: Use Arrays or ArrayLists as you feel best fits the problem. Do ensure you practice using a mix of both.
 
 1. Write a program to sum all the items in a list.

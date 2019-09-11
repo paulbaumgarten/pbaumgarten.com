@@ -193,6 +193,13 @@ for i in range( len( starwars ) ):
 
 ## Problem set
 
+For some introductory level questions, I recommend solving the problem sets on coding bat:
+
+* [List-1 coding.bat problems (no loops)](https://codingbat.com/python/List-2)
+* [List-2 coding.bat problems (require 1 loop)](https://codingbat.com/python/List-2)
+
+Be warned, a number of the questions in the main problem set are quite challenging for new programmers. Do not worry if you feel some of them are beyond you if you are at the beginning stags of learning to program. Revisit the questions you can't do after you have been programming consistently for about 12 months.
+
 1. Write a program to sum all the items in a list.
 2. Write a program to get the largest number from a list.
 3. Write a program to count the number of strings where the string length is 2 or more and the first and last character are same from a given list of strings.
