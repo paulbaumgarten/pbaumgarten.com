@@ -1,0 +1,79 @@
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-weight: 300;
+	/*
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-family:  "Meiryo", "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+	*/
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #0277bd; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+h1 {
+	color: #4285f4;
+	font-weight: 100;
+	margin-top: 1.0em;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	border-left: 10px solid #4285f4;
+	border-bottom: 1px solid #4285f4;
+	padding-left: 20px;
+	line-height: 1.2;
+}
+
+h2 {
+	color: #4285f4;
+	font-weight: 100;
+	margin-top: 1.0em;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	border-left: 10px solid #4285f4;
+	padding-left: 20px;
+}
+
+h3 {
+	color: #4285f4;
+	font-weight: bold;
+	margin-top: 1.0em;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	border-left: 5px solid #4285f4;
+	padding-left: 25px;
+}

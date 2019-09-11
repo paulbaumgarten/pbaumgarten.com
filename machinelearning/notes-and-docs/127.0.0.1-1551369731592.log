@@ -1,0 +1,265 @@
+sketch.js:28 ********** training run ********** 0
+sketch.js:29 *** data.inputs *** (2) [1, 0]0: 11: 0length: 2__proto__: Array(0)
+sketch.js:30 *** data.outputs *** [1]0: 1length: 1__proto__: Array(0)
+nn.js:147 *** inputs ***
+nn.js:147 (2) [Array(1), Array(1)]0: [1]0: 1length: 1__proto__: Array(0)1: [0]length: 2__proto__: Array(0)
+nn.js:148 *** weights_ih ***
+nn.js:148 (4) [Array(2), Array(2), Array(2), Array(2)]0: (2) [3.073059869506326, -5.875656407176714]1: (2) [6.843853153837116, -3.5593124217216916]2: (2) [5.017722571464704, 4.825135428321107]3: (2) [-2.6279113796623825, 4.782746441598828]length: 4__proto__: Array(0)
+nn.js:150 *** hidden ***
+nn.js:150 (4) [Array(1), Array(1), Array(1), Array(1)]0: [0.6663989881123119]1: [0.6087417310602828]2: [0.6976150839643707]3: [0.5146479789172229]length: 4__proto__: Array(0)
+nn.js:154 *** hidden post-activation ***
+nn.js:154 (4) [Array(1), Array(1), Array(1), Array(1)]0: [0.6663989881123119]1: [0.6087417310602828]2: [0.6976150839643707]3: [0.5146479789172229]length: 4__proto__: Array(0)
+nn.js:157 *** hidden ***
+nn.js:157 (4) [Array(1), Array(1), Array(1), Array(1)]0: [0.6663989881123119]1: [0.6087417310602828]2: [0.6976150839643707]3: [0.5146479789172229]length: 4__proto__: Array(0)
+nn.js:158 *** weights_ho ***
+nn.js:158 [Array(4)]0: Array(4)0: 0.73806487295948691: -5.4959375685831912: 6.8230954127787133: -4.713350304703202length: 4__proto__: Array(0)length: 1__proto__: Array(0)
+nn.js:160 *** outputs ***
+nn.js:160 [Array(1)]0: [0.6185208874077692]length: 1__proto__: Array(0)
+nn.js:163 *** outputs post-activation ***
+nn.js:163 [Array(1)]0: [0.6185208874077692]length: 1__proto__: Array(0)
+nn.js:167 *** targets ***
+nn.js:167 [Array(1)]0: [1]length: 1__proto__: Array(0)
+nn.js:172 *** output_errors ***
+nn.js:172 [Array(1)]0: [0.3814791125922308]length: 1__proto__: Array(0)
+nn.js:177 *** gradients ***
+nn.js:177 Matrix {rows: 1, cols: 1, data: Array(1)}cols: 1data: Array(1)0: [0.009001106447080838]length: 1__proto__: Array(0)rows: 1__proto__: Object
+nn.js:179 *** gradients post multiply outout_errors ***
+nn.js:179 [Array(1)]0: [0.009001106447080838]length: 1__proto__: Array(0)
+nn.js:181 *** learning_rate ***
+nn.js:181 0.1
+nn.js:182 *** gradients post multiple learning_rate ***
+nn.js:182 [Array(1)]0: [0.009001106447080838]length: 1__proto__: Array(0)
+nn.js:186 *** hidden_transposed ***
+nn.js:186 [Array(4)]0: Array(4)0: 0.66639898811231191: 0.60874173106028282: 0.69761508396437073: 0.5146479789172229length: 4__proto__: Array(0)length: 1__proto__: Array(0)
+nn.js:188 *** weight_ho_deltas ***
+nn.js:188 [Array(4)]0: Array(4)0: 0.0059983282282258771: 0.00547934912005386152: 0.0062793076298525373: 0.004632401241008938length: 4__proto__: Array(0)length: 1__proto__: Array(0)
+nn.js:192 *** weights_ho ***
+nn.js:192 [Array(4)]0: Array(4)0: -0.161492567187423861: -6.7193564762900132: 9.5358644291113313: -6.790730047594196length: 4__proto__: Array(0)length: 1__proto__: Array(0)
+nn.js:198 *** weights_ho_transposed ***
+nn.js:198 (4) [Array(1), Array(1), Array(1), Array(1)]0: [0.9746030548457973]1: [-0.9301547550881489]2: [0.22619241765218692]3: [0.49806186385469753]length: 4__proto__: Array(0)
+nn.js:200 *** hidden_errors ***
+nn.js:200 (4) [Array(1), Array(1), Array(1), Array(1)]0: [0.371790708492252]1: [-0.3548346105444708]2: [0.08628768276104751]3: [0.19000019783932248]length: 4__proto__: Array(0)
+nn.js:204 *** hidden_gradient ***
+nn.js:204 (4) [Array(1), Array(1), Array(1), Array(1)]0: [0.008265330426970328]1: [-0.008451281708114431]2: [0.0018202238141941827]3: [0.004745928239297328]length: 4__proto__: Array(0)
+nn.js:206 *** hidden_gradient post multiply hidden_errors ***
+nn.js:206 (4) [Array(1), Array(1), Array(1), Array(1)]0: [0.008265330426970328]1: [-0.008451281708114431]2: [0.0018202238141941827]3: [0.004745928239297328]length: 4__proto__: Array(0)
+nn.js:208 *** hidden_gradient post multiply learning rate ***
+nn.js:208 (4) [Array(1), Array(1), Array(1), Array(1)]0: [0.008265330426970328]1: [-0.008451281708114431]2: [0.0018202238141941827]3: [0.004745928239297328]length: 4__proto__: Array(0)
+nn.js:212 *** inputs_transposed ***
+nn.js:212 [Array(2)]0: (2) [1, 0]length: 1__proto__: Array(0)
+nn.js:214 *** weight_ih_deltas ***
+nn.js:214 (4) [Array(2), Array(2), Array(2), Array(2)]0: (2) [0.008265330426970328, 0]1: (2) [-0.008451281708114431, 0]2: (2) [0.0018202238141941827, 0]3: (2) [0.004745928239297328, 0]length: 4__proto__: Array(0)
+nn.js:217 *** weights_ih ***
+nn.js:217 (4) [Array(2), Array(2), Array(2), Array(2)]0: (2) [3.627862588121109, -6.594902661811532]1: (2) [10.07217165537026, -5.386184561245404]2: (2) [6.842728074672561, 6.714318311754501]3: (2) [-5.2719017324917195, 9.698532575741156]length: 4__proto__: Array(0)concat: ƒ concat()constructor: ƒ Array()copyWithin: ƒ copyWithin()entries: ƒ entries()every: ƒ every()fill: ƒ fill()filter: ƒ filter()find: ƒ find()findIndex: ƒ findIndex()flat: ƒ flat()flatMap: ƒ flatMap()forEach: ƒ forEach()includes: ƒ includes()indexOf: ƒ indexOf()join: ƒ join()keys: ƒ keys()lastIndexOf: ƒ lastIndexOf()length: 0map: ƒ map()pop: ƒ pop()push: ƒ push()reduce: ƒ reduce()reduceRight: ƒ reduceRight()reverse: ƒ reverse()shift: ƒ shift()slice: ƒ slice()some: ƒ some()sort: ƒ sort()splice: ƒ splice()toLocaleString: ƒ toLocaleString()toString: ƒ toString()unshift: ƒ unshift()values: ƒ values()Symbol(Symbol.iterator): ƒ values()Symbol(Symbol.unscopables): {copyWithin: true, entries: true, fill: true, find: true, findIndex: true, …}__proto__: Object
+sketch.js:28 ********** training run ********** 1
+sketch.js:29 *** data.inputs *** (2) [1, 1]
+sketch.js:30 *** data.outputs *** [0]
+nn.js:147 *** inputs ***
+nn.js:147 (2) [Array(1), Array(1)]
+nn.js:148 *** weights_ih ***
+nn.js:148 (4) [Array(2), Array(2), Array(2), Array(2)]
+nn.js:150 *** hidden ***
+nn.js:150 (4) [Array(1), Array(1), Array(1), Array(1)]
+nn.js:154 *** hidden post-activation ***
+nn.js:154 (4) [Array(1), Array(1), Array(1), Array(1)]
+nn.js:157 *** hidden ***
+nn.js:157 (4) [Array(1), Array(1), Array(1), Array(1)]
+nn.js:158 *** weights_ho ***
+nn.js:158 [Array(4)]
+nn.js:160 *** outputs ***
+nn.js:160 [Array(1)]
+nn.js:163 *** outputs post-activation ***
+nn.js:163 [Array(1)]
+nn.js:167 *** targets ***
+nn.js:167 [Array(1)]
+nn.js:172 *** output_errors ***
+nn.js:172 [Array(1)]
+nn.js:177 *** gradients ***
+nn.js:177 Matrix {rows: 1, cols: 1, data: Array(1)}
+nn.js:179 *** gradients post multiply outout_errors ***
+nn.js:179 [Array(1)]
+nn.js:181 *** learning_rate ***
+nn.js:181 0.1
+nn.js:182 *** gradients post multiple learning_rate ***
+nn.js:182 [Array(1)]
+nn.js:186 *** hidden_transposed ***
+nn.js:186 [Array(4)]
+nn.js:188 *** weight_ho_deltas ***
+nn.js:188 [Array(4)]
+nn.js:192 *** weights_ho ***
+nn.js:192 [Array(4)]
+nn.js:198 *** weights_ho_transposed ***
+nn.js:198 (4) [Array(1), Array(1), Array(1), Array(1)]
+nn.js:200 *** hidden_errors ***
+nn.js:200 (4) [Array(1), Array(1), Array(1), Array(1)]
+nn.js:204 *** hidden_gradient ***
+nn.js:204 (4) [Array(1), Array(1), Array(1), Array(1)]
+nn.js:206 *** hidden_gradient post multiply hidden_errors ***
+nn.js:206 (4) [Array(1), Array(1), Array(1), Array(1)]
+nn.js:208 *** hidden_gradient post multiply learning rate ***
+nn.js:208 (4) [Array(1), Array(1), Array(1), Array(1)]
+nn.js:212 *** inputs_transposed ***
+nn.js:212 [Array(2)]
+nn.js:214 *** weight_ih_deltas ***
+nn.js:214 (4) [Array(2), Array(2), Array(2), Array(2)]
+nn.js:217 *** weights_ih ***
+nn.js:217 (4) [Array(2), Array(2), Array(2), Array(2)]
+sketch.js:28 ********** training run ********** 2
+sketch.js:29 *** data.inputs *** (2) [1, 0]
+sketch.js:30 *** data.outputs *** [1]
+nn.js:147 *** inputs ***
+nn.js:147 (2) [Array(1), Array(1)]
+nn.js:148 *** weights_ih ***
+nn.js:148 (4) [Array(2), Array(2), Array(2), Array(2)]
+nn.js:150 *** hidden ***
+nn.js:150 (4) [Array(1), Array(1), Array(1), Array(1)]
+nn.js:154 *** hidden post-activation ***
+nn.js:154 (4) [Array(1), Array(1), Array(1), Array(1)]
+nn.js:157 *** hidden ***
+nn.js:157 (4) [Array(1), Array(1), Array(1), Array(1)]
+nn.js:158 *** weights_ho ***
+nn.js:158 [Array(4)]
+nn.js:160 *** outputs ***
+nn.js:160 [Array(1)]
+nn.js:163 *** outputs post-activation ***
+nn.js:163 [Array(1)]
+nn.js:167 *** targets ***
+nn.js:167 [Array(1)]
+nn.js:172 *** output_errors ***
+nn.js:172 [Array(1)]
+nn.js:177 *** gradients ***
+nn.js:177 Matrix {rows: 1, cols: 1, data: Array(1)}
+nn.js:179 *** gradients post multiply outout_errors ***
+nn.js:179 [Array(1)]
+nn.js:181 *** learning_rate ***
+nn.js:181 0.1
+nn.js:182 *** gradients post multiple learning_rate ***
+nn.js:182 [Array(1)]
+nn.js:186 *** hidden_transposed ***
+nn.js:186 [Array(4)]
+nn.js:188 *** weight_ho_deltas ***
+nn.js:188 [Array(4)]
+nn.js:192 *** weights_ho ***
+nn.js:192 [Array(4)]
+nn.js:198 *** weights_ho_transposed ***
+nn.js:198 (4) [Array(1), Array(1), Array(1), Array(1)]
+nn.js:200 *** hidden_errors ***
+nn.js:200 (4) [Array(1), Array(1), Array(1), Array(1)]
+nn.js:204 *** hidden_gradient ***
+nn.js:204 (4) [Array(1), Array(1), Array(1), Array(1)]
+nn.js:206 *** hidden_gradient post multiply hidden_errors ***
+nn.js:206 (4) [Array(1), Array(1), Array(1), Array(1)]
+nn.js:208 *** hidden_gradient post multiply learning rate ***
+nn.js:208 (4) [Array(1), Array(1), Array(1), Array(1)]
+nn.js:212 *** inputs_transposed ***
+nn.js:212 [Array(2)]
+nn.js:214 *** weight_ih_deltas ***
+nn.js:214 (4) [Array(2), Array(2), Array(2), Array(2)]
+nn.js:217 *** weights_ih ***
+nn.js:217 (4) [Array(2), Array(2), Array(2), Array(2)]
+sketch.js:28 ********** training run ********** 3
+sketch.js:29 *** data.inputs *** (2) [0, 1]
+sketch.js:30 *** data.outputs *** [1]
+nn.js:147 *** inputs ***
+nn.js:147 (2) [Array(1), Array(1)]
+nn.js:148 *** weights_ih ***
+nn.js:148 (4) [Array(2), Array(2), Array(2), Array(2)]
+nn.js:150 *** hidden ***
+nn.js:150 (4) [Array(1), Array(1), Array(1), Array(1)]
+nn.js:154 *** hidden post-activation ***
+nn.js:154 (4) [Array(1), Array(1), Array(1), Array(1)]
+nn.js:157 *** hidden ***
+nn.js:157 (4) [Array(1), Array(1), Array(1), Array(1)]
+nn.js:158 *** weights_ho ***
+nn.js:158 [Array(4)]
+nn.js:160 *** outputs ***
+nn.js:160 [Array(1)]
+nn.js:163 *** outputs post-activation ***
+nn.js:163 [Array(1)]
+nn.js:167 *** targets ***
+nn.js:167 [Array(1)]
+nn.js:172 *** output_errors ***
+nn.js:172 [Array(1)]
+nn.js:177 *** gradients ***
+nn.js:177 Matrix {rows: 1, cols: 1, data: Array(1)}
+nn.js:179 *** gradients post multiply outout_errors ***
+nn.js:179 [Array(1)]
+nn.js:181 *** learning_rate ***
+nn.js:181 0.1
+nn.js:182 *** gradients post multiple learning_rate ***
+nn.js:182 [Array(1)]
+nn.js:186 *** hidden_transposed ***
+nn.js:186 [Array(4)]
+nn.js:188 *** weight_ho_deltas ***
+nn.js:188 [Array(4)]
+nn.js:192 *** weights_ho ***
+nn.js:192 [Array(4)]
+nn.js:198 *** weights_ho_transposed ***
+nn.js:198 (4) [Array(1), Array(1), Array(1), Array(1)]
+nn.js:200 *** hidden_errors ***
+nn.js:200 (4) [Array(1), Array(1), Array(1), Array(1)]
+nn.js:204 *** hidden_gradient ***
+nn.js:204 (4) [Array(1), Array(1), Array(1), Array(1)]
+nn.js:206 *** hidden_gradient post multiply hidden_errors ***
+nn.js:206 (4) [Array(1), Array(1), Array(1), Array(1)]
+nn.js:208 *** hidden_gradient post multiply learning rate ***
+nn.js:208 (4) [Array(1), Array(1), Array(1), Array(1)]
+nn.js:212 *** inputs_transposed ***
+nn.js:212 [Array(2)]
+nn.js:214 *** weight_ih_deltas ***
+nn.js:214 (4) [Array(2), Array(2), Array(2), Array(2)]
+nn.js:217 *** weights_ih ***
+nn.js:217 (4) [Array(2), Array(2), Array(2), Array(2)]
+sketch.js:28 ********** training run ********** 4
+sketch.js:29 *** data.inputs *** (2) [1, 1]
+sketch.js:30 *** data.outputs *** [0]
+nn.js:147 *** inputs ***
+nn.js:147 (2) [Array(1), Array(1)]
+nn.js:148 *** weights_ih ***
+nn.js:148 (4) [Array(2), Array(2), Array(2), Array(2)]
+nn.js:150 *** hidden ***
+nn.js:150 (4) [Array(1), Array(1), Array(1), Array(1)]
+nn.js:154 *** hidden post-activation ***
+nn.js:154 (4) [Array(1), Array(1), Array(1), Array(1)]
+nn.js:157 *** hidden ***
+nn.js:157 (4) [Array(1), Array(1), Array(1), Array(1)]
+nn.js:158 *** weights_ho ***
+nn.js:158 [Array(4)]
+nn.js:160 *** outputs ***
+nn.js:160 [Array(1)]
+nn.js:163 *** outputs post-activation ***
+nn.js:163 [Array(1)]
+nn.js:167 *** targets ***
+nn.js:167 [Array(1)]
+nn.js:172 *** output_errors ***
+nn.js:172 [Array(1)]
+nn.js:177 *** gradients ***
+nn.js:177 Matrix {rows: 1, cols: 1, data: Array(1)}
+nn.js:179 *** gradients post multiply outout_errors ***
+nn.js:179 [Array(1)]
+nn.js:181 *** learning_rate ***
+nn.js:181 0.1
+nn.js:182 *** gradients post multiple learning_rate ***
+nn.js:182 [Array(1)]
+nn.js:186 *** hidden_transposed ***
+nn.js:186 [Array(4)]
+nn.js:188 *** weight_ho_deltas ***
+nn.js:188 [Array(4)]
+nn.js:192 *** weights_ho ***
+nn.js:192 [Array(4)]
+nn.js:198 *** weights_ho_transposed ***
+nn.js:198 (4) [Array(1), Array(1), Array(1), Array(1)]
+nn.js:200 *** hidden_errors ***
+nn.js:200 (4) [Array(1), Array(1), Array(1), Array(1)]
+nn.js:204 *** hidden_gradient ***
+nn.js:204 (4) [Array(1), Array(1), Array(1), Array(1)]
+nn.js:206 *** hidden_gradient post multiply hidden_errors ***
+nn.js:206 (4) [Array(1), Array(1), Array(1), Array(1)]
+nn.js:208 *** hidden_gradient post multiply learning rate ***
+nn.js:208 (4) [Array(1), Array(1), Array(1), Array(1)]
+nn.js:212 *** inputs_transposed ***
+nn.js:212 [Array(2)]
+nn.js:214 *** weight_ih_deltas ***
+nn.js:214 (4) [Array(2), Array(2), Array(2), Array(2)]
+nn.js:217 *** weights_ih ***
+nn.js:217 (4) [Array(2), Array(2), Array(2), Array(2)]
