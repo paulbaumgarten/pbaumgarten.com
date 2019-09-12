@@ -159,7 +159,7 @@ This "simple" card game requires you to:
  * Intelligently determine the value of the cards each player holds, remembering that cards such as the Ace might be worth different points in different circumstances
  * Use a text based or graphical based interface at your choosing
 
-# Change calculator
+## Change calculator
 
 Given an amount of money (expressed as an integer as the total number of cents, one dollar being equal to 100 cents) and the list of denominations of coins (similarly expressed as cents), create and return a list of coins that add up to amount using the greedy approach where you use as many of the highest denomination coins when possible before moving on to the next lower denomination. The list of coin denominations is guaranteed to given in sorted order, as should your result also be.
 
