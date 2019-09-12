@@ -1,4 +1,3 @@
-
 # Dates & times
 
 ## Creating a datetime
@@ -129,3 +128,14 @@ this_year = dob.replace( year = now.year )  # Replace the year
 weekday_number = this_year.weekday()
 print(f"Your birthday this year is a {day_names[ weekday_number ]")
 ```
+
+## Problem set
+
+1. Write a function that, given a string in date format, will calculate and return your age in years. Example `getAge("01/01/2010") returns 9`.
+2. Write a function that, given a string in date format, will calculate and return your age in years with one decimal point. `getAgeDecimal("01/01/2010") returns 9.7`.
+3. Write a function that, given a string in date format, will calculate and return your age in years, months, days. `getAgeLong("01/01/2010") returns 9, 10, 1`.
+4. Write a function that, given a string in date format, will calculate and return the number of days until your next birtday. `getDaysUntilBirthday("01/01/2010") returns 71`.
+5. Write a function that, given a string in date format, will calculate and return the day of week as a string for that date. `getDayOfWeek("01/01/2010") returns "Tuesday"`.
+6. Write a function accepting two dates, return True if the first is the earlier date, False if it is the later date. Example function call being `firstDateIsFirst( "04/06/2018", "02/08/2016" )`
+7. Given a list of dates as a function paramter (given as strings in DD/MM/YYYY format), and sort them into calendar correct order from earliest to latest and return the list. Example input being `sortdates( ["03/05/2001", "01/04/2002", "13/01/2000"] )`.
+

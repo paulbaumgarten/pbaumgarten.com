@@ -39,3 +39,8 @@ except:
     print("Unknown error?!?!?!")
 ```
 
+# Problem set
+
+1. Create a quadratic formula calculator that uses exceptions to detect if there are 0, 1 or 2 solutions; and then return the correct nnumber of correct solutions.
+
+> More coming soon

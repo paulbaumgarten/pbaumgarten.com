@@ -34,13 +34,13 @@ person["website"] = "https://pbaumgarten.com"
 
 Remove an element from the dictionary
 
-```
+```python
 del person["website"]
 ```
 
 Loop through all the elements of the dictionary
 
-```
+```python
 for key,val in person.items():
   print("field "+key+" has value "+val)
 ```
@@ -76,10 +76,14 @@ for val in countries:
     country = val["name"]
     code = val["code"]
     continent = val["continent"]
-    print("The country {} has code {} and is in the continent of {}.".format(country, code, continent))
+    print(f"The country {country} has code {code} and is in the continent of {continent}.")
 ```
 
 ## Requests
 
-JSON is frequently used as the medium of transferring data between web servers and applications, as such knowledge of Python dictionaries can come in particularly useful for retrieving data from the internet. Take a look at my **Web requests** notes for more detail.
+JSON is frequently used as the medium of transferring data between web servers and applications, as such knowledge of Python dictionaries can come in particularly useful for retrieving data from the internet. Take a look at my [Web requests](https://pbaumgarten.com/python/requests.html) notes for more detail.
 
+
+# Problem sets
+
+> You better believe these are coming soon! :-)
