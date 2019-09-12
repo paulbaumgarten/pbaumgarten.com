@@ -20,6 +20,16 @@ My teaching notes for the Cambridge iGCSE Computer Science course.
 * [Unit 6 Networks](unit-6-networks.md)
 * [Unit 7 Pre-release material](unit-7-pre-release-material.md)
 
+## Programming expectations
+
+Programming is one of those skills where you will get out of it what you put in. If you make an investment of time, your skills will develop and grow. If you do not invest the time, your skills will stagnate or even deteriorate. While programming is most often thought of as a Math or Science derived skill, it is also very much a Language acquisition. Just like learning any other language, a little bit of practice every day, or every second day, goes a long way.
+
+The above is a long way to say this: To do well, you should be aiming to spend 30 minutes every two or three days practicing your programming aand algorithmic skills (outside of class).
+
+To that end, I am developing a set of general programming problems for you to work through. You should, however, only be looking at these if you have already successfully completed the problem sets in the introductory programming notes.
+
+* [General programming & algorthmic thinking problems](general-problems.md)
+
 ## Assessment overview
 
 * Paper 1: Section 1 of content (theory); Out of 75 marks with 60% weighting
