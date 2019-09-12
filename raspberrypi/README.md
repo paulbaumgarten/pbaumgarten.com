@@ -4,7 +4,7 @@
 
 If you have not previously used or setup your Raspberry Pi before, there are some steps you will need to complete.
 
-* [Setup your Raspberry Pi 3](raspberrypi-setup.md)
+* [Setup your Raspberry Pi 3](setup.md)
 
 The default username and password for the Raspberry Pi are as follows:
 
@@ -19,22 +19,26 @@ It is important to keep a reference of the Raspberry Pi pin numbering, as the nu
 
 # Programming with Python
 
-* [Using LEDs](raspberrypi-led.md)
-* [Using Buttons](raspberrypi-button.md)
-* [Using Ultrasonic sensors](raspberrypi-ultrasonic.md)
-* [Using PiCamera](raspberrypi-picamera.md)
-* [Using the GPIO without easyaspi](raspberrypi-gpio.md)
+* [Using LEDs](gpio-led.md)
+* [Using Buttons](gpio-button.md)
+* [Using Ultrasonic sensors](gpio-ultrasonic.md)
+* [Using PiCamera](picamera.md)
+* [Using the GPIO without easyaspi](gpio.md)
 
 # Programminng with Java
 
-* [Programming with Java on the Raspberry Pi](raspberrypi-java.md)
+* [Get setup for Java on the Raspberry Pi](java-setup.md)
+* [Basic examples for GPIO](java-gpio.md)
+* [Official JavaDocs for Pi4J](https://pi4j.com/1.2/apidocs/index.html?com/pi4j/io/gpio/GpioFactory.html)  (external)
+* [Control GPIO output such as an LED](https://pi4j.com/1.2/example/control.html) (external)
+* [Listen to GPIO input such as a button press](https://pi4j.com/1.2/example/listener.html)  (external)
 
 # Project ideas
 
-* [Your first challenge exercises](raspberrypi-challenges.md)
+* [Your first challenge exercises](challenges.md)
 * [Hackster projects](https://www.hackster.io/projects/tags/python)
-* [Infrared IR blaster using lirc](raspberrypi-lirc.md)
-* [Coin acceptor](raspberrypi-coin-acceptor.md)
+* [Infrared IR blaster using lirc](project-lirc.md)
+* [Coin acceptor](project-coin-acceptor.md)
 
 # System management guides
 
