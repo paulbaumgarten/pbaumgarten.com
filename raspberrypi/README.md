@@ -1,6 +1,6 @@
-<img src="rpi-logo-web.png" style="float:right">
-
 # Introduction
+
+<img src="img/rpi-logo-web.png" style="float:right">
 
 If you have not previously used or setup your Raspberry Pi before, there are some steps you will need to complete.
 
