@@ -15,6 +15,8 @@
 * [Dates and times](java-datetime.md)
 * [Exceptions](java-exceptions.md)
 
+I also have a helpful [reference summary](java-reference-summary.md) that you can refer to as a prompt/reminder for the various syntax and functions for basic Java.
+
 # Java: Beyond the basics
 
 This section is mostly consisting of sample "code recipes" of how to perform common tasks that are quite commonly used in projects. It is not intended to "teach" the concept but give you enough pointers to remind you how to do something or help get you started with it, along with some links to resources where you can find more information.
