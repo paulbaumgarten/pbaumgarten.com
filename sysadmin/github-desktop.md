@@ -1,45 +1,37 @@
 # Github Desktop walkthrough
 
-## Step 1. Create your Github account
+Github, at it's core, is a version tracking tool. Additionally it allows synchronising (backups) to the Github servers, and collaboration (sharing) with others. The version tracking is particularly powerful as it lets you review your work at any point in history, so if you make changes you wish to un-do you can.
 
-1. Visit https://github.com/ 
-2. Click "Sign up"
-3. Enter a username, email and password. 
-4. Verify you are human, click "Create account"
-5. "Choose your subscription" = Free
-6. "What is your level of programming experience" and "What do you plan to use Github for" you can click "skip this step" at the bottom
-7. Please verify your email address – open your email, click on the link provided in the email you will have received from Github.
-8. When the "create a new repository" screen appears you are done. Don’t create a repository through the online site.
+A repository is the most basic element of GitHub. They're easiest to imagine as a project's folder. A repository contains all of the project files (including documentation), and stores each file's revision history. Repositories can have multiple collaborators and can be either public or private. ([source](https://help.github.com/en/articles/github-glossary#repository))
 
-## Step 2. Create your project repository
+## Pre-requisites
 
-The first time you open GitHub Desktop, it will require you to sign in
+1. Create an account with [https://github.com/](https://github.com/) (free plan is fine)
+2. Download and install [Github Desktop](https://desktop.github.com/)
+3. Open Github Desktop and sign in.
 
-1. "Sign in to Github.com"
-2. Enter your username or email, and password, click "Sign in"
-3. "Configure Git" screen, enter your name and email, click "Continue"
-4. "Make Github Desktop better" – Up to you, but I turn off the "submit periodic usage stats". Click Finish.
+## New project & repository
 
-Once you are signed in
+Ideally you would use Github to create your empty repository/project before you commence work on it.
 
-1. "Let’s get started".
-2. Click "Create a new repository on your hard drive" (note: a repository is slightly different to a project folder. It is a project folder, but it also contains additional Git data). It does not matter if you have an existing project folder you wish to turn into a repository, or if you have not started your project yet and wish to create an empty working space.
- 
-Now continue working on your project until you are ready to upload.
+1. File menu / New repository.
+2. The "repository name" will be the name used to create a folder for your project. The "local path" is the parent folder that will contain the project folder.
+3. It is highly recommended to choose your language in the "Git ignore" profile rather than leaving it as None. This will tell Git to ignore files certain temporary files your language uses that don't need to be backed up.
+4. Work on your project, and then check the section for *saving new changes to existing repository* when ready.
 
-## Step 3. Upload your project repository to Github.com
+## Existing project (not yet turned into a git repository)
 
-If your project is being uploaded for the first time
+When you have a project you are ready to backup to Github &/or share with me watch my [video walk through](https://www.youtube.com/watch?v=4dMliXK6mjM) or follow the following steps:
 
-1. Click "Publish repository" for a pop up screen to appear.
-2. You can keep "Keep this code private" set to on.
-3. Click "Publish repository" on the pop up screen.
- 
-## Step 4. Upload project updates to Github.com
+1. File menu / Add local repository (even though, technically the repository doesn't yet exist pick this optioin)
+2. The "repository name" will be the name used to create a folder for your project. The "local path" is the parent folder that will contain the project folder.
+3. Click "Publish repository" for a pop up screen to appear.
+4. You can keep "Keep this code private" set to on.
+5. Click "Publish repository" on the pop up screen.
 
-If you need to update the online copy of your project
+## Saving new changes to existing repository
 
-1. Open Github Desktop, and select the relevant repository.
+1. Open Github Desktop and select your repository from the pulldown list.
 2. You will be presented a list of files that have changed. You may review the changes.
 3. You must enter a summary. While getting used to Github, you can keep it simple (eg: "changed files"). Ideally you will be adding a meaningful description of what has changed, so browsing through the history of your project becomes easier later.
 4. Click "Commit to master" to confirm the changes.
