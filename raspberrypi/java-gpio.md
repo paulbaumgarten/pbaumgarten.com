@@ -38,6 +38,40 @@ public class ControlGpioExample {
 
 There are two methods for responding to GPIO input: `addTrigger()` and `addListener()`. A bit of experimentation is required to determine which will be the most efficient method to use. 
 
+Listener example adapted from [Robert Savage's example](https://pi4j.com/1.2/example/listener.html)
+
+```java
+import com.pi4j.io.gpio.*;
+import com.pi4j.io.gpio.event.GpioPinDigitalStateChangeEvent;
+import com.pi4j.io.gpio.event.GpioPinListenerDigital;
+
+public class ListenGpioExample {
+
+    public static void main(String args[]) throws InterruptedException {
+
+        // create gpio controller & provision button
+        final GpioController gpio = GpioFactory.getInstance();
+        final GpioPinDigitalInput myButton = gpio.provisionDigitalInputPin(RaspiPin.GPIO_02, PinPullResistance.PULL_DOWN);
+
+        // create and register gpio pin listener
+        myButton.addListener(new GpioPinListenerDigital() {
+            @Override
+            public void handleGpioPinDigitalStateChangeEvent(GpioPinDigitalStateChangeEvent event) {
+                // Event triggered; display message
+                System.out.println(" --> GPIO PIN CHANGE: " + event.getPin() + " = " + event.getState());
+            }
+        });
+
+        System.out.println("Listening... test the button");
+
+        while(true) {           // keep program running until user aborts (CTRL-C)
+            Thread.sleep(500);
+        }
+        // gpio.shutdown();   <--- implement this method call if you wish to terminate the Pi4J GPIO controller
+    }
+}
+```
+
 Trigger example adapted from [Robert Savage's example](https://pi4j.com/1.2/example/trigger.html)
 
 ```java
@@ -81,36 +115,3 @@ public class TriggerGpioExample {
 }
 ```
 
-Listener example adapted from [Robert Savage's example](https://pi4j.com/1.2/example/listener.html)
-
-```java
-import com.pi4j.io.gpio.*;
-import com.pi4j.io.gpio.event.GpioPinDigitalStateChangeEvent;
-import com.pi4j.io.gpio.event.GpioPinListenerDigital;
-
-public class ListenGpioExample {
-
-    public static void main(String args[]) throws InterruptedException {
-
-        // create gpio controller & provision button
-        final GpioController gpio = GpioFactory.getInstance();
-        final GpioPinDigitalInput myButton = gpio.provisionDigitalInputPin(RaspiPin.GPIO_02, PinPullResistance.PULL_DOWN);
-
-        // create and register gpio pin listener
-        myButton.addListener(new GpioPinListenerDigital() {
-            @Override
-            public void handleGpioPinDigitalStateChangeEvent(GpioPinDigitalStateChangeEvent event) {
-                // Event triggered; display message
-                System.out.println(" --> GPIO PIN CHANGE: " + event.getPin() + " = " + event.getState());
-            }
-        });
-
-        System.out.println("Listening... test the button");
-
-        while(true) {           // keep program running until user aborts (CTRL-C)
-            Thread.sleep(500);
-        }
-        // gpio.shutdown();   <--- implement this method call if you wish to terminate the Pi4J GPIO controller
-    }
-}
-```
