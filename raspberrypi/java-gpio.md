@@ -34,6 +34,21 @@ public class ControlGpioExample {
 }
 ```
 
+Compiling on the Raspberry Pi
+
+* Change to the folder containing your java file
+* Assuming your file is called `ControlGpioExample.java` (substitute as required)
+
+```bash
+javac -d bin -cp .:classes:/opt/pi4j/lib/'*' ControlGpioExample.java
+```
+
+Executing the compiled class on Raspberry Pi
+
+```bash
+javac -cp .:bin:classes:/opt/pi4j/lib/'*' ControlGpioExample
+```
+
 ## Button example
 
 There are two methods for responding to GPIO input: `addTrigger()` and `addListener()`. A bit of experimentation is required to determine which will be the most efficient method to use. 

@@ -19,3 +19,12 @@ curl -ssl https://pi4j.com/install | sudo bash
 
 If you have any issues with the above command, check the [detailed installation instructions for pi4j](https://pi4j.com/1.2/install.html)
 
+## Install VS Code editor
+
+```bash
+wget -o - https://packagecloud.io/headmelted/codebuilds/gpgkey| sudo apt-key add -
+sudo apt-get install code-oss=1.29.0-1539702286
+apt-mark hold code-oss
+```
+
+Instructions sourced from [makeuseof](https://www.makeuseof.com/tag/raspberry-pi-code-oss/)
