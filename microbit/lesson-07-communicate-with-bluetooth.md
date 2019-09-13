@@ -69,3 +69,10 @@ while True:
         display.set_pixel(2,2,0)
         sleep(100)
 ```
+
+## Activity
+
+1. Pair up with another student to create a communicator, inventing your own version of morse code.
+2. Pair up with another student to create a small two player game.
+3. Pair up with another student, using your Microbit to control the neopixels or music playing on a second Microbit.
+4. Pair up with another student, using the accelerometer to tell if the two Microbits are tilting the same way. See if you can match angle without seeing the other microbit.

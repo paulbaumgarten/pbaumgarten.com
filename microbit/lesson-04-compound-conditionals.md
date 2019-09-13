@@ -60,9 +60,9 @@ while not button_a.was_pressed():
 display.scroll("Bye!")
 ```
 
-## Labryinth style game
+## Rolling marble style game
 
-Here is a more complicated example. Note the use of "and" in the "if statement".
+Here is a more complicated example. Note that by the use of `or` in the `if` statement we can set multiple conditions in one go.
 
 ```python
 from microbit import *
@@ -90,3 +90,8 @@ while keep_playing:
 display.scroll("Game over")
 display.scroll(score)
 ```
+
+## Activity
+
+Make your own personalised modifications to the marble game. For instance, can you create an easy mode / hard mode option?
+

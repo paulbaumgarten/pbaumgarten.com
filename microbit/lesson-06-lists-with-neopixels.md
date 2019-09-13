@@ -38,3 +38,9 @@ while True:
     if number == 8:
         number = 0
 ```
+
+## Activity
+
+1. What interesting colored light show can you create?
+2. Can you use the buttons or the accelerometer to control your LED light show? For instance you could assign LEDs to indicate what angle way the microbit is on based through different colours for each axis.
+3. Add a coloured light show to the song you created in the previous lesson.
