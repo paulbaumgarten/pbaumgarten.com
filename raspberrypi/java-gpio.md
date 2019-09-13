@@ -14,7 +14,7 @@ public class ControlGpioExample {
         // Intialise GPIO & get pin
         GpioFactory.setDefaultProvider(new RaspiGpioProvider(RaspiPinNumberingScheme.BROADCOM_PIN_NUMBERING));
         final GpioController gpio = GpioFactory.getInstance();
-        GpioPinDigitalOutput pin = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_11);
+        GpioPinDigitalOutput pin = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_13);
         pin.high();                         // Turn LED on
         Thread.sleep(5000);                 // Pause 5 seconds
         pin.low();                          // Turn LED off
@@ -34,16 +34,20 @@ public class ControlGpioExample {
 Compiling on the Raspberry Pi
 
 * Change to the folder containing your java file
+
+```bash
+cd Desktop          # or where ever the file is located
+```
 * Assuming your file is called `ControlGpioExample.java` (substitute as required)
 
 ```bash
-javac -d bin -cp .:classes:/opt/pi4j/lib/'*' ControlGpioExample.java
+javac -cp .:classes:/opt/pi4j/lib/'*' ControlGpioExample.java
 ```
 
 Executing the compiled class on Raspberry Pi
 
 ```bash
-javac -cp .:bin:classes:/opt/pi4j/lib/'*' ControlGpioExample
+javac -cp .:classes:/opt/pi4j/lib/'*' ControlGpioExample
 ```
 
 ## Button example
@@ -61,6 +65,7 @@ public class ListenGpioExample {
     public static void main(String args[]) throws InterruptedException {
 
         // create gpio controller & provision button
+        GpioFactory.setDefaultProvider(new RaspiGpioProvider(RaspiPinNumberingScheme.BROADCOM_PIN_NUMBERING));
         final GpioController gpio = GpioFactory.getInstance();
         final GpioPinDigitalInput myButton = gpio.provisionDigitalInputPin(RaspiPin.GPIO_02, PinPullResistance.PULL_DOWN);
 
@@ -95,6 +100,7 @@ public class TriggerGpioExample {
     public static void main(String[] args) throws InterruptedException {
 
         // create gpio controller & provision button
+        GpioFactory.setDefaultProvider(new RaspiGpioProvider(RaspiPinNumberingScheme.BROADCOM_PIN_NUMBERING));
         final GpioController gpio = GpioFactory.getInstance();
         final GpioPinDigitalInput myButton = gpio.provisionDigitalInputPin(RaspiPin.GPIO_02, PinPullResistance.PULL_DOWN);
 
