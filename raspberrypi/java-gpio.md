@@ -16,6 +16,7 @@ public class ControlGpioExample {
     public static void main(String[] args) throws InterruptedException {
         System.out.println("GPIO LED example ... started.");
         // Intialise GPIO & get pin
+        GpioFactory.setDefaultProvider(new RaspiGpioProvider(RaspiPinNumberingScheme.BROADCOM_PIN_NUMBERING));
         final GpioController gpio = GpioFactory.getInstance();
         GpioPinDigitalOutput pin = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_11);
         pin.high()                          // Turn LED on
