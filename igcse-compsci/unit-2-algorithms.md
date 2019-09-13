@@ -33,31 +33,33 @@ Candidates should be able to:
 
 (Candidates are advised to try out solutions to a variety of different problems on a computer using a language of their choice; no particular programming language will be assumed in this syllabus.)
 
-
 Candidates should be able to:
 
 * show understanding of computer ethics, including copyright issues and plagiarism
 * distinguish between free software, freeware and shareware
 * show understanding of the ethical issues raised by the spread of electronic communication and computer systems, including hacking, cracking and production of malware
 
-::: notes
- * understanding subsystems
- * design: top-down design, structure diagrams, flowcharts, pseudo, sub routines
- * use libraries
- * work out purpose of algorithm (tracing?)
- * suggest and apply testing
- * validating of input
- * trace tables
- * identify errors & suggest corrections to algorithms
- * produce algorithm to problem
- * comment on effectiveness of solution (efficiency?)
- * assignment
- * if then else endif
- * case of otherwise endcast
- * for to next
- * repeat until
- * do while endwhile
- * input & output, read & print
- * totalling & counting
-:::
+## Computational thinking
+
+Outline the process, discuss the tools for each stage.
+
+* Decomposition
+* Recognition
+* Abstraction
+* Design
+
+Unplugged exercises
+
+* Walk through
+* Group do
+* Individual do
+* Code it
+
+Code it exercise
+
+* Walk through
+* Group do
+* Individual do
+* Code it
+
 
