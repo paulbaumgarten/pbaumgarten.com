@@ -15,7 +15,7 @@ public class ControlGpioExample {
         GpioFactory.setDefaultProvider(new RaspiGpioProvider(RaspiPinNumberingScheme.BROADCOM_PIN_NUMBERING));
         final GpioController gpio = GpioFactory.getInstance();
         GpioPinDigitalOutput pin = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_11);
-        pin.high()                          // Turn LED on
+        pin.high();                         // Turn LED on
         Thread.sleep(5000);                 // Pause 5 seconds
         pin.low();                          // Turn LED off
         Thread.sleep(5000);                 // Pause 5 seconds
