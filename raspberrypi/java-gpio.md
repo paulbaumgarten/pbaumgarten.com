@@ -5,11 +5,7 @@
 Adapted from [Robert Savage's example](https://pi4j.com/1.2/example/control.html)
 
 ```java
-import com.pi4j.io.gpio.GpioController;
-import com.pi4j.io.gpio.GpioFactory;
-import com.pi4j.io.gpio.GpioPinDigitalOutput;
-import com.pi4j.io.gpio.PinState;
-import com.pi4j.io.gpio.RaspiPin;
+import com.pi4j.io.gpio.*;
 
 public class ControlGpioExample {
 
@@ -58,8 +54,7 @@ Listener example adapted from [Robert Savage's example](https://pi4j.com/1.2/exa
 
 ```java
 import com.pi4j.io.gpio.*;
-import com.pi4j.io.gpio.event.GpioPinDigitalStateChangeEvent;
-import com.pi4j.io.gpio.event.GpioPinListenerDigital;
+import com.pi4j.io.gpio.event.*;
 
 public class ListenGpioExample {
 
@@ -92,17 +87,8 @@ Trigger example adapted from [Robert Savage's example](https://pi4j.com/1.2/exam
 
 ```java
 import java.util.concurrent.Callable;
-import com.pi4j.io.gpio.GpioController;
-import com.pi4j.io.gpio.GpioFactory;
-import com.pi4j.io.gpio.GpioPinDigitalInput;
-import com.pi4j.io.gpio.GpioPinDigitalOutput;
-import com.pi4j.io.gpio.PinPullResistance;
-import com.pi4j.io.gpio.PinState;
-import com.pi4j.io.gpio.RaspiPin;
-import com.pi4j.io.gpio.trigger.GpioCallbackTrigger;
-import com.pi4j.io.gpio.trigger.GpioPulseStateTrigger;
-import com.pi4j.io.gpio.trigger.GpioSetStateTrigger;
-import com.pi4j.io.gpio.trigger.GpioSyncStateTrigger;
+import com.pi4j.io.gpio.*;
+import com.pi4j.io.gpio.trigger.*;
 
 public class TriggerGpioExample {
 
