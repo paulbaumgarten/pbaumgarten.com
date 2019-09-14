@@ -13,7 +13,7 @@ This lesson:
 
 ## Video
 
-* [Microbit lesson 2 video](https://youtu.be/yZgJYlrMV4A)
+* [Microbit lesson 2 video](https://youtu.be/CQKTHavIYLg)
 
 ## Conditional execution: If
 

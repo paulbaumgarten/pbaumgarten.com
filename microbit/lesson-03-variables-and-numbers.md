@@ -10,7 +10,7 @@ This lesson:
 
 ## Video
 
-* [Microbit lesson 3 video](https://youtu.be/Qk8vsXe7Uj4)
+* [Microbit lesson 3 video](https://youtu.be/jivYnqzNIXA)
 
 ## What is a variable?
 
@@ -82,6 +82,8 @@ Then inside your main loop, add...
 ```
 
 ## Modulus
+
+Not in the video, but a useful thing for programmers to know about: The modulus. Effectively it is "the remainder" from a divison. For instance, if calculated 14 divided by 5, the answer would be 2 with 4 left over as remainder. In Python we can do this in two steps. To perform the division with the whole number of 5s that would go into 14, it would be `14 // 5` to return `2`, and to find out the remainder that would look like `14 % 5` which would return a value of `4`. 
 
 ```python
 from microbit import *
