@@ -3,9 +3,19 @@ We have been using a lot of various functions that exist within Java already but
 
 Functions are a useful way of abstracting complexity in our project. Functions will generally require one or more inputs, and then provide a returning result.
 
-*Icecreamary example*
+Functions are blocks of code that you assign a name to. You can use that name to easily run that code again whenever you need.
 
-An example: If I am visiting a bespoke icecreamary, I might ask for a double scoop of choc fudge and vanilla on a waffle cone, where as the next customer might ask for a cup of raspberry sorbet. The salesperson calculates the cost for each and advises each custoemr on the price. In order to calculate that cost there are a number of inputs (number of scoops, type of cone, etc) and an output (price). How it is actually calculated does not necessary bother me, provided it works reliably. In this way a function can provide a "black box" model through which to represent our problem. Programmers need to know how to (a) use other peoples abstractions and (b) be able to create their own. For now, the abstraction we are concerned with is creating a function. 
+Functions are very useful for separating common tasks out from your main code. It allows you to avoid repeating yourself all the time which makes your code easier to maintain. Tasks like reading from a file, saving to a file, etc are all ideally suited to being chopped off into a separate function. 
+
+> Think of an Icecreamary
+> 
+> Lots of different possible flavours, toppings, numbers of scoops, choice of waffle or regular cone, etc.
+>
+> One person could order a double scoop of chocolate fudge and vanilla on a waffle cone, where as the next customer might ask for a cup of raspberry sorbet with nut sprinkles. The salesperson calculates the cost for each and advises each custoemr on the price. In order to calculate that cost there are a number of inputs (number of scoops, type of cone, etc) and an output (price). How it is actually calculated is not important, provided it is trustworthy and works reliably. 
+>
+> In this way a function can provide a "black box" model through which we can create an abstraction to represent our problem. 
+>
+> Programmers need to know how to (a) use other peoples abstractions and (b) be able to create their own. For now, the abstraction we are concerned with is creating a function.
 
 
 ## Functions
@@ -91,8 +101,57 @@ public class Functions02 {
 
 The power of code re-use should hopefully underscore why it will become important to organise your class files into a well structured package naming scheme. In reality you are not going to want to be importing  `ch.isl.basics.Exercise901` to access a function that calculates the area of a circle, but something like `ch.isl.helpers.Geometry` instead.
 
-## Problem set
+## Functions for user input validation
 
-1. Test use a few basic geometry functions (similar to above) as you should be quite familiar with those already.
-2. Adapt your previous problem sets to use functions.
+Functions can be a handy way to require the user to comply with our wishes to enter information in a particular manner. By the time we write the checking/validation code and the loop, user input checks can run to several lines, and it would be quite common within a simple program to want to validate the same style of input several times. Functions make a handy way to reuse code for this purpose.
+
+```java
+public static String confirm( String prompt ) {
+    boolean loop = true;
+    String response = ""
+    java.util.Scanner keyb = new java.util.Scanner(System.in);
+    while (loop) {
+        System.out.println( prompt );
+        response = keyb.nextLine();
+        if (response.equals("y") || response.equals("n")) {
+            loop = false;
+        } else {
+            System.out.println("Only a 'y' or 'n' character are accepted. Please try again.");
+        }
+    }
+    return response;
+}
+```
+
+
+# Problem set
+
+1. Create a function `areaRightAngledTriangle(double base, double height)` that returns the calculated area.
+
+2. Create a function `areaNonRightAngledTriangle(double base, double height, double angle)` that returns the calculated area (remember you will need to convert the angle to radios before using it with the sine function).
+
+3. Create a user input validation function that requires the input of a number.
+
+4. Create a user input validation function that requires the input of a phone number (so `+`, spaces and `-` characeters are permitted).
+
+5. Create a user input validation function that requires the input of a date in the `dd/mm/yyyy` format.
+
+6. *(return to this one after we've done arrays)* Create a user input validation function that accepts an array of strings as the parameter and presents them to the user as a list of menu choices, requiring the user to enter a number cooresponding to a valid choice before proceeding. For example if the code to run the funciton was....
+
+```java
+String[] menu = {"Open file", "Save file", "Quit program"};
+choice = menuPicker( menu );
+System.out.println("You choose option "+choice);
+```
+
+The output could look like...
+
+```text
+Your choices are:
+1. Open file
+2. Save file
+3. Quit program
+Please enter a number from 1 to 3:
+```
+
 

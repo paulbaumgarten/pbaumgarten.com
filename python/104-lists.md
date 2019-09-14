@@ -212,3 +212,14 @@ Be warned, a number of the questions in the main problem set are quite challengi
 10. Given two lists, write a program to print the items that are not in both lists.
 11. Write a program to append the items from one list to a second list.
 12. Write a program for computing primes upto 1000. Hint: Google for the Sieve of Eratosthenes
+
+For question 8, you may like to copy and paste the following as a list to use:
+
+```python
+deck = [
+    "A♥️", "2♥️", "3♥️", "4♥️", "5♥️", "6♥️", "7♥️", "8♥️", "9♥️", "10♥️", "J♥️", "Q♥️", "K♥️",
+    "A♥️", "2♠️️", "3♠️", "4♠️", "5♠️", "6♠️", "7♠️", "8♠️", "9♠️", "10♠️", "J♠️", "Q♠️", "K♠️",
+    "A♦️", "2♦️", "3♦️", "4♦️", "5♦️", "6♦️", "7♦️", "8♦️", "9♦️", "10♦️", "J♦️", "Q♦️", "K♦️",
+    "A♣️", "2♣️", "3♣️", "4♣️", "5♣️", "6♣️", "7♣️", "8♣️", "9♣️", "10♣️", "J♣️", "Q♣️", "K♣️",
+]
+```

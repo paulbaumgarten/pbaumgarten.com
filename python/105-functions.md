@@ -101,3 +101,55 @@ def greetings( given_name, family_name=None ):
 greetings("Jane", "Smith")
 greetings("John")
 ```
+
+## Functions for user input validation
+
+Functions can be a handy way to require the user to comply with our wishes to enter information in a particular manner. By the time we write the checking/validation code and the loop, user input checks can run to several lines, and it would be quite common within a simple program to want to validate the same style of input several times. Functions make a handy way to reuse code for this purpose.
+
+```python
+def confirm( prompt ):
+    loop = True
+    response = ""
+    while loop:
+        response = input( prompt )
+        if response == "y" or response == "n":
+            loop = False
+        else:
+            print("Only a 'y' or 'n' character are accepted, please try again.")
+    return response
+```
+
+# Problem set
+
+1. Create a function `area_right_angled_triangle(base, height)` that returns the calculated area.
+
+2. Create a function `area_non_right_angled_triangle(base, height, angle)` that returns the calculated area (remember you will need to convert the angle to radios before using it with the sine function).
+
+3. Create a user input validation function that requires the input of a number.
+
+4. Create a user input validation function that requires the input of a phone number (so `+`, spaces and `-` characeters are permitted).
+
+5. Create a user input validation function that requires the input of a date in the `dd/mm/yyyy` format.
+
+6. Create a user input validation function that accepts a list of strings as the parameter and presents them to the user as a list of menu choices, requiring the user to enter a number cooresponding to a valid choice before proceeding. For example if the code to run the funciton was....
+
+```python
+menu = ["Open file", "Save file", "Quit program"]
+choice = menu_picker( menu )
+print( f"You choose option {choice}" )
+```
+
+The output could look like...
+
+```text
+Your choices are:
+1. Open file
+2. Save file
+3. Quit program
+Please enter a number from 1 to 3:
+```
+
+
+
+
+

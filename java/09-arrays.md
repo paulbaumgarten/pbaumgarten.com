@@ -273,5 +273,13 @@ Note: Use Arrays or ArrayLists as you feel best fits the problem. Do ensure you 
 11. Write a program to append the items from one list to a second list.
 12. Write a program for computing primes upto 1000. Hint: Google for the Sieve of Eratosthenes
 
-For addition problems, visit [codingbat.com](http://codingbat.com/java) and complete Array-1 and Array-2.
+For question 8, you may like to copy and paste the following as an array to use:
 
+```java
+String[] deck = {
+    "A♥️", "2♥️", "3♥️", "4♥️", "5♥️", "6♥️", "7♥️", "8♥️", "9♥️", "10♥️", "J♥️", "Q♥️", "K♥️",
+    "A♥️", "2♠️️", "3♠️", "4♠️", "5♠️", "6♠️", "7♠️", "8♠️", "9♠️", "10♠️", "J♠️", "Q♠️", "K♠️",
+    "A♦️", "2♦️", "3♦️", "4♦️", "5♦️", "6♦️", "7♦️", "8♦️", "9♦️", "10♦️", "J♦️", "Q♦️", "K♦️",
+    "A♣️", "2♣️", "3♣️", "4♣️", "5♣️", "6♣️", "7♣️", "8♣️", "9♣️", "10♣️", "J♣️", "Q♣️", "K♣️",
+};
+```
