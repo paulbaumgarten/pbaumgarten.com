@@ -6,10 +6,10 @@ Let's get started with programming by doing something very familiar to us all...
 
 Let's use Java as a calculator! Try the following commands. Hopefully they are all quite intuitive as to what they will do.
 
-In your `javaprojects` folder, create the `src/ch/isl/basics/Exercise101.java` file as follows.
+In your `javaprojects` folder, create the `src/com/pbaumgarten/basics/Exercise101.java` file as follows.
 
 ```java
-package ch.isl.basics;
+package com.pbaumgarten.basics;
 
 public class Exercise101 {
     public static void main(String[] args) {
@@ -25,8 +25,8 @@ public class Exercise101 {
 Open a console and compilte/execute:
 
 ```bash
-$ javac -d bin src/ch/isl/basics/Exercise002.java
-$ java -cp bin ch.isl.basics.Exercise002
+$ javac -d bin src/com/pbaumgarten/basics/Exercise002.java
+$ java -cp bin com.pbaumgarten.basics.Exercise002
 ```
 
 Hopefully you got the outputs you would expect.  
@@ -112,7 +112,7 @@ Beyond the simple arithmetic operations, Java has a large range of mathematical 
 As this is the first time we are doing an import, I'll provide you the full code example. 
 
 ```java
-package ch.isl.basics;
+package com.pbaumgarten.basics;
 import java.lang.Math;
 
 public class Exercise103 {
@@ -161,18 +161,18 @@ There are a whole range of useful functions in the Math library.  Here are some 
 
 One last little thing before I assign you some exercises to use these functions, let's find a way to prompt the user for input so we can make an intereactive program to calculate results.
 
-1. Create the reader variable using `java.util.Scanner reader = new java.util.Scanner(System.in);`. Do this only once at the start of your function.
+1. Create the reader variable using `java.util.Scanner keyb = new java.util.Scanner(System.in);`. Do this only once at the start of your function.
 2. Whenever you want to prompt, use `val = reader.nextDouble();` assuming that `val` is a previously declared double.
 
 ```java
-java.util.Scanner reader = new java.util.Scanner(System.in);
+java.util.Scanner keyb = new java.util.Scanner(System.in);
 double base, expon, answer;
 
 System.out.println("Exponentials calculator");
 System.out.print("Base: ");
-base = reader.nextDouble();
+base = keyb.nextDouble();
 System.out.print("Exponent: ");
-expon = reader.nextDouble();
+expon = keyb.nextDouble();
 answer = Math.pow(base, expon);
 System.out.println( answer );
 ```

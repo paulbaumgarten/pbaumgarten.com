@@ -37,11 +37,11 @@ Take careful note of the difference in punctuation between setting a value to a 
 There are a variety of functions suitable for comparing the values of strings as the following illustrates:
 
 ```java
-java.util.Scanner reader = new java.util.Scanner(System.in);
+java.util.Scanner keyb = new java.util.Scanner(System.in);
 System.out.print("Type string 1: ");
-String s1 = reader.nextLine();
+String s1 = keyb.nextLine();
 System.out.print("Type string 2: ");
-String s2 = reader.nextLine();
+String s2 = keyb.nextLine();
 
 System.out.println( s1.equals(s2) ); // also Objects.equals(s1, s2)
 System.out.println( s1.compareTo(s2) );

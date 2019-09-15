@@ -21,11 +21,11 @@ Let's make a simple example:
 
 ```java
 boolean result;
-java.util.Scanner reader = new java.util.Scanner(System.in);
+java.util.Scanner keyb = new java.util.Scanner(System.in);
 System.out.print("a: ");
-double a = reader.nextDouble();
+double a = keyb.nextDouble();
 System.out.print("b: ");
-double b = reader.nextDouble();
+double b = keyb.nextDouble();
 
 if ( a == b ) {
     System.out.println("a and b are equal");

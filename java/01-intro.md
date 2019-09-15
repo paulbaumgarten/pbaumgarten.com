@@ -74,11 +74,11 @@ Let's do the (in)famous "Hello world" example to walk you through what this look
 
 2. Inside your javaprojects folder, create a "src" folder and a "bin" folder. All your source code (Java programming code) will live inside "src", and all the binary files that Java creates will live inside "bin".
 
-3. Packages, projects and classes are organised into a structure that looks like an inverted internet domain name. There is a reason for this. The intention is that it provides a mechanism for organising your classes so you can reuse them across multiple projects without names conflicting with each other. You can also import Java code that others have written, use it in your projects, and again the names should not conflict as they will use their internet domain name and you will use yours.  The following instructions are based on the school domain name "isl.ch".  If you have access to an internet domain of your own, feel free to use your own domain name details instead.
+3. Packages, projects and classes are organised into a structure that looks like an inverted internet domain name. There is a reason for this. The intention is that it provides a mechanism for organising your classes so you can reuse them across multiple projects without names conflicting with each other. You can also import Java code that others have written, use it in your projects, and again the names should not conflict as they will use their internet domain name and you will use yours.  The following instructions are based on the school domain name "pbaumgarten.com".  If you have access to an internet domain of your own, feel free to use your own domain name details instead.
 
-* Inside the "src" folder, create a "ch" folder
-* Inside the "ch" folder, create an "isl" folder
-* Inside the "isl" folder, create a "basics" folder
+* Inside the "src" folder, create a "com" folder
+* Inside the "com" folder, create an "pbaumgarten" folder
+* Inside the "pbaumgarten" folder, create a "basics" folder
 
 You should now have a folder structure that looks like this:
 
@@ -86,8 +86,8 @@ You should now have a folder structure that looks like this:
  * javaprojects
    |-- bin
    \-- src
-       \-- ch
-           \-- isl
+       \-- com
+           \-- pbaumgarten
                \-- basics
 ```
 
@@ -125,7 +125,7 @@ On Windows:
 On Mac/Linux:
 
 ```bash
-javac -d bin -cp bin src/ch/isl/basics/Exercise001.java
+javac -d bin -cp bin src/com/baumgarten/basics/Exercise001.java
 ```
 
 On Windows:
@@ -139,7 +139,7 @@ javac -d bin -cp bin src\ch\isl\basics\Exercise001.java
 7. Execute your java class
 
 ```bash
-java -cp bin ch.isl.basics.Exercise001
+java -cp bin com.pbaumgarten.Exercise001
 ```
 
 8. If all of the above was successful, you should now be able to glory in seeing the output of `Hello world!` appear in your console! Congratulations, you have just successfully written, compiled and executed a Java program!
@@ -149,7 +149,7 @@ java -cp bin ch.isl.basics.Exercise001
 Let's look at the Hello world program line-by-line:
 
 ```txt
-1 package ch.isl.basics;
+1 package com.pbaumgarten.basics;
 2 
 3 public class Exercise001 {
 4     public static void main(String[] args) {

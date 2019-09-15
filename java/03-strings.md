@@ -34,10 +34,10 @@ System.out.println( s3 );
 To input from the user some text as a string, it works very similar to numbers except we use the `nextLine()` function.
 
 ```java
-java.util.Scanner reader = new java.util.Scanner(System.in);
+java.util.Scanner keyb = new java.util.Scanner(System.in);
 
 System.out.print("What is your full name? ");
-String fullName = reader.nextLine();
+String fullName = keyb.nextLine();
 System.out.println("Hello, "+n);
 int space = fullName.lastIndexOf(" ");
 String givenName = fullName.substring(0, space);

@@ -47,6 +47,7 @@ import java.lang.Math;
 import java.util.Scanner;
 
 public class Functions01 {
+
     public static double areaOfCircle( double radius ) {
         return Math.PI * radius * radius;
     }
@@ -79,27 +80,30 @@ This next example illustrates two ideas:
 package com.pbaumgarten.basics;
 import java.lang.Math;
 import java.util.Scanner;
-import com.pbaumgarten.basics.Functions01;
 
 public class Functions02 {
-    public static double areaOfCylinder(double radius, double length) {
-        return length * Functions01.areaOfCircle(radius);
+
+    public static double areaOfCircle( double radius ) {
+        return Math.PI * radius * radius;
     }
+
+    public static double areaOfCylinder(double radius, double length) {
+        return length * areaOfCircle(radius);
+    }
+
     public static void main(String[] args) {
-        Scanner reader = new Scanner(System.in);
+        Scanner keyb = new Scanner(System.in);
         double rad, len, answer;
         System.out.println("Surface area of cylinder calculator");
         System.out.print("Radius: ");
-        rad = reader.nextDouble();
+        rad = keyb.nextDouble();
         System.out.print("Length: ");
-        len = reader.nextDouble();
+        len = keyb.nextDouble();
         answer = areaOfCylinder(rad,len);
         System.out.println( "The surface area of this cylinder is: "+answer );
     }
 }
 ```
-
-The power of code re-use should hopefully underscore why it will become important to organise your class files into a well structured package naming scheme. In reality you are not going to want to be importing  `ch.isl.basics.Exercise901` to access a function that calculates the area of a circle, but something like `ch.isl.helpers.Geometry` instead.
 
 ## Functions for user input validation
 
