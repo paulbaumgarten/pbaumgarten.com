@@ -146,7 +146,7 @@ Arrays.sort( primes );
 System.out.println( Arrays.toString( primes ));
 ```
 
-# Two dimensional arrays
+## Two dimensional arrays
 
 It is possible to create a two dimensional static array.
 
@@ -196,17 +196,17 @@ Note: Use Arrays or ArrayLists as you feel best fits the problem. Do ensure you 
 7. Given two arrays, write a program to print the items that are not in both arrays.
 8. Write a program to select an item randomly from an array. Once drawn, you should shuffle all the remaining items in the array down and set the last value to `null` and deduct a value from a pointer keeping track of the number of populated items so that it can't be re-drawn again. (just like a deck of cards scenario)
 
-For example, given an array `{4, 7, 10, 13, 5}` and `itemCount = 5`; if you were to randomly draw position `1`, you print the value `7`, and then update the array to the values `{4, 10, 13, 5, null}` and set `itemCount = 4`.
+    For example, given an array `{4, 7, 10, 13, 5}` and `itemCount = 5`; if you were to randomly draw position `1`, you print the value `7`, and then update the array to the values `{4, 10, 13, 5, null}` and set `itemCount = 4`.
 
-For question 8, you may like to copy and paste the following as an array to use:
+    For question 8, you may like to copy and paste the following as an array to use:
 
-```java
-String[] deck = {
-    "A♥️", "2♥️", "3♥️", "4♥️", "5♥️", "6♥️", "7♥️", "8♥️", "9♥️", "10♥️", "J♥️", "Q♥️", "K♥️",
-    "A♥️", "2♠️️", "3♠️", "4♠️", "5♠️", "6♠️", "7♠️", "8♠️", "9♠️", "10♠️", "J♠️", "Q♠️", "K♠️",
-    "A♦️", "2♦️", "3♦️", "4♦️", "5♦️", "6♦️", "7♦️", "8♦️", "9♦️", "10♦️", "J♦️", "Q♦️", "K♦️",
-    "A♣️", "2♣️", "3♣️", "4♣️", "5♣️", "6♣️", "7♣️", "8♣️", "9♣️", "10♣️", "J♣️", "Q♣️", "K♣️",
-};
-```
+    ```java
+    String[] deck = {
+        "A♥️", "2♥️", "3♥️", "4♥️", "5♥️", "6♥️", "7♥️", "8♥️", "9♥️", "10♥️", "J♥️", "Q♥️", "K♥️",
+        "A♥️", "2♠️️", "3♠️", "4♠️", "5♠️", "6♠️", "7♠️", "8♠️", "9♠️", "10♠️", "J♠️", "Q♠️", "K♠️",
+        "A♦️", "2♦️", "3♦️", "4♦️", "5♦️", "6♦️", "7♦️", "8♦️", "9♦️", "10♦️", "J♦️", "Q♦️", "K♦️",
+        "A♣️", "2♣️", "3♣️", "4♣️", "5♣️", "6♣️", "7♣️", "8♣️", "9♣️", "10♣️", "J♣️", "Q♣️", "K♣️",
+    };
+    ```
 
-(ps - remember the java.lang.Math library provides a random number function)
+    (ps - remember the java.lang.Math library provides a random number function)
