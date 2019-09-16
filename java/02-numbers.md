@@ -142,7 +142,7 @@ There are a whole range of useful functions in the Math library.  Here are some 
 * `Math.round( num )` - Round *num* to the nearest integer value
 * `Math.floor( num )` - Truncate any decimals off of *num* down to the nearest integer value
 * `Math.abs( num )` - What is the absolutele value of *num*?
-* `Math.round()` - Generate a random number between 0 and 1
+* `Math.random()` - Generate a random number between 0 and 1
 * `Math.max( a, b )` - Which number is larger out of *a* or *b*?
 * `Math.min( a, b )` - Which number is smaller out of *a* or *b*?
 * `Math.PI` - The value of the mathematical constant PI, ie: 3.1415.

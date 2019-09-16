@@ -1,10 +1,10 @@
-# Arrays & ArrayLists
+# Arrays
 
 So far we've talked about numbers, strings and Booleans where each variable just stores one thing at a time. 
 
 What happens if we want to manage a shopping list? or a list of students in my class... and we want to be able to manage that entire list of things together? Java allows us to do this by creating arrays. So instead of creating variables `student1`, `student2`, `student3`, etc, we can have one variable called `students` and use that in our code.
 
-There are two main types of arrays in Java. The classic static *array* has a size that is fixed at declaration. Once the memory space has been allocated, they can not be resized. The other type is known as *ArrayLists* and are a dynamically resizable construct available when the size of the array is not known in advance.
+There are two main types of arrays in Java. The classic static *array* has a size that is fixed at declaration. Once the memory space has been allocated, they can not be resized. The other type is known as *ArrayLists* and are a dynamically resizable construct available when the size of the array is not known in advance. For now, we will focus on the static array.
 
 ## Why use arrays?
 
@@ -63,13 +63,9 @@ System.out.println("The highest score was "+highest+", the lowest was "+lowest+"
 
 Our scores array can easily contain 1000s of records and we would not have to change a single line of the calculations code! Arrays can be extremely useful!
 
-# Static array
+We'll start by looking at the static array.  There are two methods to declare a static array.
 
-We'll start by looking at the static array.
-
-## Array: Declaration
-
-**Method 1**
+## Declaring an array: method 1
 
 ```java
 dint[] primes = new int[10];
@@ -85,13 +81,15 @@ primes[8] = 19;
 primes[9] = 23;
 ```
 
-**Method 2**
+## Declarating an array: method 2
 
 ```java
 int[] primes = {1,2,3,5,7,11,13,17,19,23};
 ```
 
-**Arrays of objects**
+## Declaraing arrays of objects
+
+> Note to my students: We will not have learnt about objects yet, so I will skip this section when teaching. It is included here so this page is a complete guide for static arrays and can refer back to it later when we want to build static arrays with objects.
 
 What happens when the objects in your array require you to provide parameters to the constructor? You declare the array, and then instantiate each individual element. Here is an example of the technique.
 
@@ -113,7 +111,7 @@ for (Student individualStudent : students) {
 }
 ```
 
-## Array: Iteration
+## Iteration arrays
 
 There is a special "for loop" for iterating through an array. The following two loops produce the same output.
 
@@ -127,7 +125,7 @@ for (int i=0; i<primes.length; i++) {
 }
 ```
 
-## Array: Functions and properties
+## Functions and properties of arrays
 
 Requires `import java.util.Arrays;`
 
@@ -148,78 +146,7 @@ Arrays.sort( primes );
 System.out.println( Arrays.toString( primes ));
 ```
 
-# Array List
-
-## Array List: Declaration
-
-When instantiating an ArrayList, you can nominate the datatype to be contained by the array list or leave it unspecified (to allow for a potential mix of different data types).  There is an example of each below.
-
-ArrayLists require: `import java.util.ArrayList;`
-
-Example 1: Create an ArrayList specifying elements to be String
-
-```java
-ArrayList<String> alist = new ArrayList<String>();
-alist.add("first");
-alist.add("second");
-
-for (String item: list) {
-    System.out.println( item );
-}
-```
-
-Example 2: Create an ArrayList without specifying element type
-
-```java
-ArrayList list = new ArrayList();
-list.add( 3.14) );                      // Add a float
-list.add( true );                       // Add a boolean
-list.add( "Mixed data arrayList" );     // Add a string
-list.add( 99 );                         // Add an integer
-
-for (Object o : list) {
-    if (o.getClass() == String.class) {
-        System.out.println("The item is a string and it's value was "+o);
-    } else if (o.getClass() == Integer.class) {
-        System.out.println("The item is an integer and it's value was "+o);
-    } else if (o.getClass() == Float.class) {
-        System.out.println("The item is a float and it's value was "+o);
-    } else if (o.getClass() == Boolean.class) {
-        System.out.println("The item is a boolean and it's value was "+o);
-    }
-}
-```
-
-## Array List: Methods
-
-* `list.add( o )` - Add object o to the end of the list
-* `list.add( i, o )` - Add object o at position index i
-* `list.get( i )` - Returns the object at position index i
-* `list.push( o )` - Add object o to the end of the list
-* `list.pop()` - Returns the last item on the list and removes it
-* `list.remove( i )` - Remove object at index position i
-* `list.size()` - The number of items in the list
-
-## Array List: Convert to/from arrays
-
-As arrays and ArrayLists both have beneifts over the other, the chances are high you are going to want to convert from one to the other at some time or another.
-
-**Array to ArrayList**  
-
-```java
-int[] a = {1,2,3,5,7,11,13,17,19,23};
-ArrayList alist = new ArrayList<>(Arrays.asList(a))
-```
-
-**ArrayList to Array**  
-
-```java
-String[] a = (String[])alist.toArray(new String[alist.size()]);
-// or
-int[] a = (int[])alist.toArray(new int[alist.size()]);
-```
-
-# Two dimensional static array
+# Two dimensional arrays
 
 It is possible to create a two dimensional static array.
 
@@ -248,7 +175,7 @@ for (int[] row : a ) {
 }
 ```
 
-# Problem set: Arrays and ArrayLists
+## Problem set: Arrays
 
 For some introductory level questions, I recommend solving the problem sets on coding bat:
 
@@ -260,18 +187,16 @@ Be warned, a number of the questions in the main problem set are quite challengi
 
 Note: Use Arrays or ArrayLists as you feel best fits the problem. Do ensure you practice using a mix of both.
 
-1. Write a program to sum all the items in a list.
-2. Write a program to get the largest number from a list.
+1. Write a program to sum all the items in an array.
+2. Write a program to get the largest number from an array.
 3. Write a program to count the number of strings where the string length is 2 or more and the first and last character are same from a given list of strings.
-4. Write a program to remove duplicates from a list.
-5. Write a function that takes two lists and returns True if they have at least one common member.
-6. Write a program to print a specified list after removing the 0th, 4th and 5th elements. Sample List : `['Red', 'Green', 'White', 'Black', 'Pink', 'Yellow']` Expected Output : `['Green', 'White', 'Black']`
-7. Write a program to print the numbers of a specified list after removing even numbers from it.
-8. Write a program to select an item randomly from a list, which is then removed from the original list so it can’t be re-drawn (just like a deck of cards scenario)
-9. Write a program to generate and print a list of first and last 5 elements where the values are square of numbers between 1 and 30 (both included).
-10. Given two lists, write a program to print the items that are not in both lists.
-11. Write a program to append the items from one list to a second list.
-12. Write a program for computing primes upto 1000. Hint: Google for the Sieve of Eratosthenes
+4. Write a program to find duplicates from an array and print a message that it exists as a duplicate.
+5. Write a function that takes two array and returns `true`` if they have at least one common member.
+6. Write a program to print the contents of an array of integers, ignoring any numbers in it.
+7. Given two arrays, write a program to print the items that are not in both arrays.
+8. Write a program to select an item randomly from an array. Once drawn, you should shuffle all the remaining items in the array down and set the last value to `null` and deduct a value from a pointer keeping track of the number of populated items so that it can't be re-drawn again. (just like a deck of cards scenario)
+
+For example, given an array `{4, 7, 10, 13, 5}` and `itemCount = 5`; if you were to randomly draw position `1`, you print the value `7`, and then update the array to the values `{4, 10, 13, 5, null}` and set `itemCount = 4`.
 
 For question 8, you may like to copy and paste the following as an array to use:
 
@@ -283,3 +208,5 @@ String[] deck = {
     "A♣️", "2♣️", "3♣️", "4♣️", "5♣️", "6♣️", "7♣️", "8♣️", "9♣️", "10♣️", "J♣️", "Q♣️", "K♣️",
 };
 ```
+
+(ps - remember the java.lang.Math library provides a random number function)

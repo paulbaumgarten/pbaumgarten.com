@@ -10,10 +10,11 @@
 * [Selection ("if")](06-selection.md)
 * [Iteration ("while", "for")](07-iteration.md)
 * [Functions](08-functions.md)
-* [Arrays & ArrayLists](09-arrays.md)
-* [Classes](java-classes.md)
-* [Dates and times](java-datetime.md)
-* [Exceptions](java-exceptions.md)
+* [Arrays](09-arrays.md)
+* [Classes & object orientation](classes.md)
+* [Dates and times](datetime.md)
+* [Exceptions](exceptions.md)
+* [Array Lists](array-lists.md)
 
 I also have a helpful [reference summary](java-reference-summary.md) that you can refer to as a prompt/reminder for the various syntax and functions for basic Java.
 
