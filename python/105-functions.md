@@ -127,11 +127,11 @@ def confirm( prompt ):
 
 3. Create a user input validation function that requires the input of a number.
 
-4. Create a user input validation function that requires the input of a phone number (so `+`, spaces and `-` characeters are permitted).
+4. Create a user input validation function that requires the input of a phone number (so `+`, spaces and `-` characters are permitted).
 
 5. Create a user input validation function that requires the input of a date in the `dd/mm/yyyy` format. Bonus points if you ensure that the `dd`, `mm` and `yyyy` values make sense (ie: day should be between 1 and 31).
 
-6. Create a user input validation function that accepts a list of strings as the parameter and presents them to the user as a list of menu choices, requiring the user to enter a number cooresponding to a valid choice before proceeding. For example if the code to run the funciton was....
+6. Create a user input validation function that accepts a list of strings as the parameter and presents them to the user as a list of menu choices, requiring the user to enter a number corresponding to a valid choice before proceeding. For example if the code to run the funciton was....
 
 ```python
 menu = ["Open file", "Save file", "Quit program"]
