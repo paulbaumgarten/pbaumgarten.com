@@ -15,7 +15,7 @@
 * show understanding of the use of one-dimensional arrays, including the use of a variable as an index in an array
 * read or write values in an array using a FOR ... TO ... NEXT loop
 
-# Get setup
+## Get setup
 
 We will be learning the Python programming language.
 
@@ -28,7 +28,7 @@ Firstly, pleases complete the instructions in my handout to setup:
 Alternatively, use one of the online Python editors such as [https://repl.it](https://repl.it) or [https://trinket.io](https://trinket.io). These will allow you to try it out without installing anything on your computer.
 
 
-# Your first program
+## Your first program
 
 The traditional starting point for learning a programming language.
 
@@ -39,7 +39,7 @@ print("Hello world!")
 
 Note: In Python the `#` is used to donote a comment follows.
 
-# Learning Python
+## Learning Python
 
 Rather than reproducing all my Learning Python notes (and risk updating one set, not the other, and getting things out of sync),  we will work through my existing Python notes repository
 
@@ -47,3 +47,16 @@ Rather than reproducing all my Learning Python notes (and risk updating one set,
 
 You should complete all the 100-series tutorials and problem sets.
 
+## Unit assessment
+
+* You will be assessed on the problem sets for each of the Learning Python topics in two submissions.
+
+   * Initial submission for formative review & feedback (review targets provided)
+   * Final submission for reporting (ARR) purposes
+
+* There will be a written test for reporting (ARR) purposes.
+
+   * Paper & pen in-class written test
+   * No computer, no notes, no calculator
+   * The test will be based on the problem sets, the questions being very similar to them.
+   * [View a sample test](distribute/unit-1-sample-test.pdf)
