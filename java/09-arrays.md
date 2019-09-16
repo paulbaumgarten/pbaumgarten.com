@@ -81,13 +81,13 @@ primes[8] = 19;
 primes[9] = 23;
 ```
 
-## Declarating an array: method 2
+## Declaring an array: method 2
 
 ```java
 int[] primes = {1,2,3,5,7,11,13,17,19,23};
 ```
 
-## Declaraing arrays of objects
+## Declaring arrays of objects
 
 > Note to my students: We will not have learnt about objects yet, so I will skip this section when teaching. It is included here so this page is a complete guide for static arrays and can refer back to it later when we want to build static arrays with objects.
 
