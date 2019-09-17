@@ -496,6 +496,9 @@ Another possible alternative explaination is through the following video that al
 
 The key things for you to appreciate is the CPU cycle and the interaction of the key components within and beyond the CPU.
 
+> Comparing C to machine language
+> https://www.youtube.com/watch?v=yOyaJXpAYZQ (10m00)
+
 ---
 
 ### Fetch-decode-execute cycle
