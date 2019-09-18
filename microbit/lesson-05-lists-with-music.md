@@ -49,6 +49,10 @@ We will practice lists by using them to play music on the microbit!
 
 To do so, we will create a list of musical notes we want the microbit to play.
 
+To wire the Microbit directly to a set of earphones, you want to use clips connected to PIN0 and GND, where the other end looks like this...
+
+![](assets/clip-to-earphone-jack.png)
+
 For instance, the tune for "Happy Birthday" looks like...
 
 ```python
@@ -98,12 +102,22 @@ for note in take_on_me:
 
 ## Activity
 
+![](assets/easy-letter-notes-com.png)
+
 1. Find a song you want your microbit to play, and have a go at making it work.
 
 * [Despacito](https://easy-letter-notes.com/despacito-piano-song/)
 * [Star wars](https://easy-letter-notes.com/star-wars/)
 * [List of songs with letter notes](https://easy-letter-notes.com/category/letter-notes/) (good for those who can't read music)
 * [Piano Licks & Riffs](https://www.8notes.com/piano/licks_and_riffs/)
+
+Note: That the colour of the note on the `easy-letter-notes.com` website indicates the octave.
+
+* Yellow = octave 2
+* Red = octave 3
+* Black = octave 4 (default)
+* Green = octave 5
+* Blue = octave 6
 
 2. Learn how the Neopixels work, and combine your song with a custom light show!
 
