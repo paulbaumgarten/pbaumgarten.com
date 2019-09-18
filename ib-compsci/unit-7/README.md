@@ -1,10 +1,46 @@
 # Unit 7: Control systems (HL)
 
+## Syllabus
+
+7.1.1 Discuss a range of control systems.
+
+* A variety of control systems should be examined such as automatic doors, heating systems, taxi meters, elevators, washing machines, process control, device drivers, domestic robots, GPS systems, traffic lights and other common devices.
+* Technical knowledge of specific systems is not expected but students should be able to analyse a specified system.
+* AIM 9 Develop an appreciation of the possibilities for control systems with developments in computer systems.
+
+7.1.2 Outline the uses of microprocessors and sensor input in control systems.
+
+* These should be related to the examples suggested above.
+
+7.1.3 Evaluate different input devices for the collection of data in specified situations.
+
+* Scenarios will be based on familiar situations to students.
+
+7.1.4 Explain the relationship between a sensor, the processor and an output transducer.
+
+* Technical hardware details are not expected.
+
+7.1.5 Describe the role of feedback in a control system.
+
+* LINK Connecting computational thinking and program design.
+
+7.1.6 Discuss the social impacts and ethical considerations associated with the use of embedded systems.
+
+* S/E For example, tagging prisoners, surveillance, CCTV, improved safety systems.
+
+7.1.7 Compare a centrally controlled system with a distributed system.
+
+* Technical hardware details are not expected.
+
+7.1.8 Outline the role of autonomous agents acting within a larger system.
+
+* Technical hardware details are not expected.
+
+## Introducing control systems
+
 A control system is a device, or set of devices, that manages, commands, directs or regulates the behaviour of other devices or systems. Industrial control systems are used in industrial production for controlling equipment or machines. (Wikipedia)
 
-## 7.1.1 Discuss a range of control systems
-
-A variety of control systems should be examined such as
+Some examples of control systems include:
 
 * Automatic doors
 * Heating systems
@@ -15,16 +51,13 @@ A variety of control systems should be examined such as
 * Domestic robots (eg: robotic vacuum cleaners)
 * GPS systems
 * Traffic lights
-
-Some other devices I think are interesting to consider:
-
 * Heart monitors (pacemakers)
 * Planes (flight control systems, auto pilot etc)
 * Drones
 * Self driving cars
-* "Normal" cars (power steering, cruise control etc). The recent Jeep hack is a very interesting recent case study.
+* "Normal" cars (power steering, cruise control etc). The recent [Jeep hack](https://www.youtube.com/watch?v=MK0SrxBC1xs) is a very interesting recent case study.
 
-## 7.1.2 Outline the uses of microprocessors and sensor input in control systems
+## Microprocessors
 
 What use does a microprocessor have in control systems?
 
@@ -35,15 +68,11 @@ What use does a microprocessor have in control systems?
 * Computers require electricity
 * Computers can only respond to anticipated events as per their programming
 
-What use does sensor input have in control systems?
+## Sensor input
 
-Check adafruit.com for sensors that are easily available.
+What role do sensors or transducers have in control systems?
 
-Common sensors and transducers
-
-![](img/common-sensors.png)
-
-Input type transducers or sensors, produce a voltage or signal output response which is proportional to the change in the quantity that they are measuring (the stimulus). The type or amount of the output signal depends upon the type of sensor being used. But generally, all types of sensors can be classed as two kinds, either Passive Sensors or Active Sensors.
+Sensors can be broadly categorised into two types: active and passive.
 
 Generally, active sensors require an external power supply to operate, called an excitation signal which is used by the sensor to produce the output signal. Active sensors are self-generating devices because their own properties change in response to an external effect producing for example, an output voltage of 1 to 10v DC or an output current such as 4 to 20mA DC. Active sensors can also produce signal amplification.
 
@@ -51,20 +80,27 @@ A good example of an active sensor is an LVDT sensor or a strain gauge. Strain g
 
 Unlike an active sensor, a passive sensor does not need any additional power source or excitation voltage. Instead a passive sensor generates an output signal in response to some external stimulus. For example, a thermocouple which generates its own voltage output when exposed to heat. Then passive sensors are direct sensors which change their physical properties, such as resistance, capacitance or inductance etc.
 
-But as well as analogue sensors, Digital Sensors produce a discrete output representing a binary number or digit such as a logic level "0" or a logic level "1".
+There are an enormous variety of sensors easily available for hobbyist projects. Check [adafruit.com](https://adafruit.com/) for an indication.
 
-From: https://www.electronics-tutorials.ws/io/io_1.html
+Sensors can also be categorised into analogue or digital. Analogue sensors produce a voltage or signal output response which is proportional to the change in the quantity that they are measuring (the stimulus). Digital Sensors produce a discrete output representing a binary number or digit such as a logic level "0" or a logic level "1".
 
+Common sensors and transducers by environment they detect are:
 
-## 7.1.3 Evaluate different input devices for the collection of data in specified situations
+* Light - Light dependant resistor, photodiode, photo-transistor, solar cell
+* Temperature - Thermocouple, thermister, thermostat, resistive temperature detectors
+* Force/pressure - Strain gauge, pressure switch, load cells
+* Position - Potentiometer, encoder, reflective/slotted opto-swtich, lvdt
+* Speed - Tacho-generator, reflective/slotted opto-swtich, doppler effect sensor
+* Sound - Carbon microphone, piezo-electric crystal
+* Location - GPS
+* Others?
 
-Input devices tend to be classed as either digital or analogue.
+Source: https://www.electronics-tutorials.ws/io/io_1.html
 
-Examples of digital input devices?
+## Digital v Analgue input
 
-Examples of analogue input devices?
-
-How is analogue input read by digital computers?
+* When would it be more appropriate to use a digital v analgoue input device?
+* How can an analogue input be read by our digital computer systems (suggest: use an analogue input with a Raspberry Pi or Arduino to figure this out)
 
 What input devices would be best suited for...?
 
@@ -78,52 +114,52 @@ What input devices would be best suited for...?
 
 Brainstorm other familiar situations where there could be a computer with an input device. What input devices would be best suited for that situation?
 
-## 7.1.4 Explain the relationship between a sensor, the processor and an output transducer
+## Tranducer (outputs)
 
-**Technical hardware details are not expected.**
+* Light - LED, displays/screens, lamps
+* Temperature - Heater, fan, airconditioning
+* Force/pressure - Lift, jack, electromagnet, vibration
+* Position - Motor, solenoid, servo
+* Proximity - Ultrasonic range finder, infrared LED
+* Speed - AC motor, DC motor, stepper motor, brake
+* Sound - Buzzer, bell, speaker
 
-Open v closed loops (diagrams)
+## Open and closed loop systems
+
+The is commonly a cyclic relationship between a sensor, the processor and an output transducer. This can be either an open-loop or a closed-loop depending on the circumstance.
 
 ![](img/openclosedloop.png)
 
 What other examples could we illustrate with?
 
-## 7.1.5 Describe the role of feedback in a control system
-
 Feedback in a open and closed loop
 
-## 7.1.6 Discuss the social impacts and ethical considerations associated with the use of embedded systems
+## Social impacts and ethical considerations
 
-For example: tagging prisoners, surveillance, CCTV, improved safety systems.
+Control systems, commonly also referred to as embedded systems, come with a range of social and ethical issues.
 
-Quick in class brain storm.
+Some examples:
 
-Automating jobs traditionally performed by people
+* [Employee Monitoring: How Far is Too Far?](http://www.innovativeemployeesolutions.com/articles/employee­monitoring­how­far­is­too­far/)
+* [Should school children have tracking chips?](http://blogs.discovery.com/inscider/2013/04/should­children­have­tracking­chips.html)
+* [U.S. Confirms That It Gathers Online Data Overseas](http://www.nytimes.com/2013/06/07/us/nsa­verizon­calls.html)
+* [Satellite tracking for criminals](http://news.bbc.co.uk/2/hi/uk_news/3620024.stm)
+* [CCTV](https://en.wikipedia.org/wiki/Closed­circuit_television)
+* [After Boston: The pros and cons of surveillance](http://www.cnn.com/2013/04/26/tech/innovation/security­cameras­boston­bombings/)
+* Automating jobs traditionally performed by people
+* Automated safety systems
+* Driverless trains (Singapore MTR, Lausanne Metro), and buses
 
-"Employee Monitoring: How Far is Too Far? ­ Innovative ..." 2014. 18 Sep. 2015 <http://www.innovativeemployeesolutions.com/articles/employee­monitoring­how­far­is­too­far/>
+## Central vs distributed control
 
-"Should school children have tracking chips? ­ Science ..." 2013. 18 Sep. 2015 <http://blogs.discovery.com/inscider/2013/04/should­children­have­tracking­chips.html>
+Control systems deployed in industry may be either centrally controlled or use a distributed system of control.
 
-"U.S. Confirms That It Gathers Online Data Overseas ­ The ..." 2013. 18 Sep. 2015 <http://www.nytimes.com/2013/06/07/us/nsa­verizon­calls.html>
+In a centrally controlled system, all sensors and transducers run cabling (or wireless signal) over a network back to a central control system; where as in the distributed model control is more locallised. Each method comes with it's own advantages and disadvantages.
 
-"BBC NEWS | UK | Satellite tracking for criminals." 2004. 18 Sep. 2015 <http://news.bbc.co.uk/2/hi/uk_news/3620024.stm>
+* Pro: Cost, performance, scalability, reliability
+* Con: Bandwidth, Security, Complexity
 
-"Closed­circuit television ­ Wikipedia, the free encyclopedia." 2011. 18 Sep. 2015 <https://en.wikipedia.org/wiki/Closed­circuit_television>
-
-"After Boston: The pros and cons of surveillance ... ­ CNN.com." 2013. 18 Sep. 2015 <http://www.cnn.com/2013/04/26/tech/innovation/security­cameras­boston­bombings/>
-
-## 7.1.7 Compare a centrally controlled system with a distributed system
-
-A type of computing in which different components and objects comprising an application can be located on different computers connected to a network.
-
-Pro: Cost, performance, scalability, reliability
-Con: Bandwidth, Security, Complexity
-
-(from Michael Brooke, emjbe.net, CC-BY-NC)
-
-## 7.1.8 Outline the role of autonomous agents acting within a larger system
-
-**What are autonomous agents?**
+## Autonomous agents acting within a larger system
 
 ![](img/autonomous-agents.jpg)
 
@@ -147,9 +183,32 @@ It has been suggested agenthood of a computer system is restricted to the follow
 
 From [Federico Gobbo, 2013](https://www.slideshare.net/goberiko/a-history-of-autonomous-agents-from)
 
-**Interaction within a larger system**  
-
 Example: Self driving cars. When not everything is within the systems control.
+
+## Activity
+
+The best way of learning about how different sensors and transducers interact is through hands on experience. Using a Raspberry Pi or Arduino, experiment with different inputs and outputs. 
+
+* What are the complexities involved for a programmer to read in analogue sensor input?
+* What are the complexities involved for a programmer to read in digital sensor input?
+* What are the complexities involved for a progarmmer to control a digital output?
+* What are the complexities involved for a progarmmer to control an analogue output?
+* What are the power management methods that can be used to control an output without overloading the microprocessor/microcontroller? (how does the circuit need to be wired up etc, what other components are typically required?)
+
+Experient and gain practical hands-on experience from a programmers perspective of:
+
+* Wiring up and programmatically reading the input from digital sensors
+* Wiring up and programmatically reading the input from analogue passive sensors
+* Wiring up and programmatically reading the input from analogue active sensors
+* Wiring up and programmatically controlling the output of low powered digital outputs eg: LEDs
+* Wiring up and programmatically controlling the output of low powered analogue outputs
+* Wiring up and programmatically controlling the output of higher powered digital outputs
+* Wiring up and programmatically controlling the output of higher powered analogue outputs
+
+If time allows, experiment with creating a simple closed loop feedback system.  Options include:
+
+* Light sensors controllinng LED lighting
+* Proximity sensors controllinng motors on a simple vehicle/robot
 
 ## Past paper questions
 
