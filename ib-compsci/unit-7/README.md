@@ -126,13 +126,11 @@ Brainstorm other familiar situations where there could be a computer with an inp
 
 ## Open and closed loop systems
 
-The is commonly a cyclic relationship between a sensor, the processor and an output transducer. This can be either an open-loop or a closed-loop depending on the circumstance.
+There is commonly a cyclic relationship between a sensor, the processor and an output transducer. This can be either an open-loop or a closed-loop depending on the circumstance. The difference between the two is the role that feedback plays within the system. If the output has a direct bearing on future inputs, then it is said to be a closed loop system.
 
 ![](img/openclosedloop.png)
 
 What other examples could we illustrate with?
-
-Feedback in a open and closed loop
 
 ## Social impacts and ethical considerations
 
