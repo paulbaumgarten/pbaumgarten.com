@@ -44,3 +44,9 @@ except:
 1. Create a quadratic formula calculator that uses exceptions to detect if there are 0, 1 or 2 solutions; and then return the correct nnumber of correct solutions.
 
 > More coming soon
+
+Division by zero
+String to int cast error
+Date import error
+File not found error
+List index error

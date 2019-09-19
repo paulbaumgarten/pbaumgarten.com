@@ -87,3 +87,7 @@ JSON is frequently used as the medium of transferring data between web servers a
 # Problem sets
 
 > You better believe these are coming soon! :-)
+
+* Dictionary questions
+* JSON file read/write questions
+* Requests questions
