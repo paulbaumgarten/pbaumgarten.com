@@ -171,5 +171,27 @@ Given an amount of money (expressed as an integer as the total number of cents, 
 
 This particular problem happens to be a classic when modified so that you must minimize the total number of coins given back. The greedy approach will no longer produce the optimal result for all possible coin denominations. For example, for simple coin denominations of [4, 3, 1] zorkmids and the amount to change of 6, the greedy solution [4, 1, 1] needs three coins, whereas the actual optimal solution [3, 3] uses only two. A more advanced dynamic programming algorithm is needed to execute a branching "take it or leave it" recursion without blowing up the running time exponentially.
 
+## Luhn algorithm
+
+The Luhn algorithm or Luhn formula, also known as the “modulus 10” or “mod 10” algorithm, is a simple checksum formula used to validate a variety of identification numbers, such as credit card numbers, IMEI numbers, National Provider Identifier numbers (wikipedia).
+
+The Luhn test is used by some credit card companies to distinguish valid credit card numbers from what could be a random selection of digits.
+
+Those companies using credit card numbers that can be validated by the Luhn test have numbers that pass the following test:
+
+* Reverse the order of the digits in the number.
+* Take the first, third, ... and every other odd digit in the reversed digits and sum them to form the partial sum s1
+* Taking the second, fourth ... and every other even digit in the reversed digits:
+* Multiply each digit by two and sum the digits if the answer is greater than nine to form partial sums for the even digits
+* Sum the partial sums of the even digits to form s2
+* If s1 + s2 ends in zero then the original number is in the form of a valid credit card number as verified by the Luhn test.
+
+Some fake credit card numbers you can use for testing purposes...
+
+| VISA | MasterCard | American Express (AMEX) |
+| ---- | ---------- | ----------------------- |
+| 4916832471406208    |  5408608073972181 | 349916382888946 |
+| 4539515831865208      |  5448131672611698 | 379279126081887 |
+| 4556019822708469278   |  5345203118153280 | 372209733301573 |
 
 
