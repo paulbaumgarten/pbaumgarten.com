@@ -42,11 +42,5 @@ By the way, just before we finish the section on reading/writing files, you may 
 
 ## Problem set
 
-This problem draws on all the programming skills you have learnt so far to create a text based hang-person game. To build this exercise, you will need to successfully complete the following:
+> Coming soon
 
-* Load the words text file into a list (array)
-* Use the random number generator to randomly select one item from the list as the secret word
-* Reveal the secret word while hiding the letters not yet guessed
-* Use a loop to keep asking the player to guess a new letter
-* If a guessed letter is not in the secret word, increase their wrong guesses count and draw the new hangman.
-* If a guessed letter is in the word, add it to your list of correct guesses.
