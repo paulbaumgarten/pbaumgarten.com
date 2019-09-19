@@ -51,7 +51,7 @@ To do so, we will create a list of musical notes we want the microbit to play.
 
 To wire the Microbit directly to a set of earphones, you want to use clips connected to PIN0 and GND, where the other end looks like this...
 
-![](assets/clip-to-earphone-jack.png)
+![](assets/clip-to-earphone-jack.jpg)
 
 For instance, the tune for "Happy Birthday" looks like...
 
