@@ -40,12 +40,13 @@ Order of precedence: not, and, or (if in doubt, use parenthesis)
 ## Truth functions for strings
 
 ```python
-truth = s.isnumeric()   # does it contain only numbers?
-truth = s.isalpha()		# does it contain only letters?
-truth = s.islower()		# is it all lowercase?
-truth = s.isupper()		# is it all uppercase?
-truth = s.istitle()		# is it all title case?
-truth = s.isspace()		# is it all spaces?
+string1 = "Some string"
+truth = string1.isnumeric()   # does it contain only numbers?
+truth = string1.isalpha()		# does it contain only letters?
+truth = string1.islower()		# is it all lowercase?
+truth = string1.isupper()		# is it all uppercase?
+truth = string1.istitle()		# is it all title case?
+truth = string1.isspace()		# is it all spaces?
 ```
 
 You can also query if a sub string is in a larger string

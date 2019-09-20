@@ -105,14 +105,14 @@ String functionality
 
 ```python
 name        = "Luke Skywalker"
-length      = len(name)
-space_at    = name.index(" ")
+length      = len(name)         # Length of the string
+space_at    = name.index(" ")   # Position within string the space appears
 father      = name.replace("Luke", "Anakin")
-occurances  = name.count("a")
-tmp         = name.lower()
-tmp         = name.upper()
-tmp         = name.title()
-tmp         = name.swapcase()
+occurances  = name.count("a")   # Number of times `a` appears in string
+tmp         = name.lower()      # Convert string to lowercase
+tmp         = name.upper()      # Convert string to UPPERCASE
+tmp         = name.title()      # Convert string to Title Case
+tmp         = name.swapcase()   # Swap the casing
 tmp         = name.ljust(30)    # Left justify with spaces to length 30
 tmp         = name.rjust(30)    # Right justify with spaces to length 30
 ```
