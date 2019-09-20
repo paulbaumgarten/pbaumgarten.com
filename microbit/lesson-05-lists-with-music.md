@@ -102,22 +102,29 @@ for note in take_on_me:
 
 ## Activity
 
-![](assets/easy-letter-notes-com.png)
-
 1. Find a song you want your microbit to play, and have a go at making it work.
 
-* [Despacito](https://easy-letter-notes.com/despacito-piano-song/)
-* [Star wars](https://easy-letter-notes.com/star-wars/)
-* [List of songs with letter notes](https://easy-letter-notes.com/category/letter-notes/) (good for those who can't read music)
-* [Piano Licks & Riffs](https://www.8notes.com/piano/licks_and_riffs/)
+* [Easy-letter-notes.com](https://easy-letter-notes.com/category/letter-notes/) (good for those who can't read music)
+* [Pianoletternotes.blogspot.com](https://pianoletternotes.blogspot.com)
 
-Note: That the colour of the note on the `easy-letter-notes.com` website indicates the octave.
+Note for `easy-letter-notes.com`: That the colour of the note on the  website indicates the octave:
+
+![](assets/easy-letter-notes-com.png)
 
 * Yellow = octave 2
 * Red = octave 3
 * Black = octave 4 (default)
 * Green = octave 5
 * Blue = octave 6
+
+Note for `Pianoletternotes.blogspot.com`: The colour of the note on the website indicates the octave as follows:
+
+![](assets/pianoletternotes-blogspot-com.png)
+
+* Lowercase (a b c d e f g) letters are natural notes (white keys, a.k.a A B C D E F G ).
+* Uppercase (A C D F G) letters are the sharp notes (black keys a.k.a. A# C# D# F# G#), look at the image below to see where each letter note is on the piano keyboard.
+* The lines / dashes (-) between letters indicates timing to play the notes. Just listen to the audio file at the top of the post to figure out the time lenght of the dashes (usually 5-6 dashes is about 1 second)
+
 
 2. Learn how the Neopixels work, and combine your song with a custom light show!
 
