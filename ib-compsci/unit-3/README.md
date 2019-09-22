@@ -255,6 +255,17 @@ Huffman coding and huffman trees
 The Internet: Wires, Cables & Wifi (code.org)https://www.youtube.com/watch?v=ZhEf7e4kopM
 Compare Coax, Twisted pair & Fibre (4:30m)https://www.youtube.com/watch?v=EOCme3sNqws 
 
+## Analogy of the various networking devices
+
+* Network traffic is broken into packets which you can think of like a letter in an envelope. The letter is your data (like a Google query) and the envelope has a 'to' and 'from' line to help know how to forward it on. All those devices have different techniques for knowing how and where to forward an envelope onto, once they get it.
+* Hub: Make a copy of a letter and give it to every one of your neighbors with a t-shirt cannon, whether you meant to give it to them or not
+* Switch: Make a copy of your letter and use a map to drive it to a specific neighbor
+* Bridge: When you want to give a letter to Billy the next neighborhood over, so you give it to his brother who lives right in-between the two neighborhoods
+* Router: Send your letter to the post office, and they'll send it to your grandma by forwarding it to her post office and then driving it to her house using a map
+* Gateway: The post office in your neighborhood
+* Modem: Send your letter to the post office by saying it over the phone to a postal worker, where they type and print it off and forward it on
+
+([source](https://www.reddit.com/r/explainlikeimfive/comments/crarrw/eli5_the_difference_between_a_router_switch_hub_a/ex3wxyi?utm_source=share&utm_medium=web2x))
 ---
 
 ## Wireless networking
