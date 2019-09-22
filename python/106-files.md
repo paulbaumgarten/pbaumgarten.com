@@ -90,12 +90,18 @@ username = os.getlogin()
 Write a simple to-do app. Each line represents an task. The first character should be `-` if the task still needs doing, and `x` once it has been marked as complete. When the program starts, it should present the user with 3 options as follows.
 
 ```text
-Welcome to simple-to-dos.
-Enter the task number to mark it as complete, hit enter on an empty line to quit, or write some text to add a new task.
+Welcome to simple-to-dos!
+
+* Enter the task number to mark it as complete, 
+* Hit enter on an empty line to quit, or 
+* write some text to add a new task.
+
 The tasks currently pending are:
+
 1 Cook dinner
 2 Clean bedroom
->>
+
+Your input >>
 ```
 
 An example of the text file follows.
