@@ -194,4 +194,12 @@ Some fake credit card numbers you can use for testing purposes...
 | 4539515831865208      |  5448131672611698 | 379279126081887 |
 | 4556019822708469278   |  5345203118153280 | 372209733301573 |
 
+# Chroma-key (green screen) effect
+
+1. Research into the PIL Python Image Library
+2. Using the two provided jpg photos linked below, see if you can figure out how to create the merged photo effect.
+
+* Official docs for PIL: [https://pillow.readthedocs.io](https://pillow.readthedocs.io/en/stable/)
+* Source photo 1 .... coming soon
+* Source photo 2 .... coming soon
 

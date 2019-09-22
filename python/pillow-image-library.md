@@ -45,13 +45,17 @@ def image_remove_background( source_filename, target_filename, background_color=
     for y in range(img.size[1]):  
         for x in range(img.size[0]):  
                 r, g, b, a = img.getpixel((x, y))  
-                if abs(remove_color[0]-r)<sensitivity and abs(remove_color[1]-g)<sensitivity and abs(remove_color[2]-b)<sensitivity:
+                if abs(remove_color[0]-r)<sensitivity and 
+                    abs(remove_color[1]-g)<sensitivity and 
+                    abs(remove_color[2]-b)<sensitivity:
                     pixdata[x, y] = (0, 0, 0, 0)  # make it transparent
     img2 = img.filter(ImageFilter.GaussianBlur(radius=1))  
     if target_filename[-4:].lower() in (".jpg", ".jpe"):
         target_filename = target_filename[:-4] + ".png"
     img2.save(target_filename, "PNG")  
 ```
+
+Note: For a more accurate green screen style effect, look at this post on reddit. https://www.reddit.com/r/Python/comments/m68js/trying_to_write_a_very_simple_green_screen_code/c2yk6wx?utm_source=share&utm_medium=web2x
 
 ## Conversions
 
