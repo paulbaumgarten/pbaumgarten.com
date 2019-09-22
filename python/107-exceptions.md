@@ -41,12 +41,9 @@ except:
 
 # Problem set
 
-1. Create a quadratic formula calculator that uses exceptions to detect if there are 0, 1 or 2 solutions; and then return the correct nnumber of correct solutions.
+1. Create a quadratic formula calculator that uses exceptions to detect if there are 0, 1 or 2 solutions; and then return the correct nnumber of correct solutions. (square root of a negative number exception)
+2. Write a simple arithmetic calculator that prompts the user to enter two numbers, A and B. Then print the addition, subtraction, multiplication, division and modulus of A and B. Use exception handling to detect division by zero exception.
+3. Add to question 2 exception handling to deal with the user not entering valid numbers for A and B.
+4. Make a new copy of Question 5 from the Files problem set, with exception handling in case the file does not exist.
+5. Add to question 4, to use exception handling in case the user asks for a line number beyond the limits of the list (ie: if there are only 5 lines and the user askes for line 6).
 
-> More coming soon
-
-Division by zero
-String to int cast error
-Date import error
-File not found error
-List index error

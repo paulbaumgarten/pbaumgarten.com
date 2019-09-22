@@ -6,9 +6,10 @@ Read entire file as a list, one string per line
 
 ```python
 with open("countries.txt", "r") as f:   # Open file for reading
-    content = f.read().splitlines()     # .read() loads entire file
-    for item in content:
-        print(item)
+    content = f.read()                  # Load entire file into 1 large string
+    lines = content.splitlines()        # Split into lines
+    for line in lines:
+        print(line)
 ```
 
 Writing a text file
@@ -27,41 +28,62 @@ Notes:
 * Opening a file using `w` mode will overwrite an existing file
 * For greater predictability, cast everything to strings before writing to files
 
-By the way, just before we finish the section on reading/writing files, you may have wondered what the "r" or "w" in the `open()` function meant. This instructs Python how we want to access the file we request. The different modes for opening a file are as follows:
+By the way, just before we finish the section on reading/writing files, you may have wondered what the "r" or "w" in the `open()` function meant. This instructs Python how we want to access the file we request. The different modes for opening a file that will be relevant for now are as follows:
 
 * `r` for reading
-* `r+` opens for reading and writing (cannot truncate a file)
 * `w` for writing (erasing it if it exist)
-* `w+` for writing and reading (erasing it if it exists)
-* `rb` for reading a binary file. The file pointer is placed at the beginning of the file.
-* `rb+` reading or writing a binary file
-* `wb+` writing a binary file
-* `a+` opens for appending
-* `ab+` Opens a file for both appending and reading in binary. The file pointer is at the end of the file if the file exists. The file opens in the append mode.
-* `x` open for exclusive creation, failing if the file already exists
+* `a` opens for appending
 
 ## OS tools
 
+There is a range of operating system functionality that you will commonly use with working with files.
+
+Some functions that will be useful
+
+```python
+# Import the Operating System module
 import os
-file exists
-file is writable
-is a file, is a folder
+
+# Check if a file or folder exists of a given name
+if os.path.exists("filename.txt"):
+    print("The item exists")
+
+# Check if a file exists
+if os.path.isfile("filename.txt"):
+    print("The item is a file")
+
+# Check if a folder exists
+if os.path.isdir("documents"):
+    print("The item is a folder/directory")
+
+# Delete a file 
+# - USE WITH CAUTION
+os.remove("file.txt")
+
+# Rename a file
+os.rename("oldfile.txt", "newfile.txt")
+
+# Create a folder
+# - Will error if it already exists
+os.mkdir("folder")
+
+# Remove a folder
+# - Will error if it is not empty
+os.rmdir("folder")
+
+# Not relevant to files, but fun to know about....
+# Get current logged in user
+username = os.getlogin()
+```
 
 ## Problem set
 
-> Coming soon
-
-1. read a text file into a string
-2. read a text file into a list of strings
-3. write a string to a text file
-4. write a list of strings to a text file
-5. read a list of strings, select item you want to edit, input, update element, write back a list of strings
-
-Write a Python program to read last n lines of a file.
-Write a Python program to read first n lines of a file.
-Write a Python program to count the number of lines in a text file.
-Write a Python program to get the file size of a plain file.
-Write a Python program to read a random line from a file.
+1. Read a text file into a string, print it to the screen.
+2. Read a text file into a list of strings, and print out the number of lines in the file.
+3. Ask the user for the name of a file they'd like to create. Ask the user to type an input, and then save that as the content of the file. 
+4. Ask the user for the name of a file they'd like to create. Using a while loop, keep ask the user to type an input and only stop when they enter an empty input. Save all the lines entered as the content of the file. 
+5. Read a list of strings from a text file. Tell the user how many lines there are and ask them to enter a line number indicating one they would like to read. Print just the content of that line to the user.
+6. Read a list of strings from a text file. Tell the user how many lines there are and ask them to enter a line number indicating one they would like to change. Prompt the user for the new content of the relevant line. Write to the file the new list of strings.
 
 **Challenge question**
 
