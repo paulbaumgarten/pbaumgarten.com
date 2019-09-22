@@ -260,23 +260,23 @@ print(truthy)
 
 8) Write a program to check the validity of password input by users. The rules for a valid password are:
 
-    * At least 1 letter between [a-z] and 1 letter between [A-Z].
-    * At least 1 number between [0-9].
-    * At least 1 character from [$#@].
-    * Minimum length 6 characters.
-    * Maximum length 16 characters.
+* At least 1 letter between [a-z] and 1 letter between [A-Z].
+* At least 1 number between [0-9].
+* At least 1 character from [$#@].
+* Minimum length 6 characters.
+* Maximum length 16 characters.
 
 9) Write a program that will allow a user to input his name. The prompt and input data would look something like this: `Please enter your name: Peter Ustinov`. Using a for-loop and the String method, `substring()`, produce a printout of the reversal of the name. For example, the name Peter Ustinov would be: `vonitsu retep`. Ensure that the printout is in all lower-case.
 
 10) If we didn't do it as an example together in class (or you are using my notes online), create a simple number guessing game. The program needs to work as follows:
 
-    * The computer picks a random number and stores it as a secret number
-    * Ask the user to guess the number
-    * If the guess is higher than the secret number, print the message "too high"
-    * If the guess is lower than the secret number, print the message "too low"
-    * If the guess is correct, print the message "you are correct!"
-    * To use a while loop to keep the game going until the correct guess has been made
-    * Bonus points: Can you keep count of the number of guesses it takes the player to get it correct?
+* The computer picks a random number and stores it as a secret number
+* Ask the user to guess the number
+* If the guess is higher than the secret number, print the message "too high"
+* If the guess is lower than the secret number, print the message "too low"
+* If the guess is correct, print the message "you are correct!"
+* To use a while loop to keep the game going until the correct guess has been made
+* Bonus points: Can you keep count of the number of guesses it takes the player to get it correct?
 
-    Note: in Python to generate a random number, you should `import random` at the top of your program, and then use an instruction such as `r = random.randint(0, 100)` to generate a random integer between 0 and 99.
+Note: in Python to generate a random number, you should `import random` at the top of your program, and then use an instruction such as `r = random.randint(0, 100)` to generate a random integer between 0 and 99.
 
