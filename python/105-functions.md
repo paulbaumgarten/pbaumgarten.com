@@ -125,11 +125,11 @@ def confirm( prompt ):
 
 2. Create a function `area_non_right_angled_triangle(base, height, angle)` that returns the calculated area (remember you will need to convert the angle to radios before using it with the sine function).
 
-3. Create a user input validation function that requires the input of a number.
+3. Create a user input validation function that requires the input of a number. Hint: Remind yourself how the `.isnumeric()` function of strings works.
 
-4. Create a user input validation function that requires the input of a phone number (so `+`, spaces and `-` characters are permitted).
+4. Create a user input validation function that requires the input of a phone number (so `+`, spaces and `-` characters are permitted). Hint: Remind yourself how checking for `if 'z' in "String":` works.
 
-5. Create a user input validation function that requires the input of a date in the `dd/mm/yyyy` format. Bonus points if you ensure that the `dd`, `mm` and `yyyy` values make sense (ie: day should be between 1 and 31).
+5. Create a user input validation function that requires the input of a date in the `dd/mm/yyyy` format. Bonus points if you ensure that the `dd`, `mm` and `yyyy` values make sense (ie: day should be between 1 and 31). Hint: use `.split()`.
 
 6. Create a user input validation function that accepts a list of strings as the parameter and presents them to the user as a list of menu choices, requiring the user to enter a number corresponding to a valid choice before proceeding. For example if the code to run the funciton was....
 
