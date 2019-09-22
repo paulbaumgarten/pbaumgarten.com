@@ -15,8 +15,9 @@ christmas = datetime( 2019, 12, 25 )
 christmas = datetime( 2019, 12, 25, 11, 00, 00 )
 
 # Create a datetime from a formatted string
-birthday = input("Enter birthdate as dd/mm/yyyy:")
-dob = datetime.strptime(birthdate, "%d/%m/%Y")
+# - See section below about formatting the string
+birth_text = input("What is your birthday (write it as dd/mm/yyyy) ?")
+birth_date = datetime.strptime(birth_text, "%d/%m/%Y")
 
 # Create a datetime from a timestamp
 timestamp = 1563958625      # Number of seconds since 01/01/1970 00:00 UTC
@@ -41,17 +42,17 @@ timestamp = now.timestamp()
 from datetime import datetime
 from datetime import timedelta
 
-birthday = input("What is your birthday (write it as dd/mm/yyyy) ?")
-dob = datetime.strptime(birthday, "%d/%m/%Y")
+birth_text = input("What is your birthday (write it as dd/mm/yyyy) ?")
+birth_date = datetime.strptime(birth_text, "%d/%m/%Y")
 now = datetime.now()
 
 # Create a timedelta automatically by subtracting two dates
-diff = now - dob
-print(f"You are {diff.days} days old!")
+diff = now - birth_date
+print(f"You are currently {diff.days} days old!")
 
 # Create a new date by adding a timedelta to a date
-tenthousand = dob + timedelta( days=10000 )
-print(f"You are/were 10'000 days old on { tenthousand.strftime("%d %B, %Y") }")
+tenthousand = birth_date + timedelta( days=10000 )
+print(f"You will be 10'000 days old on { tenthousand.strftime("%d %B, %Y") }")
 ```
 
 For timedelta you may provide any combination of the following options:
@@ -63,11 +64,15 @@ For timedelta you may provide any combination of the following options:
 Use `strftime()` to generate strings containing dates and times in human presentable formats for your users
 
 ```python
-date = dt.strftime("%A, %d %B, %Y")
-print("The date is",date)
+# Create a date
+apollo11 = datetime( 1969, 7, 20, 20, 17, 40 )
 
-time = dt.strftime("%H:%M:%S")
-print("The time is",time)
+# Make pretty, human readable versions
+pretty_date = apollo11.strftime("%A, %d %B, %Y")
+pretty_time = apollo11.strftime("%H:%M:%S")
+
+# Do something with them
+print(f"Apollo 11 landed on the moon on {pretty_date} at the time of {pretty_time}")
 ```
 
 Date based codes
@@ -97,8 +102,7 @@ To retrieve parts of a date or time
 from datetime import datetime
 
 day_names = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
-birthday = input("What is your birthday (write it as dd/mm/yyyy) ?")
-dob = datetime.strptime(birthday, "%d/%m/%Y")
+
 now = datetime.now()
 
 print(f"The year is { now.year }")
@@ -119,11 +123,11 @@ Use the date `.replace()` function
 from datetime import datetime
 
 day_names = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
-birthday = input("What is your birthday (write it as dd/mm/yyyy) ?")
-dob = datetime.strptime(birthday, "%d/%m/%Y")
+birth_text = input("What is your birthday (write it as dd/mm/yyyy) ?")
+birth_date = datetime.strptime(birth_text, "%d/%m/%Y")
 now = datetime.now()
 
-this_year = dob.replace( year = now.year )  # Replace the year
+this_year = birth_date.replace( year = now.year )  # Replace the year
 
 weekday_number = this_year.weekday()
 print(f"Your birthday this year is a {day_names[ weekday_number ]")
