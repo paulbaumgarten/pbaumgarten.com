@@ -49,11 +49,25 @@ truth = string1.istitle()		# is it all title case?
 truth = string1.isspace()		# is it all spaces?
 ```
 
-You can also query if a sub string is in a larger string
+You can also query if a sub string is in a larger string...
 
 ```python
 exists = "h" in "hello"
 exists = "z" in "hello"
+```
+
+For example
+
+```python
+something = "Hello"
+if something.isnumeric():
+    val = int(something)
+    print("That is a number")
+    print(f"It's value is {val}")
+elif something.islower():
+    print("It is all lowercase")
+elif "z" in something:
+    print(f"The string '{something}' contains the letter 'z'")
 ```
 
 # If, elif, else, while
@@ -214,29 +228,21 @@ print(truthy)
 
 ## Problem set - Selection & iteration
 
-0. If we didn't do it as an example together in class (or you are using my notes online), create a simple number guessing game. The program needs to work as follows:
+1) Write a program which will find all such numbers which are divisible by 7 but are not a multiple of 5, between 2000 and 3200 (both included).
 
-    * The computer picks a random number and stores it as a secret number
-    * Ask the user to guess the number
-    * If the guess is higher than the secret number, print the message "too high"
-    * If the guess is lower than the secret number, print the message "too low"
-    * If the guess is correct, print the message "you are correct!"
-    * To use a while loop to keep the game going until the correct guess has been made
-    * Bonus points: Can you keep count of the number of guesses it takes the player to get it correct?
-
-    Note: in Python to generate a random number, you should `import random` at the top of your program, and then use an instruction such as `r = random.randint(0, 100)` to generate a random integer between 0 and 99.
-
-1. Write a program which will find all such numbers which are divisible by 7 but are not a multiple of 5, between 2000 and 3200 (both included).
-2. Suppose you ask the user what the temperature is. Create a program that will respond as follows:
+2) Suppose you ask the user what the temperature is. Create a program that will respond as follows:
 
     * If the temperature is between 20 and 27, say that it is "Just right"
     * If the temperature is below 20, say that it is "too cold"
     * If the temperature is above 27, say that it is "too hot"
 
-3. Create a program that allows the user to input the sides of any triangle, and then return True/False to indicate if the triangle is a Pythagorean Triple or not.
-4. Write a program which iterates the integers from 1 to 50. For multiples of three print "Fizz" instead of the number and for the multiples of five print "Buzz". For numbers which are multiples of both three and five print "FizzBuzz".
-5. Write a program to check a triangle is equilateral, isosceles or scalene. An equilateral triangle is a triangle in which all three sides are equal. A scalene triangle is a triangle that has three unequal sides. An isosceles triangle is a triangle with (at least) two equal sides.
-6. Write a program to construct the following pattern, using a nested for loop.
+3) Create a program that allows the user to input the sides of any triangle, and then return True/False to indicate if the triangle is a Pythagorean Triple or not.
+
+4) Write a program which iterates the integers from 1 to 50. For multiples of three print "Fizz" instead of the number and for the multiples of five print "Buzz". For numbers which are multiples of both three and five print "FizzBuzz".
+
+5) Write a program to check a triangle is equilateral, isosceles or scalene. An equilateral triangle is a triangle in which all three sides are equal. A scalene triangle is a triangle that has three unequal sides. An isosceles triangle is a triangle with (at least) two equal sides.
+
+6) Write a program to construct the following pattern, using a nested for loop.
 
 ```
 * 
@@ -250,8 +256,9 @@ print(truthy)
 *
 ```
 
-7. The fibonacci sequence is created by summing the two previous numbers together. The first 10 numbers in the sequence are 1, 1, 2, 3, 5, 8, 13, 21, 34, 55. Use a `while()` loop to create a program that will calculate the n-th number of the sequence. For instance, if asked for the 8th number, it should provide the answer of 21.
-8. Write a program to check the validity of password input by users. The rules for a valid password are:
+7) The fibonacci sequence is created by summing the two previous numbers together. The first 10 numbers in the sequence are 1, 1, 2, 3, 5, 8, 13, 21, 34, 55. Use a `while()` loop to create a program that will calculate the n-th number of the sequence. For instance, if asked for the 8th number, it should provide the answer of 21.
+
+8) Write a program to check the validity of password input by users. The rules for a valid password are:
 
     * At least 1 letter between [a-z] and 1 letter between [A-Z].
     * At least 1 number between [0-9].
@@ -259,4 +266,17 @@ print(truthy)
     * Minimum length 6 characters.
     * Maximum length 16 characters.
 
-9. Write a program that will allow a user to input his name. The prompt and input data would look something like this: `Please enter your name: Peter Ustinov`. Using a for-loop and the String method, `substring()`, produce a printout of the reversal of the name. For example, the name Peter Ustinov would be: `vonitsu retep`. Ensure that the printout is in all lower-case.
+9) Write a program that will allow a user to input his name. The prompt and input data would look something like this: `Please enter your name: Peter Ustinov`. Using a for-loop and the String method, `substring()`, produce a printout of the reversal of the name. For example, the name Peter Ustinov would be: `vonitsu retep`. Ensure that the printout is in all lower-case.
+
+10) If we didn't do it as an example together in class (or you are using my notes online), create a simple number guessing game. The program needs to work as follows:
+
+    * The computer picks a random number and stores it as a secret number
+    * Ask the user to guess the number
+    * If the guess is higher than the secret number, print the message "too high"
+    * If the guess is lower than the secret number, print the message "too low"
+    * If the guess is correct, print the message "you are correct!"
+    * To use a while loop to keep the game going until the correct guess has been made
+    * Bonus points: Can you keep count of the number of guesses it takes the player to get it correct?
+
+    Note: in Python to generate a random number, you should `import random` at the top of your program, and then use an instruction such as `r = random.randint(0, 100)` to generate a random integer between 0 and 99.
+
