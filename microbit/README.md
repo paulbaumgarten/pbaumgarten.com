@@ -33,6 +33,14 @@ Got yourself a Microbit? Awesome! They're a great way to learn Python!
 * [Lesson 7: Communicate with bluetooth](lesson-07-communicate-with-bluetooth.md)
     * Share the love by sending messages to someone else's Microbit
 
+## Sample game projects
+
+* [Snake](snake.md)
+* [Tetris](tetris.md)
+* [Flappy bird](flappy-bird.md)
+
+Start with a sample game and then adapt it. Add your own music to it, modify the controls, add a Neopixel to indicate scores.
+
 ## Project ideas
 
 * Make a pinball game! - [example](https://www.youtube.com/watch?v=QzWSRXqQBeQ) **this is cool!**
