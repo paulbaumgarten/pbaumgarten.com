@@ -16,21 +16,57 @@ This lesson:
 
 A named location in the computer’s memory that you can use to store a value to and read values from.
 
+## First example
+
+In this example, we create a named variable `account_balance` and assign it a starting value of `100`. We can then access that value any place where we might have used the number 100 previously, such as in the scroll() command.
+
+```python
+from microbit import *
+
+account_balance = 100
+display.scroll( account_balance )
+```
+
+One golden rule with assigning variable values in Python is that the name of the target variable we want to place a value in must be on the left side of the equal sign. The value we want to place, or something to calculate a value, must go on the right.
+
+To illustrate this,
+
+```python
+from microbit import *
+
+weeks = 3
+weekly_allowance = 200
+account_balance = weeks * weekly_allowance
+display.scroll( account_balance )
+```
+
 ## Numeric variables and addition
+
+How will the following program change the value of `n` as it runs? What will be output to the display?
 
 ```python
 from microbit import *
 
 n = 0
-while True:
+while n < 100:
     n = n + 1
     display.scroll(n)
+display.scroll("bye")
 ```
 
 * What will the above do?
 * How can we use the buttons to add/subject 1 to the number?
 
-## Addition and subtraction
+## Arithmetic
+
+We can perform a range of arithmetic operations on variables using the following operators:
+
+* Addition... `+`
+* Subtraction... `-`
+* Multiplication... `*`
+* Division... `/` 
+
+An example using subtraction and multiplication follow...
 
 ```python
 from microbit import *
@@ -39,46 +75,45 @@ n = 0
 while n < 100:
     n = n + 1
     if button_a.was_pressed():
-        n = n + 1
+        n = n - 10
     if button_b.was_pressed():
-        n = n - 1
-    display.scroll(n)
-```
-
-* How can we use pin0 to double the number and pin1 to halve the number?
-
-## Multiplication and division
-
-```python
-from microbit import *
-
-n = 0
-while n < 100:
-    n = n + 1
-    if button_a.was_pressed():
-        n = n + 1
-    if button_b.was_pressed():
-        n = n - 1
-    if pin0.is_touched():
         n = n * 2
-    if pin1.is_touched():
-        n = n / 2
     display.scroll(n)
 ```
 
 ## Using a random number generator
 
+While learning about numbers, it can be handy for Microbit games to know how to generate a random number. 
+
 Firstly import the `random` library as it is not part of default Python.
 
 ```python
+from microbit import *
 import random
 ```
 
-Then inside your main loop, add...
+Then to ask for a random number between 0 and 99, to be saved into a variable called `num`, the code would look like
 
 ```python
-    if pin2.is_touched():
+num = random.randint(0,99)
+```
+
+So we can add this to our previous program...
+
+```python
+from microbit import *
+import random
+
+n = 0
+while n < 100:
+    n = n + 1
+    if button_a.was_pressed():
+        n = n - 10
+    if button_b.was_pressed():
+        n = n * 2
+    if pin0.is_touched():
         n = random.randint(0,99)
+    display.scroll(n)
 ```
 
 ## Modulus
