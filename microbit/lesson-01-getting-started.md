@@ -1,14 +1,5 @@
 # Microbit Lesson 1: Getting started
 
-## Lesson overview
-
-This lesson:
-
-* Introducing the Microbit, Mu & Python
-* Running your first program on the Microbit
-* Basic syntax of Python
-* Debugging tips
-
 ## Video
 
 * [Microbit lesson 1 video](https://youtu.be/BPgkJJkEu_k)
@@ -73,26 +64,39 @@ When asking for help...
 * Show the entire stack trace including the error message.
 * Explain 2-3 things that you’ve tried already and why they didn’t work.
 
-## Activity: Quick familiarity
+## Your second program
 
-Spend a few minutes experimenting with different messages and the built in emoji images.
-
-When ready, try using the following additional commands:
+We can use the `sleep()` command to create a pause in our program as the following demonstrates...
 
 ```python
-# Will pause the program for 1000 milliseconds
-sleep(1000)                 
+from microbit import *
 
-# Clear the entire LED grid
-display.clear()             
-
-# Set pixel 3rd column, 5th row to brightness 9 (full)
-display.set_pixel(2,4,9)    
-
-# To create your own image, setting each LED individually
-# -- 0 indicates off, 9 indicates on (full brightness)
-display.show(Image("09090:99999:09090:99999:09090"))
+display.show(Image.HAPPY)
+sleep(2000)
+display.show(Image.HEART)
+sleep(2000)
+display.show(Image.YES)
+sleep(2000)
 ```
+
+## Your third program
+
+We aren't just restricted to the images already created for us, we can create our own with the `Image()` command. 
+
+For instance, if I woke up in the morning feeling sad, then felt neutral, then felt happy, I could show this with a Microbit. The neutral face doesn't currently exist, so I need to create it myself as follows...
+
+```python
+from microbit import *
+
+display.show(Image.SAD)
+sleep(2000)
+display.show(Image("00000:09090:00000:99999:00000"))
+sleep(2000)
+display.show(Image.HAPPY)
+sleep(2000)
+```
+
+The `Image()` command works by providing a brightness code for each individual LED on the board. `0` indicates LED off, `9` indicates LED full brightness on. We specifiy the five values for the five LEDs in each row, and use a `:` as a row separator.
 
 ## Activity: Create an animated art piece
 
