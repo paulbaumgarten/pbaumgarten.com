@@ -65,6 +65,8 @@ As with procedural programming, attributes have a data type associated with them
 
 This process of actually "creating" an object based on its class definition is known as instantiation. It is instantiation that will allocate the memory required to a new object based off the class definition and will execute the code necessary at its construction or birth (more on that later). (as per previous analogy: the act of building the house from the drawings)
 
+<div class="page" />
+
 ## UML
 
 This wouldn't be Computer Science if we didn't love a diagram! UML, or the Unified Modelling Language, is a set of diagrams used to document programs. We will use the UML Class diagram to document classes, their attributes and methods, and their relationships to each other. In this course you are expected to be able to (a) interpret and (b) create UML Class diagrams in the exam setting.
@@ -86,6 +88,8 @@ Let's explore a few common scenarios and decompose them into likely classes of o
 * Calendars
 * Media collections
 
+<div class="page" />
+
 ## Relationships
 
 Objects (and by extension their classes) are frequently related to each other. This relationship is also identified in the UML diagram. While there are others, there are three types of relationships the IB syllabus dictates you understand. They are:
@@ -103,6 +107,8 @@ Looking at the example of a car, here are the three types of relationship and ho
 At its heart, OOP methodology is about abstracting a problem into the objects within the problem. The idea is that each object becomes a self contained unit, with all it's attributes and methods enclosed within. 
 
 It is thought that this makes data safer and manipulation of data more predictable. 
+
+<div class="page" />
 
 ## Coding example
 
@@ -185,6 +191,9 @@ For now, I don't want you to be too concerned about all the extra boiler plate a
 
 ![](img/introducing-properties-and-methods.png)
 
+<div class="page" />
+
+
 # Unit D2: OOP features
 
 There are three core principles of object orientated programming you must be familiar with: Inheritance, encapsulation, and polymorphism.
@@ -241,8 +250,10 @@ Key points to discuss:
 
 ![](img/ExerciseOOP_ShapeAndSubclasses.png)
 
+<div class="page" />
 
 ## Abstraction
+
 Not one of the "three cores of OOP" according to the IB syllabus, but in reality it is a fairly fundamental idea you need to understand. The phrase has appeared in past papers as well, so, go figure.
 
 Abstraction refers to the concept of hiding the complexities of a system from the users of that system.
@@ -361,6 +372,8 @@ genta.name = "Genta";            // <---- Will cause Java to refuse to allow thi
 genta.setName( "Genta" );
 println( genta.getName() );
 ```
+
+<div class="page" />
 
 ## Polymorphism
 
@@ -571,6 +584,8 @@ The following is a very interesting paper, looking at some of the risks with our
 
 * Cox, Russ (2019) "Our Software Dependency Problem" available at [https://research.swtch.com/deps](https://research.swtch.com/deps)
 
+<div class="page" />
+
 # Unit D3: OOP programming
 
 ## Terminology
@@ -612,6 +627,8 @@ How much do programmers have ethical & moral duties in their work?  For instance
 * Is it the programmers duty to ensure adequate testing of products to prevent the possibilities of commercial or other damage? 
 * What about acknowledging the work of other programmers? 
 * What is the Open Source movement, and ethically how important is it to contribute to it if you plan on taking advantage of open source code in your project?
+
+<div class="page" />
 
 ## OOP example code
 
@@ -686,7 +703,6 @@ public class Sphere extends Circle {
 
 * Caution: For the above Sphere to work, you will need to make one change to Circle. The access modifier for radius will not allow Sphere to compile. What access modifier should be used instead of `private`? Check your access modifier notes.
 
-
 **Your turn!** - Create a Cylinder class such that the following `main()` will execute as expected. Notice you need an overloaded constructor!
 
 ```java
@@ -715,6 +731,8 @@ public class Sphere extends Circle {
       System.out.println("Volume: "+cy2.getVolume() );
    }
 ```
+
+<div class="page" />
 
 # Problem set
 
