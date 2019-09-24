@@ -138,7 +138,28 @@ public static String confirm( String prompt ) {
 
 4. Create a user input validation function that requires the input of a phone number (so `+`, spaces and `-` characeters are permitted).
 
-5. Create a user input validation function that requires the input of a date in the `dd/mm/yyyy` format.
+5. Create a user input validation function that requires the input of a date in the `dd/mm/yyyy` format. Example logic as follows:
+
+```text
+function inputDate(prompt)
+    forever
+        print the prompt
+        read a line from the keyboard
+        split the text entered based on /
+        check the text was split into 3 parts
+        if 3 parts then
+            if (part 1 contains only digits AND part 2 contains only digits AND part 3 contains only digits) then
+                convert part 1 to an integer
+                convert part 2 to an integer
+                convert part 3 to an integer
+                if part 1 between 1 & 31 AND part 2 between 1 & 12 AND part 3 minimum of 1900 THEN
+                    return the text originally entered
+                end if
+            end if
+        end if
+    end loop
+end function
+```
 
 6. *(return to this one after we've done arrays)* Create a user input validation function that accepts an array of strings as the parameter and presents them to the user as a list of menu choices, requiring the user to enter a number cooresponding to a valid choice before proceeding. For example if the code to run the funciton was....
 
