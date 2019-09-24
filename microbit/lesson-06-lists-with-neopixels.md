@@ -4,6 +4,16 @@
 
 * [Microbit lesson 6 video](https://youtu.be/c1RAGaOKYNo)
 
+## Connecting the Neopixels
+
+The wiring of a neopixel matters. Get the cables the wrong way around and it won't work.
+
+* Black must plug to GND
+* Red must plug to 3.3V
+* White is the data cable, it can connect to pin 0, 1 or 2
+
+![](assets/neopixel-wiring.jpg)
+
 ## Using Neopixels
 
 Neopixels are little RGB LEDs (red-green-blue light-emiting-diodes) that are programmable so we can make them any colour we wish.
@@ -58,9 +68,6 @@ from microbit import *
 from neopixel import NeoPixel
 leds = NeoPixel(pin1, 8)
 
-# Define my colours
-white =     [255, 255, 255]
-
 # Define a command (function) to set all LEDs to off
 def clear_leds():
     number = 0
@@ -69,6 +76,8 @@ def clear_leds():
         number = number + 1
     leds.show()
 
+# Our main program starts here
+white = [255, 255, 255]
 n = 0
 while True:
     clear_leds()    # Run the clear_leds() command
@@ -76,7 +85,7 @@ while True:
     n = n + 1
     if n > 8:
         n = 0
-    sleep(20)
+    sleep(100)
 ```
 
 Like the rest of Python, the indentation has special meaning. In this case we end indentation to indicate the end of the command definition.
@@ -94,14 +103,6 @@ from microbit import *
 from neopixel import NeoPixel
 leds = NeoPixel(pin1, 8)
 
-# Define my colours
-white =     [255, 255, 255]
-blue =      [  0,   0, 255]
-red =       [255,   0,   0]
-green =     [  0, 255,   0]
-magenta =   [255,   0, 255]
-black =     [  0,   0,   0]
-
 # Define a function to set all LEDs to black
 def clear_leds():
     number = 0
@@ -109,6 +110,14 @@ def clear_leds():
         leds[number] = [0,0,0]
         number = number + 1
     leds.show()
+
+# Define our colours
+white =     [255, 255, 255]
+blue =      [  0,   0, 255]
+red =       [255,   0,   0]
+green =     [  0, 255,   0]
+magenta =   [255,   0, 255]
+black =     [  0,   0,   0]
 
 # Make green and magenta opposing chasers
 clear_leds()
@@ -120,9 +129,10 @@ while True:
     number = number + 1
     if number == 8:
         number = 0
+    sleep(100)
 ```
 
-## Where next?
+## What next?
 
 How about turning on a random LED to a random colour each time?
 
@@ -153,9 +163,8 @@ while True:
     # set the LED and show
     leds[n] = [r,g,b]
     leds.show()
-    sleep(10)
+    sleep(100)
 ```
-
 
 ## Activity
 

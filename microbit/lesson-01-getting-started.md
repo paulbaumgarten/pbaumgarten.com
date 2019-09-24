@@ -6,7 +6,7 @@
 
 ## Introducing
 
-![](img/microbit-hardware.png)
+![](img/microbit-logo.png)
 
 The Microbit
 
