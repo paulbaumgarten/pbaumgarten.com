@@ -2,7 +2,15 @@
 
 * Suggested video [Text files in Python](https://www.youtube.com/watch?v=4mX0uPQFLDU&list=PLi01XoE8jYohWFPpC17Z-wWhPOSuh8Er-&index=29) by Socratica
 
-Read entire file as a list, one string per line
+## Read entire file as a string
+
+```python
+with open("countries.txt", "r") as f:   # Open file for reading
+    content = f.read()                  # Load entire file into 1 large string
+    print(content)                      # Do something with the string
+```
+
+## Read entire file as a list, one string per line
 
 ```python
 with open("countries.txt", "r") as f:   # Open file for reading
@@ -12,7 +20,15 @@ with open("countries.txt", "r") as f:   # Open file for reading
         print(line)
 ```
 
-Writing a text file
+## Writing a text file - Using just a string
+
+```python
+content = "My exciting material"
+with open("stuff.txt", "w") as f:   # Open file stuff.txt for writing
+    f.write(content)                # Write this string to the file
+```
+
+## Writing a text file - Using a list of strings
 
 ```python
 content = ['Leah', 'Obi-wan', 'Yoda', 'Rey', 'Finn', 'bb-8']
@@ -21,7 +37,15 @@ with open("people.txt", "w") as f:  # Open file people.txt for writing
     f.write(save)                   # Write this string to the file
 ```
 
-Notes:
+## Add to a file without replacing the original content
+
+```python
+content = "More exciting material"
+with open("stuff.txt", "a") as f:   # Open file stuff.txt for appending
+    f.write(content)                # Add this string to the file
+```
+
+## About files...
 
 * The `with` statement will close the file when you unindent
 * `.splitlines()` behaves like `.split("\n")`
