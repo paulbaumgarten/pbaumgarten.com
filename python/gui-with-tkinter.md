@@ -1,5 +1,11 @@
 # Tkinter GUI
 
+## Suggested resources
+
+* https://python-textbok.readthedocs.io/en/1.0/Introduction_to_GUI_Programming.html
+* http://www.effbot.org/tkinterbook/grid.htm
+* https://docs.python.org/3.7/library/tkinter.html
+
 ## Exercise 1 - Welcome screen
 
 ![]("img/tkinter-hello.png")
