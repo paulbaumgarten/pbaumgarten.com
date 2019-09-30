@@ -45,7 +45,7 @@ To test my neural network, I implemented a few simple logic gates. As you can se
 
 ## Using TF2 with MNIST
 
-![](mnisi.gif)
+![](img/mnisi.gif)
 [Animation source](https://github.com/lexfridman/mit-deep-learning/blob/master/tutorial_deep_learning_basics/deep_learning_basics.ipynb)
 
 One "classic" introductory project using a CNN is to use the "MNIST" dataset. The MNIST dataset containss 70,000 grayscale images of handwritten digits at a resolution of 28 by 28 pixels. The task is to take one of these images as input and predict the most likely digit contained in the image (along with a relative confidence in this prediction).
