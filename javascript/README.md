@@ -1,8 +1,8 @@
-# Book of Javascript
+# Learn Javascript
 
 <img src="img/js-logo.png" style="float:right">
 
-## Chapter 1 - Javascript basics
+## Javascript basics
 
 Quicklinks to Repl language playgrounds: 
 
@@ -11,62 +11,73 @@ Quicklinks to Repl language playgrounds:
 
 Lessons
 
-* 1.0 - [Introduction & getting Javascript up and running](100-intro.md)
-* 1.1 - [Numeric calculations](101-numbers.md)
-* 1.2 - [Numeric variables](102-numeric-variables.md)
-* 1.3 - [String variables](103-strings.md)
-* 1.4 - [User input](104-ui.md)
-* 1.5 - [Converting between numbers and strings](105-casting.md)
-* 1.6 - [Comparing values](106-comparing.md)
-* 1.7 - [Making decisions with "if"](107-if.md)
-* 1.8 - [Repeating instructions with "while"](108-while.md)
-* 1.9 - [Making a list](109-arrays.md)
-* 1.10 - [Looping through a list](110-looping-arrays.md)
-* 1.11 - [Other list functionality](111-array-functions.md)
-* 1.12 - [Dates and times](112-dates-times.md)
-* 1.13 - [Functions](113-functions.md)
-* 1.14 - [Callbacks](114-callbacks.md)
-* 1.15 - [JSON](115-json.md)
-* 1.16 - [Promises and using fetch](116-promises-and-fetch.md)
-* 1.17 - [Classes](117-classes.md)
+* 100 - [Introduction & getting Javascript up and running](100-intro.md)
+* 101 - [Numeric calculations](101-numbers.md)
+* 102 - [Numeric variables](102-numeric-variables.md)
+* 103 - [String variables](103-strings.md)
+* 104 - [User input](104-ui.md)
+* 105 - [Converting between numbers and strings](105-casting.md)
+* 106 - [Comparing values](106-comparing.md)
+* 107 - [Making decisions with "if"](107-if.md)
+* 108 - [Repeating instructions with "while"](108-while.md)
+* 109 - [Making a list](109-arrays.md)
+* 110 - [Looping through a list](110-looping-arrays.md)
+* 111 - [Other list functionality](111-array-functions.md)
+* 112 - [Dates and times](112-dates-times.md)
+* 113 - [Functions](113-functions.md)
+* 114 - [Callbacks](114-callbacks.md)
+* 115 - [JSON](115-json.md)
+* 116 - [Promises and using fetch](116-promises-and-fetch.md)
+* 117 - [Classes](117-classes.md)
 
-# Chapter 2 - HTML
+## Intro to HTML
 
-> Coming soon
+Javascript rarely stands alone in isolation. As the langauge of the web, it is very commonly used in conjunction with HTML and CSS, so an understanding of these two markup languages is very useful.
 
-* 2.1 - Introduction to HTML
-* 2.2 - A tags
-* 2.3 - DIV, SPAN tags
-* 2.4 - IMG, VIDEO, AUDIO tags
-* 2.5 - FORM tags
-* 2.6 - Lists
-* 2.7 - Tables
+* [Introduction to HTML](html.html)
+* [Anchor elements](html.html)
+* [The DIV and SPAN elements](html.html)
+* [IMG, VIDEO, AUDIO elements](html.html)
+* [FORM and INPUT elements](html.html)
+* [Lists](html.html)
+* [Tables](html.html)
 
-# Chapter 3 - CSS
+# Intro to CSS
 
-> Coming soon
+Javascript rarely stands alone in isolation. As the langauge of the web, it is very commonly used in conjunction with HTML and CSS, so an understanding of these two markup languages is very useful.
 
-* 3.1 - Selectors
-* 3.2 - Boiler plate
-* 3.3 - Basic styling
-* 3.4 - Showing/hiding items
-* 3.5 - Grid layout
-* 3.6 - Drop down menus
-* 3.7 - Styling form elements
-* 3.8 - Icons
-* 3.9 - Styling tables
+* [Introduction](css.html)
+* [Boiler plate](css.html)
+* [Basic styling](css.html)
+* [Showing/hiding items](css.html)
+* [Grid layout](css.html)
+* [Drop down menus](css.html)
+* [Styling form elements](css.html)
+* [Icons](css.html)
+* [Styling tables](css.html)
 
-# Chapter 4 - Javascript exercises with HTML & CSS
+# Javascript & the DOM
 
 The DOM (document object model) forms the basis of where Javascript, HTML and CSS all intersect. 
 
-* Document object model functions & properties
-* Event handlers
-* Basic form tasks (validation, send)
-* Uploading files
-* Local storage
+* [Document object model functions & properties](dom.html)
+* [Event handlers](dom.html#event-handlers)
+* [Basic form tasks](dom.html#basic-form-tasks) (validation, send)
+* [Uploading files](dom.html#uploading-files)
+* [Local storage](dom.html#local-storage)
+* [Reading an uploaded file in the browser](javascript-read-uploaded-file-in-broswer.html)
+* [Geolocation](javascript-geolocation.html)
+* [Detect screen size, device type](javascript-detect-device.html)
+* [Cordova](javascript-cordova.html)
 
-# Chapter 5 - Firebase
+# Node.js
+
+Javascript doesn't just have to run in the browser. Node.js is when Javascript is used to run as a standalone tool, commonly to create web servers.
+
+* [Install & setup of Node.js](nodejs.html) (including npm) *coming soon*
+* [A simple express.js web server](nodejs.html#expressjs) *coming soon*
+
+# Firebase
 
 Google Firebase is one of a number of tools that Google makes available for developers. It is quite handy as a "proof of concept" tool that minimises the need for you to create your own "back end" server.
 
@@ -78,45 +89,24 @@ Firebase can be used to provide:
 
 Tutorials and notes on Firebase as follows:
 
-* 5.1 - Firebase authentication - see [online demo](htps://authdemo.jigsawapps.net/)
-* 5.2 - Firebase database - see [online demo](htps://notekeeper.jigsawapps.net/)
-* 5.3 - Firebase file storage - see [online demo](htps://notekeeper.jigsawapps.net/)
+* Part 1 - [Firebase authentication](firebase.html#firebase-authentication)
+* Part 2 - [Firebase database](firebase.html#firebase-database)
+* Part 3 - [Firebase file storage](firebase.html#firebase-file-storage)
 
-Appendum: Use the following firebase database rules
-
-```json
-{
-  /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */
-  "rules": {
-    ".read": "auth != null",
-    ".write": "auth != null"
-  }
-}
-```
-
-# Chapter 6 - Canvas
+# HTML Canvas
 
 The HTML canvas is a graphics system that you can program with Javascript. The element is divided into pixels. You use sets of pixel coordinates to tell Javascript where to draw shapes, place text or images etc.
 
-* [Coordinate system](canvas.md)
-* [Hello canvas!](canvas.md#hello-canvas)
-* [Drawing basic shapes](canvas.md#drawing-basic-shapes)
-* [Using colour](canvas.md#using-color)
-* [Displaying text](canvas.md#displaying-text)
-* [Keyboard events](canvas.md#keyboard-events)
-* [Mouse events](canvas.md#mouse-events)
-* [Drawing an image](canvas.md#drawing-an-image)
-* [Playing a sound](canvas.md#playing-a-sound)
-* [Detecting collisions](canvas.md#detecting-collisions)
-
-# Additional content
-
-Not everything made it into the first edition of book that probably should have.
-
-* [Reading an uploaded file in the browser](javascript-read-uploaded-file-in-broswer)
-* [Geolocation](javascript-geolocation)
-* [Detect screen size, device type](javascript-detect-device)
-* [Cordova](javascript-cordova)
+* [Coordinate system](canvas.html)
+* [Hello canvas!](canvas.html#hello-canvas)
+* [Drawing basic shapes](canvas.html#drawing-basic-shapes)
+* [Using colour](canvas.html#using-color)
+* [Displaying text](canvas.html#displaying-text)
+* [Keyboard events](canvas.html#keyboard-events)
+* [Mouse events](canvas.html#mouse-events)
+* [Drawing an image](canvas.html#drawing-an-image)
+* [Playing a sound](canvas.html#playing-a-sound)
+* [Detecting collisions](canvas.html#detecting-collisions)
 
 # Reference guides & valuable links
 

@@ -24,7 +24,7 @@ These notes have been prepared and tested on Firebase v5.4.1. Firebase changes i
 
 <div class="page"/>
 
-# 5.1 - Firebase authentication
+# Firebase authentication
 
 See a demo of this project running at [https://authdemo.jigsawapps.net/](https://authdemo.jigsawapps.net/)
 
@@ -39,6 +39,17 @@ See a demo of this project running at [https://authdemo.jigsawapps.net/](https:/
 * Scroll to Authorised domains
   * Add the domain that you will be hosting your project from eg: `mysuperproject.com` (you can add this later if you are not sure what it will be at the start)
 * On the main sidebar, click on "Project Overview". On the "Get started by adding Firebase to your app" page, click on the `</>` icon and copy the code section that appears into your HTML header as shown in the HTML code sample on the next page in the section labelled `<-- Initialise Firebase -->`.
+* Set the following access rules for your firebase database
+
+```json
+{
+  /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */
+  "rules": {
+    ".read": "auth != null",
+    ".write": "auth != null"
+  }
+}
+```
 
 ## Run a webserver on localhost
 
@@ -198,7 +209,7 @@ window.onload = requireSignIn;
 
 <div class="page"/>
 
-# 5.2 - Firebase database
+# Firebase database
 
 See a demo of this project running at [https://notekeeper.jigsawapps.net/](https://notekeeper.jigsawapps.net/)
 
@@ -452,7 +463,7 @@ function main(status, userInfoProvided) {
 
 <div class="page"/>
 
-# 5.3 - Firebase file storage
+# Firebase file storage
 
 ## Understanding Firebase file storage
 
@@ -596,7 +607,7 @@ Find the `<div class="layout_note style_box">` section of your **Notekeeper** HT
 
 <div class="page"/>
 
-# 5.4 - CSS for Firebase projects
+# CSS for Firebase projects
 
 All projects in this chapter use the following CSS in `my-project.css`:
 

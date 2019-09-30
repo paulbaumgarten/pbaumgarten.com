@@ -1,12 +1,12 @@
-# 4 - Javascript: Manipulating the HTML and CSS
+# Javascript: Manipulating DOM (HTML & CSS)
 
-# 4.1 - Document object model functions & properties
+# The DOM
 
 This section will briefly mention some of the key functions and properties Javascript makes available for you to use to manipulate the HTML document.
 
-## Document functions
+## DOM functions & properties
 
-### querySelector()
+### .querySelector()
 
 Usage:
 
@@ -23,7 +23,7 @@ For HTML `<div id="text" class="person" data-example="nothing much">`, the follo
   * `div[data-example]` would select based on being a `div` with a `data-example` attribute
   * `div[data-example="nothing much"]` would select based on being a `div` with a `data-example` attribute that is set to `"nothing much"`
 
-### querySelectorAll()
+### .querySelectorAll()
 
 Usage:
 
@@ -44,9 +44,9 @@ for (let element of elements) {
 
 <div class="page"/>
 
-## Element functions
+### element.setAttribute()
 
-The examples below presume the following HTML:
+Presuming the following HTML:
 
 ```html
 <div id="person" class="info_box">
@@ -54,7 +54,7 @@ The examples below presume the following HTML:
 </div>
 ```
 
-### element.setAttribute()
+Then in Javascript, 
 
 ```javascript
 element.setAttribute( attribute_name, new_value );
@@ -64,6 +64,16 @@ element.setAttribute( attribute_name, new_value );
 
 ### element.removeAttribute()
 
+Presuming the following HTML:
+
+```html
+<div id="person" class="info_box">
+    <p>The person is <span id="person_name">Black widow</span></p>
+</div>
+```
+
+Then in Javascript, 
+
 ```javascript
 element.removeAttribute( attribute_name );
 ```
@@ -71,6 +81,16 @@ element.removeAttribute( attribute_name );
 `document.querySelector("#person").removeAttribute( "class" );` would remove the class attribute all together for the `<div>`.
 
 ### element.getAttribute()
+
+Presuming the following HTML:
+
+```html
+<div id="person" class="info_box">
+    <p>The person is <span id="person_name">Black widow</span></p>
+</div>
+```
+
+Then in Javascript, 
 
 ```javascript
 let attr = element.getAttribute( attribute_name );
@@ -80,6 +100,16 @@ let attr = element.getAttribute( attribute_name );
 
 ### element.hasAttribute()
 
+Presuming the following HTML:
+
+```html
+<div id="person" class="info_box">
+    <p>The person is <span id="person_name">Black widow</span></p>
+</div>
+```
+
+Then in Javascript, 
+
 ```javascript
 let result = element.hasAttribute( attribute_name );
 ```
@@ -87,6 +117,16 @@ let result = element.hasAttribute( attribute_name );
 `let result = document.querySelector("#person").hasAttribute( "class" );` would return `true`.
 
 ### element.addEventListener()
+
+Presuming the following HTML:
+
+```html
+<div id="person" class="info_box">
+    <p>The person is <span id="person_name">Black widow</span></p>
+</div>
+```
+
+Then in Javascript, 
 
 ```javascript
 element.addEventListener( event_code, function_to_call );
@@ -98,17 +138,21 @@ See *4.2 - Javascript event handlers* for a list of event_codes and some example
 
 ### element.removeEventListener()
 
+Presuming the following HTML:
+
+```html
+<div id="person" class="info_box">
+    <p>The person is <span id="person_name">Black widow</span></p>
+</div>
+```
+
+Then in Javascript, 
+
 ```javascript
 element.removeEventListener( event_code, function_to_call );
 ```
 
 Will remove event listeners when both the event_code and the function_to_call match an event that was created. See *4.2 - Javascript event handlers* for a list of event_codes and some examples.
-
-<div class="page"/>
-
-## Element properties
-
-Element properties are like variables. They are generally named items that you can read/write to like a variable that allow you to read/change the HTML element in question somehow.
 
 ### element.value
 
