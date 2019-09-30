@@ -58,17 +58,25 @@ Lessons
 
 # Chapter 4 - Javascript exercises with HTML & CSS
 
-> Coming soon
+The DOM (document object model) forms the basis of where Javascript, HTML and CSS all intersect. 
 
-* 4.1 - Document object model functions & properties
-* 4.2 - Event handlers
-* 4.3 - Basic form tasks (validation, send)
-* 4.4 - Uploading files
-* 4.5 - Local storage
+* Document object model functions & properties
+* Event handlers
+* Basic form tasks (validation, send)
+* Uploading files
+* Local storage
 
 # Chapter 5 - Firebase
 
-> Coming soon
+Google Firebase is one of a number of tools that Google makes available for developers. It is quite handy as a "proof of concept" tool that minimises the need for you to create your own "back end" server.
+
+Firebase can be used to provide:
+
+* Authentication of users against their pre-existing Google credentials.
+* Store/retrieve application data in JSON format
+* Upload/download files for storage
+
+Tutorials and notes on Firebase as follows:
 
 * 5.1 - Firebase authentication - see [online demo](htps://authdemo.jigsawapps.net/)
 * 5.2 - Firebase database - see [online demo](htps://notekeeper.jigsawapps.net/)
@@ -88,18 +96,18 @@ Appendum: Use the following firebase database rules
 
 # Chapter 6 - Canvas
 
-> Coming soon
+The HTML canvas is a graphics system that you can program with Javascript. The element is divided into pixels. You use sets of pixel coordinates to tell Javascript where to draw shapes, place text or images etc.
 
-* 6.1 - Coordinate system
-* 6.2 - Hello canvas!
-* 6.3 - Drawing basic shapes
-* 6.4 - Using colour
-* 6.5 - Displaying text
-* 6.6 - Keyboard events
-* 6.7 - Mouse events
-* 6.8 - Drawing an image
-* 6.9 - Playing a sound
-* 6.10 - Detecting collisions
+* [Coordinate system](canvas.md)
+* [Hello canvas!](canvas.md#hello-canvas)
+* [Drawing basic shapes](canvas.md#drawing-basic-shapes)
+* [Using colour](canvas.md#using-color)
+* [Displaying text](canvas.md#displaying-text)
+* [Keyboard events](canvas.md#keyboard-events)
+* [Mouse events](canvas.md#mouse-events)
+* [Drawing an image](canvas.md#drawing-an-image)
+* [Playing a sound](canvas.md#playing-a-sound)
+* [Detecting collisions](canvas.md#detecting-collisions)
 
 # Additional content
 
