@@ -325,6 +325,12 @@ To help you try to remember what the various symbols look like, it might be help
 
 ![](img/android-logic-gates.jpg)
 
+### Practice your understanding of how they work
+
+Play the NAND game - Build logic circuits from the very basics upawrd.
+
+* [nandgame.com](http://nandgame.com/)
+
 ### Order of precedence
 
 Be aware that like PEMDAS in mathematics, an order of precedence exists for equations involving gates. The order of precedence is:
