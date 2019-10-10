@@ -31,6 +31,7 @@ This is the place to start if you are brand new to Python. I have introdutory vi
 If you know the basics of Python and wish to experiement with a new package or technique, look through the other tutorials to find something of interest to you.
 
 * [Audio (recording, playback, detect frequency etc)](audio.md)
+* [Classes for OOP](classes.md)
 * [Databases](databases.md)
 * [EXE with PyInstaller](exe-with-pyinstaller.md)
 * [Flask webserver](flask-webserver.md)
