@@ -38,6 +38,7 @@ If you know the basics of Python and wish to experiement with a new package or t
 * [Google searching](google-searching.md) (through the API)
 * [GUI with PySimpleGUI](gui-with-pysimplegui.md)
 * [GUI with TKinter](gui-with-tkinter.md)
+* [GUI with Chromium](gui-with-chromium.md)
 * [Lego EV3](lego-ev3.md)
 * [Networking with sockets](networking-with-sockets.md)
 * [Nginx setup for Flask](nginx-setup-for-flask.md)
