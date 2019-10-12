@@ -141,11 +141,19 @@ Our world seems to revolve around numbers. As useful as numbers are, humans are 
 
 This **check digit** can be automatically calculated from the rest of the number. If the calculation works, then there is a much greater likelihood that the number has been correctly entered (though mistakes can still occur).
 
-One common example referred to in the textbook is the ISBN (page 122).
+### ISBN
+
+![](img/isbn.jpg)
+
+One common example referred to in the textbook is the ISBN. Refer to page 122 to see how it works.
+
+### LUHN
 
 ![](img/luhn.jpg)
 
-The **luhn algorithm** is another check digit algorithm. It is used by Master and Visa credit cards. The last digit is calculated based on a formula that uses all the other digits as the input. I've written about the luhn algorithm [here](https://pbaumgarten.com/igcse-compsci/programming-problems.html#luhn-algorithm).
+The **luhn algorithm** is another check digit algorithm. It is used by Mastercard and Visa. The last digit is calculated based on a formula that uses all the other digits as the input. I've written about the luhn algorithm [here](https://pbaumgarten.com/igcse-compsci/programming-problems.html#luhn-algorithm).
+
+### HKID
 
 ![](img/hkid_sample.jpg)
 
@@ -153,7 +161,7 @@ The Hong Kong ID number is another check digit algorithm. The algorithm is docum
 
 ### Problem
 
-Time to do some programming! Pick either the ISBN, LUHN, or HKID check algorithm and seek to design and implmement it in Python.
+Time to do some programming! Pick either the ISBN, LUHN, or HKID check algorithm. Design and implmement it in Python.
 
 I'm happy for you to work with your neighbour on this one. Please don't cheat by finding the answer online, it is supposed to be a thinking exercise.
 
