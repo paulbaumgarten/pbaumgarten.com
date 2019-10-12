@@ -5,8 +5,8 @@ Teaching resources and programming projects for Paul Baumgarten
 
 ## Teaching resources
 
-* [Computer Science: International Baccalaureate](https://pbaumgarten.com/ib-compsci)
-* [Computer Science: Cambridge iGCSE](https://pbaumgarten.com/igcse-compsci)
+* [IB Diploma Computer Science](https://pbaumgarten.com/ib-compsci)
+* [iGCSE Computer Science](https://pbaumgarten.com/igcse-compsci)
 * [Learn Python](https://pbaumgarten.com/python)
 * [Learn Java](https://pbaumgarten.com/java)
 * [Learn Javascript](https://pbaumgarten.com/javascript)

@@ -21,8 +21,6 @@ The traditional starting point for learning a programming language.
 print("Hello world!")
 ```
 
-Note: In Python the `#` is used to donote a comment follows.
-
 ## Learning Python
 
 Rather than reproducing all my Learning Python notes (and risk updates causing one set of documents to fall out of sync),  we will work through my existing Python notes repository
@@ -43,4 +41,4 @@ You should complete all the 100-series tutorials and problem sets.
    * Paper & pen in-class written test
    * No computer, no notes, no calculator
    * The test will be based on the problem sets, the questions being very similar to them.
-   * [View a sample test](distribute/unit-1-sample-test.pdf)
+   * Download a [sample test](distribute/unit-1-sample-test.pdf)

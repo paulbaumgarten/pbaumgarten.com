@@ -11,7 +11,9 @@ My teaching notes for the Cambridge iGCSE Computer Science course. *These notes 
 * [Unit 5 Databases](unit-5-databases.md)
 * [Unit 6 Networks](unit-6-networks.md)
 * [Unit 7 Pre-release material](unit-7-pre-release-material.md)
----
+
+Other resources
+
 * My [Learn Python website](https://pbaumgarten.com/python)
 * My [Youtube channel](https://youtube.com/pbaumgarten), also check the dedicated [iGCSE CompSci playlist](https://www.youtube.com/playlist?list=PLM-syYolLbsxQPkjCUOwNAugoldsLyFr2) that I'm curating.
 
@@ -33,7 +35,7 @@ To that end, I am developing a set of general programming problems for you to wo
     * Paper 1: Section 1 of content (theory); Out of 75 marks with 60% weighting
     * Paper 2: Section 2 of content (problem solving & programming); out of 50 marks with 40% weighting; 20 marks will be based on the pre-release material
     * Both papers will be 1h 45m, comprising short answer & structured questions, no calculator, all questions compulsory.
-* Textbook: Cambridge IGCSE Computer Science by Watson, D and Williams, H. ISBN: 9781471809309 - Available from the [Publisher] or (https://www.hoddereducation.co.uk/subjects/ict/products/14-16/cambridge-igcse-computer-science) [Amazon](https://www.amazon.com/Cambridge-IGCSE-Computer-Science-Watson/dp/1471809307).
+* Textbook: Cambridge IGCSE Computer Science by Watson, D and Williams, H. ISBN: 9781471809309 - Available from the [Publisher](https://www.hoddereducation.co.uk/subjects/ict/products/14-16/cambridge-igcse-computer-science) or [Amazon](https://www.amazon.com/Cambridge-IGCSE-Computer-Science-Watson/dp/1471809307).
 * [Past examination papers](https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-igcse-9-1-computer-science-0984/past-papers/)
 * My [syllabus-to-unit alignment](syllabus-alignment.md) plan.
 
