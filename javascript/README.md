@@ -42,7 +42,7 @@ Javascript rarely stands alone in isolation. As the langauge of the web, it is v
 * [Lists](html.html)
 * [Tables](html.html)
 
-# Intro to CSS
+## Intro to CSS
 
 Javascript rarely stands alone in isolation. As the langauge of the web, it is very commonly used in conjunction with HTML and CSS, so an understanding of these two markup languages is very useful.
 
@@ -56,7 +56,7 @@ Javascript rarely stands alone in isolation. As the langauge of the web, it is v
 * [Icons](css.html)
 * [Styling tables](css.html)
 
-# Javascript & the DOM
+## Javascript & the DOM
 
 The DOM (document object model) forms the basis of where Javascript, HTML and CSS all intersect. 
 
@@ -70,14 +70,14 @@ The DOM (document object model) forms the basis of where Javascript, HTML and CS
 * [Detect screen size, device type](javascript-detect-device.html)
 * [Cordova](javascript-cordova.html)
 
-# Node.js
+## Node.js
 
 Javascript doesn't just have to run in the browser. Node.js is when Javascript is used to run as a standalone tool, commonly to create web servers.
 
 * [Install & setup of Node.js](nodejs.html) (including npm) *coming soon*
 * [A simple express.js web server](nodejs.html#expressjs) *coming soon*
 
-# Firebase
+## Firebase
 
 Google Firebase is one of a number of tools that Google makes available for developers. It is quite handy as a "proof of concept" tool that minimises the need for you to create your own "back end" server.
 
@@ -93,7 +93,7 @@ Tutorials and notes on Firebase as follows:
 * Part 2 - [Firebase database](firebase.html#firebase-database)
 * Part 3 - [Firebase file storage](firebase.html#firebase-file-storage)
 
-# HTML Canvas
+## HTML Canvas
 
 The HTML canvas is a graphics system that you can program with Javascript. The element is divided into pixels. You use sets of pixel coordinates to tell Javascript where to draw shapes, place text or images etc.
 
@@ -108,7 +108,7 @@ The HTML canvas is a graphics system that you can program with Javascript. The e
 * [Playing a sound](canvas.html#playing-a-sound)
 * [Detecting collisions](canvas.html#detecting-collisions)
 
-# Reference guides & valuable links
+## Reference guides & valuable links
 
 Some summary guides that might be useful.
 
@@ -151,6 +151,6 @@ Javascript Games: A youtube series that looks quite good:
 * [Javascript Games series: Snake](https://www.youtube.com/watch?v=9TcU2C1AACw&index=4&list=PLt4757glfbhHkfz7dqojMbnBdgUnFih4B&t=0s)
 * [Javascript Games series: Tetris](https://www.youtube.com/watch?v=HEsAr2Yt2do&index=5&list=PLt4757glfbhHkfz7dqojMbnBdgUnFih4B&t=0s)
 
-# Author
+## Author
 
 (C) Paul Baumgarten 2019

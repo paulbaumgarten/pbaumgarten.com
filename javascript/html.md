@@ -1,4 +1,4 @@
-# 2 - HTML
+# HTML
 
 The following is far from an exhaustive listing of HTML tags and attributes. It is only intended as an introduction for beginners!
 
@@ -54,7 +54,7 @@ Two crucially important attributes are `id` and `class`. These are what you will
 
 The rest of this chapter is a reference guide for some of the key "tags" in HTML you should be familiar with. 
 
-# 2.2 - HTML A tags
+# A elements
 
 An 'anchor' tag is the name given to links in the web - those bits of blue text with the underline that you can click on. Generally, they are used to redirect the user to a new page, based on the address you indicate in the `href` attribute.
 
@@ -67,7 +67,7 @@ Attributes for an `<a>` tag:
 * `href` : destination for the hyperlink
 * `target` : choice of _blank | _parent | _self | _top
 
-# 2.3 - HTML DIV, SPAN tags
+# DIV & SPAN elements
 
 `<div>` and `<span>` are generic tags that can be used to divide your content into logical sections. They are useful for CSS purposes as you can "group" different elements together, so these can be used to create layout blocks etc. By default `<div>` will behave like a `<p>` and include a "new line" after it, where as `<span>` doesn't.
 
@@ -82,7 +82,7 @@ These tags might not seem like much, but `<div>` and `<span>` become incredibly 
 
 <div class="page"/>
 
-# 2.4 - HTML media tags
+# Media elements
 
 ## Images
 
@@ -124,7 +124,7 @@ Attributes for a `<audio>` tag:
 
 <div class="page"/>
 
-# 2.5 - HTML Forms
+# Forms & input elements
 
 A "typical form" demonstrating a variety of common input types and their related attributes.
 
@@ -318,7 +318,7 @@ Attributes for text area:
 
 <div class="page"/>
 
-# 2.6 - HTML Lists
+# Lists
 
 Unordered lists
 
@@ -350,7 +350,7 @@ It is worth mentioning that unordered lists are also used a lot as containers fo
 
 <div class="page"/>
 
-# 2.7 - HTML Reference: Tables
+# Tables
 
 The general structure of a HTML table would look lile:
 

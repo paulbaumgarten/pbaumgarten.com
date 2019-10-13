@@ -1,5 +1,5 @@
 
-# 3 - CSS
+# CSS
 
 CSS (cascading style sheets) are used to define rules that determine the appearance/style of elements, or sub-sets of elements.  
 

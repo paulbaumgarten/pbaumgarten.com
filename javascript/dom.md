@@ -1,7 +1,5 @@
 # Javascript: Manipulating DOM (HTML & CSS)
 
-# The DOM
-
 This section will briefly mention some of the key functions and properties Javascript makes available for you to use to manipulate the HTML document.
 
 ## DOM functions & properties
