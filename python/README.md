@@ -32,9 +32,11 @@ If you know the basics of Python and wish to experiement with a new package or t
 
 * [Audio (recording, playback, detect frequency etc)](audio.md)
 * [Databases](databases.md)
+* [Excel reading & chart generation](excel.md)
 * [EXE with PyInstaller](exe-with-pyinstaller.md)
 * [Flask webserver](flask-webserver.md)
 * [Google searching](google-searching.md) (through the API)
+* [Graphs, generate](excel#matplotlib.md)
 * [GUI with PySimpleGUI](gui-with-pysimplegui.md)
 * [GUI with TKinter](gui-with-tkinter.md)
 * [Lego EV3](lego-ev3.md)
