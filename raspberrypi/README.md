@@ -33,6 +33,13 @@ It is important to keep a reference of the Raspberry Pi pin numbering, as the nu
 * [Control GPIO output such as an LED](https://pi4j.com/1.2/example/control.html) (external)
 * [Listen to GPIO input such as a button press](https://pi4j.com/1.2/example/listener.html)  (external)
 
+# Programming with Assembler
+
+For those who want the red pill...
+
+* http://www.science.smith.edu/dftwiki/index.php/Tutorial:_Assembly_Language_with_the_Raspberry_Pi#Blinking_LED
+* https://thinkingeek.com/arm-assembler-raspberry-pi/
+
 # Project ideas
 
 * [Your first challenge exercises](challenges.md)

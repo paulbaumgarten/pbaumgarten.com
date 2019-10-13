@@ -1,4 +1,4 @@
-# General problem set: Programming and algorithmic thinking practice
+# Programming and algorithmic thinking problems
 
 This is a general purpose problem set for practicing and developing your programming and algorithmic thinking skills.
 
@@ -173,6 +173,8 @@ This particular problem happens to be a classic when modified so that you must m
 
 ## Luhn algorithm
 
+![](img/luhn.jpg)
+
 The Luhn algorithm or Luhn formula, also known as the “modulus 10” or “mod 10” algorithm, is a simple checksum formula used to validate a variety of identification numbers, such as credit card numbers, IMEI numbers, National Provider Identifier numbers (wikipedia).
 
 The Luhn test is used by some credit card companies to distinguish valid credit card numbers from what could be a random selection of digits.
@@ -180,11 +182,20 @@ The Luhn test is used by some credit card companies to distinguish valid credit 
 Those companies using credit card numbers that can be validated by the Luhn test have numbers that pass the following test:
 
 * Reverse the order of the digits in the number.
-* Take the first, third, ... and every other odd digit in the reversed digits and sum them to form the partial sum s1
-* Taking the second, fourth ... and every other even digit in the reversed digits:
-* Multiply each digit by two and sum the digits if the answer is greater than nine to form partial sums for the even digits
-* Sum the partial sums of the even digits to form s2
-* If s1 + s2 ends in zero then the original number is in the form of a valid credit card number as verified by the Luhn test.
+* Taking the 2nd, 4th, 6th ... and every other even digit, multiply each of those digits by two. If any of these individual digits is now greater than 9, sum their individual digits together. (*For example if you had originally doubled 7, this would give a new value of 14, so you would sum 1+4 to result 5.*)
+* Sum all the digits together where the odd positioned digits are their original values, and the even positioned digits are their new calculated value.
+* If your sum total ends in a zero, you have passed the Luhn algorithm test.
+
+Worked example...
+
+| -------------------- | - | - | - | - | - | - | - | - | - | - | - |
+| Original card number | 3 | 1 | 7 | 8 | 9 | 3 | 7 | 2 | 9 | 9 | 7 |
+| Reversed card number | 7 | 9 | 9 | 2 | 7 | 3 | 9 | 8 | 7 | 1 | 3 |
+| Double the even placed digits |   | 18 |   | 4 |  | 6 |  | 16 |  | 2 |  |
+| Sum the digits if >9          |   | 9  |   |   |  |   |  | 7  |  |   |  |
+| Final value for each digit    | 7 | 9  | 9 | 4 | 7 | 6 | 9 | 7 | 7 | 2 | 3 |
+
+Sum of 7 + 9 + 9 + 4 + 7 + 6 + 9 + 7 + 7 + 2 + 3 = 70 .... passed!
 
 Some fake credit card numbers you can use for testing purposes...
 
@@ -194,7 +205,13 @@ Some fake credit card numbers you can use for testing purposes...
 | 4539515831865208      |  5448131672611698 | 379279126081887 |
 | 4556019822708469278   |  5345203118153280 | 372209733301573 |
 
-# Chroma-key (green screen) effect
+## Hong Kong ID check
+
+![](img/hkid_sample.jpg)
+
+The Hong Kong ID number is another check digit algorithm. The algorithm is documented [here](https://access-excel.tips/hkid-check-digit/)
+
+## Chroma-key (green screen) effect
 
 1. Research into the PIL Python Image Library
 2. Using the two provided jpg photos linked below, see if you can figure out how to create the merged photo effect.

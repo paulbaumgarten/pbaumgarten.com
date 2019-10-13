@@ -6,8 +6,9 @@ Got yourself a Microbit? Awesome! They're a great way to learn Python!
 
 ## Get setup
 
-* [Download and install Mu editor](https://codewith.mu/)
-* [Download and print my handy reference sheet](microbit-reference-sheet.pdf)
+* Install [Mu editor](https://codewith.mu/)
+* Print the [Microbit programming reference sheet](microbit-reference-sheet.pdf)
+* Print the [unit progress chcecklist](microbit-unit-checklist.pdf)
 
 ## Lessons
 

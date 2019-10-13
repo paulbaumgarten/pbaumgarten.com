@@ -13,7 +13,7 @@ When you boot with a fresh install of Raspbian, the default credentials are:
 
 For home wifi connections this should be fairly straight forward. Click on the wifi icon on the top-right of screen, find your Wifi network and enter your password.
 
-If you are attempting to connect to an Enterprise (managed) network, it can be a bit trickier. The configuration we managed to get working at ISL is [here](/raspberrypi-setup-enterprisewifi).
+If you are attempting to connect to an Enterprise (managed) network, it can be a bit trickier. The configuration we managed to get working at ISL is [here](setup-enterprisewifi.md).
 
 # Software installation & updates
 

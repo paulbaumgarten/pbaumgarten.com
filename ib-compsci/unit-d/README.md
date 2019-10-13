@@ -2,7 +2,11 @@
 
 # Unit D1: OOP concepts
 
-Video: [Object-oriented Programming in 7 minutes | Mosh (2018)](https://www.youtube.com/watch?v=pTB0EiLXUC8) - there's a couple of things that aren't perfect with this video, but as beginners it should serve you fairly well. If you grasp the usefulnesss of grouping related variables and functions together as the main takeaway then you've done well.
+Video: Object-oriented Programming in 7 minutes | Mosh (2018)
+
+[![](http://i3.ytimg.com/vi/pTB0EiLXUC8/hqdefault.jpg)](https://www.youtube.com/watch?v=pTB0EiLXUC8)
+
+There's a couple of things that aren't perfect with this video, but as beginners it should serve you fairly well. If you grasp the usefulnesss of grouping related variables and functions together as the main takeaway then you've done well.
 
 ## Historical perspective
 
@@ -77,7 +81,7 @@ A simple UML Class diagram for the Person class we previously discussed would lo
 
 Essentially it is a three row box. The first row is the class name, the second is the list of attributes (properties, variables) and the third is the list of methods (behaviours, functions).
 
-UML Exercises
+### UML Exercises
 
 Let's explore a few common scenarios and decompose them into likely classes of objects that are documentated through UML diagrams.
 
@@ -141,7 +145,7 @@ public class Automobile {
 Let's pause at this point and go through what's happening. Specifically we should discuss:
 
 * Defining the class
-* Instantiating an object from the class. Note: If you are curious why the line *Automobile car = new Automobile()* names the class twice, [read explainatory note here](oop-declare-and-instantiate).
+* Instantiating an object from the class (by declaring the datatype of the new object and invoking the constructor for the class - [see more detailed example here](oop-declare-and-instantiate.md)).
 * The use of `static` and the `main()` function, if this is your first ever Java program
 * The use of `package`
 * The strict naming requirements linkage between the .java filename, the class and the constructor.
@@ -295,7 +299,7 @@ Notice that we have been using getters and setters already.
 Another example that illustrates the difference between haing your properties properly encapsulated and not. (don't bother with coding this)
 
 ```java
-class Person() {
+class Person {
    String name = "";
    String getName(){
       return name;
@@ -317,7 +321,7 @@ Obviously if our getter and setter functions just automatically and blindly acce
 
 As an example, the Person class below has a private attribute for the `dateOfBirth`. The `setDateOfBirth()` function is able to validate the date supplied is valid before accepting it.
 
-```python
+```java
 import java.time.LocalDate;
 
 class Person {
@@ -335,12 +339,6 @@ class Person {
         }
     }
 ```
-
-Where the confusion happens
-
-Abstraction v Encapsulation confusion: The concept where maximum developers get confused between abstraction and encapsulation is when they try to relate these to data hiding. Abstraction also hides, but as explained – abstraction hides complexity. Encapsulation, on the other hand, hides and controls access to the data(attributes) of a class. 
-
-[dervied from](https://www.javabrahman.com/programming-principles/abstraction-vs-encapsulation-in-oops-with-examples/)
 
 ### Access modifiers
 
@@ -480,37 +478,64 @@ public class Demo {
 
 Examine the following codes and draw the class diagram.
 
-Note: An abstract class cannot be directly instantiated.
+Note: An abstract class is a class that cannot be directly instantiated. It serves as a template that you can inherit existing functionalty from.
 
 ```java
 abstract public class Animal {
+   protected String name;
+
+   public Animal(String name) {
+      System.out.println("(Animal constructor)");
+      this.name = name;
+   }
+
+   public String getName() { return name; }
+
    abstract public void greeting();
 }
+
 public class Cat extends Animal {
+   public Cat(String name) {
+      super(name);
+      System.out.println("(Cat constructor)");
+   }
+
    @Override
    public void greeting() {
-      System.out.println("Meow!");
+      System.out.println(name+" says Meow!");
    }
 }
+
 public class Dog extends Animal {
+   public Dog(String name) {
+      super(name);
+      System.out.println("(Dog constructor)");
+   }
+
    @Override
    public void greeting() {
-      System.out.println("Woof!");
+      System.out.println(name+" says Woof!");
    }
    
    public void greeting(Dog another) {
-      System.out.println("Woooooooooof!");
+      System.out.println(name+"says Woooooooooof! to "+another.getName());
    }
 }
-public class BigDog extends Dog {
+
+public class Chihuahua extends Dog {
+   public Chihuahua(String name) {
+      super(name);
+      System.out.println("(Dog constructor)");
+   }
+
    @Override
    public void greeting() {
-      System.out.println("Woow!");
+      System.out.println(name+" says Yap!");
    }
    
    @Override
    public void greeting(Dog another) {
-      System.out.println("Woooooowwwww!");
+      System.out.println(name+" says Yapyapyapyapyap! to "+another.getName());
    }
 }
 ```
@@ -521,32 +546,32 @@ Explain the outputs (or error) for the following test program.
 public class TestAnimal {
    public static void main(String[] args) {
       // Using the subclasses
-      Cat cat1 = new Cat();
-      cat1.greeting();
-      Dog dog1 = new Dog();
-      dog1.greeting();
-      BigDog bigDog1 = new BigDog();
-      bigDog1.greeting();
+      Cat felix = new Cat("Felix");
+      felix.greeting();
+      Dog snoopy = new Dog("Snoopy");
+      snoopy.greeting();
+      Chihuahua chihuahua = new Chihuahua("Chihuahua");
+      chihuahua.greeting();
        
       // Using Polymorphism
-      Animal animal1 = new Cat();
-      animal1.greeting();
-      Animal animal2 = new Dog();
-      animal2.greeting();
-      Animal animal3 = new BigDog();
-      animal3.greeting();
-      Animal animal4 = new Animal();
+      Animal garfield = new Cat("Garfield");
+      garfield.greeting();
+      Animal scooby = new Dog("Scooby");
+      scooby.greeting();
+      Animal ren = new Chihuahua("Ren");
+      ren.greeting();
+      Animal animal4 = new Animal("Animal");
       
       // Downcast
-      Dog dog2 = (Dog)animal2;
-      BigDog bigDog2 = (BigDog)animal3;
-      Dog dog3 = (Dog)animal3;
-      Cat cat2 = (Cat)animal2;
-      dog2.greeting(dog3);
-      dog3.greeting(dog2);
-      dog2.greeting(bigDog2);
-      bigDog2.greeting(dog2);
-      bigDog2.greeting(bigDog1);
+      Dog brian = (Dog)scooby;
+      Chihuahua ren2 = (Chihuahua)ren;
+      Dog pluto = (Dog)ren;
+      Cat sylvester = (Cat)scooby;
+      brian.greeting(pluto);
+      pluto.greeting(brian);
+      brian.greeting(ren2);
+      ren2.greeting(brian);
+      ren2.greeting(chihuahua);
    }
 }
 ```

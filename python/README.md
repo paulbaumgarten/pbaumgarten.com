@@ -31,6 +31,7 @@ This is the place to start if you are brand new to Python. I have introdutory vi
 If you know the basics of Python and wish to experiement with a new package or technique, look through the other tutorials to find something of interest to you.
 
 * [Audio (recording, playback, detect frequency etc)](audio.md)
+* [Classes for OOP](classes.md)
 * [Databases](databases.md)
 * [Excel reading & chart generation](excel.md)
 * [EXE with PyInstaller](exe-with-pyinstaller.md)
@@ -39,6 +40,7 @@ If you know the basics of Python and wish to experiement with a new package or t
 * [Graphs, generate](excel#matplotlib.md)
 * [GUI with PySimpleGUI](gui-with-pysimplegui.md)
 * [GUI with TKinter](gui-with-tkinter.md)
+* [GUI with Chromium](gui-with-chromium.md)
 * [Lego EV3](lego-ev3.md)
 * [Networking with sockets](networking-with-sockets.md)
 * [Nginx setup for Flask](nginx-setup-for-flask.md)
