@@ -2,7 +2,11 @@
 
 # Unit D1: OOP concepts
 
-Video: [Object-oriented Programming in 7 minutes | Mosh (2018)](https://www.youtube.com/watch?v=pTB0EiLXUC8) - there's a couple of things that aren't perfect with this video, but as beginners it should serve you fairly well. If you grasp the usefulnesss of grouping related variables and functions together as the main takeaway then you've done well.
+Video: Object-oriented Programming in 7 minutes | Mosh (2018)
+
+[![](http://i3.ytimg.com/vi/pTB0EiLXUC8/hqdefault.jpg)](https://www.youtube.com/watch?v=pTB0EiLXUC8)
+
+There's a couple of things that aren't perfect with this video, but as beginners it should serve you fairly well. If you grasp the usefulnesss of grouping related variables and functions together as the main takeaway then you've done well.
 
 ## Historical perspective
 
