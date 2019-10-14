@@ -354,6 +354,7 @@ Key issues to discuss:
 
 ## Review questions
 
+* [Design your own network exercise by 101computing.net](https://www.101computing.net/design-your-own-network/)
 * Computer Science Illuminated by Nell Dale & John Lewis (page numbers based on 6th edition):
 * End of chapter 15 (page 526), exercises 16-64
 * [Past paper questions](teacher/dp-compsci-unit-3-past-papers.pdf)
