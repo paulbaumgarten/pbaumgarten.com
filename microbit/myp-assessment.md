@@ -1,10 +1,10 @@
 # MYP Assessment
 
+| Statement of inquiry | People can be adaptable and inventive when seeking a method to communicate between peoples or cultures |
 | ---- | ----- |
 | Key concept | Communication |
 | Related concepts | Invention, Adaptation |
 | Global context | Personal & cultural expression |
-| Statement of inquiry | People can be adaptable and inventive when seeking a method to communicate between peoples or cultures |
 | Objectives | Criterion C "Creating the solution", Criterion D "Evaulating" |
 
 ## Your task
@@ -61,9 +61,8 @@ You will be assessed against MYP Year 1 Digital Design Criteria C and D as follo
 | 1C | Time and resource planning  | Technical skills | Functionality and presentation | Changes justified |
 | --- | --- | --- | --- | --- |
 | **1-2**  |  | demonstrates **minimal** technical skills when making the solution | creates the solution, which functions poorly and is presented in an incomplete form |  |
-| **3-4**  | **lists the main steps** in a plan that contains some details, resulting in peers having difficulty following the plan to create the solution  | demonstrates **satisfactory** technical skills when making the solution  | creates the solution, which **partially functions** and is adequately
-presented  | **states one change** made to the chosen design **or** plan when making the solution  |
-| **5-6**  | lists the steps in a plan, which considers time and resources, resulting in peers being able to follow the plan to create the solution  | demonstrates **competent** technical skills when making the solution  | creates the solution, which **functions as intended** and is presented appropriately  | states one change made to the chosen design **and** plan when making the solution  |
+| **3-4**  | **lists the main steps** in a plan that contains some details, resulting in peers having difficulty following the plan to create the solution  | demonstrates **satisfactory** technical skills when making the solution  | creates the solution, which **partially functions** and is adequately presented | **states one change** made to the chosen design **or** plan when making the solution |
+| **5-6**  | lists the steps in a plan, which considers time and resources, resulting in peers being able to follow the plan to create the solution  | demonstrates **competent** technical skills when making the solution  | creates the solution, which **functions as intended** and is presented appropriately | states one change made to the chosen design **and** plan when making the solution  |
 | **7-8**  | outlines a plan, which considers the use of resources and time, sufficient for peers to be able to follow to create the solution  | demonstrates excellent technical skills when making the solution | follows the plan to create the solution, which functions as intended and is presented appropriately | lists the changes made to the chosen design and plan when making the solution. |
 
 ### Criterion D: Evaluating
