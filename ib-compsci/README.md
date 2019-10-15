@@ -23,6 +23,7 @@ Welcome to my teaching notes for the International Baccalaureate Diploma Compute
 * [IB Notation for pseudocode (exam version)](ib-compsci-pseudocode-flowcharts.pdf)
 * [IB Notation for pseudocode (additional detail)](ib-compsci-pseudocode-in-detail.pdf)
 * [IB Java Exam Tool Subset (JETS)](ib-compsci-jets.pdf) (previous syllabus but still very relevant)
+* [IB Subject guide](https://drive.google.com/drive/folders/1_-CMEiY1TEcvBt29xWtJF9dL-VQ8GBeR?usp=sharing) (available to STC students only)
 
 ## Assessment outline
 
