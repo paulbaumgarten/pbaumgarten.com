@@ -220,3 +220,11 @@ The Hong Kong ID number is another check digit algorithm. The algorithm is docum
 * Source photo 1 .... coming soon
 * Source photo 2 .... coming soon
 
+## Need more??
+
+Code Abbey has an excellent collection of short to moderate length programming problems to grow your computational thinking skills.
+
+* [Code Abbey](https://www.codeabbey.com/index/task_list)
+
+Once you've developed your computational thinking skills, it's time to find a real project of your own that you want to build and work through it from beginning to end. Chat with me to talk out your ideas. I should be able to help point you towards some helpful resources to get started.
+
