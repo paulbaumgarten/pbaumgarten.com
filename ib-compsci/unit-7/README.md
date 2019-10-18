@@ -97,9 +97,9 @@ Common sensors and transducers by environment they detect are:
 
 Source: https://www.electronics-tutorials.ws/io/io_1.html
 
-## Digital v Analgue input
+## Digital v Analogue input
 
-* When would it be more appropriate to use a digital v analgoue input device?
+* When would it be more appropriate to use a digital v analogue input device?
 * How can an analogue input be read by our digital computer systems (suggest: use an analogue input with a Raspberry Pi or Arduino to figure this out)
 
 What input devices would be best suited for...?
@@ -114,7 +114,7 @@ What input devices would be best suited for...?
 
 Brainstorm other familiar situations where there could be a computer with an input device. What input devices would be best suited for that situation?
 
-## Tranducer (outputs)
+## Transducer (outputs)
 
 * Light - LED, displays/screens, lamps
 * Temperature - Heater, fan, airconditioning
@@ -193,7 +193,7 @@ The best way of learning about how different sensors and transducers interact is
 * What are the complexities involved for a progarmmer to control an analogue output?
 * What are the power management methods that can be used to control an output without overloading the microprocessor/microcontroller? (how does the circuit need to be wired up etc, what other components are typically required?)
 
-Experient and gain practical hands-on experience from a programmers perspective of:
+Experiment and gain practical hands-on experience from a programmers perspective of:
 
 * Wiring up and programmatically reading the input from digital sensors
 * Wiring up and programmatically reading the input from analogue passive sensors
