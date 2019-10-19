@@ -106,7 +106,7 @@ Practice creating the four types of test data for the following problems:
 * Activity 9.5, 9.6, 9.7, 9.8 (Textbook pages 119, 120).
 * A currency conversion app that will convert HKD to USD.
 * A date reminder app that will accept dates in the style of dd/mm/yyyy.
-* A two factor authentication app that requires someone to enter their Hong Kong mobile phone number so an SMS message can be sent. (hint: check [wikipedia](https://en.wikipedia.org/wiki/Telephone_numbers_in_Hong_Kong) for the rules of what constitutes valid mobile phone numbers in HK) 
+* A two factor authentication app that requires someone to enter their **Hong Kong mobile phone number** so an SMS message can be sent. (hint: check [wikipedia](https://en.wikipedia.org/wiki/Telephone_numbers_in_Hong_Kong) for the rules of what constitutes valid mobile phone numbers in HK) 
 
 ## 04: Validation checks
 
@@ -133,6 +133,8 @@ For each of the apps in the previous lesson, identify the appropriate checks req
 | Character checks |   |   |   |   |
 | Format checks |   |   |   |   |
 | Presence checks |   |   |   |   |
+
+If you have time, start writing the Python functions that could be used to validate each of these different inputs.
 
 
 ## 05: Validation checks (2)
@@ -168,6 +170,8 @@ I'm happy for you to work with your neighbour on this one. Please don't cheat by
 ## 06: Validation checks (3)
 
 Activity 9.9 through 9.13 (textbook pages 123-124)
+
+If you have time remaining, and haven't completed any of the previous testing and validation coding exerciese, complete those now as well.
 
 ## 07: Verification checks
 

@@ -312,6 +312,10 @@ Source:
 
 * https://www.mockplus.com/blog/post/wireframe-example
 
+Additional recommended reading:
+
+* https://medium.com/@erikdkennedy/7-rules-for-creating-gorgeous-ui-part-1-559d4e805cda
+
 ---
 
 ### Entity relationship diagrams

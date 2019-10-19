@@ -28,7 +28,11 @@
 
 ### Lossless compression
 
+[How Computers Compress Text: Huffman Coding and Huffman Trees - Tom Scott (6:30)](https://www.youtube.com/watch?v=JsTptu56GM8)
+
 ## Computer architecture and the fetch-execute cycle (1.3.2)
+
+"A computer processor does moronically simple things — it moves a byte from memory to register, adds a byte to another byte, moves the result back to memory. The only reason anything substantial gets completed is that these operations occur very quickly. To quote Robert Noyce, ‘After you become reconciled to the nanosecond, computer operations are conceptually fairly simple.’” [*](Code: The Hidden Language of Computer Hardware and Software by Charles Petzold)
 
 * Watch [Tom Scott's exellcent explainer into the Fetch-decode-execute cycle](https://www.youtube.com/watch?v=Z5JC9Ve1sfI) (9:03m).
 * Do some basic assembler to understand the architecture better?
