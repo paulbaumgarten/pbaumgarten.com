@@ -476,6 +476,8 @@ There are a number of algorithms the IB course will assume you know by memory. T
 
 Any algorithm not defined as a "standard algorithm" can be considered a "novel algorithm" and will be either presented to you in the exam or is an algorithm you would be expected to devise.
 
+* [Bubble sory, insertion sort and quick sort demo video](https://www.youtube.com/watch?v=WaNLJf8xzC4) (4m38 TED-Ed)
+
 ---
 
 ### Sequential search
