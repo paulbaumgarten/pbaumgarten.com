@@ -103,9 +103,11 @@ It may also be necessary to state some assumptions when devising your test data 
 Practice creating the four types of test data for the following problems:
 
 * Activity 9.5, 9.6, 9.7, 9.8 (Textbook pages 119, 120).
-* A currency conversion app that will convert HKD to USD.
-* A date reminder app that will accept dates in the style of dd/mm/yyyy.
-* A two factor authentication app that requires someone to enter their **Hong Kong mobile phone number** so an SMS message can be sent. (hint: check [wikipedia](https://en.wikipedia.org/wiki/Telephone_numbers_in_Hong_Kong) for the rules of what constitutes valid mobile phone numbers in HK) 
+* Currency input for a currency conversion app that will convert HKD to EUR.
+* Date input for a date reminder app that will accept dates (in the style of dd/mm/yyyy, or an alternative you may prefer).
+* Hong kong mobile phone number input for an authentication app that will send SMS messages (hint: check [wikipedia](https://en.wikipedia.org/wiki/Telephone_numbers_in_Hong_Kong) for the rules of what constitutes valid mobile phone numbers in HK) 
+* Email address input
+* Postal address input
 
 ## 04: Validation checks
 
