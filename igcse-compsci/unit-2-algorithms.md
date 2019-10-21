@@ -67,12 +67,11 @@ The overall idea here is that through a combination of an overall structure diag
 
 ### Problems
 
-* Complete Activity 9.2
-* Activity 9.3 is a bit lame, don't bother with it. Computing based examples make better sense here.
+* Complete Activity 9.2 (don't bother with 9.3, it's a bit lame)
 * Draw a structure diagram for the sort algorithm we discussed in the computational thinking lesson.
-* Draw a structure diagram for the age calculator (previous lesson).
-* Draw a structure diagram for the change calculator (previous lesson).
-* For your age calculator, experiment with what you think the flowchart to document each identified sub-system might look like.
+* Draw a structure diagram for the age calculator or change calculator from the previous lesson.
+* Working with a partner, pick one of the problems from my [Programming problems](programming-problems.md) page (such as Hang-person or Tic-tac-toe) and identify the sub-systems that would be involved. Draw a structure diagram for that problem.
+* For one of the above, experiment with what you think the flowchart to document each identified sub-system might look like.
 
 ## 03: Testing algorithms
 
