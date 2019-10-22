@@ -60,6 +60,15 @@ If you know the basics of Python and wish to experiement with a new package or t
 * [Windows services howto](windows-service-howto.docx)
 * [Youtube downloading](youtube-downloading-howto.md)
 
+## Installing packages
+
+```bash
+# On the Mac 
+sudo python3 -m pip install amazing_package
+# On Windows
+python -m pip install amazing_package
+```
+
 ## Author
 
 (C) Paul Baumgarten 2019
