@@ -43,13 +43,17 @@ Once you've digested the slides or video, have a go at a couple of problems of y
 
 ## 02: Systems & algorithms
 
+* Read 9.1 Introduction and 9.2 Algorithms
+
 ### Top-down design
 
 As indicated in the previous lesson, the iGCSE course does not strictly discuss the idea of computational thinking (even though I think it should). The closest it gets is to discuss the idea of top-down design. This is roughly analogous to the process of decomposition. To quote from the textbook, "each computer system can be divided up into a set of sub-systems. Each sub-system can be further divided into sub-systems and so on until each sub-system just performs a single action" (p115).
 
 This idea of dividing a system into its **sub-systems** is known to as **top-down design**, where at the apex you have your overall project or system, and then you create a hierarchical tree of sub-systems from that.
 
-This hierarchy can be drawn into a chart, which is known as a **structure diagram**. An example for an alarm app is provided in the textbook on page 116. 
+This hierarchy can be drawn into a chart, which is known as a **structure diagram**. An example is provided below. There is also an example for an alarm app is provided in the textbook on page 116. 
+
+![](img/structure-diagram.png)
 
 The main question that might arise is "how to I know when I need to divide a system into new sub-systems"? For the purposes of this course, it is fairly safe to think of each box as a function. If it makes sense to write new functions, you are creating new sub-systems.
 
@@ -74,6 +78,8 @@ The overall idea here is that through a combination of an overall structure diag
 * For one of the above, experiment with what you think the flowchart to document each identified sub-system might look like.
 
 ## 03: Testing algorithms
+
+* Read 9.3 Test data
 
 As our programs become more complicated, having a proper testing regieme becomes increasingly important. It is no longer good enough to run our program with a "typical" value, get the expected result and consider it "working".
 
@@ -110,6 +116,8 @@ Practice creating the four types of test data for the following problems:
 * Postal address input
 
 ## 04: Validation checks
+
+* Read 9.4 Validation and verification
 
 Validation checks are the process of programmatically checking the input given to your program to ensure it meets basic criteria. This would form the basis of code that helps ensure your software will detect and behave accordingly to any erroneous data such as discussed above.
 
@@ -279,6 +287,8 @@ window.mainloop()
 
 ## 08: Trace tables
 
+* Read 9.5 Using trace tables and 9.6 Identifying and correcting errors
+
 Trace tables are a manual tool for testing and correcting an algorithm.
 
 They are a table where you manually walk through each line of your algorithm, calculating the value of each variable as you go. Every varible gets it's own column, and you add a new row for every new step of program execution.
@@ -288,6 +298,9 @@ They are a table where you manually walk through each line of your algorithm, ca
 Activity 9.14 through 9.17 (textbook 127-129)
 
 ## 09: Reading pseudo code
+
+* Read 9.7
+* Read all of chapter 10
 
 What is pseudo code?
 
