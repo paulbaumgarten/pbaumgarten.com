@@ -209,81 +209,13 @@ Design a simple Python program that validates and verifies an email address. Som
 
 PART TWO
 
-Not one to pass up the opportunity to do some real programming, and to teach you something new at the same time, here is a basic GUI screen in Python. Modify the `clicked()` function to implement your tests indicated above.
+Not one to pass up the opportunity to do some real programming, and to teach you something new at the same time, here is a basic GUI screen in Python. It uses the Tkinter library which allows you to create graphical user interfaces. Writing Python GUI's are not part of the course syllabus but they are useful and likely something you are interested in knowing how to do. If it is something you wish learn more about, I do have some notes on my Python website, called "GUI with TKinter". [https://pbaumgarten.com/python/](https://pbaumgarten.com/python/) ‐ I'm happy to create additional resources for this if you are interested please let me know.
+
+Modify the `clicked()` function to implement your tests indicated above.
 
 ![](img/verification-demo.png)
 
-```python
-from tkinter import *
-from tkinter.messagebox import showerror, showinfo
-
-def clicked():
-    ok = True
-    email1 = email1_text.get()
-    email2 = email2_text.get()
-    if "@" not in email1: 
-        email1_text["bg"] = "red"
-        showerror("Error","I said, an EMAIL ADDRESS")
-        ok = False
-    elif email1 != email2:
-        email1_text["bg"] = "red"
-        email2_text["bg"] = "red"
-        showerror("Error","Email addresses don't match")
-        ok = False
-    else:
-        email1_text["bg"] = "white"
-        email2_text["bg"] = "white"
-    pw1 = password1_text.get()
-    pw2 = password2_text.get()
-    if len(pw1) == 0:
-        password1_text["bg"] = "red"
-        showerror("Error","You must enter a password")
-        ok = False
-    elif pw1 != pw2:
-        password1_text["bg"] = "red"
-        password2_text["bg"] = "red"
-        showerror("Error","Passwords don't match")
-        ok = False
-    else:
-        password1_text["bg"] = "white"
-        password2_text["bg"] = "white"
-    if ok:
-        showinfo("Good job", "Well done, bye for now")
-        exit()
-
-# Create the window
-window = Tk()
-window.title("My fancy app")
-window.geometry("600x400")
-
-# Create the elements
-name_label = Label(window, text="Your name:")
-name_label.place(x=20, y=20)
-name_text = Entry(window, text="")
-name_text.place(x=20, y=50, width=300, height=25)
-name_text.focus()
-email1_label = Label(window, text="Your email address:")
-email1_label.place(x=20, y=80)
-email1_text = Entry(window, text="")
-email1_text.place(x=20, y=110, width=300, height=25)
-email2_label = Label(window, text="Repeat email address again:")
-email2_label.place(x=20, y=140)
-email2_text = Entry(window, text="")
-email2_text.place(x=20, y=170, width=300, height=25)
-password1_label = Label(window, text="Your password:")
-password1_label.place(x=20, y=200)
-password1_text = Entry(window, text="", show="*")
-password1_text.place(x=20, y=230, width=300)
-password2_label = Label(window, text="Repeat password again:")
-password2_label.place(x=20, y=260)
-password2_text = Entry(window, text="", show="*")
-password2_text.place(x=20, y=290, width=300)
-submit_button = Button(window, text="Submit", command=lambda:clicked() )
-submit_button.place(x=20, y=320, width=100, height=25)
-
-# Run the app
-window.mainloop()
-```
+* [Tkinter verification demo app](distribute/unit-2-tkinter-verification-demo-app.pdf)
 
 ## 08: Trace tables
 
