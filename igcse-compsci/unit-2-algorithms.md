@@ -469,6 +469,17 @@ def get_amplitude_from_stream(data_stream):
 
 Let me know once you have completed those. I am happy to create additional review questions as needed.
 
+## Unit terminology
+
+* System design: Structure diagram, top-down, system, sub-system
+* Test data: Normal data, abnormal data, erroronous data, extreme data, boundary data
+* Validation check: Range check, length check, type check, character check, pattern check, format check, presence check, check digit
+* Verification check: double check, screen/visual check, parity check, check digit
+* Trace table: 
+* Pseudo code: 
+* Flow chart: decision, loop
+* Ethics: software licenses, proprietary, open source, freeware, shareware
+
 ## 17: Unit test
 
 The unit test will assess you on:
