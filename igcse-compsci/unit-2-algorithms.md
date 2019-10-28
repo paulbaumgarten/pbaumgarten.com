@@ -162,6 +162,8 @@ One common example referred to in the textbook is the ISBN. Refer to page 122 to
 
 ![](img/luhn.jpg)
 
+![](img/luhn-demo.png)
+
 The **luhn algorithm** is another check digit algorithm. It is used by Mastercard and Visa. The last digit is calculated based on a formula that uses all the other digits as the input. I've written about the luhn algorithm [here](https://pbaumgarten.com/igcse-compsci/programming-problems.html#luhn-algorithm).
 
 ### HKID
@@ -172,9 +174,15 @@ The Hong Kong ID number is another check digit algorithm. The algorithm is docum
 
 ### Problem
 
-Time to do some programming! Pick either the ISBN, LUHN, or HKID check algorithm. Design and implmement it in Python.
+Working in pairs or individually, select one of the problems: ISBN, LUHN or HKID.
 
-I'm happy for you to work with your neighbour on this one. Please don't cheat by finding the answer online, it is supposed to be a thinking exercise.
+1. Create a table to devise test data (normal, erroneous, extreme, boundary)
+2. Create a table to decide on the input checks you will use (range, length, type, character, format, presence)
+3. Use computational thinking to decide how you will calculate the check digit (decomposition, abstraction, pattern recognition, algorithm design)
+4. Code it in Python
+5. Use your test data - do your checks behave as they should?
+
+Submit your written work (tests and checks) and Python programming.
 
 ## 06: Validation checks (3)
 
@@ -469,7 +477,7 @@ def get_amplitude_from_stream(data_stream):
 
 Let me know once you have completed those. I am happy to create additional review questions as needed.
 
-## Unit terminology
+## Unit terminology check
 
 * System design: Structure diagram, top-down, system, sub-system
 * Test data: Normal data, abnormal data, erroronous data, extreme data, boundary data
