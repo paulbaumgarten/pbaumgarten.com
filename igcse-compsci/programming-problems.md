@@ -10,7 +10,7 @@ This list will be added to over time. If you come across a problem that you thin
 
 If you'd like to practice the basics of Python some more, I suggest you sign up to this auto-graded repl.it course. It has me assigned as the teacher so I can see and monitor your progress.
 
-* [https://repl.it/data/classrooms/share/9d68c5288e184810f61b489d14ccfa54](Repl.it auto-graded Python exercises)
+* [Repl.it auto-graded Python exercises](https://repl.it/data/classrooms/share/9d68c5288e184810f61b489d14ccfa54)
 
 ## Caesars cipher
 
