@@ -6,6 +6,12 @@ It is intended for those who have completed the basic programming tutorials and 
 
 This list will be added to over time. If you come across a problem that you think would be worth adding, please let me know!
 
+## Basics
+
+If you'd like to practice the basics of Python some more, I suggest you sign up to this auto-graded repl.it course. It has me assigned as the teacher so I can see and monitor your progress.
+
+* [https://repl.it/data/classrooms/share/9d68c5288e184810f61b489d14ccfa54](Repl.it auto-graded Python exercises)
+
 ## Caesars cipher
 
 Julius Caesar created one of the first own encryption algorithms. It used a substitution method where each letter was replaced by another a fixed number of letters across from the original.
