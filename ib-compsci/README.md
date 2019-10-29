@@ -52,6 +52,8 @@ Check out some of the great online programming resources available.
 
 Programming practice?
 
+* [Repl.it auto graded practice for Java](https://repl.it/data/classrooms/share/6eb69c6fa7b2d8c43a47961ca856c8af) (I am the registered teacher for this so I will get notified of and can monitor your progress)
+* [Repl.it auto graded practice for Python](https://repl.it/data/classrooms/share/9d68c5288e184810f61b489d14ccfa54) (I am the registered teacher for this so I will get notified of and can monitor your progress)
 * [CodingBat for Javascript](https://codingjs.pbaumgarten.com/)
 * [CodingBat for Java](https://codingbat.com/java)
 * [CodingBat for Python](https://codingbat.com/python)

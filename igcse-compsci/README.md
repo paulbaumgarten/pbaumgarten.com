@@ -16,6 +16,8 @@ Other resources
 
 * My [Learn Python website](https://pbaumgarten.com/python)
 * My [Youtube channel](https://youtube.com/pbaumgarten), also check the dedicated [iGCSE CompSci playlist](https://www.youtube.com/playlist?list=PLM-syYolLbsxQPkjCUOwNAugoldsLyFr2) that I'm curating.
+* [Repl.it auto-graded Python exercises](https://repl.it/data/classrooms/share/9d68c5288e184810f61b489d14ccfa54)
+
 
 ## Programming expectations
 
