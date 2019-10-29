@@ -106,14 +106,22 @@ It may also be necessary to state some assumptions when devising your test data 
 
 ### Problems
 
-Practice creating the four types of test data for the following problems:
-
 * Activity 9.5, 9.6, 9.7, 9.8 (Textbook pages 119, 120).
-* Currency input for a currency conversion app that will convert HKD to EUR.
-* Date input for a date reminder app that will accept dates (in the style of dd/mm/yyyy, or an alternative you may prefer).
-* Hong kong mobile phone number input for an authentication app that will send SMS messages (hint: check [wikipedia](https://en.wikipedia.org/wiki/Telephone_numbers_in_Hong_Kong) for the rules of what constitutes valid mobile phone numbers in HK) 
-* Email address input
-* Postal address input
+* Create a table and generate the four types of test data for the following problems:
+   * Currency input for a currency conversion app that will convert HKD to EUR.
+   * Date input for a date reminder app that will accept dates (in the style of dd/mm/yyyy, or an alternative you may prefer).
+   * Hong kong mobile phone number input for an authentication app that will send SMS messages (hint: check [wikipedia](https://en.wikipedia.org/wiki/Telephone_numbers_in_Hong_Kong) for the rules of what constitutes valid mobile phone numbers in HK) 
+   * Email address input
+   * Postal address input
+
+Example table
+
+| Test data | Exam average calculator | Currency conversion | Date reminder | Phone number authenticator | 
+| --------------- | ----------------------- | ------------------- | ------------- | -------------------------- |
+| Normal data       | 45, 82  |   |   |   |
+| Erroneous         | -13, 500, 76%, 50.1, eighty  |   |   |   |
+| Extreme           |  0987409234097234092340922 |   |   |   |
+| Boundary          | -1, 0, 99, 100    |   |   |   |
 
 ## 04: Validation checks
 
@@ -136,12 +144,12 @@ For each of the apps in the previous lesson, identify the appropriate checks req
 
 | Checks required | Exam average calculator | Currency conversion | Date reminder | Phone number authenticator | 
 | --------------- | ----------------------- | ------------------- | ------------- | -------------------------- |
-| Range checks |   |   |   |   |
-| Length checks |   |   |   |   |
-| Type checks |   |   |   |   |
-| Character checks |   |   |   |   |
-| Format checks |   |   |   |   |
-| Presence checks |   |   |   |   |
+| Range checks      | `n >= 0 and n <= 100`  |   |   |   |
+| Length checks     | `len(n) > 0 and len(n) <= 3`    |   |   |   |
+| Type checks       | `n.isnumeric()`    |   |   |   |
+| Character checks  |     |   |   |   |
+| Format checks     |   |   |   |   |
+| Presence checks   |   |   |   |   |
 
 If you have time, start writing the Python functions that could be used to validate each of these different inputs.
 
