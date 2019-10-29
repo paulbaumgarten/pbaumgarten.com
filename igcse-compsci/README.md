@@ -12,12 +12,16 @@ My teaching notes for the Cambridge iGCSE Computer Science course. *These notes 
 * [Unit 6 Networks](unit-6-networks.md)
 * [Unit 7 Pre-release material](unit-7-pre-release-material.md)
 
+Programming practice/resources
+
+* [Repl.it auto-graded Python exercises](https://repl.it/data/classrooms/share/9d68c5288e184810f61b489d14ccfa54)
+* [Past pre-release scenarios for practice](distribute/past-pre-release-scenarios.pdf)
+* [Programming & algorthmic thinking problems](programming-problems.md)
+
 Other resources
 
 * My [Learn Python website](https://pbaumgarten.com/python)
 * My [Youtube channel](https://youtube.com/pbaumgarten), also check the dedicated [iGCSE CompSci playlist](https://www.youtube.com/playlist?list=PLM-syYolLbsxQPkjCUOwNAugoldsLyFr2) that I'm curating.
-* [Repl.it auto-graded Python exercises](https://repl.it/data/classrooms/share/9d68c5288e184810f61b489d14ccfa54)
-
 
 ## Programming expectations
 
