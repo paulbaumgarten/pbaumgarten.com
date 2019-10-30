@@ -43,13 +43,17 @@ Once you've digested the slides or video, have a go at a couple of problems of y
 
 ## 02: Systems & algorithms
 
+* Read 9.1 Introduction and 9.2 Algorithms
+
 ### Top-down design
 
 As indicated in the previous lesson, the iGCSE course does not strictly discuss the idea of computational thinking (even though I think it should). The closest it gets is to discuss the idea of top-down design. This is roughly analogous to the process of decomposition. To quote from the textbook, "each computer system can be divided up into a set of sub-systems. Each sub-system can be further divided into sub-systems and so on until each sub-system just performs a single action" (p115).
 
 This idea of dividing a system into its **sub-systems** is known to as **top-down design**, where at the apex you have your overall project or system, and then you create a hierarchical tree of sub-systems from that.
 
-This hierarchy can be drawn into a chart, which is known as a **structure diagram**. An example for an alarm app is provided in the textbook on page 116. 
+This hierarchy can be drawn into a chart, which is known as a **structure diagram**. An example is provided below. There is also an example for an alarm app is provided in the textbook on page 116. 
+
+![](img/structure-diagram.png)
 
 The main question that might arise is "how to I know when I need to divide a system into new sub-systems"? For the purposes of this course, it is fairly safe to think of each box as a function. If it makes sense to write new functions, you are creating new sub-systems.
 
@@ -68,12 +72,14 @@ The overall idea here is that through a combination of an overall structure diag
 ### Problems
 
 * Complete Activity 9.2 (don't bother with 9.3, it's a bit lame)
-* Draw a structure diagram for the sort algorithm we discussed in the computational thinking lesson.
+* Draw a structure diagram for the sort algorithm we discussed in the computational thinking lesson. ([example solution](img/structure-diagram-sort.png))
 * Draw a structure diagram for the age calculator or change calculator from the previous lesson.
 * Working with a partner, pick one of the problems from my [Programming problems](programming-problems.md) page (such as Hang-person or Tic-tac-toe) and identify the sub-systems that would be involved. Draw a structure diagram for that problem.
 * For one of the above, experiment with what you think the flowchart to document each identified sub-system might look like.
 
 ## 03: Testing algorithms
+
+* Read 9.3 Test data
 
 As our programs become more complicated, having a proper testing regieme becomes increasingly important. It is no longer good enough to run our program with a "typical" value, get the expected result and consider it "working".
 
@@ -100,16 +106,26 @@ It may also be necessary to state some assumptions when devising your test data 
 
 ### Problems
 
-Practice creating the four types of test data for the following problems:
-
 * Activity 9.5, 9.6, 9.7, 9.8 (Textbook pages 119, 120).
-* Currency input for a currency conversion app that will convert HKD to EUR.
-* Date input for a date reminder app that will accept dates (in the style of dd/mm/yyyy, or an alternative you may prefer).
-* Hong kong mobile phone number input for an authentication app that will send SMS messages (hint: check [wikipedia](https://en.wikipedia.org/wiki/Telephone_numbers_in_Hong_Kong) for the rules of what constitutes valid mobile phone numbers in HK) 
-* Email address input
-* Postal address input
+* Create a table and generate the four types of test data for the following problems:
+   * Currency input for a currency conversion app that will convert HKD to EUR.
+   * Date input for a date reminder app that will accept dates (in the style of dd/mm/yyyy, or an alternative you may prefer).
+   * Hong kong mobile phone number input for an authentication app that will send SMS messages (hint: check [wikipedia](https://en.wikipedia.org/wiki/Telephone_numbers_in_Hong_Kong) for the rules of what constitutes valid mobile phone numbers in HK) 
+   * Email address input
+   * Postal address input
+
+Example table
+
+| Test data | Exam average calculator | Currency conversion | Date reminder | Phone number authenticator | 
+| --------------- | ----------------------- | ------------------- | ------------- | -------------------------- |
+| Normal data       | 45, 82  |   |   |   |
+| Erroneous         | -13, 500, 76%, 50.1, eighty  |   |   |   |
+| Extreme           |  0987409234097234092340922 |   |   |   |
+| Boundary          | -1, 0, 99, 100    |   |   |   |
 
 ## 04: Validation checks
+
+* Read 9.4 Validation and verification
 
 Validation checks are the process of programmatically checking the input given to your program to ensure it meets basic criteria. This would form the basis of code that helps ensure your software will detect and behave accordingly to any erroneous data such as discussed above.
 
@@ -128,12 +144,12 @@ For each of the apps in the previous lesson, identify the appropriate checks req
 
 | Checks required | Exam average calculator | Currency conversion | Date reminder | Phone number authenticator | 
 | --------------- | ----------------------- | ------------------- | ------------- | -------------------------- |
-| Range checks |   |   |   |   |
-| Length checks |   |   |   |   |
-| Type checks |   |   |   |   |
-| Character checks |   |   |   |   |
-| Format checks |   |   |   |   |
-| Presence checks |   |   |   |   |
+| Range checks      | `n >= 0 and n <= 100`  |   |   |   |
+| Length checks     | `len(n) > 0 and len(n) <= 3`    |   |   |   |
+| Type checks       | `n.isnumeric()`    |   |   |   |
+| Character checks  |     |   |   |   |
+| Format checks     |   |   |   |   |
+| Presence checks   |   |   |   |   |
 
 If you have time, start writing the Python functions that could be used to validate each of these different inputs.
 
@@ -154,6 +170,8 @@ One common example referred to in the textbook is the ISBN. Refer to page 122 to
 
 ![](img/luhn.jpg)
 
+![](img/luhn-demo.png)
+
 The **luhn algorithm** is another check digit algorithm. It is used by Mastercard and Visa. The last digit is calculated based on a formula that uses all the other digits as the input. I've written about the luhn algorithm [here](https://pbaumgarten.com/igcse-compsci/programming-problems.html#luhn-algorithm).
 
 ### HKID
@@ -164,9 +182,15 @@ The Hong Kong ID number is another check digit algorithm. The algorithm is docum
 
 ### Problem
 
-Time to do some programming! Pick either the ISBN, LUHN, or HKID check algorithm. Design and implmement it in Python.
+Working in pairs or individually, select one of the problems: ISBN, LUHN or HKID.
 
-I'm happy for you to work with your neighbour on this one. Please don't cheat by finding the answer online, it is supposed to be a thinking exercise.
+1. Create a table to devise test data (normal, erroneous, extreme, boundary)
+2. Create a table to decide on the input checks you will use (range, length, type, character, format, presence)
+3. Use computational thinking to decide how you will calculate the check digit (decomposition, abstraction, pattern recognition, algorithm design)
+4. Code it in Python
+5. Use your test data - do your checks behave as they should?
+
+Submit your written work (tests and checks) and Python programming.
 
 ## 06: Validation checks (3)
 
@@ -201,83 +225,17 @@ Design a simple Python program that validates and verifies an email address. Som
 
 PART TWO
 
-Not one to pass up the opportunity to do some real programming, and to teach you something new at the same time, here is a basic GUI screen in Python. Modify the `clicked()` function to implement your tests indicated above.
+Not one to pass up the opportunity to do some real programming, and to teach you something new at the same time, here is a basic GUI screen in Python. It uses the Tkinter library which allows you to create graphical user interfaces. Writing Python GUI's are not part of the course syllabus but they are useful and likely something you are interested in knowing how to do. If it is something you wish learn more about, I do have some notes on my Python website, called "GUI with TKinter". [https://pbaumgarten.com/python/](https://pbaumgarten.com/python/) ‐ I'm happy to create additional resources for this if you are interested please let me know.
+
+Modify the `clicked()` function to implement your tests indicated above.
 
 ![](img/verification-demo.png)
 
-```python
-from tkinter import *
-from tkinter.messagebox import showerror, showinfo
-
-def clicked():
-    ok = True
-    email1 = email1_text.get()
-    email2 = email2_text.get()
-    if "@" not in email1: 
-        email1_text["bg"] = "red"
-        showerror("Error","I said, an EMAIL ADDRESS")
-        ok = False
-    elif email1 != email2:
-        email1_text["bg"] = "red"
-        email2_text["bg"] = "red"
-        showerror("Error","Email addresses don't match")
-        ok = False
-    else:
-        email1_text["bg"] = "white"
-        email2_text["bg"] = "white"
-    pw1 = password1_text.get()
-    pw2 = password2_text.get()
-    if len(pw1) == 0:
-        password1_text["bg"] = "red"
-        showerror("Error","You must enter a password")
-        ok = False
-    elif pw1 != pw2:
-        password1_text["bg"] = "red"
-        password2_text["bg"] = "red"
-        showerror("Error","Passwords don't match")
-        ok = False
-    else:
-        password1_text["bg"] = "white"
-        password2_text["bg"] = "white"
-    if ok:
-        showinfo("Good job", "Well done, bye for now")
-        exit()
-
-# Create the window
-window = Tk()
-window.title("My fancy app")
-window.geometry("600x400")
-
-# Create the elements
-name_label = Label(window, text="Your name:")
-name_label.place(x=20, y=20)
-name_text = Entry(window, text="")
-name_text.place(x=20, y=50, width=300, height=25)
-name_text.focus()
-email1_label = Label(window, text="Your email address:")
-email1_label.place(x=20, y=80)
-email1_text = Entry(window, text="")
-email1_text.place(x=20, y=110, width=300, height=25)
-email2_label = Label(window, text="Repeat email address again:")
-email2_label.place(x=20, y=140)
-email2_text = Entry(window, text="")
-email2_text.place(x=20, y=170, width=300, height=25)
-password1_label = Label(window, text="Your password:")
-password1_label.place(x=20, y=200)
-password1_text = Entry(window, text="", show="*")
-password1_text.place(x=20, y=230, width=300)
-password2_label = Label(window, text="Repeat password again:")
-password2_label.place(x=20, y=260)
-password2_text = Entry(window, text="", show="*")
-password2_text.place(x=20, y=290, width=300)
-submit_button = Button(window, text="Submit", command=lambda:clicked() )
-submit_button.place(x=20, y=320, width=100, height=25)
-
-# Run the app
-window.mainloop()
-```
+* [Tkinter verification demo app](distribute/unit-2-tkinter-verification-demo-app.pdf)
 
 ## 08: Trace tables
+
+* Read 9.5 Using trace tables and 9.6 Identifying and correcting errors
 
 Trace tables are a manual tool for testing and correcting an algorithm.
 
@@ -288,6 +246,9 @@ They are a table where you manually walk through each line of your algorithm, ca
 Activity 9.14 through 9.17 (textbook 127-129)
 
 ## 09: Reading pseudo code
+
+* Read 9.7
+* Read all of chapter 10
 
 What is pseudo code?
 
@@ -523,6 +484,17 @@ def get_amplitude_from_stream(data_stream):
 * [70 pseudocode practice questions](distribute/pseudocode-70-questions.pdf) (I have the solutions for these for you to self-check)
 
 Let me know once you have completed those. I am happy to create additional review questions as needed.
+
+## Unit terminology check
+
+* System design: Structure diagram, top-down, system, sub-system
+* Test data: Normal data, abnormal data, erroronous data, extreme data, boundary data
+* Validation check: Range check, length check, type check, character check, pattern check, format check, presence check, check digit
+* Verification check: double check, screen/visual check, parity check, check digit
+* Trace table: 
+* Pseudo code: 
+* Flow chart: decision, loop
+* Ethics: software licenses, proprietary, open source, freeware, shareware
 
 ## 17: Unit test
 

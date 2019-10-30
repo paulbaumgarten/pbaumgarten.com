@@ -37,7 +37,7 @@ Welcome to my teaching notes for the International Baccalaureate Diploma Compute
 
 ## Other resources
 
-Other IB CS teachers have their own course websites. Feel free to check them out!
+Other IB CS teacher websites. Feel free to check them out!
 
 * [Chris Coetzee, Dartford Grammar School, UK](http://ib.compscihub.net/) 
 * [Michael Brooke, St Julian’s School](http://www.emjbe.net/moodle/course/view.php?id=2)
@@ -45,18 +45,21 @@ Other IB CS teachers have their own course websites. Feel free to check them out
 * [Robert Griffiths, Colegio Gran Bretaña, Bogotá](https://ibcompsci.net/)
 * [Wikibooks, various authors](https://en.wikibooks.org/wiki/IB/Group_4/Computer_Science)
 
-Check out some of the great online programming resources available.
+Online programming courses & lectures
 
 * [Video lectures from various universities](https://github.com/Developer-Y/cs-video-courses) **highly recommended and comprehensive**
-* [Teach yourself CS](https://teachyourselfcs.com)
+* [edX: Introduction to Java Programming – Part 1](https://www.edx.org/course/introduction-to-java-programming-part-1-3) (25 hours)
+* [coursera: Object Oriented Programming in Java Specialization](https://www.coursera.org/specializations/object-oriented-programming) (13 hours for course 1, 24 hours for course 2, 25 hours for course 3, don't worry about course 4)
 
-Programming practice?
+Programming practice
 
+* [Repl.it auto graded practice for Java](https://repl.it/data/classrooms/share/6eb69c6fa7b2d8c43a47961ca856c8af) (I am the registered teacher for this so I will get notified of and can monitor your progress)
+* [Repl.it auto graded practice for Python](https://repl.it/data/classrooms/share/9d68c5288e184810f61b489d14ccfa54) (I am the registered teacher for this so I will get notified of and can monitor your progress)
 * [CodingBat for Javascript](https://codingjs.pbaumgarten.com/)
 * [CodingBat for Java](https://codingbat.com/java)
 * [CodingBat for Python](https://codingbat.com/python)
 
-Looking for programming project ideas?
+Project ideas
 
 * ["I Need Practice Programming": 49 Ideas for Game Clones to Code](http://inventwithpython.com/blog/2012/02/20/i-need-practice-programming-49-ideas-for-game-clones-to-code/)
 * [Code Abbey (213 problems)](http://www.codeabbey.com/index/task_list)
