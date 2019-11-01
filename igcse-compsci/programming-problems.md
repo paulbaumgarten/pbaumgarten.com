@@ -194,13 +194,13 @@ Those companies using credit card numbers that can be validated by the Luhn test
 
 Worked example...
 
-| -------------------- | - | - | - | - | - | - | - | - | - | - | - |
-| Card number | 7 | 9 | 9 | 2 | 7 | 3 | 9 | 8 | 7 | 1 | 3 |
-| Double the even placed digits |   | 18 |   | 4 |  | 6 |  | 16 |  | 2 |  |
-| Sum the digits if >9          |   | 9  |   |   |  |   |  | 7  |  |   |  |
-| Final value for each digit    | 7 | 9  | 9 | 4 | 7 | 6 | 9 | 7 | 7 | 2 | 3 |
+| ------------------------------------- | - | -- | - | - | - | - | - | - | - | - | - | - | - | - | - | - |
+| Card number                           | 4 | 9  | 1 | 6 | 8 | 3 | 2 | 4 | 7 | 1 | 4 | 0 | 6 | 2 | 0 | 8 |
+| Double the even placed digits         |   | 18 |   | 12 |  | 6 |  | 8 |  | 2 |  | 0 |    | 4 |   | 16 |
+| Sum the digits if >9 except the last  |   | 9  |   | 3 |   |   |  | 8  |  | 2  |  | 0 |   | 4 |   | 16 |
+| Final value for each digit            | 4 | 9  | 1 | 3 | 8 | 6 | 2 | 8 | 7 | 2 | 4 | 0 | 6 | 4 | 0 | 16 |
 
-Sum of 7 + 9 + 9 + 4 + 7 + 6 + 9 + 7 + 7 + 2 + 3 = 70 .... 70 % 10 == 0 ... therefore passed!
+Sum of 4+9+1+3+8+6+2+8+7+2+4+0+6+4+0+16 = 80 .... 80 % 10 == 0 ... therefore passed!
 
 Some fake credit card numbers you can use for testing purposes...
 
