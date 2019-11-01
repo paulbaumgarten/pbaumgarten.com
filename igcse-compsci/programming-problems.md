@@ -187,16 +187,15 @@ The Luhn test is used by some credit card companies to distinguish valid credit 
 
 Those companies using credit card numbers that can be validated by the Luhn test have numbers that pass the following test:
 
-* You will use every second digit such that the last digit is not used (as it is the calculated check digit). So if, including the check digit, you have an even number of digits, you will use the 2nd, 4th, 6th etc as demonstrated by this example.
-* Taking the 2nd, 4th, 6th ... and every other evenly placed digit, multiply each of those digits by two. 
-* If any digits are now greater than 9, sum their individual digits together. (*For example if you had originally doubled 7, this would give a new value of 14, so you would sum 1+4 to result 5.*)
+* Double every second digit, ie: the 2nd, 4th, 6th ... 
+* If any value is now greater than 9, sum their individual digits together. (*For example if you had originally doubled 7, this would give a new value of 14, so you would sum 1+4 to result 5.*) **except the last value**
 * Sum all the new values together.
 * If the modulus ten of your sum total is zero, you have passed the Luhn algorithm test.
 
 Worked example...
 
 | -------------------- | - | - | - | - | - | - | - | - | - | - | - |
-| Reversed card number | 7 | 9 | 9 | 2 | 7 | 3 | 9 | 8 | 7 | 1 | 3 |
+| Card number | 7 | 9 | 9 | 2 | 7 | 3 | 9 | 8 | 7 | 1 | 3 |
 | Double the even placed digits |   | 18 |   | 4 |  | 6 |  | 16 |  | 2 |  |
 | Sum the digits if >9          |   | 9  |   |   |  |   |  | 7  |  |   |  |
 | Final value for each digit    | 7 | 9  | 9 | 4 | 7 | 6 | 9 | 7 | 7 | 2 | 3 |
