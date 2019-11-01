@@ -11,34 +11,52 @@
 ![]("img/tkinter-hello.png")
 
 ```python
-import tkinter as tk
-import tkinter.messagebox as tkmessagebox
+from tkinter import *
 
-class HelloWorldWindow:
-    def __init__(self, window):
-        self.window = window
-        # Create the main program and window
-        self.window.geometry("500x200")
-        self.window.title("Hello World")
-        # Create a label
-        self.name_label = tk.Label(window, text="Please enter your name")
-        self.name_label.place(x=20, y=20)
-        # Create a text box (called an Entry in TKinter)
-        self.name_textbox = tk.Entry(window)
-        self.name_textbox.place(x=20, y=50)
-        self.name_textbox.focus() # Put the cursor in the text box
-        # Create two buttons
-        self.greet_button = tk.Button(window, text="Submit", command=self.greet_me)
-        self.greet_button.place(x=20, y=100)
-        self.close_button = tk.Button(window, text="Close", command=self.window.quit)
-        self.close_button.place(x=220, y=100)
+def button_click(text, label):
+    name = text.get()
+    label["text"] = "Hello "+name+"! Nice to meet you!"
 
-    def greet_me(self):
-        name = self.name_textbox.get()
-        tkmessagebox.showinfo("G'day", f"Helo {name}! Have a great day!")
+def menu_file_exit():
+    exit()
 
-root = tk.Tk()
-app = HelloWorldWindow(root)
+def draw_screen():
+    # Create the main program and window
+    window = Toplevel()
+    window.geometry("500x200")
+    window.title("My first window program")
+    # Create the main menu bar
+    menu = Menu(window)
+    window.config(menu=menu)
+    # Create a sub menu for File
+    menu_file = Menu(menu)
+    menu_file.add_command(label="New")
+    menu_file.add_command(label="Save")
+    menu_file.add_command(label="Quit", command=menu_file_exit)
+    menu.add_cascade(label="File", menu=menu_file)
+    # Create a sub menu for Help
+    menu_help = Menu(menu)
+    menu_help.add_command(label="About")
+    menu.add_cascade(label="Help", menu=menu_help)
+    # Create a label
+    label1 = Label(text="Please enter your name")
+    label1.place(x=20, y=20)
+    # Create a text box (called an Entry in TKinter)
+    text = Entry(window)
+    text.place(x=20, y=50)
+    text.focus() # Put the cursor in the text box
+    # Create another label
+    label2 = Label(window, text="", font=("Helvetica", "24"))
+    label2.place(x=20, y=110
+    # Create a button
+    button = Button(window, text="Hello", command=lambda: button_click(text, label2))
+    button.place(x=20, y=80)
+    # Finish function
+    return window
+
+root = Tk()
+windowMainScreen = draw_screen()
+root.withdraw() # Hide the root window, work with TopLevel windows instead
 root.mainloop()
 ```
 
@@ -49,107 +67,110 @@ root.mainloop()
 ![]("img/tkinter-contacts.png")
 
 ```python
-import tkinter as tk
+from tkinter import *
 
 contacts = []
 contacts.append({"givenName":"Paul", "familyName":"Baumgarten", "email": "pbaumgarten@isl.ch", "phone": "555-0000"})
 contacts.append({"givenName":"Emmett", "familyName":"Brown", "email": "emmett@greatscot.com", "phone": "555-0001"})
 contacts.append({"givenName":"Marty", "familyName":"McFly", "email": "marty@pinheads.com", "phone": "555-0002"})
 contacts.append({"givenName":"Biff", "familyName":"Tannen", "email": "biff@fertilisers-r-us.com", "phone": "555-0003"})
+previously_selected = -1 # Start of program use -1
+
+def menu_file_exit():
+    exit()
 
 # Create the main program and window
-class ContactsApp:
-    def __init__(self, window, contacts):
-        self.previously_selected = -1 # Start of program use -1
-        self.window = window
-        self.contacts = contacts
-        self.window.geometry("550x400")
-        self.window.title("Contacts directory")
+def draw_screen():
+    def new_contact():
+        global contacts
+        contacts.append({"givenName": "New contact", "familyName": "", "email": "", "phone": ""})
+        listbox.insert(END, "** New **")
+        listbox.select_set(len(contacts) - 1)
 
-        # Create a list
-        self.listbox = tk.Listbox(self.window, width=20, height=20) # width is characters, height is lines
-        for item in contacts:
-            self.listbox.insert(tk.END, item["familyName"]+", "+item["givenName"])
-        self.listbox.place(x=20, y=20)
-        self.listbox.bind('<<ListboxSelect>>', self.list_click)
-
-        # Create the main menu bar
-        self.menu = tk.Menu(self.window)
-        self.window.config(menu=self.menu)
-
-        # Create a sub menu for File
-        self.menu_file = tk.Menu(self.menu)
-        self.menu_file.add_command(label="New", command=self.new_contact)
-        self.menu_file.add_command(label="Quit", command=self.menu_file_exit)
-        self.menu.add_cascade(label="File", menu=self.menu_file)
-
-        # Create a sub menu for Help
-        self.menu_help = tk.Menu(self.menu)
-        self.menu_help.add_command(label="About")
-        self.menu.add_cascade(label="Help", menu=self.menu_help)
-
-        # Create labels
-        self.label1 = tk.Label(self.window, text="Given name")
-        self.label1.place(x=220, y=20)
-        self.label2 = tk.Label(self.window, text="Family name")
-        self.label2.place(x=220, y=50)
-        self.label3 = tk.Label(self.window, text="Email")
-        self.label3.place(x=220, y=80)
-        self.label4 = tk.Label(self.window, text="Phone")
-        self.label4.place(x=220, y=110)
-
-        # Create text boxes
-        self.text_given_name = tk.Entry(self.window)
-        self.text_given_name.place(x=320, y=20)
-        self.text_family_name = tk.Entry(self.window)
-        self.text_family_name.place(x=320, y=50)
-        self.text_email = tk.Entry(self.window)
-        self.text_email.place(x=320, y=80)
-        self.text_phone = tk.Entry(self.window)
-        self.text_phone.place(x=320, y=110)
-
-    def menu_file_exit(self):
-        exit()
-
-    def new_contact(self):
-        self.contacts.append({"givenName": "New contact", "familyName": "", "email": "", "phone": ""})
-        self.listbox.insert(tk.END, "** New **")
-        self.listbox.select_set(len(self.contacts) - 1)
-
-    def list_click(self,e):
+    def list_click(e):
+        global previously_selected
         # Save changes to previous contact before moving to next
-        if self.previously_selected >= 0:
-            this_contact = self.contacts[self.previously_selected]
+        if previously_selected >= 0:
+            this_contact = contacts[previously_selected]
+
             # Update our entry in the contacts list
-            this_contact["givenName"] = self.text_given_name.get()
-            this_contact["familyName"] = self.text_family_name.get()
-            this_contact["email"] = self.text_email.get()
-            this_contact["phone"] = self.text_phone.get()
+            this_contact["givenName"] = text_given_name.get()
+            this_contact["familyName"] = text_family_name.get()
+            this_contact["email"] = text_email.get()
+            this_contact["phone"] = text_phone.get()
             # Update the listing in the list box
-            self.listbox.delete(self.previously_selected)
-            self.listbox.insert(self.previously_selected, this_contact["familyName"] + ", " + this_contact["givenName"])
+            listbox.delete(previously_selected)
+            listbox.insert(previously_selected, this_contact["familyName"] + ", " + this_contact["givenName"])
 
         # Find the selected item in the list
-        selected = int(self.listbox.curselection()[0])  # item number selected in list
-        this_contact = self.contacts[selected]
+        selected = int(listbox.curselection()[0])  # item number selected in list
+        this_contact = contacts[selected]
 
         # Show the contacts details
-        self.text_given_name.delete(0, tk.END)
-        self.text_given_name.insert(tk.END, this_contact["givenName"])
-        self.text_family_name.delete(0, tk.END)
-        self.text_family_name.insert(tk.END, this_contact["familyName"])
-        self.text_email.delete(0, tk.END)
-        self.text_email.insert(tk.END, this_contact["email"])
-        self.text_phone.delete(0, tk.END)
-        self.text_phone.insert(tk.END, this_contact["phone"])
+        text_given_name.delete(0, END)
+        text_given_name.insert(END, this_contact["givenName"])
+        text_family_name.delete(0, END)
+        text_family_name.insert(END, this_contact["familyName"])
+        text_email.delete(0, END)
+        text_email.insert(END, this_contact["email"])
+        text_phone.delete(0, END)
+        text_phone.insert(END, this_contact["phone"])
         # Save this value for next time
-        self.previously_selected = selected
+        previously_selected = selected
+
+    window = Toplevel()
+    window.geometry("550x400")
+    window.title("Contacts directory")
+
+    # Create a list
+    listbox = Listbox(window, width=20, height=20) # width is characters, height is lines
+    for item in contacts:
+        listbox.insert(END, item["familyName"]+", "+item["givenName"])
+    listbox.place(x=20, y=20)
+    listbox.bind('<<ListboxSelect>>', list_click)
+
+    # Create the main menu bar
+    menu = Menu(window)
+    window.config(menu=menu)
+
+    # Create a sub menu for File
+    menu_file = Menu(menu)
+    menu_file.add_command(label="New", command=new_contact)
+    menu_file.add_command(label="Quit", command=menu_file_exit)
+    menu.add_cascade(label="File", menu=menu_file)
+
+    # Create a sub menu for Help
+    menu_help = Menu(menu)
+    menu_help.add_command(label="About")
+    menu.add_cascade(label="Help", menu=menu_help)
+
+    # Create labels
+    label1 = Label(window, text="Given name")
+    label1.place(x=220, y=20)
+    label1 = Label(window, text="Family name")
+    label1.place(x=220, y=50)
+    label1 = Label(window, text="Email")
+    label1.place(x=220, y=80)
+    label1 = Label(window, text="Phone")
+    label1.place(x=220, y=110)
+
+    # Create text boxes
+    text_given_name = Entry(window)
+    text_given_name.place(x=320, y=20)
+    text_family_name = Entry(window)
+    text_family_name.place(x=320, y=50)
+    text_email = Entry(window)
+    text_email.place(x=320, y=80)
+    text_phone = Entry(window)
+    text_phone.place(x=320, y=110)
+
+    return window
 
 # Run the program
-window = tk.Tk()
-app = ContactsApp(window, contacts)
+window = Tk()
+windowMainScreen = draw_screen()
+window.withdraw() # Hide the root window, work with TopLevel windows instead
 window.mainloop()
-
 ```
 
 <div class="page"/>
@@ -159,9 +180,9 @@ window.mainloop()
 ![]("img/tkinter-chat.png")
 
 ```python
-import tkinter as tk
-import tkinter.messagebox as messagebox
-import tkinter.simpledialog as simpledialog 
+from tkinter import *
+from tkinter import messagebox
+from tkinter import simpledialog
 from datetime import  datetime
 import requests
 import os
@@ -287,9 +308,3 @@ windowMainScreen = drawMainScreen(550, 400, "Bookface messenger")
 root.withdraw() # Hide the root window, work with TopLevel windows instead
 root.mainloop()
 ```
-
-## References
-
-* https://stackoverflow.com/questions/17466561/best-way-to-structure-a-tkinter-application
-* https://python-textbok.readthedocs.io/en/latest/Introduction_to_GUI_Programming.html
-* https://www.begueradj.com/tkinter-best-practices/
