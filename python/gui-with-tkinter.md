@@ -1,295 +1,399 @@
 # Tkinter GUI
 
+## Contents
+
+1. [Starting a basic app](#a-basic-app)
+2. [Label, entry box and button](#labels-entry-box-button)
+3. [Listbox and simpledialog](#listbox-simpledialog)
+4. [Menubar and filedialog](#menubar-filedialog)
+5. [Images](#images)
+6. [Second window](#second-window)
+7. [Tabs](#tabs)
+8. [Suggested resources](#suggested-resources)
+
+<div class="page"/>
+
+## A basic app
+
+```python
+import tkinter as tk
+from tkinter import ttk
+
+# Pre-define some defaults
+FONT_LARGE = ("Arial", 48)
+
+class AppWindow():
+    def __init__(self, parent):
+        # Create the window
+        self.parent = parent
+        self.parent.geometry("400x200")
+        self.parent.title("Test app")
+        # Create a text label and place it in the window
+        self.hello_label = tk.Label(self.parent, text="Hello world!", font=FONT_LARGE)
+        self.hello_label.place(x=20, y=20)
+
+if __name__ == "__main__":
+    root = tk.Tk()
+    app = AppWindow(root)
+    root.mainloop()
+```
+
+<div class="page"/>
+
+## Labels, entry box, button
+
+```python
+import tkinter as tk
+from tkinter import ttk
+from tkinter import messagebox
+
+# Pre-define some defaults
+FONT_LARGE = ("Arial", 48)
+
+class AppWindow():
+    def __init__(self, parent):
+        # Create the window
+        self.parent = parent
+        self.parent.geometry("400x200")
+        self.parent.title("Test app")
+        # Create a text label
+        self.question_label = tk.Label(self.parent, text="What is your name?")
+        self.question_label.place(x=20, y=20)
+        # Create a text entry box
+        self.name_entry = tk.Entry(self.parent)
+        self.name_entry.place(x=20, y=50)
+        self.name_entry.focus()                 # Put the cursor in the text box
+        # Create a button
+        self.submit_button = tk.Button(self.parent, text="Submit", command=self.greetings)
+        self.submit_button.place(x=20, y=100)
+        # Create a second button
+        self.close_button = tk.Button(self.parent, text="Close", command=self.parent.quit)
+        self.close_button.place(x=120, y=100)
+
+    def greetings(self):
+        # This function is executed when the submit button is clicked
+        # Retrieve the text from the entry box
+        person = self.name_entry.get()
+        # Display a message box
+        messagebox.showinfo("Greetings", f"Hello {person}, welcome to Tkinter!")
+
+if __name__ == "__main__":
+    root = tk.Tk()
+    app = AppWindow(root)
+    root.mainloop()
+```
+
+<div class="page"/>
+
+## Listbox, simpledialog
+
+```python
+import tkinter as tk
+from tkinter import ttk
+from tkinter import messagebox
+from tkinter import simpledialog
+
+# Pre-define some defaults
+FONT_LARGE = ("Arial", 48)
+
+# List of items to demo listbox
+items = ["Apples", "Oranges", "Bananas", "Strawberrys"]
+
+class AppWindow():
+    def __init__(self, parent):
+        # Create the window
+        self.parent = parent
+        self.parent.geometry("400x250")
+        self.parent.title("Test app")
+        # Create a list box
+        self.list = tk.Listbox(self.parent, width=10, height=10)    # width is characters, height is lines
+        for item in items:
+            self.list.insert(tk.END, item)                     # Add each item to the end of the list
+        self.list.place(x=20, y=20)
+        self.list.bind('<<ListboxSelect>>', self.list_clicked) # When an item in the list is selected, execute the list_clicked function
+        self.selected = -1                                     # Give `selected` a default of -1
+        # Create some buttons
+        self.add_to_top_button = tk.Button(self.parent, text="Add an item to top of list", command=self.add_to_top_clicked)
+        self.add_to_top_button.place(x=140, y=20)
+        self.add_to_end_button = tk.Button(self.parent, text="Add an item to end of list", command=self.add_to_end_clicked)
+        self.add_to_end_button.place(x=140, y=50)
+        self.close_button = tk.Button(self.parent, text="Delete selected item", command=self.delete_selected_clicked)
+        self.close_button.place(x=140, y=80)
+
+    def add_to_top_clicked(self):
+        answer = simpledialog.askstring("Add item","What item would you like to add?")
+        self.list.insert(0, answer)
+
+    def add_to_end_clicked(self):
+        answer = simpledialog.askstring("Add item","What item would you like to add?")
+        self.list.insert(tk.END, answer)
+
+    def delete_selected_clicked(self):
+        if self.selected >= 0:      # Check this still isn't -1
+            self.list.delete(self.selected)
+            self.selected = -1      # Reset back to -1
+        else:
+            messagebox.showerror("Error", "Can't delete the selected item if you haven't selected anything!")
+
+    def list_clicked(self, e):
+        print(e)
+        self.selected = int(self.list.curselection()[0])      # item number selected in list
+        item = self.list.get(self.selected)                   # text of selected item
+        print(f"You have clicked item {self.selected} which is {item}")
+
+if __name__ == "__main__":
+    root = tk.Tk()
+    app = AppWindow(root)
+    root.mainloop()
+```
+
+<div class="page"/>
+
+## Menubar, filedialog
+
+```python
+import tkinter as tk
+from tkinter import ttk
+from tkinter import messagebox
+from tkinter import filedialog
+
+# Pre-define some defaults
+FONT_LARGE = ("Arial", 48)
+ALLOWED_FILES = (("JPEG files","*.jpg"),("PNG files","*.png"),("all files","*.*"))
+
+class AppWindow():
+    def __init__(self, parent):
+        # Create the window
+        self.parent = parent
+        self.parent.geometry("400x200")
+        self.parent.title("Test app")
+        # Create a text label and place it in the window
+        self.hello_label = tk.Label(self.parent, text="Hello world!", font=FONT_LARGE)
+        self.hello_label.place(x=20, y=20)
+        # Create a menu bar
+        menubar = tk.Menu(self.parent)
+        filemenu = tk.Menu(menubar, tearoff=0)
+        filemenu.add_command(label="Open file", command=self.file_open)
+        filemenu.add_command(label="Save file as", command=self.file_saveas)
+        filemenu.add_command(label="Set default folder", command=self.select_folder)
+        filemenu.add_separator()
+        filemenu.add_command(label="Exit", command=self.parent.quit)
+        helpmenu = tk.Menu(menubar, tearoff=0)
+        helpmenu.add_command(label="About", command=self.about)
+        menubar.add_cascade(label="File", menu=filemenu)
+        menubar.add_cascade(label="Help", menu=helpmenu)
+        self.parent.config(menu=menubar)
+        # Intialise the default folder location
+        self.default_folder = "."
+
+    def file_open(self):
+        filename = filedialog.askopenfilename(initialdir=self.default_folder, title="Select file", filetypes=ALLOWED_FILES)
+        print(f"Open file: {filename}")
+
+    def file_saveas(self):
+        filename = filedialog.asksaveasfilename(initialdir=self.default_folder, title="Select file", filetypes=ALLOWED_FILES)
+        print(f"Save file as: {filename}")
+
+    def select_folder(self):
+        folder = filedialog.askdirectory(initialdir=self.default_folder, title = "Select folder containing student photos")
+        self.default_folder = folder
+        print(f"New default folder: {folder}")
+
+    def about(self):
+        messagebox.showinfo("About", "Copyright (c) 2019 Paul Baumgarten\nWebsite: pbaumgarten.com")
+
+if __name__ == "__main__":
+    root = tk.Tk()
+    app = AppWindow(root)
+    root.mainloop()
+```
+
+<div class="page"/>
+
+## Images
+
+```python
+import tkinter as tk
+from tkinter import filedialog
+from PIL import Image, ImageTk
+
+# Pre-define some defaults
+FONT_LARGE = ("Arial", 48)
+ALLOWED_FILES = (("JPEG files","*.jpg"),("PNG files","*.png"),("all files","*.*"))
+
+class AppWindow():
+    def __init__(self, parent):
+        # Create the window
+        self.parent = parent
+        self.parent.geometry("400x400")
+        self.parent.title("Test app")
+        # Button
+        self.pick_file_button = tk.Button(self.parent, text="Pick an image", command=self.show_image)
+        self.pick_file_button.place(x=20,y=20)
+        # Create a label reserved for displaying image later
+        self.image_label = tk.Label(self.parent)
+        self.image_label.place(x=20,y=70,width=300,height=300)
+
+    def show_image(self):
+        # Get image selection
+        filename = filedialog.askopenfilename(title="Select image", filetypes=ALLOWED_FILES)
+        print(f"Opening file: {filename}")
+        # Open the image file
+        img = Image.open(filename)
+        # (optional) resize the image
+        img = img.resize((300, 300))        
+        # 1. Reformat the image into tk compatible form, and
+        # 2. Save a copy of the image to self otherwise it will be cleared from memory when this function closes
+        self.tkimg = ImageTk.PhotoImage(img)
+        # Display the image in the label
+        self.image_label.configure(image=self.tkimg)
+
+if __name__ == "__main__":
+    root = tk.Tk()
+    app = AppWindow(root)
+    root.mainloop()
+```
+
+<div class="page"/>
+
+## Second window
+
+```python
+import tkinter as tk
+from tkinter import ttk
+import time
+
+# Pre-define some defaults
+FONT_LARGE = ("Arial", 48)
+
+class LoginWindow():
+    def __init__(self):
+        # Secondary windows are made using tk.Toplevel()
+        self.parent = tk.Toplevel()
+        self.parent.geometry("400x300")
+        self.parent.title("Login")
+        # Labels
+        self.username_label = tk.Label(self.parent, text="Username:")
+        self.username_label.place(x=20,y=20)
+        self.password_label = tk.Label(self.parent, text="Password:")
+        self.password_label.place(x=20,y=70)
+        # Entry boxes
+        self.username_text = tk.Entry(self.parent)
+        self.username_text.place(x=100,y=20)
+        self.username_text.focus()
+        self.password_text = tk.Entry(self.parent, show="*")
+        self.password_text.place(x=100,y=70)
+        # Button
+        self.login_button = tk.Button(self.parent, text="Login", command=self.login)
+        self.login_button.place(x=100,y=120)
+
+    def login(self):
+        self.userid = self.username_text.get()
+        self.passwd = self.password_text.get()
+        print(f"Your username is {self.userid} and password is {self.passwd}")
+        # Close the login window
+        self.parent.destroy()  
+
+    def get_info(self):
+        return self.userid, self.passwd
+
+class AppWindow():
+    def __init__(self, parent):
+        # Create the window
+        self.parent = parent
+        self.parent.geometry("400x200")
+        self.parent.title("Test app")
+        # Create a text label and place it in the window
+        self.hello_label = tk.Label(self.parent, text="Hello world!", font=FONT_LARGE)
+        self.hello_label.place(x=20, y=20)
+        # Create a button
+        self.login_button = tk.Button(self.parent, text="Login", command=self.login_clicked)
+        self.login_button.place(x=20, y=170)
+    
+    def login_clicked(self):
+        # Create login window        
+        login_window = LoginWindow()
+        # Wait until the login window is closed
+        self.parent.wait_window(login_window.parent)  
+        print("Finished waiting")
+        uid, pwd = login_window.get_info()
+        self.hello_label.configure(text=f"Hello {uid}")
+
+if __name__ == "__main__":
+    root = tk.Tk()
+    app = AppWindow(root)
+    root.mainloop()
+```
+
+<div class="page"/>
+
+## Tabs
+
+```python
+import tkinter as tk
+from tkinter import ttk
+from tkinter import messagebox
+
+class AppWindow():
+    def __init__(self, parent):
+        # Create the window
+        self.parent = parent
+        self.parent.geometry("400x400")
+        self.parent.title("Test app")
+        # Create a text label and place it in the window
+        self.hello_label = tk.Label(self.parent, text="Hello world!", font=FONT_LARGE)
+        self.hello_label.place(x=20, y=20)
+        # Create 3 tabs
+        self.tab_container = tk.Frame(self.parent)
+        self.tab_container.place(x=0,y=0,width=400,height=400)
+        self.tabs = ttk.Notebook(self.tab_container)
+        self.tab_1 = tk.Frame(self.tabs)
+        self.tab_2 = tk.Frame(self.tabs)
+        self.tab_3 = tk.Frame(self.tabs)
+        self.tabs.bind("<<NotebookTabChanged>>", self.on_tab_selected)
+        self.tabs.add(self.tab_1, text="Tab 1")
+        self.tabs.add(self.tab_2, text="Tab 2")
+        self.tabs.add(self.tab_3, text="Tab 3")
+        self.tabs.place(x=0,y=0,height=400,width=400)
+        # Content for tab 1
+        self.label1 = tk.Label(self.tab_1, text="I am the content of tab 1")
+        self.label1.place(x=20, y=20) # Coordinates are relative to within the tab area    
+        # Content for tab 2
+        self.label2 = tk.Label(self.tab_2, text="I am the content of tab 2")
+        self.label2.place(x=20, y=20) # Coordinates are relative to within the tab area
+        # Content for tab 3
+        self.label3 = tk.Label(self.tab_3, text="I am the content of tab 3")
+        self.label3.place(x=20, y=20) # Coordinates are relative to within the tab area
+        self.close_button = tk.Button(self.tab_3, text="Close", command=self.close_clicked)
+        self.close_button.place(x=20,y=70)
+
+    def on_tab_selected(self, e):
+        selected_tab = e.widget.select()
+        tab_text = e.widget.tab(selected_tab, "text")
+        if tab_text == "Tab 1":
+            print("You clicked into tab 1")
+        if tab_text == "Tab 2":
+            print("You clicked into tab 2")
+        if tab_text == "Tab 3":
+            print("You clicked into tab 3")
+
+    def close_clicked(self):
+        result = messagebox.askyesno("Confirm", message="Do you want to quit?")
+        if result:
+            self.parent.quit()
+
+if __name__ == "__main__":
+    root = tk.Tk()
+    app = AppWindow(root)
+    root.mainloop()
+```
+
+<div class="page"/>
+
 ## Suggested resources
 
 * https://python-textbok.readthedocs.io/en/1.0/Introduction_to_GUI_Programming.html
 * http://www.effbot.org/tkinterbook/grid.htm
 * https://docs.python.org/3.7/library/tkinter.html
+* https://www.python-course.eu/python_tkinter.php
 
-## Exercise 1 - Welcome screen
-
-![]("img/tkinter-hello.png")
-
-```python
-import tkinter as tk
-import tkinter.messagebox as tkmessagebox
-
-class HelloWorldWindow:
-    def __init__(self, window):
-        self.window = window
-        # Create the main program and window
-        self.window.geometry("500x200")
-        self.window.title("Hello World")
-        # Create a label
-        self.name_label = tk.Label(window, text="Please enter your name")
-        self.name_label.place(x=20, y=20)
-        # Create a text box (called an Entry in TKinter)
-        self.name_textbox = tk.Entry(window)
-        self.name_textbox.place(x=20, y=50)
-        self.name_textbox.focus() # Put the cursor in the text box
-        # Create two buttons
-        self.greet_button = tk.Button(window, text="Submit", command=self.greet_me)
-        self.greet_button.place(x=20, y=100)
-        self.close_button = tk.Button(window, text="Close", command=self.window.quit)
-        self.close_button.place(x=220, y=100)
-
-    def greet_me(self):
-        name = self.name_textbox.get()
-        tkmessagebox.showinfo("G'day", f"Helo {name}! Have a great day!")
-
-root = tk.Tk()
-app = HelloWorldWindow(root)
-root.mainloop()
-```
-
-<div class="page"/>
-
-## Exercise 2 - Contacts directory
-
-![]("img/tkinter-contacts.png")
-
-```python
-import tkinter as tk
-
-contacts = []
-contacts.append({"givenName":"Paul", "familyName":"Baumgarten", "email": "pbaumgarten@isl.ch", "phone": "555-0000"})
-contacts.append({"givenName":"Emmett", "familyName":"Brown", "email": "emmett@greatscot.com", "phone": "555-0001"})
-contacts.append({"givenName":"Marty", "familyName":"McFly", "email": "marty@pinheads.com", "phone": "555-0002"})
-contacts.append({"givenName":"Biff", "familyName":"Tannen", "email": "biff@fertilisers-r-us.com", "phone": "555-0003"})
-
-# Create the main program and window
-class ContactsApp:
-    def __init__(self, window, contacts):
-        self.previously_selected = -1 # Start of program use -1
-        self.window = window
-        self.contacts = contacts
-        self.window.geometry("550x400")
-        self.window.title("Contacts directory")
-
-        # Create a list
-        self.listbox = tk.Listbox(self.window, width=20, height=20) # width is characters, height is lines
-        for item in contacts:
-            self.listbox.insert(tk.END, item["familyName"]+", "+item["givenName"])
-        self.listbox.place(x=20, y=20)
-        self.listbox.bind('<<ListboxSelect>>', self.list_click)
-
-        # Create the main menu bar
-        self.menu = tk.Menu(self.window)
-        self.window.config(menu=self.menu)
-
-        # Create a sub menu for File
-        self.menu_file = tk.Menu(self.menu)
-        self.menu_file.add_command(label="New", command=self.new_contact)
-        self.menu_file.add_command(label="Quit", command=self.menu_file_exit)
-        self.menu.add_cascade(label="File", menu=self.menu_file)
-
-        # Create a sub menu for Help
-        self.menu_help = tk.Menu(self.menu)
-        self.menu_help.add_command(label="About")
-        self.menu.add_cascade(label="Help", menu=self.menu_help)
-
-        # Create labels
-        self.label1 = tk.Label(self.window, text="Given name")
-        self.label1.place(x=220, y=20)
-        self.label2 = tk.Label(self.window, text="Family name")
-        self.label2.place(x=220, y=50)
-        self.label3 = tk.Label(self.window, text="Email")
-        self.label3.place(x=220, y=80)
-        self.label4 = tk.Label(self.window, text="Phone")
-        self.label4.place(x=220, y=110)
-
-        # Create text boxes
-        self.text_given_name = tk.Entry(self.window)
-        self.text_given_name.place(x=320, y=20)
-        self.text_family_name = tk.Entry(self.window)
-        self.text_family_name.place(x=320, y=50)
-        self.text_email = tk.Entry(self.window)
-        self.text_email.place(x=320, y=80)
-        self.text_phone = tk.Entry(self.window)
-        self.text_phone.place(x=320, y=110)
-
-    def menu_file_exit(self):
-        exit()
-
-    def new_contact(self):
-        self.contacts.append({"givenName": "New contact", "familyName": "", "email": "", "phone": ""})
-        self.listbox.insert(tk.END, "** New **")
-        self.listbox.select_set(len(self.contacts) - 1)
-
-    def list_click(self,e):
-        # Save changes to previous contact before moving to next
-        if self.previously_selected >= 0:
-            this_contact = self.contacts[self.previously_selected]
-            # Update our entry in the contacts list
-            this_contact["givenName"] = self.text_given_name.get()
-            this_contact["familyName"] = self.text_family_name.get()
-            this_contact["email"] = self.text_email.get()
-            this_contact["phone"] = self.text_phone.get()
-            # Update the listing in the list box
-            self.listbox.delete(self.previously_selected)
-            self.listbox.insert(self.previously_selected, this_contact["familyName"] + ", " + this_contact["givenName"])
-
-        # Find the selected item in the list
-        selected = int(self.listbox.curselection()[0])  # item number selected in list
-        this_contact = self.contacts[selected]
-
-        # Show the contacts details
-        self.text_given_name.delete(0, tk.END)
-        self.text_given_name.insert(tk.END, this_contact["givenName"])
-        self.text_family_name.delete(0, tk.END)
-        self.text_family_name.insert(tk.END, this_contact["familyName"])
-        self.text_email.delete(0, tk.END)
-        self.text_email.insert(tk.END, this_contact["email"])
-        self.text_phone.delete(0, tk.END)
-        self.text_phone.insert(tk.END, this_contact["phone"])
-        # Save this value for next time
-        self.previously_selected = selected
-
-# Run the program
-window = tk.Tk()
-app = ContactsApp(window, contacts)
-window.mainloop()
-
-```
-
-<div class="page"/>
-
-## Exercise 3 - Chat client
-
-![]("img/tkinter-chat.png")
-
-```python
-import tkinter as tk
-import tkinter.messagebox as messagebox
-import tkinter.simpledialog as simpledialog 
-from datetime import  datetime
-import requests
-import os
-from PIL import Image, ImageTk
-
-displayName = "---not-set---"
-messages = []
-
-def drawMainScreen(width, height, title):
-
-    def send_message():
-        print(window)
-        messagebox.showinfo("Hmmm...", "Insert code to send message here....")
-        this_message = text_message.get()
-        messages.append({"from": displayName, "to": "Luke Skywalker", "datetime": datetime.now().timestamp(), "message": this_message})
-        print("The message was: ",this_message)
-        text_message.delete(0, END)
-        displayMessages(messagesList)
-        pass
-
-    def new_contact():
-        pass
-
-    def menu_file_exit():
-        exit()
-
-    def sign_in():
-        drawLoginScreen()
-
-    def status_changed(val):
-        print("Your status is now: ",val)
-
-    def displayMessages(messagesList):
-        messagesList.delete(0, END)
-        for item in messages:
-            messagesList.insert(END, item["from"] + ", says: " + item["message"])
-
-    window = Toplevel()
-    window.title(title)
-    dimensions = str(width)+"x"+str(height)
-    window.geometry(dimensions)
-
-    messagesList = Listbox(window, width=75, height=20) # width is characters, height is lines
-    displayMessages(messagesList)
-    messagesList.place(x=20, y=20)
-
-    # Create the main menu bar
-    menu = Menu(window)
-    window.config(menu=menu)
-
-    # Create a sub menu for File
-    menu_file = Menu(menu)
-    menu_file.add_command(label="Sign in", command=sign_in)
-    menu_file.add_command(label="New", command=new_contact)
-    menu_file.add_command(label="Quit", command=menu_file_exit)
-    menu.add_cascade(label="File", menu=menu_file)
-
-    # Create a sub menu for Help
-    menu_help = Menu(menu)
-    menu_help.add_command(label="About")
-    menu.add_cascade(label="Help", menu=menu_help)
-
-    # Create labels
-    Label(window, text="New message").place(x=20, y=340)
-
-    # Create text boxes
-    text_message = Entry(window, width=75)
-    text_message.place(x=20, y=360)
-
-    Button(window, text="Send", height=2, command=lambda: send_message()).place(x=500, y=340)
-
-    # Display logo
-    img = Image.open("bookface.png").resize((50, 50))
-    logo_image = ImageTk.PhotoImage(img)
-    logo_label = Label(window, image=logo_image)
-    logo_label.image = logo_image
-    logo_label.place(x=485, y=20)
-
-    # Status drop down
-    status_var = StringVar(root)
-    status_var.set("Online") # default value
-    status_options = ["Online","Away","Offline"]
-    status = OptionMenu(root, status_var, *status_options, command=status_changed)
-    status.place(x=485, y=90)
-
-    return window
-
-def drawLoginScreen():
-    def do_login():
-        login(username=text_username.get(), password=text_password.get(), address=text_address.get())
-        window.destroy()
-
-    window = Toplevel()
-    window.title("Connect to server")
-    window.geometry("400x400")
-    Label(window, text="Username").place(x=20, y=20)
-    Label(window, text="Password").place(x=20, y=60)
-    Label(window, text="Server address").place(x=20, y=100)
-    text_username = Entry(window, width=25)
-    text_username.place(x=120, y=20)
-    text_password = Entry(window, show="*", width=25)
-    text_password.place(x=120, y=60)
-    text_address = Entry(window, width=25)
-    text_address.place(x=120, y=100)
-    Button(window, text="Login", height=2, command=do_login).place(x=120, y=140)
-    return window
-
-def login(username, password, address):
-    global displayName
-    print("Connecting to {} as {}".format(address,username))
-    displayName = username
-
-def download_file(url, local_file_name):
-    if not os.path.exists(local_file_name):
-        r = requests.get(url, stream=True)
-        with open(local_file_name, 'wb') as fd:
-            for chunk in r.iter_content(1024): # parameter is chunk size in bytes
-                fd.write(chunk)
-
-download_file('https://pbaumgarten.com/uploads/python/bookface.png', "bookface.png")
-root = Tk()
-windowMainScreen = drawMainScreen(550, 400, "Bookface messenger")
-root.withdraw() # Hide the root window, work with TopLevel windows instead
-root.mainloop()
-```
-
-## References
-
-* https://stackoverflow.com/questions/17466561/best-way-to-structure-a-tkinter-application
-* https://python-textbok.readthedocs.io/en/latest/Introduction_to_GUI_Programming.html
-* https://www.begueradj.com/tkinter-best-practices/
