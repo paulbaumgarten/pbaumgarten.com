@@ -11,6 +11,7 @@ This list will be added to over time. If you come across a problem that you thin
 If you are not quite ready for these problems and are seeking some more practice with the basics, I suggest you sign up to this auto-graded repl.it course. This particular problem set has me assigned as the teacher so I can see and monitor your progress.
 
 * [Repl.it auto-graded Python exercises](https://repl.it/data/classrooms/share/9d68c5288e184810f61b489d14ccfa54)
+* [Repl.it auto graded Java exercises](https://repl.it/data/classrooms/share/6eb69c6fa7b2d8c43a47961ca856c8af)
 
 ## Caesars cipher
 
