@@ -15,6 +15,8 @@
 
 ## A basic app
 
+* Video: [A quick intro to Tkinter and object orientated programming](https://youtu.be/olxgc9F8mzk)
+
 ```python
 import tkinter as tk
 from tkinter import ttk

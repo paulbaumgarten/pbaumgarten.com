@@ -461,7 +461,8 @@ end if
 
 The following past paper questions include those that require use arrays and collections. Make sure you are confident with those for your exams.
 
-* [Pseudocode past paper questions for practice](teacher/pseudocode-past-questions.pdf)
+* [Pseudocode past paper questions for practice](assets/pseudocode-past-questions.pdf)
+* [70 pseudocode practice questions](/igcse-compsci/distribute/pseudocode-70-questions.pdf) (I have the solutions for these for you to self-check)
 
 ---
 
@@ -894,109 +895,7 @@ Source: [hartleybrody (2016)](https://www.reddit.com/r/learnprogramming/comments
 
 # Programming problems to practice
 
-The following problems are intended for you to practice all you have learnt so far. Use the 7 step method with pseudo code and trace tables and then program functional solutions to these problems. Use the debugging strategies to help you when you get stuck.
-
-## Caesars cipher
-
-Julius Caesar created one of the first own encryption algorithms. It used a substitution method where each letter was replaced by another a fixed number of letters across from the original.
-
-For example: with a cipher key of 1, each letter shifts up one position as shown:
-
-> `plaintext:     defend the east wall of the castle`
-> `ciphertext:    efgfoe uif fbtu xbmm pg uif dbtumf`
-
-Create pseudo code that replicates the Caesar Cipher algorithm. Swap and test your neighbours algorithm with a trace table.
-
-Only once your trace table verifies your algorithm (and you have shown it to me), may you proceed with attempting it in code.
-
-## Vigenère cipher
-
-Earlier, we designed and coded a Caesar cipher. Unfortunately they’re very easy to crack. How about trying a Vigenère cipher or a Rail fence cipher?
-
-For a full explination of the Vigenère, try this:
-> https://pages.mtu.edu/~shene/NSF-4/Tutorial/VIG/Vig-Base.html
-
-While the normal way of learning the Vigenère relies on a 26x26 lookup table, it actually isn't necessary. The trick to the Vigenère over the Ceasar is that you use a word as your cipher key instead of a single value letter or number. You iterate through the value positions of each letter of your key word, and then resetting to the start again when you need more values.  The following illustration shows how to encode the message "ATTACK THE ENEMY" using the cipher key of "SECRET". 
-
-![](img/Vigenere.png)
-
-See how you go at building a Vigenère encoder and decoder.
-
-## Rail fence cipher
-
-To quote from the wikipedia article on the Rail Fence cipher:
-
-In the rail fence cipher, the plain text is written downwards and diagonally on successive "rails" of an imaginary fence, then moving up when the bottom rail is reached. When the top rail is reached, the message is written downwards again until the whole plaintext is written out. The message is then read off in rows. For example, if 3 "rails" and the message 'WE ARE DISCOVERED. FLEE AT ONCE' is used, the cipherer writes out:
-
-```
-W . . . E . . . C . . . R . . . L . . . T . . . E
-. E . R . D . S . O . E . E . F . E . A . O . C .
-. . A . . . I . . . V . . . D . . . E . . . N . .
-```
-
-Then reads off to get the ciphertext:
-
-```
-WECRLTEERDSOEEFEAOCAIVDEN
-```
-
-Note that this particular example does NOT use spaces separating the words. The decipherer will need to add them based on context. If spaces are shown in the ciphertext, then they must be included in the count of letters to determine the width of the solution grid.
-
-Keys can also be used in this cipher eg In this example shown above have Key=3 which means there is three rails, or three lines of text.
-
-More info: [https://en.wikipedia.org/wiki/Rail_fence_cipher](https://en.wikipedia.org/wiki/Rail_fence_cipher)
-
-## Closest pair problem
-
-The closest pair problem is a "classic" algorithm for beginning coders. (The closest pair of points problem or closest pair problem is a problem of computational geometry: given n points in metric space, find a pair of points with the smallest distance between them). It has real life significance in many applications. Consider: where are the closest shops? where is the closest hospital?
-
-Your task:
-
-* Derive an algorithm based on the Haversine formula (use your 7 step process). 
-* Use the your algorithm to find the distance from our classroom to each city. 
-* Generate a list in sorted order of every location, from closest to most distant.
-
-Assumptions provided:
-
-* The radius of the earth is 6373 km.
-* The coordinates of my classroom @ ISL are: `{"lat": 46.542816, "lng":6.637191}`
-
-Location data: Use any of the following...
-
-* [City information dataset 1](https://github.com/paulbaumgarten/data-sets) - 660 records (good starting point)
-* [City information dataset 2](https://github.com/bahar/WorldCityLocations) - ~10 thousand records
-* [City information dataset 3](https://github.com/lutangar/cities.json) - ~4 million records!
-
-You will likely need to check the documentation for the math functionality you will require for your programming language:
-
-* [Javascript Math library reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math)
-* [Python Math library reference](https://docs.python.org/3/library/math.html)
-* [Java Math library reference](https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html)
-
-The haversine formula determines the great-circle distance between two points on a sphere given their longitudes and latitudes.
-
-It holds that where:
-
-* `d` -  the distance between the two points (along the surface of the sphere),
-* `r` -  the radius of the sphere,
-* `φ1` - latitude of point 1 
-* `φ2` - latitude of point 2,
-* `λ1` - longitude of point 1,
-* `λ2` - longitude of point 2.
-
-then d =
-
-![](img/haversine.svg)
-
-## Further problems
-
-Programming practice?
-
-* [CodingBat for Javascript](https://codingjs.pbaumgarten.com/) (great for beginner programmers)
-* [CodingBat for Java](https://codingbat.com/java) (great for beginner programmers)
-* [CodingBat for Python](https://codingbat.com/python) (great for beginner programmers)
-* [Practice python](http://www.practicepython.org/) (while aimed at Python users, the exercises are generic enough that they are suitable regardless of the language you want to practice)
-* [Project Euler practice problems](https://projecteuler.net/archives) (more challenging)
+Refer to link on main course page
 
 ---
 
