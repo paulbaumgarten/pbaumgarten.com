@@ -9,6 +9,7 @@
 5. [Images](#images)
 6. [Second window](#second-window)
 7. [Tabs](#tabs)
+8. [Assorted tips and tricks](#tips-and-tricks)
 8. [Suggested resources](#suggested-resources)
 
 <div class="page"/>
@@ -397,6 +398,30 @@ if __name__ == "__main__":
 ```
 
 <div class="page"/>
+
+## Tips and tricks
+
+A few little discoveries I've made along the way of building a few projects...
+
+Execute a function (in this case, `self.window.quit()`) when the window close icon is clicked
+
+```python
+self.window.protocol("WM_DELETE_WINDOW", self.window.quit)
+```
+
+Make the window partially transparent
+
+```python
+self.window.attributes('-alpha', 0.8)
+```
+
+Force the window to stay visibly on top of all other programs
+
+```python
+root.wm_attributes("-topmost", 1)
+```
+
+Any other useful little tricks that should be added here?
 
 ## Suggested resources
 
