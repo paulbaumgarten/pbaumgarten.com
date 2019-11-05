@@ -4,7 +4,7 @@ Welcome to my teaching notes for the International Baccalaureate Diploma Compute
 
 *Everybody in this country should learn how to program a computer… because it teaches you how to think. - Steve Jobs*
 
-## Units
+## Units & key resources
 
 * [Unit 1: Systems design](unit-1)
 * [Unit 2: Computer architecture](unit-2)
@@ -18,14 +18,20 @@ Welcome to my teaching notes for the International Baccalaureate Diploma Compute
 * [Case study](case-study.md) (high level only)
 * [Extended essay](extended-essay.md) (optional)
 
-## Course documents
+## Programming resources
+
+* [Programming problems to solve](../igcse-compsci/programming-problems.md)
+* [Repl.it auto graded practice for Java](https://repl.it/data/classrooms/share/6eb69c6fa7b2d8c43a47961ca856c8af) (I am the registered teacher for this so I will get notified of and can monitor your progress)
+* [CodingBat for Java](https://codingbat.com/java)
+
+## IB course documents
 
 * [IB Notation for pseudocode (exam version)](ib-compsci-pseudocode-flowcharts.pdf)
 * [IB Notation for pseudocode (additional detail)](ib-compsci-pseudocode-in-detail.pdf)
 * [IB Java Exam Tool Subset (JETS)](ib-compsci-jets.pdf) (previous syllabus but still very relevant)
 * [IB Subject guide](https://drive.google.com/drive/folders/1_-CMEiY1TEcvBt29xWtJF9dL-VQ8GBeR?usp=sharing) (available to STC students only)
 
-## Assessment outline
+## IB assessment outline
 
 | Examination                                             | Standard level | High level |
 | ------------------------------------------------------- | --------- | --------- |
@@ -35,7 +41,7 @@ Welcome to my teaching notes for the International Baccalaureate Diploma Compute
 | Internal assessment: Solution                           | 30%, 30h  | 20%, 30h  |
 | Internal assessment: Group 4 project                    | 0%, 10h   | 0%, 10h   |
 
-## Other resources
+## Other IB teacher websites
 
 Other IB CS teacher websites. Feel free to check them out!
 
@@ -45,19 +51,13 @@ Other IB CS teacher websites. Feel free to check them out!
 * [Robert Griffiths, Colegio Gran Bretaña, Bogotá](https://ibcompsci.net/)
 * [Wikibooks, various authors](https://en.wikibooks.org/wiki/IB/Group_4/Computer_Science)
 
+## Other online computer science resources
+
 Online programming courses & lectures
 
 * [Video lectures from various universities](https://github.com/Developer-Y/cs-video-courses) **highly recommended and comprehensive**
 * [edX: Introduction to Java Programming – Part 1](https://www.edx.org/course/introduction-to-java-programming-part-1-3) (25 hours)
 * [coursera: Object Oriented Programming in Java Specialization](https://www.coursera.org/specializations/object-oriented-programming) (13 hours for course 1, 24 hours for course 2, 25 hours for course 3, don't worry about course 4)
-
-Programming practice
-
-* [Repl.it auto graded practice for Java](https://repl.it/data/classrooms/share/6eb69c6fa7b2d8c43a47961ca856c8af) (I am the registered teacher for this so I will get notified of and can monitor your progress)
-* [Repl.it auto graded practice for Python](https://repl.it/data/classrooms/share/9d68c5288e184810f61b489d14ccfa54) (I am the registered teacher for this so I will get notified of and can monitor your progress)
-* [CodingBat for Javascript](https://codingjs.pbaumgarten.com/)
-* [CodingBat for Java](https://codingbat.com/java)
-* [CodingBat for Python](https://codingbat.com/python)
 
 Project ideas
 
@@ -66,5 +66,11 @@ Project ideas
 * [Mega Project List (110 problems)](https://github.com/karan/Projects)
 * [Daily programmer challenge](https://www.reddit.com/r/dailyprogrammer/)
 * [Coding Bat introductory problems](http://codingbat.com/java) (Java and Python)
+
+Non-Java programming resources
+
+* [Repl.it auto graded practice for Python](https://repl.it/data/classrooms/share/9d68c5288e184810f61b489d14ccfa54) (I am the registered teacher for this so I will get notified of and can monitor your progress)
+* [CodingBat for Javascript](https://codingjs.pbaumgarten.com/)
+* [CodingBat for Python](https://codingbat.com/python)
 
 If you come across any other site worth adding to the list, please let me know!
