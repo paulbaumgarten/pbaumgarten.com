@@ -217,6 +217,12 @@ Some fake credit card numbers you can use for testing purposes...
 
 The Hong Kong ID number is another check digit algorithm. The algorithm is documented [here](https://access-excel.tips/hkid-check-digit/)
 
+## Find prime numbers
+
+Use the Sieve of Eratosthene algorithm to find the first 1000 prime numbers.
+
+* [Sieve of Eratosthene (wikipedia)](https://en.wikipedia.org/wiki/Sieve_of_Eratosthene)
+
 ## Chroma-key (green screen) effect
 
 1. Research into the PIL Python Image Library
