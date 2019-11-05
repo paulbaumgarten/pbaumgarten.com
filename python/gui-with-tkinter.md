@@ -27,11 +27,11 @@ FONT_LARGE = ("Arial", 48)
 class AppWindow():
     def __init__(self, parent):
         # Create the window
-        self.parent = parent
-        self.parent.geometry("400x200")
-        self.parent.title("Test app")
+        self.window = parent
+        self.window.geometry("400x200")
+        self.window.title("Test app")
         # Create a text label and place it in the window
-        self.hello_label = tk.Label(self.parent, text="Hello world!", font=FONT_LARGE)
+        self.hello_label = tk.Label(self.window, text="Hello world!", font=FONT_LARGE)
         self.hello_label.place(x=20, y=20)
 
 if __name__ == "__main__":
@@ -55,21 +55,21 @@ FONT_LARGE = ("Arial", 48)
 class AppWindow():
     def __init__(self, parent):
         # Create the window
-        self.parent = parent
-        self.parent.geometry("400x200")
-        self.parent.title("Test app")
+        self.window = parent
+        self.window.geometry("400x200")
+        self.window.title("Test app")
         # Create a text label
-        self.question_label = tk.Label(self.parent, text="What is your name?")
+        self.question_label = tk.Label(self.window, text="What is your name?")
         self.question_label.place(x=20, y=20)
         # Create a text entry box
-        self.name_entry = tk.Entry(self.parent)
+        self.name_entry = tk.Entry(self.window)
         self.name_entry.place(x=20, y=50)
         self.name_entry.focus()                 # Put the cursor in the text box
         # Create a button
-        self.submit_button = tk.Button(self.parent, text="Submit", command=self.greetings)
+        self.submit_button = tk.Button(self.window, text="Submit", command=self.greetings)
         self.submit_button.place(x=20, y=100)
         # Create a second button
-        self.close_button = tk.Button(self.parent, text="Close", command=self.parent.quit)
+        self.close_button = tk.Button(self.window, text="Close", command=self.window.quit)
         self.close_button.place(x=120, y=100)
 
     def greetings(self):
@@ -104,22 +104,22 @@ items = ["Apples", "Oranges", "Bananas", "Strawberrys"]
 class AppWindow():
     def __init__(self, parent):
         # Create the window
-        self.parent = parent
-        self.parent.geometry("400x250")
-        self.parent.title("Test app")
+        self.window = parent
+        self.window.geometry("400x250")
+        self.window.title("Test app")
         # Create a list box
-        self.list = tk.Listbox(self.parent, width=10, height=10)    # width is characters, height is lines
+        self.list = tk.Listbox(self.window, width=10, height=10)    # width is characters, height is lines
         for item in items:
             self.list.insert(tk.END, item)                     # Add each item to the end of the list
         self.list.place(x=20, y=20)
         self.list.bind('<<ListboxSelect>>', self.list_clicked) # When an item in the list is selected, execute the list_clicked function
         self.selected = -1                                     # Give `selected` a default of -1
         # Create some buttons
-        self.add_to_top_button = tk.Button(self.parent, text="Add an item to top of list", command=self.add_to_top_clicked)
+        self.add_to_top_button = tk.Button(self.window, text="Add an item to top of list", command=self.add_to_top_clicked)
         self.add_to_top_button.place(x=140, y=20)
-        self.add_to_end_button = tk.Button(self.parent, text="Add an item to end of list", command=self.add_to_end_clicked)
+        self.add_to_end_button = tk.Button(self.window, text="Add an item to end of list", command=self.add_to_end_clicked)
         self.add_to_end_button.place(x=140, y=50)
-        self.close_button = tk.Button(self.parent, text="Delete selected item", command=self.delete_selected_clicked)
+        self.close_button = tk.Button(self.window, text="Delete selected item", command=self.delete_selected_clicked)
         self.close_button.place(x=140, y=80)
 
     def add_to_top_clicked(self):
@@ -166,25 +166,25 @@ ALLOWED_FILES = (("JPEG files","*.jpg"),("PNG files","*.png"),("all files","*.*"
 class AppWindow():
     def __init__(self, parent):
         # Create the window
-        self.parent = parent
-        self.parent.geometry("400x200")
-        self.parent.title("Test app")
+        self.window = parent
+        self.window.geometry("400x200")
+        self.window.title("Test app")
         # Create a text label and place it in the window
-        self.hello_label = tk.Label(self.parent, text="Hello world!", font=FONT_LARGE)
+        self.hello_label = tk.Label(self.window, text="Hello world!", font=FONT_LARGE)
         self.hello_label.place(x=20, y=20)
         # Create a menu bar
-        menubar = tk.Menu(self.parent)
+        menubar = tk.Menu(self.window)
         filemenu = tk.Menu(menubar, tearoff=0)
         filemenu.add_command(label="Open file", command=self.file_open)
         filemenu.add_command(label="Save file as", command=self.file_saveas)
         filemenu.add_command(label="Set default folder", command=self.select_folder)
         filemenu.add_separator()
-        filemenu.add_command(label="Exit", command=self.parent.quit)
+        filemenu.add_command(label="Exit", command=self.window.quit)
         helpmenu = tk.Menu(menubar, tearoff=0)
         helpmenu.add_command(label="About", command=self.about)
         menubar.add_cascade(label="File", menu=filemenu)
         menubar.add_cascade(label="Help", menu=helpmenu)
-        self.parent.config(menu=menubar)
+        self.window.config(menu=menubar)
         # Intialise the default folder location
         self.default_folder = "."
 
@@ -226,14 +226,14 @@ ALLOWED_FILES = (("JPEG files","*.jpg"),("PNG files","*.png"),("all files","*.*"
 class AppWindow():
     def __init__(self, parent):
         # Create the window
-        self.parent = parent
-        self.parent.geometry("400x400")
-        self.parent.title("Test app")
+        self.window = parent
+        self.window.geometry("400x400")
+        self.window.title("Test app")
         # Button
-        self.pick_file_button = tk.Button(self.parent, text="Pick an image", command=self.show_image)
+        self.pick_file_button = tk.Button(self.window, text="Pick an image", command=self.show_image)
         self.pick_file_button.place(x=20,y=20)
         # Create a label reserved for displaying image later
-        self.image_label = tk.Label(self.parent)
+        self.image_label = tk.Label(self.window)
         self.image_label.place(x=20,y=70,width=300,height=300)
 
     def show_image(self):
@@ -260,6 +260,10 @@ if __name__ == "__main__":
 
 ## Second window
 
+To have Tkinter open second windows, use the `tk.Toplevel()` function as shown in the `LoginWindow.__init__()` function.
+
+With respect to organising your code, it is generally good practice to make each window its own class.
+
 ```python
 import tkinter as tk
 from tkinter import ttk
@@ -269,24 +273,26 @@ import time
 FONT_LARGE = ("Arial", 48)
 
 class LoginWindow():
-    def __init__(self):
+    def __init__(self, parent):
+        # Create a variable with which we can reference our parent
+        self.parent = parent
         # Secondary windows are made using tk.Toplevel()
-        self.parent = tk.Toplevel()
-        self.parent.geometry("400x300")
-        self.parent.title("Login")
+        self.window = tk.Toplevel()
+        self.window.geometry("400x300")
+        self.window.title("Login")
         # Labels
-        self.username_label = tk.Label(self.parent, text="Username:")
+        self.username_label = tk.Label(self.window, text="Username:")
         self.username_label.place(x=20,y=20)
-        self.password_label = tk.Label(self.parent, text="Password:")
+        self.password_label = tk.Label(self.window, text="Password:")
         self.password_label.place(x=20,y=70)
         # Entry boxes
-        self.username_text = tk.Entry(self.parent)
+        self.username_text = tk.Entry(self.window)
         self.username_text.place(x=100,y=20)
         self.username_text.focus()
-        self.password_text = tk.Entry(self.parent, show="*")
+        self.password_text = tk.Entry(self.window, show="*")
         self.password_text.place(x=100,y=70)
         # Button
-        self.login_button = tk.Button(self.parent, text="Login", command=self.login)
+        self.login_button = tk.Button(self.window, text="Login", command=self.login)
         self.login_button.place(x=100,y=120)
 
     def login(self):
@@ -294,7 +300,7 @@ class LoginWindow():
         self.passwd = self.password_text.get()
         print(f"Your username is {self.userid} and password is {self.passwd}")
         # Close the login window
-        self.parent.destroy()  
+        self.window.destroy()  
 
     def get_info(self):
         return self.userid, self.passwd
@@ -302,21 +308,21 @@ class LoginWindow():
 class AppWindow():
     def __init__(self, parent):
         # Create the window
-        self.parent = parent
-        self.parent.geometry("400x200")
-        self.parent.title("Test app")
+        self.window = parent
+        self.window.geometry("400x200")
+        self.window.title("Test app")
         # Create a text label and place it in the window
-        self.hello_label = tk.Label(self.parent, text="Hello world!", font=FONT_LARGE)
+        self.hello_label = tk.Label(self.window, text="Hello world!", font=FONT_LARGE)
         self.hello_label.place(x=20, y=20)
         # Create a button
-        self.login_button = tk.Button(self.parent, text="Login", command=self.login_clicked)
+        self.login_button = tk.Button(self.window, text="Login", command=self.login_clicked)
         self.login_button.place(x=20, y=170)
     
     def login_clicked(self):
         # Create login window        
         login_window = LoginWindow()
         # Wait until the login window is closed
-        self.parent.wait_window(login_window.parent)  
+        self.window.wait_window(login_window.window)  
         print("Finished waiting")
         uid, pwd = login_window.get_info()
         self.hello_label.configure(text=f"Hello {uid}")
@@ -339,14 +345,14 @@ from tkinter import messagebox
 class AppWindow():
     def __init__(self, parent):
         # Create the window
-        self.parent = parent
-        self.parent.geometry("400x400")
-        self.parent.title("Test app")
+        self.window = parent
+        self.window.geometry("400x400")
+        self.window.title("Test app")
         # Create a text label and place it in the window
-        self.hello_label = tk.Label(self.parent, text="Hello world!", font=FONT_LARGE)
+        self.hello_label = tk.Label(self.window, text="Hello world!", font=FONT_LARGE)
         self.hello_label.place(x=20, y=20)
         # Create 3 tabs
-        self.tab_container = tk.Frame(self.parent)
+        self.tab_container = tk.Frame(self.window)
         self.tab_container.place(x=0,y=0,width=400,height=400)
         self.tabs = ttk.Notebook(self.tab_container)
         self.tab_1 = tk.Frame(self.tabs)
