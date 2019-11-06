@@ -421,7 +421,7 @@ Force the window to stay visibly on top of all other programs
 root.wm_attributes("-topmost", 1)
 ```
 
-Any other useful little tricks that should be added here?
+Any other useful little tricks that should be added here? Let me know!
 
 ## Suggested resources
 
