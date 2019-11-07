@@ -126,6 +126,7 @@ while True:
     clear_leds()
     leds[number] = green
     leds[7-number] = magenta
+    leds.show()
     number = number + 1
     if number == 8:
         number = 0
@@ -145,7 +146,7 @@ leds = NeoPixel(pin1, 8)
 # Define a function to set all LEDs to black
 def clear_leds():
     number = 0
-    while number < 8
+    while number < 8:
         leds[number] = [0,0,0]
         number = number + 1
     leds.show()
