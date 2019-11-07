@@ -19,7 +19,7 @@ This is the place to start if you are brand new to Python. I have introdutory vi
 1. [Variables and numbers](101-variables-and-numbers.md)
 2. [Strings and casting](102-strings-and-casting.md)
 3. [Truth, if, else and while](103-truth-if-else-while.md)
-4. [Lists](104-lists.md)
+4. [Lists and for-loops](104-lists-for.md)
 5. [Functions](105-functions.md)
 6. [Files](106-files.md)
 7. [Exceptions](107-exceptions.md)

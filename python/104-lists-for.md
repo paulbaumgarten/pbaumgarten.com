@@ -173,7 +173,13 @@ print(groot)
 
 ## Traversing a list
 
-The preferred method
+We can traverse over a list using a 'for-loop'. This is a loop that increments over a series of values, running the intended code with a different value each time.
+
+There are two methods of writing for-loops. 
+
+### Method 1: For item in collection
+
+The **item in collection** method will, when provided a list of values, the for-loop will iterate through each value. In the following example, the variable `character` shall have the value `Luke` the first time the loop is executed, `Han` the second time, `Leah` the third time and so on until the list is complete.
 
 ```python
 starwars = ["Luke", "Han", "Leah", "Obi-wan", "Yoda", "Rey", "Finn"]
@@ -181,14 +187,57 @@ for character in starwars:
     print(f"Vote for {character} as your favourite starwars character")
 ```
 
-Alternative method
+### Method 2: For value in range
 
-* If you need to know the index value of each element while iterating
+The **value in range** method will increment of a series of numbers. In the example below, the `range(10)` function generates a sequence of values from `0` up to but not including `10`. So, the print will generate the output of `0`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`.
+
+```python
+for i in range(10):
+    print(i)
+```
+
+You can still use this method to work in combination with lists, by using the `len()` function to determine the length of a given list, and then use the square bracket notation to access individual list elements, as the following example illustrates.
 
 ```python
 starwars = ["Luke", "Han", "Leah", "Obi-wan", "Yoda", "Rey", "Finn"]
 for i in range( len( starwars ) ):
     print(f"Character #{ i } is { starwars[i] }")
+```
+
+It is worth noting that the `range()` function can be used in a couple of other different ways. It does not have to start from `0`, and it does not have to increment up by `1` each time.
+
+For instance, to increment from 10 to 19 would look like:
+
+```python
+for i in range(10, 20):
+    print(i)
+```
+
+The following example shows how you can change the amount you increment each time. This will print `0`, `5`, `10`, `15`, `20`, and stop after printing `95`.
+
+```python
+for i in range(0, 100, 5):
+    print(i)
+```
+
+## Tips and tricks
+
+```python
+# Python's list comprehension is a great little short cut...
+vals = [expression for value in collection if condition]
+
+# The long form equivilant is...
+vals = []
+for value in collection:
+    if condition:
+        vals.append(expression)
+```
+
+For example:
+
+```python
+nums = [ x*x for x in range(10) if not x % 2 == 0 ]
+print(nums)   # [0, 4, 16, 36, 64]
 ```
 
 ## Problem set
