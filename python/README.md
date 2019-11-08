@@ -55,6 +55,7 @@ If you know the basics of Python and wish to experiement with a new package or t
 * [Text to speech](text-to-speech.md)
 * [Threading](threading.md)
 * [Turtle](turtle.md)
+* [venv (Virtual Environments)](venv.md)
 * [Web scraping](web-scraping.md) with beautifulsoap4
 * [Windows services howto](windows-service.docx)
 * [Youtube downloading](youtube.md)
