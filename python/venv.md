@@ -23,10 +23,12 @@ Create your virtual environment through the following console commands. This is 
 ### Using Github Desktop + VS Code
 
 1 - Create or clone your repository
+
 2 - Use the Git Ignore template for Python (to ignore venv by default) 
+
 3 - Enter a terminal and create a virtual environment
 
-    * Github desktop menu: Repository / Open in terminal
+* Github desktop menu: Repository / Open in terminal
 
 ```bash
 python -m venv venv                 # Create venv
