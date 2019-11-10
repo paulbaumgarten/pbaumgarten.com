@@ -20,108 +20,57 @@ Create your virtual environment through the following console commands. This is 
 
 ## Suggested workflows
 
-### Using Github + VS Code
+### Using Github Desktop + VS Code
 
-1. Create or clone your repository
+1 - Create or clone your repository
+2 - Use the Git Ignore template for Python (to ignore venv by default) 
+3 - Enter a terminal and create a virtual environment
 
-2. Enter a terminal and create a virtual environment
-
-* Github desktop menu: Repository / Open in terminal
-* Create the virtual environment
-
-```bash
-python -m venv venv
-```
-
-2. Create an `.ignore` file
-
-* Ignore the `/venv` folder.
-
-3. Create a `requirements.txt` file if required
+    * Github desktop menu: Repository / Open in terminal
 
 ```bash
-pip freeze > requirements.txt
+python -m venv venv                 # Create venv
+source venv/bin/activate            # Activate the virtual environment
+pip install -r requirements.txt     # Install requirements into it
+exit                                # Exit the virtual envionment
 ```
 
-4. Install your packages
-
-```bash
-pip install -r requirements.txt
-```
-
-5. Build your project
+Build your project!
 
 * Just ensure VS Code is using the correct Python interpreter (bottom-left corner in the blue bar)
 
 ### Mac terminal
 
 ```bash
-# Change into your project folder
-cd thematrix
-
-# Create a virtual environment (venv) in the folder venv
-python3 -m venv venv
-
-# Activate the virtual environment
-source venv/bin/activate
-
-# Confirm virtual environment will run the local python
-which python
-
-# Install your packages
-pip3 install -r requirements.txt
-pip3 install package1 package2 package3...
-
-# Test your project
-python3 main.py 
-
-# Deactivate the virtual environment when finished
-deactivate
+cd thematrix                        # Change into your project folder
+python3 -m venv venv                # Create a virtual environment (venv)
+source venv/bin/activate            # Activate the virtual environment
+which python                        # Confirm virtual environment
+pip3 install -r requirements.txt    # Install your packages
+python3 main.py                     # Test your project
+deactivate                          # Deactivate venv
 ```
 
 ### Windows DOS command line
 
 ```bash
-# Change into your project folder
-cd thematrix
-
-# Create a virtual environment (venv) in the folder venv
-python -m venv venv
-
-# Activate the virtual environment
-source venv/bin/activate
-
-# Confirm virtual environment will run the local python
-which python
-
-# Install your packages
-pip install -r requirements.txt
-pip install package1 package2 package3...
-
-# Test your project
-python main.py 
-
-# Deactivate the virtual environment when finished
-deactivate
+cd thematrix                        # Change into your project folder
+python -m venv venv                 # Create a virtual environment (venv)
+source venv/bin/activate            # Activate the virtual environment
+which python                        # Confirm virtual environment
+pip install -r requirements.txt     # Install your packages
+python main.py                      # Test your project
+deactivate                          # Deactivate the virtual environment
 ```
 
 ### IDLE
 
 ```bash
-# Create a virtual environment (venv) in the folder venv
-python -m venv venv
-
-# Activate the virtual environment
-source venv/bin/activate
-
-# Launch IDLE via the Python module
-python -m idlelib.idle
-
-# Deactivate the virtual environment when finished
-deactivate
+python -m venv venv                 # Create a virtual environment (venv) in the folder venv
+source venv/bin/activate            # Activate the virtual environment
+python -m idlelib.idle              # Launch IDLE via the Python module
+deactivate                          # Deactivate the virtual environment when finished
 ```
-
-* Last step from [https://stackoverflow.com/a/38104835](https://stackoverflow.com/a/38104835)
 
 ### PyCharm
 
