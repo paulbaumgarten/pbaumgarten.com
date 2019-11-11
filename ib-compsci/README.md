@@ -48,6 +48,7 @@ Other IB CS teacher websites. Feel free to check them out!
 * [Chris Coetzee, Dartford Grammar School, UK](http://ib.compscihub.net/) 
 * [Michael Brooke, St Julian’s School](http://www.emjbe.net/moodle/course/view.php?id=2)
 * [Bill MacKenty, American School of Warsaw](https://computersciencewiki.org/)
+* [Bill MacKenty, second site?](https://computersciencelearning.org/learn/courses)
 * [Robert Griffiths, Colegio Gran Bretaña, Bogotá](https://ibcompsci.net/)
 * [Wikibooks, various authors](https://en.wikibooks.org/wiki/IB/Group_4/Computer_Science)
 
