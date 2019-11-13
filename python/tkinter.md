@@ -16,6 +16,8 @@
 
 ## A basic app
 
+![](img/tkinter-01.png)
+
 * Video: [A quick intro to Tkinter and object orientated programming](https://youtu.be/olxgc9F8mzk)
 
 ```python
@@ -31,6 +33,7 @@ class AppWindow():
         self.window = parent
         self.window.geometry("400x200")
         self.window.title("Test app")
+        self.window.protocol("WM_DELETE_WINDOW", self.window.quit) # Enable the close icon
         # Create a text label and place it in the window
         self.hello_label = tk.Label(self.window, text="Hello world!", font=FONT_LARGE)
         self.hello_label.place(x=20, y=20)
@@ -44,6 +47,8 @@ if __name__ == "__main__":
 <div class="page"/>
 
 ## Labels, entry box, button
+
+![](img/tkinter-02.png)
 
 ```python
 import tkinter as tk
@@ -65,7 +70,7 @@ class AppWindow():
         # Create a text entry box
         self.name_entry = tk.Entry(self.window)
         self.name_entry.place(x=20, y=50)
-        self.name_entry.focus()                 # Put the cursor in the text box
+        self.name_entry.focus()   # Put the cursor in the text box
         # Create a button
         self.submit_button = tk.Button(self.window, text="Submit", command=self.greetings)
         self.submit_button.place(x=20, y=100)
@@ -90,6 +95,8 @@ if __name__ == "__main__":
 
 ## Listbox, simpledialog
 
+![](img/tkinter-03.png)
+
 ```python
 import tkinter as tk
 from tkinter import ttk
@@ -109,12 +116,16 @@ class AppWindow():
         self.window.geometry("400x250")
         self.window.title("Test app")
         # Create a list box
-        self.list = tk.Listbox(self.window, width=10, height=10)    # width is characters, height is lines
+        # -- width is characters, height is lines
+        self.list = tk.Listbox(self.window, width=10, height=10)    
         for item in items:
-            self.list.insert(tk.END, item)                     # Add each item to the end of the list
+            # Add each item to the end of the list
+            self.list.insert(tk.END, item)                     
         self.list.place(x=20, y=20)
-        self.list.bind('<<ListboxSelect>>', self.list_clicked) # When an item in the list is selected, execute the list_clicked function
-        self.selected = -1                                     # Give `selected` a default of -1
+        # -- When an item in the list is selected, execute the list_clicked function
+        self.list.bind('<<ListboxSelect>>', self.list_clicked) 
+        # -- Give `selected` a default of -1
+        self.selected = -1                                     
         # Create some buttons
         self.add_to_top_button = tk.Button(self.window, text="Add an item to top of list", command=self.add_to_top_clicked)
         self.add_to_top_button.place(x=140, y=20)
@@ -153,6 +164,8 @@ if __name__ == "__main__":
 <div class="page"/>
 
 ## Menubar, filedialog
+
+![](img/tkinter-04.png)
 
 ```python
 import tkinter as tk
@@ -215,6 +228,9 @@ if __name__ == "__main__":
 
 ## Images
 
+![](img/tkinter-05.png)
+
+
 ```python
 import tkinter as tk
 from tkinter import filedialog
@@ -261,6 +277,8 @@ if __name__ == "__main__":
 
 ## Second window
 
+![](img/tkinter-06.png)
+
 To have Tkinter open second windows, use the `tk.Toplevel()` function as shown in the `LoginWindow.__init__()` function.
 
 With respect to organising your code, it is generally good practice to make each window its own class.
@@ -277,7 +295,7 @@ class LoginWindow():
     def __init__(self, parent):
         # Create a variable with which we can reference our parent
         self.parent = parent
-        # Secondary windows are made using tk.Toplevel()
+        # Secondary windows are made using tk.Toplevel() instead of using parent
         self.window = tk.Toplevel()
         self.window.geometry("400x300")
         self.window.title("Login")
@@ -308,7 +326,7 @@ class LoginWindow():
 
 class AppWindow():
     def __init__(self, parent):
-        # Create the window
+        # Create the window (linked to the app parent)
         self.window = parent
         self.window.geometry("400x200")
         self.window.title("Test app")
@@ -338,6 +356,8 @@ if __name__ == "__main__":
 
 ## Tabs
 
+![](img/tkinter-07.png)
+
 ```python
 import tkinter as tk
 from tkinter import ttk
@@ -359,11 +379,12 @@ class AppWindow():
         self.tab_1 = tk.Frame(self.tabs)
         self.tab_2 = tk.Frame(self.tabs)
         self.tab_3 = tk.Frame(self.tabs)
-        self.tabs.bind("<<NotebookTabChanged>>", self.on_tab_selected)
         self.tabs.add(self.tab_1, text="Tab 1")
         self.tabs.add(self.tab_2, text="Tab 2")
         self.tabs.add(self.tab_3, text="Tab 3")
         self.tabs.place(x=0,y=0,height=400,width=400)
+        # Define what function to run when current tab is changed
+        self.tabs.bind("<<NotebookTabChanged>>", self.on_tab_selected)
         # Content for tab 1
         self.label1 = tk.Label(self.tab_1, text="I am the content of tab 1")
         self.label1.place(x=20, y=20) # Coordinates are relative to within the tab area    
@@ -377,6 +398,7 @@ class AppWindow():
         self.close_button.place(x=20,y=70)
 
     def on_tab_selected(self, e):
+        # Function to execute whenever current tab is changed
         selected_tab = e.widget.select()
         tab_text = e.widget.tab(selected_tab, "text")
         if tab_text == "Tab 1":
