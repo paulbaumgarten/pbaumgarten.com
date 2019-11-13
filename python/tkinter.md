@@ -277,7 +277,7 @@ if __name__ == "__main__":
 
 ## Second window
 
-![](img/tkinter-06.png)
+![](img/tkinter-06.PNG)
 
 To have Tkinter open second windows, use the `tk.Toplevel()` function as shown in the `LoginWindow.__init__()` function.
 
@@ -356,7 +356,7 @@ if __name__ == "__main__":
 
 ## Tabs
 
-![](img/tkinter-07.png)
+![](img/tkinter-07.PNG)
 
 ```python
 import tkinter as tk
