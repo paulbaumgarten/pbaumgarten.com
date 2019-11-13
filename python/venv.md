@@ -28,7 +28,7 @@ Create your virtual environment through the following console commands. This is 
 
 3 - Enter a terminal and create a virtual environment
 
-* Github desktop menu: Repository / Open in terminal
+* Github desktop menu: Repository / Open in terminal or Open in command prompt
 
 ```bash
 python -m venv venv                 # Create venv
@@ -47,7 +47,6 @@ Build your project!
 cd thematrix                        # Change into your project folder
 python3 -m venv venv                # Create a virtual environment (venv)
 source venv/bin/activate            # Activate the virtual environment
-which python                        # Confirm virtual environment
 pip3 install -r requirements.txt    # Install your packages
 python3 main.py                     # Test your project
 deactivate                          # Deactivate venv
@@ -55,11 +54,10 @@ deactivate                          # Deactivate venv
 
 ### Windows DOS command line
 
-```bash
+```msdos
 cd thematrix                        # Change into your project folder
 python -m venv venv                 # Create a virtual environment (venv)
-source venv/bin/activate            # Activate the virtual environment
-which python                        # Confirm virtual environment
+venv\scripts\activate               # Activate the virtual environment
 pip install -r requirements.txt     # Install your packages
 python main.py                      # Test your project
 deactivate                          # Deactivate the virtual environment
