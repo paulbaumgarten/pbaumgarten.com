@@ -204,7 +204,9 @@ for i in range( len( starwars ) ):
     print(f"Character #{ i } is { starwars[i] }")
 ```
 
-It is worth noting that the `range()` function can be used in a couple of other different ways. It does not have to start from `0`, and it does not have to increment up by `1` each time.
+## For-loops for non-list purposes
+
+You can also use a for-loop for any iteration when you know the number of iterations you wish to loop in advance.
 
 For instance, to increment from 10 to 19 would look like:
 
@@ -218,6 +220,30 @@ The following example shows how you can change the amount you increment each tim
 ```python
 for i in range(0, 100, 5):
     print(i)
+```
+
+
+```python
+limit = int(input("Enter a number for me to count up to: "))
+for i in range(limit):   # will loop from 0 to up_to-1
+   print( i+1 )
+print("The end!")
+```
+
+You can also specify a starting number other than zero. For instance
+
+```python
+for i in range(50, 100):   # will loop from 50 to 99
+   print( i )
+print("The end!")
+```
+
+You can even specify that it counts downwards, or using an interval different to one by specifying a third parameter to the `range()` function.
+
+```python
+for i in range(100, 0, -1):   # will loop from 100 to 1
+   print( i )
+print("The end!")
 ```
 
 ## Tips and tricks
