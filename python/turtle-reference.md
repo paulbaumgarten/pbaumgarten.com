@@ -5,7 +5,6 @@ The following is a summary of turtle instructions, taken from the [Python refere
 ## Import
 
 ```python
-#!/usr/bin/env python3
 from turtle import *
 ```
 
