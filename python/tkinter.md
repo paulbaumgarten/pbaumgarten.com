@@ -48,6 +48,11 @@ if __name__ == "__main__":
 
 ## Labels, entry box, button
 
+
+* Video: [Using buttons in Tkinter](https://youtu.be/MoyIk66vlmk)
+* Video: [Using entry textbox in Tkinter](https://youtu.be/4dN5Ef4rTzo)
+
+
 ![](img/tkinter-02.png)
 
 ```python
