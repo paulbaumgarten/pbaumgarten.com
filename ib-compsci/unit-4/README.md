@@ -238,35 +238,6 @@ Program design is all about **solving problems**.
 
 If you can’t solve and articulate the problem by hand, you will not be able to solve it with code!
 
-## Introducing the 7 step process
-
-Duke University have identified a 7 step process to learning problem solving with programming which we will work through.
-
-1. Work example by hand
-2. Write down what you did
-3. Find patterns
-4. Check by hand & buddy check
-5. Translate to code
-6. Run test cases
-7. Debug any failed test cases
-
-(from Duke University (2018), "Programming Foundations with JavaScript, HTML and CSS: A seven step approach to solving programming problems" available [online](https://www.coursera.org/lecture/duke-programming-web/a-seven-step-approach-to-solving-programming-problems-AEy5M))
-
-## Practice the 7 step process
-
-Exercise 1: The green screen problem
-
-![](img/green-screen-sample.png)
-
-What would be the instructions (recipe) to perform a simple version of the green screen problem?
-
-Exercise 2:
-
-* I have pre-printed a number of different algorithm problems for you to solve.
-* I will distribute the problems so that no-one sitting next to each other is working on the same problem. 
-* Do not show your neighbour your problem - you are to use your neighbour as your buddy check in step 4 so they can’t know in advance what your procedure is supposed to achieve. 
-* For today: We'll stop after you achieve success at step 4 (ie: clear written instructions correctly interpreted by another)
-
 ## Documenting program design
 
 There are three key strategies this course would like you to be familiar with for articulating and testing algorithms. They are:
