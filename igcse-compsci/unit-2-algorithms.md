@@ -425,6 +425,10 @@ Syntax of flowcharts for the iGCSE course:
 
 ## 13: Ethical considerations
 
+Video: [The Consequences of Your Code by Tom Scott](https://www.youtube.com/watch?v=LZM9YdO_QKk) (6:15m)
+
+There are real-world impacts on human lives by the software we create. We have an ethical and moral responsibility to take care with the projects we create to minimise potential harm.
+
 Chapter 8.9 and 8.10
 
 As programmers, we have responsibilities to be ethical in
