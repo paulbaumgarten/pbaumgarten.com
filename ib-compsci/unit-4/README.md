@@ -477,7 +477,7 @@ A binary search divides a range of values into halves, and continues to narrow d
 
 ```
 function binary( haystack, needle ) {
-    var max = haystack.length;
+    var max = haystack.length-1;
     var min = 0;
     while (max >= min) {
         var mid = Math.floor((min+max)/2);
