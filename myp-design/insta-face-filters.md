@@ -19,6 +19,7 @@ Conceptual questions:
 Debatable questions:
 
 Assessment objectives:
+A,B,D
 
 ## Lesson overviews
 
@@ -29,6 +30,9 @@ Assessment objectives:
 3. Simple filters: Black and white, re-colour, blur
 4. OpenCV: Detect faces, bodies, face features
 5. Face filter demo
+6. Design your own face filter
+7. Build your own face filter
+8. Evaluate your own face filter
 
 
 
