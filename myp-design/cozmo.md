@@ -1,6 +1,5 @@
 # Cozmo Robotics
 
-
 ## Summary
 
 ## Unit information
@@ -35,6 +34,28 @@ A,B,C,D?
 7. Design your own obstacle course
 8. Build your own obstacle course
 9. Evaluate your own obstacle course
+
+## 1. Connect to robot, basic movement
+
+## 2. Control LEDs, move robot head
+
+## 3. Detect cliff edge, 
+drive around a tabletop
+
+## 4. Take photo, save photo
+
+## 5. Detect AruCode markers
+print some arucode markers
+print large and small
+test them, determine range of each size
+
+## 6. Take action based on AruCode markers
+
+## 7. Design your own obstacle course
+
+## 8. Build your own obstacle course
+
+## 9. Evaluate your own obstacle course
 
 ## Resources
 

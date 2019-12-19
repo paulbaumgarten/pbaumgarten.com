@@ -26,16 +26,19 @@ A,D? Research and evaluate
 
 12 lessons as follows:
 
+1. Install tools, understand basic ideas of AI
+2. The CartPole problem - with a random agent
+3. The CartPole problem - with simple logic
+4. Intro to ML theory
+5. The CartPole problem - with a basic neural network
+6. The Mountain Car problem - converting continuous to discrete actions
+7. Simple game - complete demo
+8. Simple game - training
+9. Simple game - tweak and retrain
+10. Analysis
 
-1. CartPole - random
-2. CartPole - simple logic
-3. Intro to ML theory
-4. CartPole - Basic NN
-5. Mountain Car - Continuous to discrete actions - https://youtu.be/nvhWfk7R0RM
-6. Breakout - Image input
-7. Train & tweak
 
-
+ - https://youtu.be/nvhWfk7R0RM
 
 ## Reference
 
