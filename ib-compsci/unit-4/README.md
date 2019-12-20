@@ -760,6 +760,11 @@ The CPU only performs a few basic functions:
 
 A piece of software, such as a game or web browser, combines these functions to perform more complex tasks. These are known as compound operations.
 
+**How do computers read code?**
+
+This video is a look at the link between programming languages, compilers, assembler and machine code - [https://www.youtube.com/watch?v=QXjU9qTsYCc](https://www.youtube.com/watch?v=QXjU9qTsYCc) (12:00)
+
+
 ## Low level v higher level languages
 
 A computer program is a list of instructions that enable a computer to perform a specific task.
@@ -835,38 +840,6 @@ Regardless of the programming language you learn, there are core constructs that
 * Arrays/lists - a subtype of collection
 * Sub routines, functions
 * Error or exception handling
-
----
-
-# Debugging programs
-
-We're going to do sone programming practice shortly, so, before we do let's review some useful strategies to debug our programs. 
-
-1. Print things a lot
-2. Start with code that already works
-3. Run your code every time you make a small change
-4. Read the error message
-5. Google the error message
-6. Guess and Check
-7. Comment-out code
-8. If you’re not sure where the problem is, do a binary search
-9. Take a break and walk away from the keyboard
-10. How to ask for help
-
-    Before asking anyone about a bug in your code, it’s important that you make sure you have all of the following components of an excellent question:
-
-    1. Explain what you’re trying to do
-    2. Show the code that’s giving the error
-    3. Show the entire stack trace including the error message
-    4. Explain 2-3 things that you’ve tried already and why they didn’t work
-    
-Source: [hartleybrody (2016)](https://www.reddit.com/r/learnprogramming/comments/5ebip6/ive_been_teaching_an_online_coding_class_and_have/)
-
----
-
-# Programming problems to practice
-
-Refer to link on main course page
 
 ---
 

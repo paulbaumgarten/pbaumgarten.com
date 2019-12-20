@@ -79,3 +79,6 @@ Reasoning for hex notation
 ## References
 
 1. https://www.quora.com/How-many-transistors-are-in-i3-i5-and-i7-processors
+2. https://www.includehelp.com/python/binary-numbers-representation.aspx
+3. https://pythonspot.com/binary-numbers-and-logical-operators/
+
