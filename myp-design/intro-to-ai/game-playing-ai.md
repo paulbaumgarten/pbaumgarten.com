@@ -37,8 +37,11 @@ A,D? Research and evaluate
 9. Simple game - tweak and retrain
 10. Analysis
 
+Play Any OpenAI Gym Environment with a Single Agent - TheComputerScientist (4:21)
+https://youtu.be/nvhWfk7R0RM
 
- - https://youtu.be/nvhWfk7R0RM
+How Machines Learn - CGP Grey (9m)
+https://www.youtube.com/watch?v=R9OHn5ZF4Uo
 
 ## Reference
 

@@ -5,12 +5,6 @@ import numpy as np
 MIN_DETECT_WIDTH = 100
 MIN_DETECT_HEIGHT = 100
 
-def show_photo(img):
-    cv2.imshow('video',img)
-
-def save_photo(img, filename):
-    cv2.imwrite(filename, img)
-
 def convert_cv2_to_pil( cv2_image ):
     pil_image = Image.fromarray(cv2.cvtColor(cv2_image, cv2.COLOR_BGR2RGB))
     return pil_image
