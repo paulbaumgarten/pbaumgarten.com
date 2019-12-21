@@ -445,6 +445,8 @@ What are some of the common licensing options available to us as a programmer?
 * Freeware
 * Shareware
 
+### Honesty and fair attribution in the code we create
+
 **At a minimum** it is expected that code you source through independent research is properly attributed. This should take the form of a url provided as an in-code comment. I will mark you down for code that is clearly not your own that is not attributed. Where necessary it may also be referred for academic dishonesty.
 
 For example, here is some code I wrote to calculate the amplitude (volume) of an audio stream feed from a microphone. Notice there are three references provided. Those references don't just ensure fair attribution of other people's work, they also help provide documentation links that I can return to when if I need to re-learn how the algorthm works.
@@ -474,6 +476,18 @@ def get_amplitude_from_stream(data_stream):
         return 0
     # end of function
 ```
+
+### Consequences of the software we create
+
+* [Fitness tracking app Strava gives away location of secret US army bases](https://www.theguardian.com/world/2018/jan/28/fitness-tracking-app-gives-away-location-of-secret-us-army-bases)
+* [How to Track
+President Trump](https://www.nytimes.com/interactive/2019/12/20/opinion/location-data-national-security.html)
+* [MIT Researcher Exposing Bias in Facial Recognition Tech Triggers Amazon’s Wrath](https://www.insurancejournal.com/news/national/2019/04/08/523153.htm)
+* [Hackers tricked a Tesla, and it's a sign of things to come in the race to fool artificial intelligence - Science News - ABC News]()
+https://www.abc.net.au/news/science/2019-04-14/tesla-tencent-study-humans-are-trickable-so-are-computers/10994578)
+*  [Tracking Phones, Google Is a Dragnet for the Police - The New York Times](https://www.nytimes.com/interactive/2019/04/13/us/google-location-tracking-police.html)
+
+
 
 ### Problems
 
