@@ -42,7 +42,9 @@ Crop, resize, rotate, photo in photo
 
 Black and white, re-colour, blur
 
-# 4. Detect faces, bodies, features
+# 4. OpenCV
+
+Detect faces, bodies, features
 
 # 5. Complete the face filter demo
 
