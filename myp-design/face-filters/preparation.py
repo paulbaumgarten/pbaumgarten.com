@@ -1,13 +1,13 @@
 
 from PIL import Image, ImageDraw, ImageFilter, ImageEnhance
 from PIL import ImageFont
-from cameratools import Camera
+import ImageTools
 import time
 
 # 1. Use camera to take photos, open photos from disk, save photos to disk
 
 def task1a():
-    camera = Camera()
+    camera = ImageTools.Camera()
     for _ in range(10):
         img = camera.take_photo()
         img.save("camera.png", "png")
@@ -56,7 +56,7 @@ def task2b(): # crop it, resize it, rotate it
 def print_info(img):
     width, height = img.size
     mode = img.mode
-    print(f"Image info: Size {width} x {height}, colour mode {mode}")
+    print(f"Image info: Size {img.size[0]} x {img.size[1]}, colour mode {mode}")
 
 def task2c(): # photo in photo
     # Open
@@ -190,8 +190,59 @@ def task3e():
     img = img.convert("RGB", matrix=(0.0,1.0,0.0,0.0, 1.0,0.0,0.0,0.0, 0.0,0.0,0.5,0.0))
     img = img.convert("RGBA")
     img.show()
+    if isinstance(img, Image.Image):
+        print("yes")
+    else:
+        print("no")
 
-task3e()
+def task4a():
+    img = Image.open("./myp-design/face-filters/test-pic.png")
+    faces_coordinates = ImageTools.get_faces(img, "./myp-design/face-filters/assets/haarcascade_frontalface_default.xml")
+    if len(faces_coordinates) > 0:
+        print("Faces found at the following locations")
+        for face_location in faces_coordinates:
+            print(face_location)
+            x,y,w,h = face_location
+            face_image = img.crop((x,y,x+w,y+h))
+            face_image.show()
+
+def task4b():
+    img = Image.open("./myp-design/face-filters/test-pic.png")
+    draw = ImageDraw.Draw(img)
+    faces_coordinates = ImageTools.get_faces(img, "./myp-design/face-filters/assets/haarcascade_frontalface_default.xml")
+    if len(faces_coordinates) > 0:
+        print("Faces found at the following locations")
+        for face_location in faces_coordinates:
+            x,y,w,h = face_location
+            draw.rectangle((x,y,x+w,y+h), outline="#ffff00", width=5)
+    img.show()
+
+def task4c():
+    img = Image.open("./myp-design/face-filters/test-pic.png")
+    face_filter = Image.open("./myp-design/face-filters/filters/demo.png")
+    draw = ImageDraw.Draw(img)
+    faces_coordinates = ImageTools.get_faces(img, "./myp-design/face-filters/assets/haarcascade_frontalface_default.xml")
+    if len(faces_coordinates) > 0:
+        print("Faces found at the following locations")
+        for face_location in faces_coordinates:
+            print(face_location)
+            x,y,w,h = face_location
+            draw.rectangle((x,y,x+w,y+h), outline="#ffff00", width=5)
+            adjusted_face_filter = face_filter.resize((h,w))
+            img.paste(adjusted_face_filter, (x,y))
+    img.show()
+
+#task4c()
+
+im = Image.open("/users/pbaumgarten/desktop/orig.jpg")
+altered = im.crop((0,100,3000,2100))
+print_info(altered)
+im.save("my picture.png", "png")
+
+img = Image.open("./myp-design/face-filters/test-pic.png")
+img = Image.open("/users/pbaumgarten/desktop/faces.jpg")
+faces_coordinates = ImageTools.get_faces(img, "./myp-design/face-filters/assets/haarcascade_frontalface_default.xml")
+print(faces_coordinates)
 
 # 4. OpenCV: Detect faces, bodies, face features
 # 5. Complete the face filter demo
