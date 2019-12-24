@@ -234,17 +234,27 @@ def task4c():
 
 #task4c()
 
-im = Image.open("/users/pbaumgarten/desktop/orig.jpg")
-altered = im.crop((0,100,3000,2100))
-print_info(altered)
-im.save("my picture.png", "png")
+#im = Image.open("/users/pbaumgarten/desktop/orig.jpg")
+#altered = im.crop((0,100,3000,2100))
+#print_info(altered)
+#im.save("my picture.png", "png")
 
-img = Image.open("./myp-design/face-filters/test-pic.png")
-img = Image.open("/users/pbaumgarten/desktop/faces.jpg")
-faces_coordinates = ImageTools.get_faces(img, "./myp-design/face-filters/assets/haarcascade_frontalface_default.xml")
-print(faces_coordinates)
+#img = Image.open("./myp-design/face-filters/test-pic.png")
+#img = Image.open("/users/pbaumgarten/desktop/faces.jpg")
+#faces_coordinates = ImageTools.get_faces(img, "./myp-design/face-filters/assets/haarcascade_frontalface_default.xml")
+#print(faces_coordinates)
 
 # 4. OpenCV: Detect faces, bodies, face features
 # 5. Complete the face filter demo
 
+def task2():
+    img = Image.open("./myp-design/face-filters/test-pic.png")
+    w,h = img.size
+    print(img.size)
+    img2 = img.resize((320,180))
+    img3 = img.crop((550,100,850,600)).resize((108,180))
+    compiled = Image.new("RGBA", (428,180))
+    compiled.paste(img2, (0,0))
+    compiled.paste(img3, (320,0))
+    compiled.show()
 

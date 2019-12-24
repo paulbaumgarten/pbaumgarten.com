@@ -59,7 +59,7 @@ Once you have your Image object (called `img` in my example below), it has built
 ```python
 camera = ImageTools.Camera()
 img = camera.take_photo()
-img.save("camera.png", "png")
+img.save("my photo.png", "png")
 img.show()
 ```
 
@@ -98,7 +98,7 @@ The Image mode is a single value like this...
 mode = img.mode
 ```
 
-The mode tells you how many different colours are in the image and how they are stored internally. This information comes in useful later on if we want to read or write to a pixel etc.
+We will use this mode information in later lessons to switch between different colour modes.
 
 For completeness, the full list of colour modes available are below (1). You probably only need to be concerned with `1`, `L`, `RGB` and `RGBA`.
 
@@ -122,6 +122,13 @@ print(f"Image info: Size {img.size[0]} x {img.size[1]}, colour mode {mode}")
 
 ## Your task/s
 
+* Successfully get the Python Image system working
+* Successfully open an existing PNG or JPG photo on your computer and have Python open it for viewing
+* Obtain the information for your existing photo. What width, height and mode does Python say it has?
+* Successfully have the camera take a photo
+* Obtain the information for your camera photo. What width, height and mode does Python say it has?
+* Successfully save the photo from your camera. Upload it to your portfolio.
+
 # 2. Simple photo manipulation
 
 The following section requires the following imports
@@ -132,8 +139,6 @@ import ImageTools
 ```
 
 ## Crop
-
-![](assets/sample-crop.png)
 
 The image object has a built in crop command that requires a set of 4 values denoting the pixel boundaries of the rectangle to crop the image down to. The 4 values are left-edge, top-edge, right-edge, and bottom-edge.
 
@@ -183,7 +188,10 @@ By default the rotated image will be the same dimensions as the original. This m
 If there is any blank space in the new image (such as if you are rotating on 45 degrees and will end up with a triangle in each corner), you can specify the colour to use to fill the blank space with the `fillcolor` command.
 
 ```python
-rotated_img = img.rotate(90, expand=True, fillcolor=(0,0,0))
+# Example 1
+rotated_img_1 = img.rotate(90, expand=True, fillcolor="#00ffff")
+# Example 2
+rotated_img_2 = img.rotate(45, expand=True, fillcolor="#ff00ff")
 ```
 
 ## Paste one image into another image
@@ -197,7 +205,30 @@ img1.paste(img2, (100,100))
 img1.show()
 ```
 
+## Create a new, blank image
+
+The `.new()` command needs two parameters: The first specifies the mode for this image, and the second is a set of (width,height) size dimensions.
+
+Example
+
+```python
+img = Image.new("RGBA", (3000, 2000))
+```
+
+You can create new blank images as the target to paste a bunch of other images into if you wish.
+
 ## Your task/s
+
+* Take a photo of someone with your camera
+* Take a crop of their face from that photo (approximately 100x180 pixels)
+* Resize the original photo to the same size as the crop (approximately 320x180 pixels)
+* Create a new blank image wide enough for both the crop and shrunk version of the original (approximately 420x180 pixels)
+* Paste the crop photo and the resized/shrunk photo into the blank image
+* Save and upload the result to your portfolio
+
+An example of what you are aiming for...
+
+![](assets/sample-crop-resize.png)
 
 # 3. Simple filters
 
@@ -211,7 +242,7 @@ import ImageTools
 
 ## Convert to black and white or grey scale
 
-![](assets/sample-bw-greyscale.png)
+![](assets/sample-bw-grey.png)
 
 The easiest way to convert to black and white or greyscale is to convert the image mode.
 
@@ -304,7 +335,9 @@ new_img = ImageEnhance.Color(img).enhance(0.5)
 
 To create a meme you usually need a couple of things: A great photo or image, and a witty caption.
 
-I think it's pretty rare for teachers to have students make memes about them that aren't of the 'this teacher sucks' variety, so I'll happily share what others have already created here.
+I'm fortunate enough that one of the students at my previous school created a meme about me that wasn't of the 'this teacher sucks' variety, so I'll happily share it here as a sample...
+
+![](assets/sample-meme.jpg)
 
 We've covered how you can manipulate photos and images, but what can we do about the caption?
 
@@ -315,8 +348,7 @@ Caution: If you are going to create a meme featuring someone else in the school 
 The following section requires the following imports...
 
 ```python
-from PIL import Image, ImageDraw, ImageFilter, ImageEnhance
-from PIL import ImageFont
+from PIL import Image, ImageDraw, ImageFilter, ImageEnhance, ImageFont
 import ImageTools
 ```
 
@@ -343,6 +375,7 @@ Other than mems, drawing lines can also have other uses. Here is one I created t
 ```python
 filename = input("What image do you want to open?")
 img = Image.open(filename)
+width,height = img.size
 print(f"Image size is {width} x {height} pixels")
 draw = ImageDraw.Draw(img)
 for x in range(width):
@@ -370,7 +403,7 @@ img = camera.take_photo()
 width, height = img.size
 # Step 1 - Create a draw object that is linked to the img
 draw = ImageDraw.Draw(img)
-# Step 2 - Use the draw object's line function
+# Step 2 - Use the draw object's rectangle function
 draw.rectangle((0,0,width,50), fill="#000000", width=1)
 draw.rectangle((0,0,50,height), fill="#000000", width=1)
 draw.rectangle((width-50,0,width,height), fill="#000000", width=1)
@@ -378,15 +411,55 @@ draw.rectangle((0,height-50,width,height), fill="#000000", width=1)
 img.show()
 ```
 
-
 ## Draw an ellipse on an image
+
+    TODO: Finish this section
 
 ## Change an individual pixel
 
 What is the point of being able to read or update an individual pixel? Because where there is one, there is many. Knowing how to modify one gives you the capicty to run the funcitonality through some loops and change a whole bunch of pixels. It is the most fine-detail level of control you can have.
 
+    TODO: Finish this section
+
 ## Write text on an image
 
+Firstly to draw text on your Image you are going to need to pick a font. I recomment using [https://fonts.google.com/](https://fonts.google.com/), find one you like (that's free) and download the font. It will probably download as a ZIP file. Viewing the file icon in Windows Explorer, right click on it and find the option to "decompress" or "expand" so you get the TTF file(s). Copy your TTF files into your project folder in order to proceed.
+
+In addition to creating an `ImageDraw.Draw()` object, we also need to create an `ImageFont.truetype()` object which will contain the font information from the TTF file we just downloaded.
+
+The `draw.text()` command brings it all together. It requires four parameters: the location as (x,y) pixel coordinates for where to place the top left of the text, the string containing the caption text you wish to write, a colour value, and a link to the font object.
+
+See this for a working example...
+
+```python
+camera = ImageTools.Camera()
+img = camera.take_photo()
+w,h = img.size
+person = input("Who is in this photo?")
+# Generate the text we will place on the Image
+caption = "This is a photo of "+person
+# Nominate a colour
+yellow = "#ffff00"
+# Determine the (x,y) location to place the text
+location = (20, h-50)
+# Create a drawing object linked to our image
+draw = ImageDraw.Draw(img) 
+# Create a drawing object linked to our image
+font = ImageFont.truetype("Roboto-Light.ttf", 48)
+# Finally, bring it all together and render the text to our Image 
+draw.text(location,caption,yellow,font=font) 
+img.show()
+```
+
+Note: If you wish to centre or right align your text, check the hint suggested here [https://stackoverflow.com/a/1970930/10971929](https://stackoverflow.com/a/1970930/10971929)
+
+## Your task
+
+Create a meme! Combine a photo, maybe put a border around it, add some text, go viral!
+
+Upload your meme to your portfolio.
+
+Reminder: If you are going to create a meme featuring someone else in the school - get their permission first (celebrates are fair game though... but remember this is a school assignment, and school expectations on appropriateness apply)
 
 # 5. Object detection
 
