@@ -4,16 +4,11 @@ import pycozmo
 from PIL import Image
 import ImageTools
 
-def on_cliff_detected(client, state):
-    global cozmo    # Bring the cozmo object into this function
+def on_cliff_detected(cozmo, state):
     if state:
         print("Cliff detected.")
-        # Reverse straight back
-        cozmo.drive_wheels(lwheel_speed=-50.0, rwheel_speed=-50.0, duration=1.0)
-        # Reversing turn
-        cozmo.drive_wheels(lwheel_speed=0.0, rwheel_speed=-50.0, duration=2.8)
-        # Drive forward
-        cozmo.drive_wheels(lwheel_speed=50.0, rwheel_speed=50.0)
+        # Stop
+        cozmo.drive_wheels(lwheel_speed=0.0, rwheel_speed=0.0)
 
 def process_photo(cozmo, image):
     markers = ImageTools.get_aruco(image)
