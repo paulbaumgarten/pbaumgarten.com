@@ -229,11 +229,11 @@ def task4c():
             print(face_location)
             x,y,w,h = face_location
 #            draw.rectangle((x,y,x+w,y+h), outline="#ffff00", width=5)
-            adjusted_face_filter = face_filter.resize((h,w))
+            adjusted_face_filter = face_filter.resize((w,int(h*1.2)))
             img.paste(adjusted_face_filter, (x,y), mask=adjusted_face_filter)
     img.show()
 
-task4c()
+#task4c()
 
 #im = Image.open("/users/pbaumgarten/desktop/orig.jpg")
 #altered = im.crop((0,100,3000,2100))
@@ -259,3 +259,9 @@ def task2():
     compiled.paste(img3, (320,0))
     compiled.show()
 
+img = Image.new("HSV", (255, 255))
+width, height = img.size
+for x in range(width):
+    for y in range(height):
+        img.putpixel((x,y), (x,y,255))
+img.show()

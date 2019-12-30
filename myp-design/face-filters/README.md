@@ -433,13 +433,47 @@ img.show()
 
 ## Draw an ellipse on an image
 
-    TODO: Finish this section
+The ellipse function works by providing it the coordinates of a rectangle, `[left, top, right, bottom]`, and it will then draw an ellipse that touches all the sides of the rectangle. For example, to draw an ellipse that is the size of our image...
+
+```python
+camera = ImageTools.Camera()
+img = camera.take_photo()
+width, height = img.size
+# Step 1 - Create a draw object that is linked to the img
+draw = ImageDraw.Draw(img)
+# Step 2 - Use the draw object's rectangle function
+draw.ellipse((0,0,width,height), outline="#ffff00", width=5)
+img.show()
+```
 
 ## Change an individual pixel
 
 What is the point of being able to read or update an individual pixel? Because where there is one, there is many. Knowing how to modify one gives you the capicty to run the funcitonality through some loops and change a whole bunch of pixels. It is the most fine-detail level of control you can have.
 
-    TODO: Finish this section
+To read the colour values for an individual pixel...
+
+```python
+camera = ImageTools.Camera()
+img = camera.take_photo()
+width, height = img.size
+for y in range(height):
+    for x in range(width):
+        col = img.getpixel((x,y))
+        print(f"The colour at {x},{y} is {col}")
+```
+
+To set the colour values for an individual pixel...
+
+* use the `Image.putpixel((x,y), colour_code)` function for example...
+
+```python
+img = Image.new("HSV", (255, 255))
+width, height = img.size
+for x in range(width):
+    for y in range(height):
+        img.putpixel((x,y), (x,y,255))
+img.show()
+```
 
 ## Write text on an image
 
@@ -571,6 +605,8 @@ Note regarding bias: The algorithm we are using is one that is very widely used 
 
 # 6. Complete the face filter demo
 
+![](assets/sample-face-filter.jpg)
+
 We now have all the pieces necessary for an Instagram/Snap style face filter. In short we want to
 
 * Take a photo
@@ -594,7 +630,7 @@ for a_face in faces_found:
     # Obtain the location for this individual face
     x,y,w,h = a_face
     # Resize the face filter to match this face
-    resized_face_filter = face_filter.resize((h,w))
+    resized_face_filter = face_filter.resize((w,h))
     # Paste the face filter into the main photo
     img.paste(resized_face_filter, (x,y))
 # Show and save the end result
@@ -602,11 +638,19 @@ img.show()
 img.save("masterpeice.png", "png")
 ```
 
-You've probably discovered your first attempt is not perfect. It will need some tweaking. You may have to adjust the coordinates for the paste (and or subject a value from some of the values), or adjust the amount of the resize. 
+You've probably discovered your first attempt is not perfect. It will need some tweaking. You may have to adjust the coordinates for the paste, or adjust the amount of the resize. 
 
-Be aware that any calculations made to adjust your numbers should still end up with whole integers. For instance if you took a size of (232,135) and decided to enlarge it by a factor of 1.2, that would give you decimals but part pixels don't exist. So you would have to use the `int()` function like `.resize((int(h*1.2), int(w*1.2)))` 
+Be aware that any calculations made to adjust your numbers should still end up with whole integers. For instance if you took a size of (232,135) and decided to stretch the height by a factor of 1.2, that would give you decimals but part pixels don't exist. So you would have to use the `int()` function like `.resize((w, int(h*1.2)))` 
 
 ## Your task/s
+
+Use an existing PNG with animal cartoon features before attempting to create your own. I have a collection of a few available here:
+
+* [https://github.com/paulbaumgarten/paulbaumgarten/tree/master/myp-design/face-filters/filters](https://github.com/paulbaumgarten/paulbaumgarten/tree/master/myp-design/face-filters/filters)
+
+Alternatively, use a Google Image search with terms such as "face filter png transparent"
+
+Upload your code, before photo and after photo to your portfolio.
 
 # 7. Design your own effct generators, memes and filters
 
@@ -648,7 +692,7 @@ img.save(filename+"-before.png", "png")
 bw.save(filename+"-after.png", "png")
 ```
 
-# 9. Evaluate your effct generators, memes and filters
+# 9. Evaluate your effect generators, memes and filters
 
 How successful were you?  Address the following questions and provide the response to your portfolio.
 
