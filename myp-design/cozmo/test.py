@@ -4,8 +4,7 @@ import pycozmo
 from PIL import Image
 import ImageTools
 
-def on_cliff_detected(client, state):
-    global cozmo    # Bring the cozmo object into this function
+def on_cliff_detected(cozmo, state):
     if state:
         print("Cliff detected.")
         # Reverse straight back

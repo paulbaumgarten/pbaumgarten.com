@@ -45,7 +45,7 @@ When running the installer, make sure you turn on the option to "Add Python to P
 Once you have Python installed, open the command prompt and run the following
 
 ```text
-pip install pycozmo Pillow ImageTools
+pip install pycozmo Pillow ImageToolsMadeEasy
 ```
 
 ## Basic Python knowledge
@@ -97,7 +97,7 @@ cozmo.stop()
 ## Your task/s
 
 * Install Python and VS Code if you don't already have it
-* Install the `cozmo_wrapper` and `pycozmo` libraries
+* Install the `ImageTools` and `pycozmo` libraries
 * Connect to your Cozmo over wifi
 * Get the sample test code above working to prove you can connect and control your Cozmo
 * Start experimenting with other code
@@ -186,8 +186,7 @@ cozmo.add_handler(pycozmo.event.EvtCliffDetectedChange, on_cliff_detected)
 So if our main section is going to tell Cozmo to run the `on_cliff_detected` function, we need to ensure it actually exists. Here is an example of what it could look like. You can modify yours to do something different.
 
 ```python
-def on_cliff_detected(client, state):
-    global cozmo    # Bring the cozmo object into this function
+def on_cliff_detected(cozmo, state):
     if state:
         print("Cliff detected.")
         # Reverse straight back
@@ -207,11 +206,10 @@ Detect pressing the button on top of Cozmo...
 cozmo.conn.add_handler(pycozmo.protocol_encoder.ButtonPressed, on_button_pressed)
 
 # Example handler function for button press
-def on_button_pressed(cli2, pkt):
-    global cozmo
+def on_button_pressed(cozmo, pkt):
     if pkt.pressed:
         print("Button pressed.")
-        cli.drive_wheels(lwheel_speed=50.0, rwheel_speed=50.0)
+        cozmo.drive_wheels(lwheel_speed=50.0, rwheel_speed=50.0)
 ```
 
 Detect when Cozmo is picked up...
@@ -221,8 +219,7 @@ Detect when Cozmo is picked up...
 cozmo.add_handler(pycozmo.event.EvtRobotPickedUpChange, on_robot_picked_up)
 
 # Example handler function for picked up
-def on_robot_picked_up(cli, state):
-    global cozmo
+def on_robot_picked_up(cozmo, state):
     if state: ## state is set to True if picked up
         print("Picked up.")
         cozmo.stop_all_motors()
@@ -247,8 +244,7 @@ cozmo.add_handler(pycozmo.event.EvtNewRawCameraImage, process_photo, one_shot=Tr
 An example event handling function could look like...
 
 ```python
-def process_photo(cli, image):
-    del cli
+def process_photo(cozmo, image):
     # saves the image to your project folder
     image.save("camera.png", "PNG")
     # shows the image on your laptop screen
@@ -270,28 +266,33 @@ For this exercise we are going to keep it simple and use some ArUco Markers. Thi
 You will need to print your own ArUco labels. You can generate them from this website [http://chev.me/arucogen/](http://chev.me/arucogen/) (keep the "dictionary" setting on 4x4). From my trials a marker of 50mm was detectable by the Cozmo at a distance of approximately 50cm. You will have to experiment with the sizes you need based on the range you want it to recognise the code.
 
 ```python
-def saw_marker(cozmo, markers):
-    # The callback function receives two parameters: the cozmo client object, and a list of integers of markers seen
+def process_photo(cozmo, image):
+    # Use the ImageTools.get_aruco() function to decode any arUco markers in the image
+    markers = ImageTools.get_aruco(image)
     if 70 in markers:
         print("I saw ArUco marker 70")
     if 71 in markers:
         print("I saw ArUco marker 71")
     if 72 in markers:
         print("I saw ArUco marker 72")
-        cozmo.alive = False   # Tell our Cozmo program it's time to end
 
-coz = Cozmo()
-coz.start()
-coz.connect()
-coz.wait_for_robot()
+cozmo = pycozmo.Client()
+cozmo.start()
+cozmo.connect()
+cozmo.wait_for_robot()
 # Look straight ahead
-coz.set_head_angle(0.0)
-# When you see an ArUco, run the `saw_marker` function
-coz.on_aruco(saw_marker)    
-while coz.alive:
+cozmo.set_head_angle(0.0)
+# Take photos continually. Run the process_photo() function on each image.
+cozmo.conn.send(pycozmo.protocol_encoder.EnableCamera(enable=True))
+cozmo.conn.send(pycozmo.protocol_encoder.EnableColorImages(enable=True))
+cozmo.add_handler(pycozmo.event.EvtNewRawCameraImage, process_photo, one_shot=False)
+# Loop for 60 seconds
+stop_at = time.time() + 60
+while time.time() < stop_at:
     time.sleep(0.1)
-coz.disconnect()
-coz.stop()
+print("Time's up, quitting...")
+cozmo.disconnect()
+cozmo.stop()
 ```
 
 ## Your task/s
@@ -346,6 +347,6 @@ To install packages from IDLE, use the following two lines....
 
 ```python
 from pip._internal import main as pipmain
-pipmain(['install', 'pycozmo', 'cozmo_wrapper'])
+pipmain(['install', 'pycozmo', 'ImageTools'])
 ```
 

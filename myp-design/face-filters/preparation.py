@@ -219,7 +219,8 @@ def task4b():
 
 def task4c():
     img = Image.open("./myp-design/face-filters/test-pic.png")
-    face_filter = Image.open("./myp-design/face-filters/filters/demo.png")
+    face_filter = Image.open("./myp-design/face-filters/filters/demo2.png")
+    print(img.mode, face_filter.mode)
     draw = ImageDraw.Draw(img)
     faces_coordinates = ImageTools.get_faces(img, "./myp-design/face-filters/assets/haarcascade_frontalface_default.xml")
     if len(faces_coordinates) > 0:
@@ -227,12 +228,12 @@ def task4c():
         for face_location in faces_coordinates:
             print(face_location)
             x,y,w,h = face_location
-            draw.rectangle((x,y,x+w,y+h), outline="#ffff00", width=5)
+#            draw.rectangle((x,y,x+w,y+h), outline="#ffff00", width=5)
             adjusted_face_filter = face_filter.resize((h,w))
-            img.paste(adjusted_face_filter, (x,y))
+            img.paste(adjusted_face_filter, (x,y), mask=adjusted_face_filter)
     img.show()
 
-#task4c()
+task4c()
 
 #im = Image.open("/users/pbaumgarten/desktop/orig.jpg")
 #altered = im.crop((0,100,3000,2100))

@@ -46,7 +46,7 @@ When running the installer, make sure you turn on the option to "Add Python to P
 Once you have Python installed, open the command prompt and run the following
 
 ```text
-pip install Pillow ImageTools
+pip install Pillow ImageToolsMadeEasy
 ```
 
 ## Basic Python knowledge
@@ -531,8 +531,10 @@ counter = 0
 camera = ImageTools.Camera()
 img = camera.take_photo()
 faces = ImageTools.get_faces(img, "haarcascade_frontalface_default.xml")
-for a_face in faces: # for each individual face in the list of faces...
-    x,y,w,h = a_face # extract the left, top, width and height locations of a face
+# for each individual face in the list of faces...
+for a_face in faces: 
+    # extract the left, top, width and height locations of a face
+    x,y,w,h = a_face 
     a_face_img = img.crop((x,y,x+w,y+h))
     a_face_img.save(f"face_{counter:2}.jpg", "jpg")
     a_face_img.show()
@@ -544,11 +546,14 @@ Or we could use a drawing tool to put rectangles highlighting the faces found in
 ```python
 camera = ImageTools.Camera()
 img = camera.take_photo()
-draw = ImageDraw.Draw(img)          # create the drawing object
+draw = ImageDraw.Draw(img) # create the drawing object
 faces = ImageTools.get_faces(img, "haarcascade_frontalface_default.xml")
-for a_face in faces: # for each individual face in the list of faces...
-    x,y,w,h = a_face # extract the left, top, width and height locations of a face
-    draw.rectangle((x,y,x+w,y+h), outline="#ffff00", width=5)   # draw a rectangle around the face
+# for each individual face in the list of faces...
+for a_face in faces: 
+    # extract the left, top, width and height locations of a face
+    x,y,w,h = a_face
+    # draw a rectangle around the face
+    draw.rectangle((x,y,x+w,y+h), outline="#ffff00", width=5)
 # show the final image, highlighting each face
 img.show()
 ```
