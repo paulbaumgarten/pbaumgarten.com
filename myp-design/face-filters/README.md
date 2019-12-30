@@ -31,7 +31,25 @@ You will use the Python programming language to explore how apps like Instagram 
 8. Build your own face filter
 9. Evaluate your own face filter
 
-# 0. Python basics
+# 0. Prequisites
+
+## Python installed
+
+This assumes you have a recent version of Python installed, typically at least version 3.6
+
+If you don't have it, go to [https://wwww.python.org](https://wwww.python.org) and download it.
+
+When running the installer, make sure you turn on the option to "Add Python to PATH"
+
+## Libraries required
+
+Once you have Python installed, open the command prompt and run the following
+
+```text
+pip install Pillow ImageTools
+```
+
+## Basic Python knowledge
 
 This guide assumes a basic familiarity with Python. I have written a quick recap designed for a one hour lesson should you need it. It is available at:
 
@@ -52,9 +70,11 @@ import ImageTools
 
 ## Use camera to take a photo image
 
-To take a photo, you create an instance of the camera object, and then you can use the `.take_photo()` function to trigger the camera. It may take a second or two for this line to execute depending on the speed of your built in camera.
+To take a photo, you create an instance of the camera object, and then you can use the built in `.take_photo()` function to trigger the camera and return an Image object. It may take a second or two for this line to execute depending on the speed of your built in camera.
 
 Once you have your Image object (called `img` in my example below), it has built in commands that you can use to save it to a PNG or JPG image file, and/or open a preview window to display it.
+
+A basic example
 
 ```python
 camera = ImageTools.Camera()
@@ -76,7 +96,7 @@ img.show()
 
 ## Save an image
 
-As already shown in the take a photo section, once you have an Image object it has a built in save command. It can save in PNG or JPG format. It will be saved into your project folder.
+As already shown above section, once you have an Image object it has a built in save command. It can save in PNG or JPG format. It will be saved into your project folder.
 
 ```python
 img = Image.open("my picture.png")  # alternatively use the camera

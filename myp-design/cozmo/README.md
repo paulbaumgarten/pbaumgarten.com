@@ -27,15 +27,41 @@ Students of mine will be given this as a print out. You should check my website 
 * Lesson 5. Detect ArUcode markers
 * Lesson 6. Take action based on ArUcode markers
 * Lesson 7. Design your own obstacle course
-* Lesson 8,9,10. Build your own obstacle course
-* Lesson 11. Evaluate your own obstacle course
+* Lesson 8,9,10. Build & program your obstacle course
+* Lesson 11. Evaluate your obstacle course
+
+# 0. Prequisites
+
+## Python installed
+
+This assumes you have a recent version of Python installed, typically at least version 3.6
+
+If you don't have it, go to [https://wwww.python.org](https://wwww.python.org) and download it.
+
+When running the installer, make sure you turn on the option to "Add Python to PATH"
+
+## Libraries required
+
+Once you have Python installed, open the command prompt and run the following
+
+```text
+pip install pycozmo Pillow ImageTools
+```
+
+## Basic Python knowledge
+
+This guide assumes a basic familiarity with Python. I have written a quick recap designed for a one hour lesson should you need it. It is available at:
+
+* [https://pbaumgarten.com/python/recap/](https://pbaumgarten.com/python/recap/)
+
+If you need a more detailed introduction to Python I have a set of detailed tutorials on my website. Each lesson contains detailed notes, videos and practice exercises. Each lesson is roughly an hour in length with 9 lessons in "the basics" (though only the first 5 are required for this tutorial).
+
+* [https://pbaumgarten.com/python/](https://pbaumgarten.com/python/)
 
 # 1. Connect to Cozmo
 
 <img src="assets/cozmo-screen-code.png" width="30%" style="float:right">
 
-* Install `Python` if you haven't already. It can be downloaded from [python.org](https://python.org/).
-* Install the required cozmo packages. From Windows command prompt this is `pip install pycozmo cozmo_wrapper`
 * Sit the Cozmo on it's charger unit which must be powered on (it doesn't have to be connected to your computer, just usb power).
 * On the front screen, Cozmo will display a code similar to the one displayed. 
 * Open your computer network settings and search for the wifi connection with Cozmo's name in it. Connect to the Cozmo wifi using the code on the Cozmo's front screen as the password.
@@ -49,10 +75,11 @@ Students of mine will be given this as a print out. You should check my website 
 import time
 import math
 import pycozmo
-from cozmo_wrapper import Cozmo
+from PIL import Image
+import ImageTools
 
 # Connect to Cozmo
-cozmo = Cozmo()
+cozmo = pycozmo.Client()
 cozmo.start()
 cozmo.connect()
 cozmo.wait_for_robot()
@@ -209,7 +236,7 @@ def on_robot_picked_up(cli, state):
 
 # 4. Take photo, save photo
 
-Your Cozmo has a camera. Admitted the resolution isn't great, but you can see what it sees easily enough. After we enable the camera, we then create another event handler to process the content of the image we receive.
+Your Cozmo has a camera. Admittedly the resolution isn't great, but it works easily enough. After we enable the camera, we then create another event handler to process the content of the image we receive.
 
 ```python
 cozmo.conn.send(pycozmo.protocol_encoder.EnableCamera(enable=True))
