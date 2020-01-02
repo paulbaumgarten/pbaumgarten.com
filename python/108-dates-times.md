@@ -8,32 +8,31 @@ from datetime import datetime
 # Create a datetime using current computer date & time
 now = datetime.now()
 
-# Create a datetime from numeric day, month, year values
+# Create a datetime with year=2019, month=12, day=25
 christmas = datetime( 2019, 12, 25 )
 
-# Create a datetime from year=2019, month=12, day=25, hour=11, minute=00, seconds=00
+# Create a datetime with year=2019, month=12, day=25, hour=11, minute=00, seconds=00
 christmas = datetime( 2019, 12, 25, 11, 00, 00 )
 
 # Create a datetime from a formatted string
 # - See section below about formatting the string
 birth_text = input("What is your birthday (write it as dd/mm/yyyy) ?")
 birth_date = datetime.strptime(birth_text, "%d/%m/%Y")
+```
+
+## Using timestamps
+
+A timestamp is how computers internally store date and time information. It is the number of seconds since the computing epoch, deemed as 01/01/1970 00:00 UTC
+
+```python
+from datetime import datetime
+
+# Create a timestamp based on current date/time
+timestamp = datetime.now().timestamp()
 
 # Create a datetime from a timestamp
 timestamp = 1563958625      # Number of seconds since 01/01/1970 00:00 UTC
 july24_2019 = datetime.fromtimestamp(timestamp)
-```
-
-## Creating a timestamp
-
-* A timestamp is based on number of seconds since computing epoch, deemed as 01/01/1970 00:00 UTC
-
-```python
-from datetime import datetime
-now = datetime.now()
-
-# Create timestamp from a datetime object
-timestamp = now.timestamp()
 ```
 
 ## Differences between dates

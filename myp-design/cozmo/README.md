@@ -1,4 +1,4 @@
-# Cozmo Robotics
+# Unit: Cozmo Robotics
 
 ## Summary
 
@@ -8,13 +8,19 @@ Learn to program the Anki Cozmo robot with Python!
 
 Students of mine will be given this as a print out. You should check my website for any updates/changes @ [https://pbaumgarten.com/myp-design/cozmo/](https://pbaumgarten.com/myp-design/cozmo/)
 
+This unit assumes some existing knowledge of Python basics.
+
+Last updated: 02/01/2020
+
 ## Unit information
 
-* Statement of inquiry: Robotic systems are a technical innovation where computers are capable of functioning in and adapting to a variety of physical environments.
-* Key concept: Systems
-* Related concepts: Function, Adaptation
-* Global context: Scientific and technical innovation
-* Assessment objectives: A,B,C,D
+| MYP item | This unit |
+| ---- | ---- |
+| Statement of inquiry | Robotic systems are a technical innovation where computers are capable of functioning in and adapting to a variety of physical environments. |
+| Key concept | Systems |
+| Related concepts | Function, Adaptation |
+| Global context | Scientific and technical innovation |
+| Assessment objectives | A (inquiring & analysing), B (devising ideas), D (evaluating) |
 
 ## Lesson overviews
 
@@ -149,9 +155,8 @@ Tilt head up/down
 
 ```python
 # === Move Cozmo's head ===
-# Cozmo's head can typically move in a range from -25 degrees 
-# (looking down) to +44 degrees (up). Python expects the angle
-# to be in radians so it needs converting from degrees.
+# Cozmo's head should move in a range from -25 degrees (facing down) to +44 degrees (up). 
+# Python expects the angle to be in radians so it needs converting from degrees.
 # The angle can be provided as a variable or a number.
 angle = 0
 cozmo.set_head_angle(radians(angle)) 
@@ -161,8 +166,7 @@ Raise/lower lifting arm
 
 ```python
 # === Move Cozmo's lifting arm ===
-# Cozmo's lifting arm can move in a range from 
-# 32mm (fully lowered) to 92mm (fully raised)
+# Cozmo's lifting arm can move in a range from 32mm (fully lowered) to 92mm (fully raised)
 # Height can be provided as a variable or a number.
 height = 90
 cozmo.set_lift_height(height)
@@ -175,12 +179,34 @@ Using a combination of the above commands, can you make your Cozmo...
 * Drive in a perfect square of sides 1 meter in length, and sharp 90 degree turns? It should stop at the spot it started, facing the same way when done.
 * Go in a perfect circle (diameter at least 50cm), stopping and starting at the same point.
 
-# 3. Detect cliff edge, 
+# 3. Detect cliff edge
 
 Cozmo has sensors built in through which it can detect different situations and events. The following command `add_handler` tells Cozmo that if a particular event occurs, there is a function we have written to handle it. In this case, the event is if a cliff edge is detected, and the handling function is specified in the 2nd parameter as being called `on_cliff_detected`.
 
 ```python
 cozmo.add_handler(pycozmo.event.EvtCliffDetectedChange, on_cliff_detected)
+```
+
+... which could look like this when added to a full program ...
+
+```python
+# ... remmeber to add your import statements first ...
+
+# Connect to Cozmo
+cozmo = pycozmo.Client()
+cozmo.start()
+cozmo.connect()
+cozmo.wait_for_robot()
+# Add cliff detection
+cozmo.add_handler(pycozmo.event.EvtCliffDetectedChange, on_cliff_detected)
+# Start moving
+cozmo.drive_wheels(lwheel_speed=50.0, rwheel_speed=50.0)
+# Run for 60 seconds
+for second in range(60):
+    time.sleep(1)
+# Disconnect from Cozmo
+cozmo.disconnect()
+cozmo.stop()
 ```
 
 So if our main section is going to tell Cozmo to run the `on_cliff_detected` function, we need to ensure it actually exists. Here is an example of what it could look like. You can modify yours to do something different.
@@ -197,7 +223,9 @@ def on_cliff_detected(cozmo, state):
         cozmo.drive_wheels(lwheel_speed=50.0, rwheel_speed=50.0)
 ```
 
-There are other handlers you should know about. You don't need them for this lesson, but they may come in handy for a later lesson so I'll include the notes on them now just in case.
+---
+
+There are other handlers you should know about. In addition to detecting a cliff edge, the Cozmo can also detect when the button on it's top is pressed, or when you pick it up. Examples of how these work follow...
 
 Detect pressing the button on top of Cozmo...
 
@@ -206,8 +234,8 @@ Detect pressing the button on top of Cozmo...
 cozmo.conn.add_handler(pycozmo.protocol_encoder.ButtonPressed, on_button_pressed)
 
 # Example handler function for button press
-def on_button_pressed(cozmo, pkt):
-    if pkt.pressed:
+def on_button_pressed(cozmo, state):
+    if state.pressed:
         print("Button pressed.")
         cozmo.drive_wheels(lwheel_speed=50.0, rwheel_speed=50.0)
 ```
@@ -233,11 +261,13 @@ def on_robot_picked_up(cozmo, state):
 
 # 4. Take photo, save photo
 
-Your Cozmo has a camera. Admittedly the resolution isn't great, but it works easily enough. After we enable the camera, we then create another event handler to process the content of the image we receive.
+Your Cozmo has a camera. Admittedly the resolution isn't great, but at least getting it to work is easy enough. After we enable the camera, we then create another event handler to process the content of the image we receive.
 
 ```python
+# Setup the camera
 cozmo.conn.send(pycozmo.protocol_encoder.EnableCamera(enable=True))
 cozmo.conn.send(pycozmo.protocol_encoder.EnableColorImages(enable=True))
+# Instruct the camera to take a photo
 cozmo.add_handler(pycozmo.event.EvtNewRawCameraImage, process_photo, one_shot=True)
 ```
 
@@ -245,11 +275,15 @@ An example event handling function could look like...
 
 ```python
 def process_photo(cozmo, image):
-    # saves the image to your project folder
-    image.save("camera.png", "PNG")
-    # shows the image on your laptop screen
-    image.show()
+    import uuid                             # additional import required
+    filename = str(uuid.uuid1()) + ".jpg"   # generate a unique filename
+    image.save(filename, "JPG")             # save the image as JPG to your project folder 
+    image.show()                            # open the image to view on screen
 ```
+
+* This will create a filename based on the current time so you can save multiple images without them overwriting with each other. 
+* Notice the `cozmo.add_handler()` has a `one_shot=True` parameter. When set to `True` it will trigger the camera to take just one photo. When set to `False` it will take photos continually (about 15 per second)
+* The `cozmo.add_handler()` command does not have to appear with the camera setup commands. It could be placed in the function that handles another event such as a cliff or the button.
 
 ## Your task/s
 

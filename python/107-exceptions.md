@@ -39,6 +39,14 @@ except:
     print("Unknown error?!?!?!")
 ```
 
+You can also generate your own exceptions if you want to cause a program to fail for some reason.
+
+```python
+x = 10
+if x > 5:
+    raise Exception("Not allowed to have a number greater than 5")
+```
+
 # Problem set
 
 1. Create a quadratic formula calculator that uses exceptions to detect if there are 0, 1 or 2 solutions; and then return the correct nnumber of correct solutions. (square root of a negative number exception)

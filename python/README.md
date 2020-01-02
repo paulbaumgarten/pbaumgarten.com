@@ -26,6 +26,8 @@ This is the place to start if you are brand new to Python. I have introdutory vi
 8. [Dates and times](108-dates-times.md)
 9. [Dictionaries](109-dictionaries.md)
 
+After you have completed the lessons, feel free to make use of my [Python basics reference for beginners PDF](000-python-basics-reference.pdf) that serves as a summary of the above topics.
+
 ## Beyond the basics
 
 If you know the basics of Python and wish to experiement with a new package or technique, look through the other tutorials to find something of interest to you.

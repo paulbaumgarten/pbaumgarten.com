@@ -4,25 +4,25 @@
 
 Python dictionaries are similar to lists. Where a list uses a number to keep track of the individual elements contained within it, a dictionary (generally) uses a word.
 
-Examples:
-
-Create an empty dictionary (see adding below to add items to an empty dictionary)
+Create an empty dictionary
 
 ```python
-person = { }
+person = { }    # Curly braces instead of the square brackets used for lists
 ```
 
-Creating a dictionary with initial data
+Set values to your dictionary
 
 ```python
-person = {"givenName" : "Paul", "familyName" : "Baumgarten"}
+# Once the dictionary is created we then revert to using square brackets
+person["given_name"] = "Paul"   
+person["family_name"] = "Baumgarten"
 ```
 
 Getting elements from the dictionary
 
 ```python
-print( person["givenName"] )
-print( person["familyName"] )
+print( person["given_ame"] )
+print( person["family_name"] )
 ```
 
 Adding / modifying elements in the dictionary
@@ -42,7 +42,7 @@ Loop through all the elements of the dictionary
 
 ```python
 for key,val in person.items():
-  print("field "+key+" has value "+val)
+   print(f"field {key} has value {val}")
 ```
 
 ## Read/write JSON files

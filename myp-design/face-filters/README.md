@@ -1,21 +1,24 @@
-# Insta face filters
-
-## Summary
+# Unit: Images, memes and face filters
 
 <img src="assets/face-filter-example.png" width="50%" align="right">
 
+## Summary
+
 You will use the Python programming language to explore how apps like Instagram and Snapchat create their various filters and effects on your photos.
+
+This unit assumes some existing knowledge of Python basics.
+
+Last updated: 02/01/2020
 
 ## Unit information
 
-* Key concept: Communication
-* Related concepts: Adaptation, Form
-* Global context: Personal and cultural expression.
-* Statement of inquiry: Technology allows us to adapt our form when communicating with different audiences to more creatively express ourselves. 
-* Factual questions:
-* Conceptual questions:
-* Debatable questions: In what ways can altering our appearance be harmful? In what ways can altering our appearance be benefital? 
-* Assessment objectives: A,B,D
+| MYP item | This unit |
+| ---- | ---- |
+| Key concept | Communication |
+| Related concepts | Adaptation, form |
+| Global context | Personal and cultural expression |
+| Statement of inquiry | Technology allows us to adapt our form when communicating with different audiences to more creatively express ourselves | 
+| Assessment objectives | A (inquiring & analysing), B (devising ideas), D (evaluating) |
 
 ## Lesson overviews
 
@@ -103,6 +106,8 @@ img = Image.open("my picture.png")  # alternatively use the camera
 img.save("myphoto new copy.png", "png")
 img.save("myphoto another copy.jpg", "jpg")
 ```
+
+---
 
 ## Get image information
 
@@ -196,6 +201,8 @@ img = Image.open("my picture.png")  # alternatively use the camera
 resized_img = img.resize((300, 200))
 img.show()
 ```
+
+---
 
 ## Rotate
 
@@ -332,6 +339,8 @@ To enhance the contrast, the key line would be...
 ```python
 new_img = ImageEnhance.Contrast(img).enhance(0.5)
 ```
+
+---
 
 To enhance the sharpness use...
 
@@ -676,20 +685,26 @@ Enough of following the examples, time to build something of your own from scrat
 
 ## Pro-tip
 
-It is suggested to use code that will auomatically generate filenames that are unique for you, so you can take lots of photos when testing without worrying about losing any (of course nothing to stop you deleting some later ;-). The following will use the date and time to create a unique filename (provided you don't take more than one photo per second). Note that it requires you to add `from datetime import datetime` to your import statements.
+It is suggested to use code that will auomatically generate filenames that are unique, so you can take lots of photos when testing without worrying about losing any (of course nothing to stop you deleting some later). 
+
+The following will use the date and time to create a unique filename (provided you don't take more than one photo per second). 
+
+Note: that it requires you to add `from datetime import datetime` to your import statements. An example follows...
 
 ```python
-# Create a unique filename string based on the date and time
-# for example 20191223-202613
+# Create a unique filename string based on the date and time for example 20191223-202613
 filename = datetime.now().strftime("%Y%m%d-%H%m%s")
-# Take a photo
+# Create the camera object
 camera = ImageTools.Camera()
-img = camera.take_photo()
-# Create a black and white copy of the photo
-bw = img.convert(mode="1")
-# Save both images using the special filename prefix
-img.save(filename+"-before.png", "png")
-bw.save(filename+"-after.png", "png")
+# Take 100 photos
+for i in range(100):
+    # Take a photo
+    img = camera.take_photo()
+    # Do something interesting with the photo, such as convert to black and white
+    bw = img.convert(mode="1")
+    # Save both images using the special filename prefix
+    img.save(filename+"-before.png", "png")
+    bw.save(filename+"-after.png", "png")
 ```
 
 # 9. Evaluate your effect generators, memes and filters
