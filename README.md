@@ -5,13 +5,14 @@ Teaching resources and programming projects for Paul Baumgarten
 
 ## Teaching resources
 
+<img src="img/Happy-New-Year-2020.jpg" width="30%" align="right">
+
 * [IB Diploma Computer Science](https://pbaumgarten.com/ib-compsci)
 * [iGCSE Computer Science](https://pbaumgarten.com/igcse-compsci)
+* [MYP Digital Design](https://pbaumgarten.com/myp-design/)
 * [Learn Python](https://pbaumgarten.com/python)
 * [Learn Java](https://pbaumgarten.com/java)
 * [Learn Javascript](https://pbaumgarten.com/javascript)
-* [Learn Python with the Microbit](https://pbaumgarten.com/microbit)
-* [Learn Python with the Turtle](https://pbaumgarten.com/python/turtle)
 * [Learn Raspberry Pi](https://pbaumgarten.com/raspberrypi)
 * [Full repositories list...](https://github.com/paulbaumgarten?tab=repositories)
 
@@ -28,7 +29,7 @@ Whether you are here because you have to be (ie: a student of mine), or are just
 More [about me](img/paul-baumgarten-about-me-2019.pdf).
 
 Paul Baumgarten  
-September 2019
+January 2020
 
 [![](img/icon-youtube-48.png)](https://youtube.com/pbaumgarten)
 [![](img/icon-twitter-48.png)](https://twitter.com/pbaumgarten)

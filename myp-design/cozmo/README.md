@@ -36,6 +36,10 @@ Last updated: 02/01/2020
 * Lesson 8,9,10. Build & program your obstacle course
 * Lesson 11. Evaluate your obstacle course
 
+## Website
+
+The website for this unit is at [https://pbaumgarten.com/myp-design/cozmo](https://pbaumgarten.com/myp-design/cozmo)
+
 # 0. Prequisites
 
 ## Python installed
@@ -46,12 +50,23 @@ If you don't have it, go to [https://wwww.python.org](https://wwww.python.org) a
 
 When running the installer, make sure you turn on the option to "Add Python to PATH"
 
+I have a video walk through of the process for installing Python and VS Code at 
+
+* [https://pbaumgarten.com/python/install/](https://pbaumgarten.com/python/install/), or 
+* [https://youtu.be/-R6HFLp7tTs](https://youtu.be/-R6HFLp7tTs)
+
 ## Libraries required
 
 Once you have Python installed, open the command prompt and run the following
 
 ```text
 pip install pycozmo Pillow ImageToolsMadeEasy
+```
+
+If you get a permissions error with the above, try it again with the `--user` switch as follows
+
+```text
+pip install --user pycozmo Pillow ImageToolsMadeEasy
 ```
 
 ## Basic Python knowledge
@@ -66,14 +81,11 @@ If you need a more detailed introduction to Python I have a set of detailed tuto
 
 # 1. Connect to Cozmo
 
-<img src="assets/cozmo-screen-code.png" width="30%" style="float:right">
+<img src="assets/cozmo-connection2.png" width="30%" style="float:right">
 
 * Sit the Cozmo on it's charger unit which must be powered on (it doesn't have to be connected to your computer, just usb power).
 * On the front screen, Cozmo will display a code similar to the one displayed. 
 * Open your computer network settings and search for the wifi connection with Cozmo's name in it. Connect to the Cozmo wifi using the code on the Cozmo's front screen as the password.
-
-<img src="assets/cozmo-connection.png" width="30%" style="float:right">
-
 * Open `VS Code` or your preferred Python editor. The following is a simple program to test your connection is working properly. It will cause the backlight on the cozmo to turn green for 1 second, then red for 1 second, then off.
 
 ```python
