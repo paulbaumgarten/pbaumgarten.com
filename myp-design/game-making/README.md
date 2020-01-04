@@ -34,6 +34,8 @@ Who doesn't love a good, fun computer game? This unit will give you the opportun
 
 The website for this unit is [https://pbaumgarten.com/myp-design/game-making/](https://pbaumgarten.com/myp-design/game-making/)
 
+# 0. Pre-requisites
+
 ## Libraries required
 
 Once you have Python installed, open the command prompt and run the following
@@ -129,10 +131,6 @@ To briefly explain a few commands:
 * Pygame will only actually draw onto your screen when it hits the `pygaame.display.update()` command.
 * `window.fill(BLACK)` will erase everything on screen and fill the screen with the specified color, in this case black.
 * `fps.tick(25)` is saying we want the game to run at 25 frames per second
-
-## Your tasks/
-
-    TODO
 
 # 2. Shapes, colour & text
 
@@ -400,6 +398,8 @@ while not quit:
 pygame.quit()
 ```
 
+---
+
 ## Your task/s
 
  * Get the two demonstration activities to work (do not just copy and paste the code - practice typing Python code for yourself so you learn how to correct the errors along the way)
@@ -475,10 +475,6 @@ while not quit:
 pygame.quit()
 ```
 
-## Your task/s
-
-    TODO
-
 # 5. Playing sound
 
 Like images, this will assume all your sound files are in your project folder. You can only have one track of "background" music playing at a time. You can, however, have multiple sound effects at once. 
@@ -514,7 +510,9 @@ BOUNCE_SOUND.play()
 
 ## Your task/s
 
-    TODO
+* Spend no more than 10 minutes searching for some good game sound effects.
+* Remember if you find MP3, you will have to convert them to WAV files. Use an online converter, or Audacity if it is on your laptop.
+* Create a new copy of your Pong game (or any other previous Pygame exercise) and add sound effects to it at key points.
 
 # 6. Using images in Pygame
 
@@ -612,16 +610,16 @@ window.blit(animation.next_frame(), (x, y))
 
 ## Demo - Basic mario
 
-The following exercise creates a simple Mario walking scene where his "walk" is animated through a series of cells for the left and right walking as shown
-
 ![](img/pygame-mario-right-animation-7x1.png)
 
-You will need to download the following files:
+The following exercise creates a simple Mario walking scene where his "walk" is animated through a series of cells for the left and right walking as shown
 
-* [mario-stationary.png](img/pygame-mario-stationary.png)
-* [mario-left-animation.png](img/pygame-mario-left-animation.png)
-* [mario-right-animation.png](img/pygame-mario-right-animation.png)
-* [mario-background-768p.png](img/pygame-mario-background-768p.png)
+* mario-stationary.png
+* mario-left-animation.png
+* mario-right-animation.png
+* mario-background-768p.png
+
+from [https://github.com/paulbaumgarten/paulbaumgarten/tree/master/myp-design/game-making/img](https://github.com/paulbaumgarten/paulbaumgarten/tree/master/myp-design/game-making/img)
 
 The sprite animation runs from functionality in the `pygamemadeeasy` library. Ensure you have it installed and import as follows
 
@@ -629,38 +627,86 @@ The sprite animation runs from functionality in the `pygamemadeeasy` library. En
 from pygamemadeeasy import *
 ```
 
-Creating an animation then involves creating an animation object such as below. In this case, the `90, 133` indicates the height and width of the individual frames within the image file. The `SpriteAnimation()` object has been designed to work on PNG files exported from Piskelapp where columns has been set to `1`.
+Creating an animation first requires creating an animation object called a `SpriteAnimation()` as can be seen below. In this case, the `90, 133` indicates the height and width of the individual frames within the image file. 
 
 ```python
 mario_left_animation    = SpriteAnimation("mario-left-animation.png", 90, 133)
 ```
 
-To then obtain the image data to blit onto screen, use the `.next_frame()` function which will automatically iterate through the set of sprite frames each time it is called.
+**Note** - The `SpriteAnimation()` object has been designed to work on PNG files exported from the Piskelapp website where columns have been set to `1`. It may not work properly if you have multiple columns.
+
+To blit (draw) a frame of the image onto screen use the `.next_frame()` function. This will automatically move to the next frame each time it is called.
 
 ```python
-window.blit(mario_right_animation.next_frame(), (player_x, player_y))
+window.blit( mario_right_animation.next_frame(), (player_x, player_y) )
 ```
-
-    TODO
 
 ---
 
-## Demo - Running and jumping mario
-
-This extends the Mario demo so he can walk, run, jump based on your keyboard input.
-
-You will need to download the following files:
-
-* [mario-stationary.png](img/pygame-mario-stationary.png)
-* [mario-left-animation.png](img/pygame-mario-left-animation.png)
-* [mario-right-animation.png](img/pygame-mario-right-animation.png)
-* [mario-background-768p.png](img/pygame-mario-background-768p.png)
+The full demo is here...
 
 ```python
 import pygame, time, random
 from pygame.locals import *
 from pygamemadeeasy import *
-from spritemap import load_sprite_map
+
+### START GAME CODE ###
+pygame.init()
+window = pygame.display.set_mode((300,300))
+fps = pygame.time.Clock()
+
+# Declare colors, fonts, images
+mario_right_animation   = SpriteAnimation("mario-right-animation.png", 90, 133)
+
+# Variables
+player_x = 100                                      # x-value of player
+player_y = 100                                      # y-value of player
+quit = False                                        # game still playing while this is True
+
+# Main game loop
+while not quit:
+
+    # Process events
+    for event in pygame.event.get():
+        if event.type == KEYDOWN:
+            if event.key == K_ESCAPE:
+                quit = True
+
+    # Draw graphics
+    window.fill( colors.black )
+
+    # Draw the animated sprite    
+    window.blit( mario_right_animation.next_frame(), ( player_x, player_y ) )
+
+    # Update the window
+    pygame.display.update()
+    fps.tick(10)
+pygame.quit()
+```
+
+---
+
+## Demo - Running and jumping mario
+
+![](img/pygame-mario-2.png)
+
+This extends the Mario demo so he can walk, run, jump based on your keyboard input.
+
+**You are not required to do this demo. It is for information purposes. Check your assigned tasks below.**
+
+If you do choose to code this, you will need to download the following files:
+
+* mario-stationary.png
+* mario-left-animation.png
+* mario-right-animation.png
+* mario-background-768p.png
+
+from [https://github.com/paulbaumgarten/paulbaumgarten/tree/master/myp-design/game-making/img](https://github.com/paulbaumgarten/paulbaumgarten/tree/master/myp-design/game-making/img)
+
+```python
+import pygame, time, random
+from pygame.locals import *
+from pygamemadeeasy import *
 
 ### FUNCTIONS ####
 
@@ -681,10 +727,10 @@ window = pygame.display.set_mode((1000,760))
 fps = pygame.time.Clock()
 
 # Declare colors, fonts, images
-background_image        = pygame.image.load("media/mario-background-768p.png").convert_alpha()
-mario_left_animation    = SpriteAnimation("media/mario-left-animation.png", 90, 133)
-mario_right_animation   = SpriteAnimation("media/mario-right-animation.png", 90, 133)
-mario_stationary_image  = pygame.image.load("media/mario-stationary.png").convert_alpha()
+background_image        = pygame.image.load("mario-background-768p.png").convert_alpha()
+mario_left_animation    = SpriteAnimation("mario-left-animation.png", 90, 133)
+mario_right_animation   = SpriteAnimation("mario-right-animation.png", 90, 133)
+mario_stationary_image  = pygame.image.load("mario-stationary.png").convert_alpha()
 arial_60                = pygame.font.SysFont("Arial", 60)
 
 # Variables
@@ -750,9 +796,12 @@ while not quit:
 pygame.quit()
 ```
 
+---
+
 ## Your task/s
 
-    TODO
+* Do the first demo to get an animated sprite working for yourself.
+* Rather than doing the second demo, create your own PiskelApp animation, and then create your own simple demo that uses it.
 
 # 7. Detecting collisions
 
@@ -818,7 +867,66 @@ To see this in use properly, look at Space Invaders in the project starters sect
 
 ## Your task/s
 
-    TODO
+* Implement the collision demo that follows.
+* Make your own personalised modifications to it.
+
+```python
+import pygame, time, random
+from pygame.locals import *
+
+pygame.init()
+window = pygame.display.set_mode((500,500))     # set screen width,height
+fps = pygame.time.Clock()
+
+#********** Declare colors, images, sounds, fonts, variables **********
+arial_24 = pygame.font.SysFont("Arial", 24)
+black = (0,0,0)
+red = (255,0,0)
+green = (0,255,0)
+white = (255,255,255)
+quit = False
+x,y = 250,250
+
+#********** Main game loop starts **********
+while not quit:
+    window.fill(black)           # Reset the screen to black background
+    #********** Process events **********
+    for event in pygame.event.get():
+        print(event)
+        if event.type == QUIT:
+            quit = True
+        elif event.type == MOUSEMOTION:
+            x,y = event.pos
+
+    #********** Calculations **********
+    player = Rect(x,y,50,50)
+    obj1 = Rect(50,50,50,50)
+    blocks = [
+        Rect(30,400,40,40),
+        Rect(130,400,40,40),
+        Rect(230,400,40,40),
+        Rect(330,400,40,40),
+        Rect(430,400,40,40)
+    ]
+    player_color = green
+    if player.colliderect(obj1):            # Detect collision between one rectangle and another rectangle
+        player_color = red
+    if player.collidelist(blocks) >= 0:     # Detect collision between one rectangle and a list of rectangles
+        block_num = player.collidelist(blocks)
+        player_color = red
+        window.blit( arial_24.render(f"Collision with block {block_num}", 1, white), (100,20))
+
+    #********** Update screen **********
+    pygame.draw.rect(window, white, obj1) 
+    for block in blocks:
+        pygame.draw.rect(window, white, block) 
+    pygame.draw.rect(window, player_color, player) 
+    pygame.display.update()         # Actually does the screen update
+    fps.tick(25)                    # Run the game at 25 frames per second
+
+#********** Game over **********
+pygame.quit()
+```
 
 # 8. Project starters
 
@@ -840,19 +948,90 @@ Discuss with me if you feel you are ready one of these.
 
 # 9. Design your own game
 
-    TODO
+## Task B1: Success criteria
 
-* Once you have your starter project, it is time to modify it and make it your own.
+Generate a list of project **success criteria** that you will use to judge how successful you have been with the project. Each success criterion should be as **specific** and **measurable** as possible. To assist you in brainstorming your success criteria, you try to create criteria for each of these categories:
 
-## Design
+* Functionality: What will your program do? How will it behave? Under what conditions?
+* Aesthetics: What will it look like? Sound like? Will there be any movement/animation/colour?
+* Technology: What will the client require to run it?
+* Feasibility: What time constraints, resource constraints, knowledge constraints do you face?
 
-* Submit your designs to your portfolio
+## Task B2: Design ideas
 
-## Create
+![](../original-space-invaders-sketches.jpg)
 
-* Submit your Python code to your portfolio
+Original sketches for SPACE INVADERS (1978) characters by Toshihiro Nishikado. [(source)](https://www.reddit.com/r/geek/comments/akr1n3/original_concept_sketches_for_space_invaders_1978/)
 
-## Evaluate
+![](../original-donkeykong-sketches.jpg)
+
+Original Donkey Kong, (Donkey Kong, Jumpman/Mario & Pauline) sprite drawings - Shigeru Miyamoto (~1981) [(source)](https://twitter.com/gameanim/status/1076985452903653378)
+
+![](../original-mario-sketches.jpeg)
+
+![](../original-mario-sketches.jpg)
+
+Original Mario levels - Shigeru Miyamoto [(source)](https://qz.com/429862/the-original-super-mario-game-was-designed-on-graph-paper/)
+
+The above represent some original sketches for classic arcade games.  Your task is to create designs or detailed sketches for your product.
+
+* Label key parts so other people can understand your ideas.
+* You can draw screenshots or storyboards or what you anticipate the final solution may look like. 
+* You may draw sketches or use modelling software if you prefer.
+* You drawings should be able to be fully understood by others. (the idea being that someone else could build the app that's in your head based off your drawings).
+* You are NOT being assessed on your artistic drawing capabilities but your work IS expected to be neat and have all possible care taken in its presentation. (for instance if a line is supposed to be straight then use a ruler!)
+
+In general, you should produce at least 3 different designs/sketches.
+
+Annotate your drawings to indicate the function of the various parts of the project. Try to ensure that accross your diagrams, you cover the following spread of categories:
+
+* Functionality
+* Aesthetics
+* Technical requirements
+* Characters (if relevant)
+* Target market (I drew a character that looks like .... because I want it to appeal to ..... )
+* Feasibility
+
+If you need blank templates for your Criterion B design sketches, you can use my [Criterion B Prototype Sketches Template](../crit-b-prototype-desktop.pdf)
+
+---
+
+## Task B3: Design selection
+
+How well do each of your proposed designs satisfy your success criteria from B1?
+
+To adequately address strand B3 you should:
+
+* Compare each of your B2 proposals against each of your B1 success criteria.
+* With the comparison in mind, which of the proposals best solves the problem and why? Are there any changes you will make to this design to further improve it? 
+* Reference your various elements of your B1 success criteria in your justification.
+
+## Task B4: Final design proposal
+
+Discuss the logic of your program? Here are some example bullet points that would describe product behaviour:
+
+* The player starts with 10 health (or 3 lives, or 0 points, or….)
+* When the up arrow is pressed: Player will jump for a few moments and gradually descent to land on a platform
+* When the bullet hits the player: The player loses 5 health (or 1 life, or the game ends...)
+* When the player touches a treasure chest: The player gains 50 points (or 10 health, or the game moves to the next level) etc
+* When the colour sensor sees blue: The left wheel will turn at maximum speed, the right wheel will stop.
+
+## Task C: Create
+
+* Submit your Python code to your portfolio.
+
+## Task D: Evaluate
+
+The Criterion D deliverable should take the form of a narrated screen-cast video.
+
+Your video needs to include the following:
+
+* Write an outline for key points you want to make in your video before recording it (a word by word script is not necessary).
+* Demonstrate the achievement of each of your success criteria identified in task B1
+* Discuss what changes you would make to your product if given more time. This could either be to better address success criteria not fully completed, or to add enhancements to your product
+* Within the video, identify who your client (or target audience) for the project was, and discuss whether you have achieved the original objective identified back in task A1. How has completed product impacted on your client (or target audience). Perhaps a brief on camera interview with your client (or a couple of representatives of the target audience).
+
+In order to address this criterion thoroughly, I anticipate most videos to be around 4 or 5 minnutes.
 
 * Submit your Video evaluation to your portfolio
 

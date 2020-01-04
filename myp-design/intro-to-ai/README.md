@@ -74,11 +74,158 @@ If you need a more detailed introduction to Python I have a set of detailed tuto
 
 # 1. Basics of AI
 
-How Machines Learn - CGP Grey (9m)
-https://www.youtube.com/watch?v=R9OHn5ZF4Uo
+Lets start with a video...<img src="qr-video-cgpgrey-how-machines-learn.png" align="right">
 
-    TO DO
+* How Machines Learn by CGP Grey (9min) - [https://www.youtube.com/watch?v=R9OHn5ZF4Uo](https://www.youtube.com/watch?v=R9OHn5ZF4Uo)
 
+## What is artificial intelligence?
+
+Artificial intelligence (AI) is an area of computer science that involves the creation of machines that work and react like humans.
+
+Some of the human activities that are commonly being programmed using artificial intelligence include:
+
+* Computer vision: ability of computers to identify objects, scenes, and activities in images
+* Natural Language Processing: ability of computers to understand meaning from text or generating text that is readable
+* Speech Processing: automatically transcribing human speech or generating speech from the corresponding text
+
+For instance,
+
+* Google Maps uses AI to update addresses and street names based on street view pictures.
+* Facebook uses AI to analyze text posted by users and better suggest ads they may need or be interested in. It also uses AI to analyse photos and identify faces.
+* Amazon & Netflix uses AI in its recommendation engine.
+
+AI is rapidly moving from the laboratory towards business and consumer application for 3 big reasons:
+
+* Big Data: Live, interactive, automatically generated, and often self-correcting data that fuels real-time decisions and real-time responses.
+* Cheaper Computing: Cloud computing, massively parallel processing and new CPUs are powering AI techniques that simply weren’t practical before.
+* Better Algorithms: AI techniques have existed for decades but there is a surge in innovation and performance with the rapid growth in computational infrastructure, data and sensors.
+
+What is machine learning? How is it different to artificial intelligence?
+
+Broadly speaking, you can consider machine learning to be a sub-set of the broader field of artificial intelligence. Where AI is simply about creating intelligent machines and programs, ML refers to systems that can learn from experience.
+
+For example, say you provide machine learning program with lots of images of skin conditions along with the what do those conditions mean. The algorithm can mine this image data and help to analyze skin condition in the future. The algorithm examines images and identifies patterns that exist between these images that have similar conditions.
+
+When the algorithm is given a new skin image (whose condition is unknown) in the future, it will compare the pattern that is present in the current image with the pattern it learned from analyzing all the past pictures and be able to able to predict what kind of skin condition it is.
+
+If there are new skin conditions or if the existing patterns of the skin conditions changes, the algorithm will not predict those conditions correctly. One has to feed in all the new data to the algorithm for it to learn to predict based on new skin conditions.
+
+On the other hand, Artificial Intelligence learns by acquiring knowledge and learning how to apply it. The aim of artificial intelligence is to increase the chances of success and to find the optimal solution. AI is the study to train the computers to attempt to do things which at present human can do better. AI tends to be used in situations where adapting to new scenarios are important.
+
+In summary, machine learning uses the experience to look for the pattern it learned. AI uses the experience to acquire knowledge/skill and also how to apply that knowledge for new environments.
+
+## Types of learning
+
+There are four commonly used types of learning algorithms:
+
+* Supervised: Learn rules that map inputs to target outputs.
+* Unsupervised: Learn to cluster and label similar inputs.
+* Deep learning: Learn through a hierarchy of simple to complex concepts.
+* Reinforced: Learn by continually interacting with an environment.
+
+## Supervised learning
+
+Supervised learning happens when we feed the computer data and the outcome we want from that data. Then we let the computer find a correlation between the data and the outcome so that it may predict outcomes with new data without us providing the outcome.
+
+Supervised learning is the example illustrated in the CGP Grey video, "How machines learn". That is: Why feed the algorithm a stack of information, ask it to make a prediction based on the pattern that it could identify, we then tell it whether it made a correct or incorrect prediction. 
+
+The goal is to minimize the error between the model's predictions and the actual outcomes.
+
+In a perfect world we would minimize errors on all possible inputs.
+
+In reality, we usually don't have enough inputs with corresponding outcomes to teach the computer well enough.
+
+## Deep learning
+
+![](img/deeplearning.png)
+
+Imagine we gave a computer millions of images of puppies and kittens. What characteristics about each might we pick to enable a computer to learn to identify future puppies and kittens? With images it's quite hard. This is where deep learning comes in.
+
+* Deep neural networks are a subtype of supervised learning.
+* Deep networks are multilayer networks on top of each other where each layer corresponds to a different level of abstraction.
+* There are two main reasons behind the popularity and the high impact of deep neural networks in various fields such as computer vision and speech recognition:
+  * The emergence of modern parallel computing architectures providing low-cost and fast computation for a large number of parameters of the deep networks.
+  * The availability of vast amounts of images, video, speech and text on the Internet providing sufficient data for training these networks.
+* Each layer in the deep architecture provides a nonlinear information processing.
+* The output is a parameterized function of the inputs and the output of each layer is the input for the higher layer.
+
+<img src="img/qr-video-neuralnetworks1.png" align="right">
+Watch this excellent introduction to neural networks with deep learning. "But what is a Neural Network? | Deep learning, chapter 1" by 3blue1brown.
+
+* [https://www.youtube.com/watch?v=aircAruvnKk](https://www.youtube.com/watch?v=aircAruvnKk)
+
+Key terms to make notes on from the video:
+
+* Activation value
+* Hidden layer
+* Neuron
+* Weights
+* Sigmoid
+* What does Learning mean in this context?
+
+Warning: The video will start talking about vectors and matrices from the mathematical field of linear algebra. I'm not too worried about you understanding the math at this stage as you won't have covered that in math yet.
+
+## Unsupervised learning
+
+![](img/unsupervisedlearning.png)
+
+In unsupervised learning we give the computer unlabeled data (Input representations without their corresponding outcomes). We just present the data and let the computer algorithm make it's best attempt at sorting and categorising it.
+
+The goal for unsupervised learning is to model the underlying structure or distribution in the data in order to learn more about the data.
+
+These are called unsupervised learning because unlike supervised learning above there is no correct answers and there is no teacher. Algorithms are left to their own devises to discover and present the interesting structure in the data.
+
+## Reinforcement learning
+
+<img src="img/qr-video-cats-reinforcementlearning.png" align="right">This video provides an excellent demostration of reinforcement learning in real life.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6lp-LPc3LGI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+* [https://youtu.be/6lp-LPc3LGI](https://youtu.be/6lp-LPc3LGI)
+
+![](reinforcementlearning.jpeg)
+
+Reinforced Learning: The machine is exposed to an environment where it gets trained by trial and error method, here it is trained to make a much specific decision. The machine learns from past experience and tries to capture the best possible knowledge to make accurate decisions based on the feedback received.
+
+Practical applications include playing computer games and self driving cars.
+
+## The workflow
+
+It is typically stated there are 5 steps to the process of building an AI.
+
+![](img/data-science-flow.png)
+
+* **Get the data**.
+* **Clean, prepare and manipulate the data.**. - Pre-processing and cleaning data are important tasks that must be applied before using data to train an ML model Why? To avoid "garbage in, garbage out". While the "fun part" might be training the model, most of the time and energy tends to be on preparing your data.
+* **Train the model** - Identify the inputs and outputs you want from the model, structure your layers, and feed the model your data.
+* **Test the data** - In supervised learning some known data is typically held back for testing the accuracy of predictions. This is usually about 20 to 30% of your dataset.
+* **Improve the data and model** - Analyse the results. Change the training settings to determine which inputs and algorithms might give you the best results.
+
+Recognize that perfect performance is rarely, if ever, possible. Performance objectives should be defined based on the end goal for the model that you are building. Understanding the error tolerance is a critical step in identifying the risks in every model prediction.
+
+## Challenges
+
+**Overfitting:**
+
+We can find a hypothesis that predicts perfectly the training data but does not generalize well to new data. The function ”memorizes” the data points, but is wild everywhere else. Typical overfitting means that error on the training data is very low, but error on new instances is high.
+
+**Underfitting:**
+
+Typically, underfitting means that error on the training data is very high.
+
+## More information
+
+Podcasts
+
+* https://tech2025.com/podcast-show/
+
+## Credits
+
+* Parinaz Sobhani for Canada Learning Code - https://github.com/ladieslearningcode/teenslc-intro-to-ai
+* Key differences between Artificial Intelligence and Machine Learning - https://towardsdatascience.com/key-differences-between-artificial-intelligence-and-machine-learning-fe637cd0deca
+* Machine learning types and alogrithms - https://towardsdatascience.com/machine-learning-types-and-algorithms-d8b79545a6ec
+* Supervised and Unsupervised Machine Learning Algorithms
+by Jason Brownlee on March 16, 2016 - https://machinelearningmastery.com/supervised-and-unsupervised-machine-learning-algorithms/
+* https://towardsdatascience.com/reinforcement-learning-with-python-8ef0242a2fa2
 
 # 2. The CartPole problem - with a random agent
 
@@ -250,14 +397,31 @@ for game_number in range(100):
 
 # 5. Q Learning
 
+Q-Learning is one of the most commonly used algorithms for reinforcement learning. We will use Q-learning to teach our AI how to navigate through simple worlds using the Gym environments.
+
+Let's start with a terminology primer:
+
+* Agent: The name given to our computer algorithm simulating a human playing the "game". Think Agent Smith from the Matrix... it is the AI-bot.
+* State: The state is a description of condition of the world we are observing. It is a collection of data that provides that description. In more complex uses, it could be providing a full pixel-by-pixel image of whats on the screen to the algorithm. In simplier cases it could be a handful of variables that sum up the key information about the "world" at any moment in time. 
+* Action: What action will our algorithm take? Action is usually based on the environment, different environments lead to different actions based on the agent. Set of valid actions for an agent are recorded in a space called an action space. These are usually finite in number.
+* Environment: This where the agent lives and interacts. The "game world".
+* Reward: The reward function is a measure of the benefit the agent received as a result of taking an action. If we win the game, we'll earn a great reward. If we lose the game, we'll obtain a negative reward. Other actions may obtain smaller positive or negative rewards along the way. It plays a vital role in reinforcement learning. The algorithm will seek to maximise reward.
+* Policies: Policy is a rule used by an agent for choosing the next action, these are also called as agents brains.
+
+The most commonly used algorithm for reinforcement learning is known as q-learning. As you start researching into Q-learning, you will likely encounter a formula that looks like this...
+
+![](img/q-learning-equation.png)
+
+I don't want you to stress over the math, so ignore the formula for now. Instead I will endeavour to explain by way of a walk through what the process is that's occurring.
+
     TO DO
 
 Discuss:
 
- * Role of q table
+ * Role of q table - a list of every possible state and every possible action, and a historical record of the reward earned by taking that action when in that state.
  * Updating the q table (with a walk through)
  * Mapping a continuous space into discrete set of possiblities for the q table
- * Role of epsilon
+ * Role of epsilon - especially at the start. exploration is key.
 
 # 6. Mountain Car - with Q Learning
 
@@ -309,6 +473,8 @@ class Agent():
         return (self.find_closest(self.position_space, position), self.find_closest(self.velocity_space, velocity))
 
     def max_action(self, state):
+        # Search our q-table for all entries that match the current state.
+        # Then, look through those results to find the action that obtained the highest reward.
         max_index = 0
         max_value = -10e10 # a really negative number, ie: -10^10
         for i in range(len(self.action_space)):
@@ -378,16 +544,12 @@ for game_number in range(101):
 print("all done!")
 ```
 
-# 7. Tic Tac Toe - complete demo
+# 7. Moon lander
 
-# 8. Simple game - training
-
-# 9. Simple game - tweak and retrain
-
-# 10. Analysis
+# 8. Analysis
 
 
-## References
+# References
 
 Lesson 2, 3 (Pole) derived from 
 
