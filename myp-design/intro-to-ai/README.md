@@ -31,7 +31,7 @@ Artificial intelligence is experiencing a massive boom in interest and investmen
 
 ## Website
 
-The website for this unit is [https://pbaumgarten.com/myp-design/game-making/]
+The website for this unit is [https://pbaumgarten.com/myp-design/intro-to-ai/](https://pbaumgarten.com/myp-design/intro-to-ai/)
 
 # 0. Prequisites
 
@@ -52,18 +52,18 @@ I have a video walk through of the process for installing Python and VS Code at
 Once you have Python installed, open the command prompt and run the following
 
 ```text
-pip install Pillow ImageToolsMadeEasy
+pip install gym numpy gym[box2d]
 ```
 
 If you get a permissions error with the above, try it again with the `--user` switch as follows
 
 ```text
-pip install --user gym numpy 
+pip install --user gym numpy gym[box2d]
 ```
 
-## Basic Python knowledge
+## Comfortable Python knowledge
 
-This guide assumes a basic familiarity with Python. I have written a quick recap designed for a one hour lesson should you need it. It is available at:
+This guide assumes a comfortable familiarity with Python. I have written a quick recap designed for a one hour lesson should you need it. It is available at:
 
 * [https://pbaumgarten.com/python/recap/](https://pbaumgarten.com/python/recap/)
 
@@ -175,16 +175,19 @@ The goal for unsupervised learning is to model the underlying structure or distr
 
 These are called unsupervised learning because unlike supervised learning above there is no correct answers and there is no teacher. Algorithms are left to their own devises to discover and present the interesting structure in the data.
 
+---
+
 ## Reinforcement learning
 
 <img src="img/qr-video-cats-reinforcementlearning.png" align="right">This video provides an excellent demostration of reinforcement learning in real life.
-<iframe width="560" height="315" src="https://www.youtube.com/embed/6lp-LPc3LGI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 * [https://youtu.be/6lp-LPc3LGI](https://youtu.be/6lp-LPc3LGI)
 
 ![](reinforcementlearning.jpeg)
 
 Reinforced Learning: The machine is exposed to an environment where it gets trained by trial and error method, here it is trained to make a much specific decision. The machine learns from past experience and tries to capture the best possible knowledge to make accurate decisions based on the feedback received.
+
+It’s very similar to the structure of how we play a video game, in which the player (agent) engages in a series of trials (actions) to obtain the highest score (reward). The action the agent takes will vary depending upon what the player (agent) observes on screen (the state) at any moment in time. The overall game world is the environment.
 
 Practical applications include playing computer games and self driving cars.
 
@@ -204,44 +207,29 @@ Recognize that perfect performance is rarely, if ever, possible. Performance obj
 
 ## Challenges
 
+The cause of poor performance in machine learning is either overfitting or underfitting the data.
+
 **Overfitting:**
 
-We can find a hypothesis that predicts perfectly the training data but does not generalize well to new data. The function ”memorizes” the data points, but is wild everywhere else. Typical overfitting means that error on the training data is very low, but error on new instances is high.
+Overfitting refers to a model that models the training data too well.
+
+Overfitting happens when a model learns the detail and noise in the training data to the extent that it negatively impacts the performance of the model on new data. This means that the noise or random fluctuations in the training data is picked up and learned as concepts by the model. The problem is that these concepts do not apply to new data and negatively impact the models ability to generalize.
 
 **Underfitting:**
 
-Typically, underfitting means that error on the training data is very high.
+Underfitting refers to a model that can neither model the training data nor generalize to new data.
 
-## More information
+An underfit machine learning model is not a suitable model and will be obvious as it will have poor performance on the training data.
 
-Podcasts
+# 2. CartPole problem - random agent
 
-* https://tech2025.com/podcast-show/
+<img src="img/cartpole.png" width="50%">
 
-## Credits
+The Cartpole problem is a simple act of attempting to balance a pole on top of a moving cart. If the pole starts falling, the cart has to move to compensate to keep it balanced.
 
-* Parinaz Sobhani for Canada Learning Code - https://github.com/ladieslearningcode/teenslc-intro-to-ai
-* Key differences between Artificial Intelligence and Machine Learning - https://towardsdatascience.com/key-differences-between-artificial-intelligence-and-machine-learning-fe637cd0deca
-* Machine learning types and alogrithms - https://towardsdatascience.com/machine-learning-types-and-algorithms-d8b79545a6ec
-* Supervised and Unsupervised Machine Learning Algorithms
-by Jason Brownlee on March 16, 2016 - https://machinelearningmastery.com/supervised-and-unsupervised-machine-learning-algorithms/
-* https://towardsdatascience.com/reinforcement-learning-with-python-8ef0242a2fa2
+The following will get the Cart Pole program up and running without any intelligence. It will simply pick a random action each time.
 
-# 2. The CartPole problem - with a random agent
-
-Environment: MountainCarContinuous-v0
-
-Documentation at
-https://github.com/openai/gym/wiki/CartPole-v0
-
-Observation: Box 4
- * 0 = Cart position -2.4 to 2.4
- * 1 = Cart velocity -infinity to +infinity
- * 2 = Pole angle -41.8 degrees to +41.8 degrees
- * 3 = Pole velocity at top -infinity to +infinity
-Action: Discrete 1
- * 0 = Push left, 1 = Push right
-
+The next section will explain how the environment, state and action system works.
 
 ```python
 import gym
@@ -259,7 +247,7 @@ class Agent():
 # Load the game environment
 env_name = "CartPole-v1"
 env = gym.make(env_name)
-# Create our AI player agent (see class code above)
+# Create our AI player agent
 agent = Agent(env)
 # Reset the game environment
 state = env.reset()
@@ -273,9 +261,47 @@ for timestep in range(200):
     env.render()
 ```
 
-# 3. The CartPole problem - with simple logic
+# 3. CartPole problem - simple logic agent
 
-state documentation at https://github.com/openai/gym/blob/master/gym/envs/classic_control/cartpole.py
+The first version of the CartPole, we just made random actions. Obviously we want something more intelligent than that. To do more with it, we need to understand how to interact with the environment that the Gym library is providing us.
+
+Each different environment is documented on the Gym website or it's github page. Some environments have better documentation than others! :-/
+
+The Gym documentation for the Cart Pole is at [https://github.com/openai/gym/wiki/CartPole-v0](https://github.com/openai/gym/wiki/CartPole-v0)
+
+This documentation tells us:
+
+* What we can observe about the state of the game each round
+* What actions we can make each round
+* What rewards are received for different eventualities
+* When the game ends
+
+For the CartPole, the observation data we recieve every time we make a move consists of 4 floating point numbers. Each of these numbers represents something about the state of the cart or pole as follows...
+
+ * The first number, value 0, represents the Cart position and will be a range between -2.4 to 2.4
+ * The second number, value 1, represents the Cart velocity and will be of range -infinity to +infinity
+ * The third number, value 2, represents the Pole angle and will range -41.8 degrees to +41.8 degrees
+ * The forth number, value 3, represents the Pole velocity at top and will range -infinity to +infinity
+
+For the actions, we provide one integer number as follows...
+
+ * 0 = Push left, 1 = Push right
+
+The rewards we receive are...
+
+* Reward is 1 for every step taken, including the termination step. The threshold is 475 for v1.
+
+And the game terminates when...
+
+* Pole Angle is more than ±12°
+* Cart Position is more than ±2.4 (center of the cart reaches the edge of the display)
+* Episode length is greater than 200 (500 for v1).
+
+So a simple adaption of our previous solution might be to replace the random number generator with a simple `if` statement. If the pole angle is less than zero, push left. If the pole angle is greater than zero, push right.
+
+You can see that modification in the `get_action()` function in the following code. How could you further improve on this logic?
+
+---
 
 ```python
 import gym
@@ -310,9 +336,13 @@ for timestep in range(200):
     env.render()
 ```
 
-# 4. The Mountain Car problem - Continuous action spaces
+# 4. Mountain Car problem
 
-## Mountain Car - Discrete
+We'll move on from the Cart Pole to the Mountain Car as there are a couple of other issues to get you acquianted with.
+
+<img src="img/mountaincar.png" width="50%">
+
+The objective of the Mountain Car is to drive up the hill to reach the flag. The car doesn't have enough power to make it up the hill on it's own however, it has to build momentum by swinging off the backside hill. 
 
 ```python
 import gym
@@ -338,27 +368,85 @@ for game_number in range(100):
     while not done:
         # Get a random action from the list available
         action = agent.get_action(state)
-        print(f"game {game_number:3} move {move:3}: taking action {action}")
         # Apply that action to the environment
         next_state, reward, done, info = env.step(action) 
-        state = next_state
+        print(f"game {game_number:3} move {move:3} action {action} reward {reward}")
         env.render()
+        # Prepare for the next move
+        state = next_state
         move += 1
 ```
 
-## Mountain Car - Continuous
+---
 
-Environment: MountainCarContinuous-v0
+## Mountain Car problem - Continuous action
 
-Documentation at
-https://github.com/openai/gym/wiki/MountainCarContinuous-v0
+So far we've only been working with scenarios that involve a discrete action set. More commonly, however, the action set will be continuous. When we want to start using our observation state values as well, they will generally be continuous. What does this mean?
 
+* Discrete data is a count that can't be made more precise. Typically it involves **integers**. For instance, the number of children (or adults, or pets) in your family is discrete data, because you are counting whole, indivisible entities: you can't have 2.5 kids, or 1.3 pets.
+* Continuous data, on the other hand, could be divided and reduced to finer and finer levels. For example, you can measure the height of people at progressively more precise scales—meters, centimeters, millimeters, and beyond—so height is continuous data. Typically it involves using **floating point numbers**.
+
+The complication with using continuous data is we need a finite set of values to use in our q-table for lookup purposes. The most obvious solution is to build our table for ranges of values. 
+
+For instance, looking at the mountain car problem, the observation values for the car position are a range from -1.2 to 0.6. So one possible solution for the q-table would be to use each 0.1 increment for the index. This means we will have to add logic to our program that converts between the floating numbers to integers for storing to the q-table and for searching it.
+
+Given some of the documentation for the Gym environments is lacking, it's useful to understand how to query the environments through Python. The following is some simple code that shows you the different action spaces of the two versions of the MountainCar problem that exist.
+
+```python
+import gym
+import numpy as np
+
+env_name = "MountainCar-v0"
+env = gym.make(env_name)
+print(f"Querying the environment for {env_name}...")
+print(f"env.observation_space = {env.observation_space}")
+print(f"env.action_space = {env.action_space}")
+state = env.reset()
+print(f"Initial state = {state}")
+
+env_name = "MountainCarContinuous-v0"
+env = gym.make(env_name)
+print(f"Querying the environment for {env_name}...")
+print(f"env.observation_space = {env.observation_space}")
+print(f"env.action_space = {env.action_space}")
+state = env.reset()
+print(f"Initial state = {state}")
+```
+
+The output I got for the above is
+
+```
+Querying the environment for MountainCar-v0...
+env.observation_space = Box(2,)
+env.action_space = Discrete(3)
+Initial state = [-0.51097797  0.        ]
+Querying the environment for MountainCarContinuous-v0...
+env.observation_space = Box(2,)
+env.action_space = Box(1,)
+Initial state = [-0.4561188  0.       ]
+```
+
+Where the output refers to a `Box()`, it is indicating continuous or floating point values. Where it is referring to `Discrete()`, it is referring to an integer of that many values.
+
+So for MountainCar-v0, the above tells me:
+
+* Observation will be two floating point numbers, and the action is an integer in range 0 to 2 (ie: 3 possible values)
+
+And for MountainCarContinuous-v0, the output informs that:
+
+* Observation will be two floating point numbers, and the action will also be a floating point number.
+
+This concurs with the documentation for MountainCarContinuous-v0 at [https://github.com/openai/gym/wiki/MountainCarContinuous-v0](https://github.com/openai/gym/wiki/MountainCarContinuous-v0) which states:
+
+```
 Observation: Box 2
  * 0 = Car position from -1.2 to 0.6
  * 1 = Car velocity from -0.07 to 0.07
 Action: Box 1
  * Negative push left, positive push right
+```
 
+So to use our random method for a Continuous action space, we could modify our code as follows...
 
 ```python
 import gym
@@ -367,10 +455,8 @@ import numpy as np
 
 class Agent():
     def __init__(self, env):
-        print("Contineous action space")
         self.low = float(env.action_space.low)
         self.high = float(env.action_space.high)
-        self.action_shape = env.action_space.shape
         print(f"Actions range available: from {self.low} to {self.high}")
 
     def get_action(self, state):
@@ -387,11 +473,12 @@ for game_number in range(100):
     while not done:
         # Get a random action from the list available
         action = agent.get_action(state)
-        print(f"game {game_number:3} move {move:3}: taking action {action}")
         # Apply that action to the environment
         next_state, reward, done, info = env.step(action) 
-        state = next_state
+        print(f"game {game_number:3} move {move:3} action {action} reward {reward}")
         env.render()
+        # Prepare for the next move
+        state = next_state
         move += 1
 ```
 
@@ -399,31 +486,45 @@ for game_number in range(100):
 
 Q-Learning is one of the most commonly used algorithms for reinforcement learning. We will use Q-learning to teach our AI how to navigate through simple worlds using the Gym environments.
 
-Let's start with a terminology primer:
-
-* Agent: The name given to our computer algorithm simulating a human playing the "game". Think Agent Smith from the Matrix... it is the AI-bot.
-* State: The state is a description of condition of the world we are observing. It is a collection of data that provides that description. In more complex uses, it could be providing a full pixel-by-pixel image of whats on the screen to the algorithm. In simplier cases it could be a handful of variables that sum up the key information about the "world" at any moment in time. 
-* Action: What action will our algorithm take? Action is usually based on the environment, different environments lead to different actions based on the agent. Set of valid actions for an agent are recorded in a space called an action space. These are usually finite in number.
-* Environment: This where the agent lives and interacts. The "game world".
-* Reward: The reward function is a measure of the benefit the agent received as a result of taking an action. If we win the game, we'll earn a great reward. If we lose the game, we'll obtain a negative reward. Other actions may obtain smaller positive or negative rewards along the way. It plays a vital role in reinforcement learning. The algorithm will seek to maximise reward.
-* Policies: Policy is a rule used by an agent for choosing the next action, these are also called as agents brains.
+When reading about reinforcement learning online you will see the terminology such as agent, action, state, reward, and environment. So, firstly, a refresher on that terminology copied from above which is based on the structure of how we play a video game: The player (agent) engages in a series of trials (actions) to obtain the highest score (reward). The action the agent takes will vary depending upon what the agent observes on screen (the state) at any moment in time. The overall game world is the "environment".
 
 The most commonly used algorithm for reinforcement learning is known as q-learning. As you start researching into Q-learning, you will likely encounter a formula that looks like this...
 
 ![](img/q-learning-equation.png)
 
-I don't want you to stress over the math, so ignore the formula for now. Instead I will endeavour to explain by way of a walk through what the process is that's occurring.
+I don't want you to stress over the math, so ignore the formula for now. I'll explain the logic of what's going on instead...
 
-    TO DO
+## Q-table
 
-Discuss:
+At the heart of q-learning is the q-table. Why "Q"? Who knows?! Maybe all the other cool letters of the alphabet were taken already?
 
- * Role of q table - a list of every possible state and every possible action, and a historical record of the reward earned by taking that action when in that state.
- * Updating the q table (with a walk through)
- * Mapping a continuous space into discrete set of possiblities for the q table
- * Role of epsilon - especially at the start. exploration is key.
+The q-table is simply a giant lookup table that given any possible game state and action, will keep record of the past reward achieved for taking that action for that state. A simplified example...
+
+![](img/q-table-illustration.png)
+
+In the above illustration, our AI agent is the player 'X'. The q-table pairs every possible state the game can be in, with every possible action the player could make, and stores the historical reward achieved when that action was taken for the corresponding state. So in the example of tic-tac-toe where there are 3^9 states, each of which have 9 actions, that means the table has 177'147 rows.
+
+You might ask why the third row is present as it is not a valid move to land on a square you've already been on in tac-tac-toe. The answer is the agent doesn't know that until it's played the game and learnt from experience that it can't make the move. Remember the AI is actually quite dumb. It knows nothing about what it should or shouldn't do until it is rewarded (or punished) accordingly. The starting value in the reward column for every possible state+action is set to zero, and is adjusted as the agent learns.
+
+The Q-learning algorithm is simply the process by which this table is updated as the agent plays the game. Every time the player makes a move it receives a reward (whether positive or negative, we just call it 'reward' for simplicity). The algorithm will then search up the relevant combination of state and action in the q-table and update it's knowledge about the reward.
+
+## Learning rate
+
+It's important to understand however, that the algorthim will not just adjust the stored reward information to the full value of the reward achieved when it made the move. It only adjusts it a small fraction of the value. This is because, particularly in more complex environments, a given action will not necessarily always result in the same reward for that state. The real reward (winning the game) may only occur several actions later, and the current action may be a path to success or could still be a path to failure (or vice-versa). For this reason we use a "learning rate" to denote how much we want the q-table to be updated each time. So if the learning rate is set to 5% and the agent receives a reward of 20 points, it will only adjust the q-table by 20 * 5% = 1 point for that round.
+
+## Epsilon
+
+The final important consideration is how the agent determines which action to take for any given state. If the q-table is a giant lookup table with the history of rewards for every possible state and every possible action, then surely the agent can just look up the table, find the rows that match for the state the game is currently in, and pick the action that has the history of the best reward? In theory, yes. In practice, yes, but only after the agent is confident it has fully learnt the game.
+
+Remember at the start the q-tables are all set to zero. Consider what happens if the very first set of moves the agent takes happened to end up with a positive reward. If the agent exclusively only ever made moves based on what worked historically, then it will always make the same moves, never deviating. But the positive reward could have been a fluke, or may not be the optimal (highest) reward possible. It is important that while learning the game, the agent continues to explore other options.
+
+For this reason, every time the agent makes a move, it also picks a random number. It compares this random number to another number it has stored within it's memory we call *epsilon*. If the random number is lower than epsilon, it will ignore the q-table and make a purely random move to allow it to explore new options. If the random number was higher than epsilon, it will make the move recommended by the q-table.
+
+As the agent gradually learns, the numerical value stored within epsilon is lowered so the agent gradually becomes increasingly likely to use the q-table instead of making a random move. 
 
 # 6. Mountain Car - with Q Learning
+
+The mountain car with Q-learning
 
 ```python
 import gym
@@ -454,10 +555,10 @@ class Agent():
         self.q = {}
         for state in states:
             for action in self.action_space:
-                self.q[state, action] = 0 # initialise value for this state and action
+                self.q[state, action] = 0 # initialise reward history to 0
 
-    @staticmethod
-    def find_closest(dataset, target):
+    def find_closest(self, dataset, target):
+        # Search an array of observation spaces or action spaces for the entry that is closest to a given target number. 
         closest_index = 0
         closest_distance = 10e10 # a really big number, ie: 10^10
         for i in range(len(dataset)):
@@ -470,23 +571,28 @@ class Agent():
     def get_state(self, observation):
         # Get an observation (continuous) and return a discrete state
         position, velocity = observation
-        return (self.find_closest(self.position_space, position), self.find_closest(self.velocity_space, velocity))
+        position = self.find_closest(self.position_space, position)
+        velocity = self.find_closest(self.velocity_space, velocity)
+        return (position, velocity)
 
     def max_action(self, state):
         # Search our q-table for all entries that match the current state.
         # Then, look through those results to find the action that obtained the highest reward.
         max_index = 0
         max_value = -10e10 # a really negative number, ie: -10^10
+        # For all possible actions...
         for i in range(len(self.action_space)):
             action_val = self.action_space[i]
+            # Find the q-value that matches this state and action
             q_val = self.q[state, action_val]
+            # If the q-value is higher than the best found so far, save this as the best
             if q_val > max_value:
                 max_index = i
                 max_value = q_val
         return self.action_space[max_index]
 
     def get_action(self, state):
-        r = random.random()
+        r = random.random() # random number between 0..1
         # if our random number is less than epsilon, take a random action
         if r < self.epsilon:
             action = random.choice(self.action_space)
@@ -496,6 +602,7 @@ class Agent():
         return action
     
     def train(self, experience):
+        # The experience parameter contains 5 items in it, seperate them out...
         prev_state, action, new_state, reward, done = experience
         # find the new action
         new_action = self.max_action(new_state)
@@ -516,7 +623,7 @@ class Agent():
 env_name = "MountainCarContinuous-v0"
 env = gym.make(env_name)
 agent = Agent(env)
-for game_number in range(101):
+for game_number in range(1000):
     # reset game
     done = False
     score = 0
@@ -544,12 +651,236 @@ for game_number in range(101):
 print("all done!")
 ```
 
-# 7. Moon lander
+# 7. Tic tac toe
 
-# 8. Analysis
+The tic-tac-toe environment is a simple text based one rather than graphical. The sample output looks like the following.
 
+```
+ -------------
+ | x | o | x |
+ -------------
+ | o | x |   |
+ -------------
+ |   | o |   |
+ -------------
+
+game_number 999: status Random wins reward -20
+wins 77%, losses 23%, draws 0%
+```
+
+For your first attempt at developing your own q-learning agent, tic-tac-toe is a fairly simple and intuitive game to get your head around (i hope!). I have provided a random agent for you. Because it is a two player, turn based game, the main-line of the code looks slightly different. You should hopefully be able to follow it. It is designed to have one intelligent agent playing against one random agent, though you could easily modify that code to make the second player also be an intelligent agent or a human player if you wish.
+
+Your task is to build q-learning intelligence into it!
+
+The tic-tac-toe environment comes from [https://github.com/ClementRomac/gym-tictactoe](https://github.com/ClementRomac/gym-tictactoe)
+
+To install, download the the project from github and uncompress the zip file. There will be a `gym_tictactoe` folder inside the uncompressed folders. (Note: one has a hyphen and the other has an underscore!). Copy the `gym_tictactoe` folder into your project folder.
+
+---
+
+```python
+import gym
+import gym_tictactoe
+import random
+
+class Agent():
+    def __init__(self, env):
+        # adjust the rate of learning
+        # Set the actions we can select
+        self.action_space = [0, 1, 2, 3, 4, 5, 6, 7, 8]
+        # Build a list containing all possible states
+        # Build our q-table
+
+    def get_action(self, state):
+        action = random.choice(self.action_space)
+        return action
+    
+    def train(self, experience):
+        pass
+    
+    def reduce_greediness(self):
+        pass
+
+env = gym.make('TicTacToe-v1')  
+env.init(symbols=[-1, 1]) # Define users symbols
+user = 0
+done = False
+agent = Agent(env)
+win, loss, draw, outof = 0, 0, 0, 0
+for game_number in range(1000):
+    # reset game
+    done = False
+    reward = 0
+    move_number = 0
+    state = env.reset()
+    status = ""
+    while not done:
+        env.render(mode=None)
+        if user == 0: # AI's turn
+            # Get the action to perform for this state
+            action = agent.get_action(state)
+            # Apply that action to the environment
+            new_state, reward, done, info = env.step(action, -1)
+            # Train
+            agent.train((state, action, new_state, reward, done))
+        elif user == 1: # Random's turn
+            state, reward, done, infos = env.step(env.action_space.sample(), 1)
+        # End of move: Increment to next player or game is over
+        if not done:
+            user = 0 if user == 1 else 1
+        else:
+            outof += 1
+            if reward == 10:
+                status = "Draw"
+                draw += 1
+            elif reward == -20 and user == 0:
+                status = "Random wins"
+                loss += 1
+            elif reward == -20 and user == 1:
+                status = "Random loses"
+                win += 1
+            elif reward == 20 and user == 0:
+                status = "AI wins"
+                win += 1
+            elif reward == 20 and user == 1:
+                status = "AI loses"
+                loss += 1
+    print(f"game_number {game_number:3}: status {status} reward {reward}")
+    agent.reduce_greediness()
+print(f"wins {round(100*win/outof)}%, losses {round(100*loss/outof)}%, draws {round(100*draw/outof)}%")
+```
+
+# 8. Lunar lander
+
+<img src="img/lander.png" width="50%">
+
+The objective of the lunar lander is to be Neil Armstrong... successfully land your craft on the moon without crashing.
+
+The observation space contains 8 continuous values. The first two are the x,y coordinates containing the location of the space craft relative to the ideal landing spot. The location of the landing spot is always 0,0 so that is what your craft needs to aim for. The other 6 values in the observation space are undocumented so if you wish to use them, analyse their output while watching the game play to determine what they represent. It is safe to assume they would indicate things such as velocity, angle of orientation and so forth.
+
+The action space uses 2 continuous values. The first is for the main engine (-1.0 is off, +0.5 is %50 throttle, +1.0 is 100% throttle), the second is the left/right engine (-1.0 to +1.0)
+
+Rewards: Reward for moving from the top of the screen to landing pad and zero speed is about 100..140 points. If lander moves away from landing pad it loses reward back. Episode finishes if the lander crashes or comes to rest, receiving additional -100 or +100 points. Each leg ground contact is +10. Firing main engine is -0.3 points each frame. Solved is 200 points. Landing outside landing pad is possible. 
+
+The Gym info page is at [https://gym.openai.com/envs/LunarLander-v2/](https://gym.openai.com/envs/LunarLander-v2/)
+
+I have provided a random agent for you. Your task is to build q-learning intelligence into it!
+
+By the way, if you think this is hard to solve... you are right. Allow me to quote from the Gym website FAQ:
+
+    How do I modify an environment to make it easier to learn?
+    The short answer is: don't. Environments are intended to have various levels of difficulty, in order to benchmark the ability of reinforcement learning agents to solve them. Many of the environments are beyond the current state of the art, so don't expect to solve all of them.
+
+Do the best you can... it will be a learning experience regardless!
+
+---
+
+```python
+import gym
+import random
+import numpy as np
+
+class Agent():
+    def __init__(self, env):
+        print(f"[agent init] env.action_space = {env.action_space}, env.observation_space = {env.observation_space}")
+        # adjust the rate of learning
+        # Set the actions we can select
+        self.main_engine = [-1.0, 0.0, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
+        self.left_right_engine = [-1.0, -0.5, 0.0, 0.5, 1.0]
+        # Set the observations we can make
+        # Build a list containing all possible states
+        # Build a list containing all possible actions
+        self.actions = []
+        for main_engine in self.main_engine:
+            for leftright_engine in self.left_right_engine:
+                self.actions.append((main_engine, leftright_engine))
+        # Build our q-table
+
+    def get_state(self, observation):
+        # Get an observation (continuous) and return a discrete state
+        x, y, _, _, _, _, _, _ = observation
+        x = round(x, 1)
+        y = round(y, 1)
+        return (x, y)
+
+    def get_action(self, state):
+        action = random.choice(self.actions)
+        return action
+    
+    def train(self, experience):
+        pass
+    
+    def reduce_greediness(self):
+        pass
+
+env_name = "LunarLander-v2" # uses discret action spaces
+env_name = "LunarLanderContinuous-v2" # uses continuous action spaces
+env = gym.make(env_name)
+agent = Agent(env)
+print("ready to rumble...")
+for game_number in range(50000):
+    score = 0
+    observation = env.reset()
+    state = agent.get_state((observation))
+    done = False
+    move_number = 0
+    while not done: 
+        # Get the action to perform for this state
+        action = agent.get_action(state)
+        # Apply that action to the environment
+        new_observation, reward, done, info = env.step(action)
+        new_state = agent.get_state((new_observation))
+        env.render()
+        score += reward
+        # Prepare for the next move
+        agent.train((state, action, new_state, reward, done))
+        state = new_state
+        move_number += 1
+    # Print diagnostic information
+    print(f"game_number {game_number}: moves made {move_number}, reward earned {score}")
+    agent.reduce_greediness()
+print("all done!")
+```
+
+# 9. Analysis
+
+In the context of the artificial intelligence field of reinforcement learning, prepare an analysis that summarises what you have learnt through this exploration. Pay particular attention to:
+
+* The relevance and need for tools such as reinforcement learning in society.
+* Describing different aspects used within reinforcement learning. 
+* How you tested the models you worked with?
+* How successful your models were and why?
+* With more time, what further changes and improvements would you make?
+
+Criterion A:
+
+* i. explains and justifies the need for a solution to a problem
+* ii. constructs a research plan, which states and prioritizes the primary
+and secondary research needed to develop a solution to the problem
+independently
+* iii. analyses a group of similar products that inspire a solution to the problem
+* iv. develops a design brief, which presents the analysis of relevant research.
+
+Criterion D:
+
+* i. describes detailed and relevant testing methods, which generate
+accurate data, to measure the success of the solution
+* ii. explains the success of the solution against the design specification
+based on authentic product testing
+* iii. describes how the solution could be improved
+* iv. describes the impact of the solution on the client/target audience.
 
 # References
+
+Lesson 1 (Intro to AI)
+
+* Parinaz Sobhani for Canada Learning Code - https://github.com/ladieslearningcode/teenslc-intro-to-ai
+* Key differences between Artificial Intelligence and Machine Learning - https://towardsdatascience.com/key-differences-between-artificial-intelligence-and-machine-learning-fe637cd0deca
+* Machine learning types and alogrithms - https://towardsdatascience.com/machine-learning-types-and-algorithms-d8b79545a6ec
+* Supervised and Unsupervised Machine Learning Algorithms
+by Jason Brownlee on March 16, 2016 - https://machinelearningmastery.com/supervised-and-unsupervised-machine-learning-algorithms/
+* https://towardsdatascience.com/reinforcement-learning-with-python-8ef0242a2fa2
+* https://machinelearningmastery.com/overfitting-and-underfitting-with-machine-learning-algorithms/
 
 Lesson 2, 3 (Pole) derived from 
 
@@ -561,7 +892,7 @@ Lesson 5, 6 (Mountain cart) derived from
 * "Q learning with just numpy | solving the Mountain car | Tutorial" by Machine Learning with Phil, 2019 - https://www.youtube.com/watch?v=rBzOyjywtPw
 * "Youtube-Code-Repository/ReinforcementLearning/mountaincar.py" by philtabor, 2019 - https://github.com/philtabor/Youtube-Code-Repository/blob/master/ReinforcementLearning/mountaincar.py
 
-Lesson 7+ (Tic Tac Toe) derived from
+Lesson 7 (Tic Tac Toe) derived from
 
 * "Gym TicTacToe is a light Tic-Tac-Toe environment for OpenAI Gym" by ClementRomac, 2019 - https://github.com/ClementRomac/gym-tictactoe
 
