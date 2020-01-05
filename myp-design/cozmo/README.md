@@ -173,7 +173,7 @@ Tilt head up/down
 # Python expects the angle to be in radians so it needs converting from degrees.
 # The angle can be provided as a variable or a number.
 angle = 0
-cozmo.set_head_angle(radians(angle)) 
+cozmo.set_head_angle(math.radians(angle)) 
 ```
 
 Raise/lower lifting arm
