@@ -16,11 +16,10 @@ There are various aspects or resources that require management in a computer sys
 
 Each application wants to have access to many or all of these. What determines which program can use what and when? That is the role of the operating system.
 
----
-
 ## Role of the Operating System
 
 The various roles of an operating system generally revolve around the idea of "sharing nicely."
+
 Multiple users, multiple programs, multiple devices all taking their turn to share the CPU between them. The OS acts as the playground monitor and makes sure everyone cooperates and has a chance.
 
 ## Evaluating the limits available
@@ -52,8 +51,6 @@ How could one operating system communicate with and manage an impossibly large v
 Usually that communication is accomplished with the help of a device driver, a small program that "knows" the way a particular device expects to receive and deliver information. With device drivers, every operating system no longer needs to know about every device with which it might possible be expected to communicate in the future. 
 
 It's another beautiful example of abstraction. 
-
----
 
 ## Management techniques used
 
@@ -87,15 +84,14 @@ Affects things such as:
 * Printers
 * Cameras, scanners
 
----
-
 ### Multi tasking
 
-![](img/multitasking.jpg)
+<img src="img/multitasking.jpg" width="50%" style="float:right">
 
 Multitasking is the technique of keeping multiple programs in main memory at the same time; these programs compete for access to the CPU so that they can do their work. All modern operating systems employ multiprogramming to one degree or another. An operating system must therefore perform memory management to keep track of what programs are in memory and where in memory they reside. *(page 340)*
 
 Thus, operating systems must employ techniques to:
+
 * track where and how a program resides in memory, and
 * convert logical program addresses into actual memory addresses.
 
@@ -105,13 +101,9 @@ The solution is to use two kinds of addresses: logical addresses and physical ad
 
 When a program is compiled, a reference to an identifier (such as a variable name) is changed to a logical address. When the program is eventually loaded into memory, each logical address finally corresponds to a specific physical address. The mapping of a logical address to a physical address is called address binding. Logical addresses allow a program to be moved around in memory or loaded in different places at different times. As long as one keeps track of where the program is stored, one is always able to determine the physical address that corresponds to any given logical address. *(pages 344-245)*
 
-> Dale & Lewis (2016) Computer Science Illuminated
-
----
-
 ### Virtual memory & paging
 
-![](img/virtual_memory.png)  
+<img src="img/virtual_memory.png" width="25%" style="float:right">
 
 Virtual Memory is a memory management technique that is implemented using both hardware (MMU) and software (operating system). It abstracts from the real memory available on a system by introducing the concept of virtual address space, which allows each process thinking of physical memory as a contiguous address space (or collection of contiguous segments).
  
@@ -132,12 +124,6 @@ Unfortunately, page table lookup may fail due to two reasons. The first one is w
 
 As it turns out, the task of above works until there is enough room in main memory to store pages back from disk. However, when all the physical memory is exhausted, the page supervisor must also free a page in main memory to allow the incoming page from disk to be stored. To fairly determine which page to move from main memory to disk, the paging supervisor may use several page replacement algorithms, such as Least Recently Used (LRU). Generally speaking, moving pages from/to secondary storage to/from main memory is referred to as swapping (4.), and this is why page faults may occur.
 
-> Tolomei, G (2014?) Virtual Memory, Paging, and Swapping  
-> https://gabrieletolomei.wordpress.com/miscellanea/operating-systems/virtual-memory-paging-and-swapping/
-> 
-> Virtual memory image by ehamberg (2018) Wikimedia commons - CC BY-SA 3.0  
-> https://commons.wikimedia.org/w/index.php?curid=8352077
-
 ### Interrupts & polling
 
 An interrupt is a signal to the processor emitted by hardware or software indicating an event that needs immediate attention. 
@@ -152,21 +138,22 @@ This is where the CPU periodically checks each device to see if it needs service
 * Overhead may be reduced at expense of response time
 * Can be efficient if events arrive rapidly
 
-"Polling is like picking up your phone every few seconds to see if you have a call. ..." Which is more efficient? 
+"Polling is like picking up your phone every few seconds to see if you have a call. ..." 
+
+Which is more efficient? 
 
 * Interrupts win if processor has other work to do and event response time is not critical
 * Polling can be better if processor has to respond to an event ASAP ??
 * Polling may sometimes be used in device controller that contains dedicated secondary processor
 
-This video demonstrates through using an Arduino the differences between polling and interrupts.
 
-> Computerphile (2017) Program, Interrupted  
-> https://www.youtube.com/watch?v=54BrU82ANww (6m40)
+<img src="img/qr-video-interrupts.png" style="float:right">This video demonstrates through using an Arduino the differences between polling and interrupts.
+
+* Computerphile (2017) Program, Interrupted - [https://www.youtube.com/watch?v=54BrU82ANww](https://www.youtube.com/watch?v=54BrU82ANww) (6m40)
 
 This is an interesting article looking at the Apollo Guidance Computer of the 1970s and the challenges they tackled building an operating system for it. The article discusses the unsuitablity of round-robin scheduling and the adoption of priority queues through interrupts.
 
-> Srikanth, V (2018): The Magic behind Apollo  
-> https://medium.com/delta-force/the-magic-behind-apollo-cf89aede34d4
+* Srikanth, V (2018): The Magic behind Apollo - [https://medium.com/delta-force/the-magic-behind-apollo-cf89aede34d4](https://medium.com/delta-force/the-magic-behind-apollo-cf89aede34d4)
 
 ## Dedicated device operating systems
 
@@ -200,3 +187,14 @@ Describe one way that the operating system of a networked workstation hides the 
 Define the term operating system?
 
 Outline the role of paging in the management of primary memory?
+
+## References
+
+Multi tasking
+
+* Dale & Lewis (2016) Computer Science Illuminated
+
+Virtual memory & paging
+
+* Tolomei, G (2014?) Virtual Memory, Paging, and Swapping - https://gabrieletolomei.wordpress.com/miscellanea/operating-systems/virtual-memory-paging-and-swapping/
+* Virtual memory image by ehamberg (2018) Wikimedia commons - CC BY-SA 3.0 - https://commons.wikimedia.org/w/index.php?curid=8352077

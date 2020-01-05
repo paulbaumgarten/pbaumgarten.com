@@ -1,5 +1,3 @@
-# Unit 4: Computational thinking, problem solving and programming
-
 # Unit 4.1: Computational thinking
 
 Jeanette Wing (Vice President of Microsoft Research, and previously President’s Processor of Computer Science at Carnegie Mellon University, Pittsburgh) wrote a short but highly influential paper outlining the importance of computational thinking. That paper forms the basis of this unit within the IB course.
@@ -82,6 +80,8 @@ for (each episode of Game Of Thrones)
 end 
 ```
 
+---
+
 ### Activity: Logical thinking with a flow chart
 
 On 1st June 2009, Air France flight 447 left Rio de Janeiro heading to Paris.  It was a routine international flight.  In the early hours of the morning, over the Atlantic Ocean, contact was lost, and the aeroplane vanished.
@@ -141,7 +141,9 @@ If an egg breaks when dropped from floor n, then it would also have broken from 
 
 The question is: What strategy should you adopt to minimize the number egg drops it takes to find the solution?. (And what is the worst case for the number of drops it will take?)
 
-** Hint **
+**Spoilers ahead! Don't read on further than necessary. If you do read a hint, stop and give it a genuine attempt before reading on to the next one**
+
+** Hint 1 **
 
 Whilst it’s not strictly part of the puzzle, let’s first imagine what we’d do if we had only one egg.
 
@@ -149,7 +151,7 @@ Once this egg is broken, that’s it, no more egg. So, we really have no other c
 
 There’s no other one egg solution. If we’d been feeling lucky we could have gone up the floors in two’s but imagine if the egg broke on floor 16; we have no way of knowing if it would have also broken on floor 15!
 
-** Hint part 2 **
+** Hint 2 **
 
 At the other extreme, what if we had an infinite number of eggs? (Or at least as many eggs as we need). What would our strategy be here? In this case we’d use one of a programmer’s favorite tools, the binary tree.
 
@@ -157,7 +159,7 @@ First we’d go to floor 50 and drop an egg. It either breaks, or it does not. T
 
 The mathematicians in the audience will quickly see that the number of drops required for this solution is log2 n, where n is the number of floors of the building. (This is like asking how many powers of two there are). ie: log2 100 = 6.644, or 7.
 
-** Hint part 3 **
+** Hint 3 **
 
 It does not take much imagination to see why a binary search solution will not work (optimally) for two eggs. Let’s imagine we did try a binary search and dropped our first egg from floor 50. If it broke, we’d be instantly reduced to a one egg problem.
 
@@ -165,9 +167,13 @@ What happens if we started off with our first egg going up by floors ten at a ti
 
 The question really comes down to: what is the optimal number of floors to skip with the first egg?
 
-** Hint part 4 **
+** Hint 4 **
 
 What we need is a solution that minimizes our maximum regret. We need is a strategy that tries to make solutions to all possible answers the same depth (same number of drops). The way to reduce the worst case is to attempt to make all cases take the same number of drops.
+
+** Solution **
+
+Did you work it out? The solution is at [https://code.oursky.com/famous-egg-dropping-puzzle-in-combinatorics/](https://code.oursky.com/famous-egg-dropping-puzzle-in-combinatorics/)
 
 ### Activity: Ball bearings
 
@@ -230,8 +236,6 @@ In what ways is the taxi driver able to:
 * Think ahead
 * Think logically
 
----
-
 # Unit 4.2: Program design
 
 Program design is all about **solving problems**.
@@ -254,44 +258,45 @@ For that reason, most of the time an algorithm is being written it won't be in a
 
 **What is pseudo code?**
 
-Notation that is intended to be **language-neutral**, so a programmer can understand what is required regardless of the languages they know.
+It is "Structured English".
 
-Oxford dictionaries define "pseudo" as being *Not genuine; spurious or sham.*. In that way, pseudo-code is not a genuine programming language; It is a documentation tool. With that in mind there is no 100% "correct" or "incorrect" way of writing it. If you search "how to write pseudo code", you will find a variety of different answers and syntax articulated. Don't stress too much about memorising a "correct" way of writing it. If what you write achieves the purpose of **providing a language neutral way of documenting an algorithm so a programmer can understand it regardless of the languages they know**, then you have written good pseudo code.
+It's intent: To clearly communicate an algorithm to other programmers regardless of the programming language(s) they are familiar with.
 
-**IB expectations**
+It uses general programming constructs rather than anything language specific.
 
-You need to be able to create as well as interpret/analyse pseudo code.
+Since it is not an actual language, there is not a fixed syntax for it’s use in broader computer science industry, provided it is generic enough to achieve it’s aims.
 
->Where answers are to be written in pseudocode, the examiners will be looking for clear algorithmic thinking to be demonstrated. In examinations, this type of question will be written in the approved notation, so a familiarity with it is expected. It is accepted that under exam conditions candidates may, in their solutions, use pseudocode similar to a programming language with which they are familiar. This is acceptable. The markscheme will be written using the approved notation. Provided the examiners can see the logic in the candidate’s response, regardless of language, it will be credited. No marks will be withheld for syntax errors ... for answers to be written in pseudo code
+*That said, to achieve consistency in iGCSE & IB, these courses do have a fixed syntax for the manner in which questions are provided.*
 
-**IB syntax**
+---
 
-Given the statements made above about there not being a "correct" way to write it, there is a set syntax that the IB will use when they write pseudo code questions for you in the exam. As per the expectations comments above, you are not obligied to follow their syntax in your responses, and you will not lose credit for doing so, but you should be familiar enough with their syntax to be able to properly interpret the questions they give you.
+## Pseudo code example
 
-*These methods, in their pseudocode format, may be used without explanation or clarification in examination questions. Teachers should ensure that candidates will be able to interpret these methods when presented as part of an examination question.*
+```text
+ODDS ← 0
+EVENS ← 0
+input N
+loop while N <> 0
+    if N modulus 2 == 0 then
+        EVENS ← EVENS + 1
+    else
+        ODDS ← ODDS + 1
+    end if
+    input N
+end loop
+output ODDS, EVENS
+```
 
-The following comes from the IB documents
-
-* "Approved notation for developing pseudocode" available at [https://pbaumgarten.com/ib-compsci/ib-compsci-pseudocode-flowcharts.pdf](https://pbaumgarten.com/ib-compsci/ib-compsci-pseudocode-flowcharts.pdf)
-* "Pseudocode in Examinations" available at [https://pbaumgarten.com/ib-compsci/ib-compsci-pseudocode-in-detail.pdf](https://pbaumgarten.com/ib-compsci/ib-compsci-pseudocode-in-detail.pdf)
-
-![](img/ib-pseudo-code-approved-notation-both.jpg)
-![](img/ib-pseudo-code-strings-arrays-collections.jpg)
-![](img/ib-pseudo-code-examples.jpg)
-
-
-## Flow charts
-
-IB exams will not require you to create your own flow charts but they will present flow charts to you for analysis and interpretation.
-
-Check the previous pages for the "official" IB method of presenting flow chart questions to you.
-
+* What is the above algorithm doing?
+* Bonus points: What is the error in this algorithm?
 
 ## Trace tables
 
-A trace table is a technique used to test algorithms, in order to make sure that no logical errors occur whilst the algorithm is being processed. The table usually takes the form of a multi-column, multi-row table; With each column showing a variable, and each row showing each number input into the algorithm and the subsequent values of the variables (Wikipedia: Trace table).
+A trace table is a method of performing a manual dry run on an algorithm where _you_ perform the computations. It is useful for error checking of simple algorithms.
 
-Trace tables are a useful way of checking the algorithm is going to behave the way you want it to. You should have columns for all variables, and for all comparison checks.
+To make one, draw a table of columns, one for each variable. Then walk through the algorithm by hand, writing any changes to the data line by line using test data.
+
+To properly test an algorithm with a trace table it is important to use a good variety of test data, both normal and erroneous data.
 
 You are expected to be able to analyse and create trace tables for different algorithms. You could, for instance, be asked to:
 
@@ -303,6 +308,69 @@ You are expected to be able to analyse and create trace tables for different alg
 ![](img/trace-tables.jpg)
 
 ---
+
+What would a trace table look like for the previous pseudo code algorithm?
+
+```text
+ODDS ← 0
+EVENS ← 0
+input N
+loop while N <> 0
+    if N modulus 2 == 0 then
+        EVENS ← EVENS + 1
+    else
+        ODDS ← ODDS + 1
+    end if
+    input N
+end loop
+output ODDS, EVENS
+```
+
+| Odds | Evens | N | Output |
+| ---- | ----- | -- | ----- |
+| .     |       |    |       |
+| .     |       |    |       |
+| .     |       |    |       |
+| .     |       |    |       |
+| .     |       |    |       |
+| .     |       |    |       |
+| .     |       |    |       |
+| .     |       |    |       |
+| .     |       |    |       |
+| .     |       |    |       |
+
+## Questions: Pseudo code & trace tables
+
+Q1. Design an algorithm... where the user continually inputs a number, stopping when -1 is provided. For each number, the count and the sum of the numbers provided is kept and output at the end.
+
+Q2. Design an algorithm... that counts numbers. Have the user inputs two positive integers, and the program counts up by increments of 1 from the smaller number up to but not including the larger number.
+
+Q3. Design an algorithm... where the user inputs three peoples names, and the program prints the name of the person whose name is longest (contains the most characters).
+
+Q4. Design an algorithm... where the user inputs three numbers, and then outputs them in order from lowest to highest value.
+
+---
+
+## IB Pseudo code and flow charts
+
+You need to be able to create as well as interpret/analyse pseudo code.
+
+    Where answers are to be written in pseudocode, the examiners will be looking for clear algorithmic thinking to be demonstrated. In examinations, this type of question will be written in the approved notation, so a familiarity with it is expected. It is accepted that under exam conditions candidates may, in their solutions, use pseudocode similar to a programming language with which they are familiar. This is acceptable. The markscheme will be written using the approved notation. Provided the examiners can see the logic in the candidate’s response, regardless of language, it will be credited. No marks will be withheld for syntax errors ... for answers to be written in pseudo code
+
+Given the statements made above about there not being a "correct" way to write it, there is a set syntax that the IB will use when they write pseudo code questions for you in the exam. As per the expectations comments above, you are not obligied to follow their syntax in your responses, and you will not lose credit for doing so, but you should be familiar enough with their syntax to be able to properly interpret the questions they give you.
+
+*These methods, in their pseudocode format, may be used without explanation or clarification in examination questions. Teachers should ensure that candidates will be able to interpret these methods when presented as part of an examination question.*
+
+IB exams will not require you to create your own flow charts but they will present flow charts to you for analysis and interpretation. The IB format for these is included in the document that follows.
+
+The following comes from the IB documents
+
+* "Approved notation for developing pseudocode" available at [https://pbaumgarten.com/ib-compsci/ib-compsci-pseudocode-flowcharts.pdf](https://pbaumgarten.com/ib-compsci/ib-compsci-pseudocode-flowcharts.pdf)
+* "Pseudocode in Examinations" available at [https://pbaumgarten.com/ib-compsci/ib-compsci-pseudocode-in-detail.pdf](https://pbaumgarten.com/ib-compsci/ib-compsci-pseudocode-in-detail.pdf)
+
+![](img/ib-pseudo-code-approved-notation-both.jpg)
+![](img/ib-pseudo-code-strings-arrays-collections.jpg)
+![](img/ib-pseudo-code-examples.jpg)
 
 ## Excercises for pseudo code
 
@@ -327,36 +395,7 @@ Write pseudo code that will perform the following:
 
 Write pseudo code that will calculate a running sum. A user will enter numbers that will be added to the sum and when a negative number is encountered, stop adding numbers and write out the final result.
 
-**Question 5: Cricket scores**
-
-SCORES is a collection that stores the runs scored by a cricketer in each match he played. 
-
-In your answer, make use of the collections functions of isEmpty(), hasNext(), getNext(), resetNext() and addItem()
-
-Write pseudocode for the following: 
-
-1. Count and display the number of matches the player has played.
-2. Calculate and display the average runs scored by the player.
-3. Get a number S as input and check if it is present in the collection SCORES. Display appropriate message.
-4. Count and display the number of times the player scored above 99.
-5. Add the following scores to STORES – 145, 78, 26, 89
-
-(sourced from Rajesh Kumar via IB teacher forums)
-
-**Question 6: Rainfall**
-
-The rainfall of each day during a monsoon period is stored in a collection RAINFALL. Write pseudocode for the following:
-
-1. Get a value D as input. Search for D in RAINFALL and display an appropriate message “Found” or “Not found”.
-2. To store the data in RAINFALL, into an array RAIN. (Assume that the array RAIN has enough locations to store data and the collection RAINFALL is non-empty)
-3. To get a number R as input and count the array RAIN for number of days the rainfall was above or equal to R. Display the count.
-4. Sort the array RAIN in descending order, using either Bubble or Selection sort technique.
-5. To get two numbers MIN and MAX as inputs. Check the Collection RAINFALL and store all the values between MIN and MAX (both inclusive) into a linked list LINKRAIN.
-6. To calculate and display the average of the list LINKRAIN.
-
-(sourced from Rajesh Kumar via IB teacher forums)
-
-**Question 7: Hailstone problem**
+**Question 5: Hailstone problem**
 
 The Hailstone Series is generated using the following high level algorithm: 
 
@@ -365,22 +404,22 @@ The Hailstone Series is generated using the following high level algorithm:
 * If it is even, divide the number by two. 
 * Go back to step 2. 
 
-This series will eventually reach the repeating ”ground” state: 4, 2, 1, 4, 2, 1 
+This series will eventually reach the repeating "ground" state: 4, 2, 1, 4, 2, 1 
 
 Here is the sequence generated for an initial value of 26: 
 
 * 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1, 4, 2, 1
 
-Task 1: Convert the high-level algorithm into pseudo-code subject to the following:
+Task 1: 
 
+* Convert the high-level algorithm into pseudo-code
 * At the end, display how many items are in the sequence
 * At the end, display what is the largest number computed in the sequence
-* You can assume the ”ground” state commences when the integer 4 is computed. At this stage you can terminate computation of the series. 
-* If 0 is input as the positive number your algorithm should terminate without calculating the series. 
+* You can assume the "ground" state commences when the integer 4 is computed. At this stage you can terminate computation of the series. 
 
 Task 2: Produce a trace table for your Hailstone Series algorithm, given an input of 17.
 
-**Question 8: Fizz buzz**
+**Question 6: Fizz buzz**
 
 This is a "famous" programming job interview question.
 
@@ -393,20 +432,7 @@ Example output: 1, 2, Fizz, 4, Buzz, Fizz, 7, 8, Fizz, Buzz, 11, Fizz, ...
 
 Task: Create the pseudo code for a Fizz Buzz generater, and use a trace table to for values up to 15.
 
-**Question 9: Secret number guesser**
-
-Create pseudo code for an algorithm where the computer picks a "secret" number at random from 1 to 100. The user is then repeatedly prompted to guess the number, the computer responds with "too low", "too high", or "correct!". The computer should also keep count of the number of guesses and let the user know how many guesses it required at the end.
-
-Swap with your neighbour to test each others algorithms with trace tables. Have they documented it correctly?
-
-Assume availability of a random number generator function to complete this exercise. The function can be Math.random( maximum ) where a number will be generated between 0 and the maximum.
-
-Task:
-
- * Create the pseudo code for the algorithm
- * Use a trace table to test your algorithm picking a "random number" of 37, and "input" guesses of 50, 25, 40, 35, 37.
-
-**Question 10: An IB question**
+**Question 7: An IB question**
 
 The following exercise comes from the May 2015 IB exam. 
 
@@ -435,8 +461,6 @@ The following past paper questions include those that require use arrays and col
 * [Pseudocode past paper questions for practice](assets/pseudocode-past-questions.pdf)
 * [70 pseudocode practice questions](/igcse-compsci/distribute/pseudocode-70-questions.pdf) (I have the solutions for these for you to self-check)
 
----
-
 ## The standard algorithms
 
 There are a number of algorithms the IB course will assume you know by memory. These are the "standard algorithms".
@@ -448,11 +472,9 @@ There are a number of algorithms the IB course will assume you know by memory. T
 
 Any algorithm not defined as a "standard algorithm" can be considered a "novel algorithm" and will be either presented to you in the exam or is an algorithm you would be expected to devise.
 
-* [Bubble sory, insertion sort and quick sort demo video](https://www.youtube.com/watch?v=WaNLJf8xzC4) (4m38 TED-Ed)
+* [Bubble sort, insertion sort and quick sort demo video](https://www.youtube.com/watch?v=WaNLJf8xzC4) (4m38 TED-Ed)
 
----
-
-### Sequential search
+## Sequential search
 
 Search through a set of data sequentially until you find the item you are looking for.
 
@@ -469,9 +491,7 @@ function sequential( haystack, needle ) {
 
 One interesting thing to note with the sequential search is it does not require your data to be sorted ahead of the search. This could save a lot of processing time. If, however, your data is already sorted, you can include within your sequential search a test to see if we have already gone past the point at which the record we are looking for would exist. In that case, we can abort the remainder of the search and return a "not found" result.
 
----
-
-### Binary search
+## Binary search
 
 A binary search divides a range of values into halves, and continues to narrow down the field of search until the unknown value is found. It is the classic example of a "divide and conquer" algorithm. Your data must be pre-sorted!
 
@@ -497,7 +517,7 @@ function binary( haystack, needle ) {
 
 Note: This is known as an iterative binary search. There is also a recursive binary search which we will look at in a later unit. Just be aware if you have to google binary search that there are two types.
 
-### Search algorithm exercises
+## Search algorithm exercises
 
 **Question 1: Tracing binary search**
 
@@ -519,7 +539,7 @@ Use the 7 step process to devise an algorithm for this and have a go at implemen
 
 * You will need a "word list" to use as your dictionary. There are lots of good word lists available online. This is one I've used before but feel free to find your own. https://github.com/dolph/dictionary/blob/master/popular.txt
 
-### Bubble sort
+## Bubble sort
 
 Bubble sort: The highest value "bubbles" to the top each round.
 
@@ -541,9 +561,11 @@ function bubbleSort( data ) {
 }
 ```
 
-### Selection sort
+---
 
-The selection sort is just as inefficient as the bubble search, so why bother learning both? The big advantage for the selection sort is it optimised for when writing data is very expensive (slow) when compared to reading, eg. writing to flash memory or EEPROM. No other sorting algorithm has less data movement!  This is important to realise as you can be asked questions justifying the use of one algorithm over another.
+## Selection sort
+
+The pseudo code for a selection sort
 
 ```
 function selectionSort( data ) {
@@ -562,35 +584,64 @@ function selectionSort( data ) {
 }
 ```
 
+## Comparing Bubble and Selection sort
+
 To see an animation of either sort in action look at https://visualgo.net/bn/sorting 
 
----
+Both of these sorting algorithms look very inefficient (and, generally speaking they are). But they do have unique edge-case advantages when they might be of real-world use.
 
-### Sort algorithm exercises
+* Buuble sort is highly efficient when the dataset is already mostly sorted. It is ideal to use when you want to add a new value into it's sorted position to an already sorted dataset.
+* Selection sort is optimised for when writing data is very expensive (slow) when compared to reading. Eg:. writing to flash memory or EEPROM. No other sorting algorithm has less data movement!  This is important to realise as you can be asked questions justifying the use of one algorithm over another.
+
+## Sort algorithm exercises
 
 **Question 1**
 
-Go to https://www.random.org/integer-sets/ and produce 1 set of 50 random integers. Be sure to turn off the tick box that sorts the results for you, you want unsorted data.
+Here is a set of 50 integers from [https://www.random.org/integer-sets/](https://www.random.org/integer-sets/)...
 
-Implement both sorting algorithms to process your data set. Create two programs that will load the array, sort it, and then output the list of names to the screen. Your two programs is to create one version that implements a bubble sort, and one version that implements a selection sort.
+```text
+34, 43, 73, 88, 9, 91, 48, 10, 94, 3, 75, 87, 74, 63, 11, 36, 82, 100, 28, 68, 18, 60, 35, 81, 79, 23, 86, 41, 49, 2, 7, 83, 6, 58, 47, 39, 27, 54, 21, 12, 4, 5, 31, 46, 62, 55, 37, 57, 67, 93
+```
+
+Implement both sorting algorithms to process your data set. Compare and contrast how many comparison read operations each takes (ie: count the number of times the `if` statement operates), and how many write operations each takes (ie: how many times the array is written to).
+
+Is it correct that the selection sort orders of magnitude more efficient for the number of write operations?
+
+```text
+100, 1, 2, 3, 5, 9, 10, 11, 12, 17, 20, 23, 25, 31, 33, 35, 39, 40, 42, 43, 44, 45, 46, 47, 51, 52, 55, 56, 59, 61, 62, 63, 64, 66, 69, 70, 75, 77, 78, 79, 80, 81, 83, 86, 87, 88, 89, 92, 94, 96, 98
+```
+
+Swapping to use the second set of numbers, is it true that the bubble sort is more efficient for this "almost sorted" set? By how much?
 
 **Question 2**
 
 Once you are successfully sorting numbers, how about sorting strings such as a list of names?
 
+```text
+"Eustolia","Nathan","Milissa","Willie","Hoyt","Alexandria","Clelia","Alpha","Delbert","Boyd","Milton","Vivan","Constance","Hilma","Irving","Carie","Nicky","Adele","Carlene","Hermina","Ayana","Frederica","Arianna","Zandra","Vina","Lory","Mao","Alona","Lajuana","Coralie","Allyson","Corey","Geraldo","Sherryl","Monika","Charlesetta","Deon","Coletta","Jed","Carlee","Lise","Teresita","Odelia","Adeline","Olive","Elisha","Casey","Octavia","Alexandra","Franklyn"
+```
+
+From [http://listofrandomnames.com/](http://listofrandomnames.com/).
+
 **Question 3**
 
-Sort a set of dates given in dd/mm/yyyy format into their correct calendar order so the date which occurs first, appears first in the list.
+Sort the given set of dates given in dd/mm/yyyy format into their correct calendar order so the date which occurs first, appears first in the list.
+
+```text
+"29/06/2009","06/06/1984","16/06/1993","23/11/1996","23/09/1986","07/07/2002","29/01/1999","13/06/1998","14/02/2005","29/08/2013","24/12/2009","04/09/2019","02/02/2020","22/10/2015","08/11/1987","23/10/2018","14/10/2015","19/02/2013","05/06/1989","21/08/1991","06/06/2005","03/02/1993","01/12/1993","01/09/1995","24/01/2018"
+```
+
+From [https://www.random.org/calendar-dates/](https://www.random.org/calendar-dates/)
 
 ---
 
 ## Algorithm efficiency and Big-O
 
+We have compared the efficiency of our sorting algorithms. Studying algorithm efficiency and having a language to describe it is an important part of the science of Computer Science.
+
 From the IB CS syllabus:
 
-> Students should understand and explain the difference in efficiency between a single loop, nested loops, a loop that ends when a condition is met or questions of similar complexity.
-> Students should also be able to suggest changes in an algorithm that would improve efficiency, for example, using a flag to stop a search immediately when an item is found, rather than continuing the search through the entire list.
-> Examination questions will involve specific algorithms (in pseudocode/flowcharts), and students may be expected to give an actual number (or range of numbers) of iterations that a step will execute.
+    Students should understand and explain the difference in efficiency between a single loop, nested loops, a loop that ends when a condition is met or questions of similar complexity. Students should also be able to suggest changes in an algorithm that would improve efficiency, for example, using a flag to stop a search immediately when an item is found, rather than continuing the search through the entire list. Examination questions will involve specific algorithms (in pseudocode/flowcharts), and students may be expected to give an actual number (or range of numbers) of iterations that a step will execute.
 
 As you can see from the above, it is important to understand the efficiency of different algorithms. One measure used in industry is called Big O notation.
 
@@ -625,6 +676,8 @@ function something() {
 // Overall result = O(a+b)
 ```
 
+---
+
 2. Drop constants.
 
 ```
@@ -656,14 +709,18 @@ For example, if an algorithm as a nested for-loop which would be O(n^2) and a re
 
 Here is also a great analogy from the comments section of that video: Let's say you're making dinner for your family. O is the process of following a recipe, and n is the number of times you follow a recipe.
 
-* O(1) - you make one dish that everyone eats whether they like it or not. You follow one recipe from top to bottom, then serve (1 recipe). <-- How I grew up
-* O(n) - you make individual dishes for each person. You follow a recipe from top to bottom for each person in your family (recipe times the number of people in your family).
-* O(n^2) - you make individual dishes redundantly for every person. You follow all recipes for each person in your family (recipe times the number of people squared).
-* O(log n) - you break people into groups according to what they want and make larger portions. You make one dish for each group (recipe times request)
+* `O(1)` - you make one dish that everyone eats whether they like it or not. You follow one recipe from top to bottom, then serve (1 recipe). <-- How I grew up
+* `O(n)` - you make individual dishes for each person. You follow a recipe from top to bottom for each person in your family (recipe times the number of people in your family).
+* `O(n^2)` - you make individual dishes redundantly for every person. You follow all recipes for each person in your family (recipe times the number of people squared).
+* `O(log n)` - you break people into groups according to what they want and make larger portions. You make one dish for each group (recipe times request)
 
 For a graphical comparison that illustrates the difference in processing load of different O() algorithms, check the [bigocheatsheet.com](http://bigocheatsheet.com/) website.
 
-## Practice: Determine the Big O
+---
+
+## Questions: Determine the Big O
+
+What is the Big O in the following?
 
 **Question 1**
 
@@ -726,7 +783,7 @@ You are maintaining a customer contact details database for a sales business, cu
 
 Should your program...?
 
-* Save new changes as they occur, and have the support desk app sequentially search through the records OR 
+* Save new changes as they occur, and have the support desk app sequentially search through the records? ... or ...
 * Bubble sort after every save, and have the support desk app binary search through the records.
 
 Justify your choice with reference to the O(n) of each method. [5 marks]
@@ -740,15 +797,11 @@ With approximately 1000 transactions per day, would it be more efficient to:
  * Selection sort the data after each individual sale? or
  * Bubble sort the data after closing each day?
 
----
+# Unit 4.3: Programming concepts
 
-# Unit 4.3: Programming
-
-The following assumes you have already been introduced to a programming language. It only outlines the theory content associated with unit 4.3 not the introduction to a programming language.
+The following is not an introduction to a programming langauge per-se, rather a discussion about the conceptual ideas involved in programming.
 
 ## Nature of programming languages
-
-As we saw in unit 2, the CPU uses the fetch-decode-execute-store cycle.
 
 Software programs are sets of instructions. For a CPU to execute these instructions, each one must first be translated into machine code – simple binary codes that activate parts of the CPU.
 
@@ -760,10 +813,9 @@ The CPU only performs a few basic functions:
 
 A piece of software, such as a game or web browser, combines these functions to perform more complex tasks. These are known as compound operations.
 
-**How do computers read code?**
+Do how do computers read code?
 
 This video is a look at the link between programming languages, compilers, assembler and machine code - [https://www.youtube.com/watch?v=QXjU9qTsYCc](https://www.youtube.com/watch?v=QXjU9qTsYCc) (12:00)
-
 
 ## Low level v higher level languages
 
@@ -827,7 +879,7 @@ A compiler translates a human-readable program directly into an executable, mach
 
 An interpreter translates a human-readable program into an executable, machine-readable form, instruction by instruction. It then executes each translated instruction before moving on to the next one. A program is translated every time it is run. Python is an example of an interpreted language.
 
-## Core constructs in modern programming languages
+## Features of modern programming languages
 
 Regardless of the programming language you learn, there are core constructs that are generally available in all major, modern programming langauges. Be sure you are aware of the terminology involved.
 

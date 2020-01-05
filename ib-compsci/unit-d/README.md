@@ -1,10 +1,8 @@
-# Unit D1-3: Object orientated programming
-
 # Unit D1: OOP concepts
 
-Video: Object-oriented Programming in 7 minutes | Mosh (2018)
+<img src="img/qr-oop-in-7-mins.png" style="float: right">Video: Object-oriented Programming in 7 minutes by Mosh (2018)
 
-[![](http://i3.ytimg.com/vi/pTB0EiLXUC8/hqdefault.jpg)](https://www.youtube.com/watch?v=pTB0EiLXUC8)
+* [https://www.youtube.com/watch?v=pTB0EiLXUC8](https://www.youtube.com/watch?v=pTB0EiLXUC8)
 
 There's a couple of things that aren't perfect with this video, but as beginners it should serve you fairly well. If you grasp the usefulnesss of grouping related variables and functions together as the main takeaway then you've done well.
 
@@ -33,6 +31,8 @@ Designing object orientated programming depends identifying four things:
 * Identify how the different objects relate to one-another
 * Identify the properties of each class of object
 * Identify the behaviours of each class of objet
+
+---
 
 ## Classes and objects
 
@@ -69,7 +69,7 @@ As with procedural programming, attributes have a data type associated with them
 
 This process of actually "creating" an object based on its class definition is known as instantiation. It is instantiation that will allocate the memory required to a new object based off the class definition and will execute the code necessary at its construction or birth (more on that later). (as per previous analogy: the act of building the house from the drawings)
 
-<div class="page" />
+---
 
 ## UML
 
@@ -81,7 +81,7 @@ A simple UML Class diagram for the Person class we previously discussed would lo
 
 Essentially it is a three row box. The first row is the class name, the second is the list of attributes (properties, variables) and the third is the list of methods (behaviours, functions).
 
-### UML Exercises
+## UML Exercises
 
 Let's explore a few common scenarios and decompose them into likely classes of objects that are documentated through UML diagrams.
 
@@ -92,7 +92,7 @@ Let's explore a few common scenarios and decompose them into likely classes of o
 * Calendars
 * Media collections
 
-<div class="page" />
+---
 
 ## Relationships
 
@@ -112,7 +112,7 @@ At its heart, OOP methodology is about abstracting a problem into the objects wi
 
 It is thought that this makes data safer and manipulation of data more predictable. 
 
-<div class="page" />
+---
 
 ## Coding example
 
@@ -195,8 +195,7 @@ For now, I don't want you to be too concerned about all the extra boiler plate a
 
 ![](img/introducing-properties-and-methods.png)
 
-<div class="page" />
-
+---
 
 # Unit D2: OOP features
 
@@ -254,7 +253,7 @@ Key points to discuss:
 
 ![](img/ExerciseOOP_ShapeAndSubclasses.png)
 
-<div class="page" />
+---
 
 ## Abstraction
 
@@ -371,15 +370,15 @@ genta.setName( "Genta" );
 println( genta.getName() );
 ```
 
-<div class="page" />
+---
 
 ## Polymorphism
 
 Polymorphism is the concept that allows our object to have multiple implementations of the same behaviour depending on the data it receives. There are two types of polymorphism that can be used within Java OOP: Overloading, and Overriding
 
-![](img/polymorphism.png)
+<img src="img/polymorphism.png" width="40%" style="float: right">
 
-### Polymorphism by overloading
+## Polymorphism by overloading
 
 Overloading means we will have two methods with the identical name, but expecting different input parameters. Which one is executed depends on the parameters that are provided at run time. 
 
@@ -438,7 +437,7 @@ System.out.println( demo.getAge() );
 
 Overloading polymorphism is a very handy tool as it means we don't have to continually remember "what did I call that method for this circumstance?". It comes in particularly useful when we are usually going to want our program to assume a default value, so we don't want to have to manually specify it every time, but also allowing us the possibility to override the default – such as the above example with the speed of the vehicle.
 
-### Polymorphism by overriding
+## Polymorphism by overriding
 
 Overriding means a subclass is implementing a method of the same name as exists in the superclass.
 
@@ -474,7 +473,9 @@ public class Demo {
 }
 ```
 
-### Polymorphism questions
+---
+
+## Questions on Polymorphism
 
 Examine the following codes and draw the class diagram.
 
@@ -609,8 +610,6 @@ The following is a very interesting paper, looking at some of the risks with our
 
 * Cox, Russ (2019) "Our Software Dependency Problem" available at [https://research.swtch.com/deps](https://research.swtch.com/deps)
 
-<div class="page" />
-
 # Unit D3: OOP programming
 
 ## Terminology
@@ -635,7 +634,9 @@ Before we spend too much time programming OOP, are there any terms we need to di
 * extends
 * static
 
-Find all the above in this [OOP terminology exercise PDF](oop-terminology.pdf)
+---
+
+![](oop-terminology.jpg)
 
 ## Programmer considerations
 
@@ -653,7 +654,7 @@ How much do programmers have ethical & moral duties in their work?  For instance
 * What about acknowledging the work of other programmers? 
 * What is the Open Source movement, and ethically how important is it to contribute to it if you plan on taking advantage of open source code in your project?
 
-<div class="page" />
+---
 
 ## OOP example code
 
@@ -696,6 +697,8 @@ In the above example, where is the code...
 * Instantiating the object
 * Using the object
 
+---
+
 To use inheritance with our Circle, we might create a Sphere class.
 
 ```java
@@ -728,7 +731,11 @@ public class Sphere extends Circle {
 
 * Caution: For the above Sphere to work, you will need to make one change to Circle. The access modifier for radius will not allow Sphere to compile. What access modifier should be used instead of `private`? Check your access modifier notes.
 
-**Your turn!** - Create a Cylinder class such that the following `main()` will execute as expected. Notice you need an overloaded constructor!
+# Problem set
+
+## Q0: Warm up
+
+Create a Cylinder class such that the following `main()` will execute as expected. Notice you need an overloaded constructor!
 
 ```java
    public static void main(String[] args) {
@@ -757,10 +764,6 @@ public class Sphere extends Circle {
    }
 ```
 
-<div class="page" />
-
-# Problem set
-
 ## Q1: Student's books
 
 Create a class for `Student` and a class for `Book`.
@@ -769,54 +772,22 @@ Create an `ArrayList<Student>`, where each Student has a collection of books sto
 
 Methods to consider:
 
-1. A particular student buys a new book (add to ArrayList<Book>)
-2. A particular student donates a selected book (remove from ArrayList<Book>)
-3. Print out list of books a particular student has
-4. Print out the name of a student who has a particular book
+1. A particular student buys a new book (add to `ArrayList<Book>`)
+2. A particular student donates a selected book (remove from `ArrayList<Book>`)
+3. Print out list of books a particular student has.
+4. Print out the name of a student who has a particular book.
 5. Print number of books each student has.
+6. Provide a simple console based user interface to add student, add book, donate book, and to run each of the print tasks.
 
-(Sourced: N.Ghazaryan via IB forums)
+Student fields should include: givenName, familyName, studentNumber, academicYear.
 
-## Q2: Book-list
+Book fields should include: title, author, isbn.
 
-For this exercise, use static arrays. We'll use a scenario that a booklist will never have more than 50 books.
+(Adapted from: N.Ghazaryan via IB forums)
 
-* Create a class `BookList` with the following properties:
-	*   Number of books marked as read
-	*   Number of books marked not read yet
-	*   A reference to the next book to read (book object)
-	*   A reference to the current book being read (book object)
-	*   A reference to the last book read (book object)
-	*   An array of all the Books
-* `Booklist` should conain the following methods:
-	* .add(book)
-		* should add a `book` to the books list.
-	*   .finishCurrentBook()
-		*   should mark the `book` that is currently being read as "read"
-		*   Give it a read date of new Date(Date.now())
-		*   Change the last `book read to be the book that just got finished
-		*   Change the current `book` to be the next book to be read
-		*   Change the next `book` to be read property to be the first unread book you find in the list of books
-* Create another class called `Book` with the following properties:
-	*  ISBN
-	*  Title
-	*  Genre
-	*  Author
-	*  Read (true or false)
-	*  Read date (Try using the Java [LocalData object](https://pbaumgarten.com/java/java-datetime/)
-*   `Booklists` and `Books` might need more methods than that. Try to think of more that might be useful.
+If it helps, I have a CSV file of book data available at [https://github.com/paulbaumgarten/data-sets](https://github.com/paulbaumgarten/data-sets) (but it is not required for the question)
 
-Got the basics working, ready for something extra?
-
-* Extension 1:  Read in a CSV file of books on program start. 
-   * Download `books.csv` from [https://github.com/paulbaumgarten/data-sets](https://github.com/paulbaumgarten/data-sets)
-   * To use CSV files, check this tutorial https://www.callicoder.com/java-read-write-csv-file-apache-commons-csv/
-   * Download the binaries of the [Apache Commons library](https://commons.apache.org/proper/commons-csv/download_csv.cgi). 
-   * Import the library into your project. 
-* Extension 2: Read/save the current state of your booklist to another CSV file.
-   * As above, but this time also writing to a CSV file.
-
-## Q4: Hotel reservations
+## Q3: Hotel reservations
 
 Create a simple Hotel reservation system.
 
@@ -827,17 +798,19 @@ Classes required include:
 * `Booking` class.  Keep it simple, one customer can only reserve one room per booking.
 * Create a booking interface that maintains an array of bookings, allows for new bookings, viewing bookings for a room, viewing bookings for a customer etc.
 
-## Q5: Employee
+## Q4: Employee
 
 ![](img/ExerciseOOP_Employee.png)
 
-## Q6: Province animal registrations
+## Q5: Province animal registrations
 
 Create a simple animal registration system for your local government authority.
 
 * Design your own classes. The system needs for allow for different breeds, and to store the age, color, animal name and owner information. Each owner may have multiple pets.
 
-## Q7. Contacts information system
+---
+
+## Q6. Contacts information system
 
 Create a contacts information system, along the lines of the one in my Java tutorials
 
