@@ -83,6 +83,8 @@ If you need a more detailed introduction to Python I have a set of detailed tuto
 
 <img src="assets/cozmo-connection2.png" width="30%" style="float:right">
 
+A video walk through of the connection process is available on YouTube via the QR code or manually, at [https://youtu.be/-k_oiQhBa5o](https://youtu.be/-k_oiQhBa5o). Alternatively, the steps are as follows...
+
 * Sit the Cozmo on it's charger unit which must be powered on (it doesn't have to be connected to your computer, just usb power).
 * On the front screen, Cozmo will display a code similar to the one displayed. 
 * Open your computer network settings and search for the wifi connection with Cozmo's name in it. Connect to the Cozmo wifi using the code on the Cozmo's front screen as the password.
@@ -102,7 +104,7 @@ cozmo.start()
 cozmo.connect()
 cozmo.wait_for_robot()
 # Do something simple
-cozmo.set_all_backpack_lights(pycozmo.lights.green_light)
+cozmo.set_all_backpack_lights(pycozmo.lights.blue_light)
 time.sleep(1)
 cozmo.set_all_backpack_lights(pycozmo.lights.red_light)
 time.sleep(1)
