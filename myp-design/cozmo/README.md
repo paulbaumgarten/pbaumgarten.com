@@ -309,7 +309,7 @@ While the view from the Cozmo camera might be nice, it also has a practical purp
 
 <img src="arucodes/4x4_1000-50-small.png" style="float:right">
 
-For this exercise we are going to keep it simple and use some ArUco Markers. Think of ArUco as mini-QR-codes. They are a 2D black and white block code that are very easy for the vision system to recognise and decode. There are a couple of different versions, but the one we are using will create 4x4 blakc and white grids that Python will recognise as being a number between 0 and 999. This ArUco represents the number 50. 
+For this exercise we are going to keep it simple and use some ArUco Markers. Think of ArUco as mini-QR-codes. They are a 2D black and white block code that are very easy for the vision system to recognise and decode. There are a couple of different versions, but the one we are using will create 4x4 black and white grids that Python will recognise as being a number between 0 and 999. This ArUco represents the number 50. 
 
 You will need to print your own ArUco labels. You can generate them from this website [http://chev.me/arucogen/](http://chev.me/arucogen/) (keep the "dictionary" setting on 4x4). From my trials a marker of 50mm was detectable by the Cozmo at a distance of approximately 50cm. You will have to experiment with the sizes you need based on the range you want it to recognise the code.
 
@@ -362,11 +362,13 @@ By now you have experimented with quite a few features of the Cozmo. Design an o
 
 ## Your task/s
 
-Create planning drawings for your obstacle course and include those in your portfolio for lesson 7.
+Create planning drawings for your obstacle course and include those in your portfolio for lesson 7. You want to strike the balance between making a complex yet achievable obstacle course. You should work on the basis of having 3 lessons for physically building the course and programming the Cozmo.
+
+Show your obstacle course ideas to your teacher for approval before proceeding.
 
 # 8,9,10. Build your own obstacle course
 
-Create your obstacle course (1 lesson) and program your Cozmo to complete it (2 lessons).
+Create your obstacle course (~1 lesson) and program your Cozmo to complete it (~2 lessons).
 
 How long does it take your cozmo to capture the flag?
 
@@ -375,7 +377,7 @@ How long does it take your cozmo to capture the flag?
 * a) Submit a photo of your final obstacle course into your portfolio.
 * b) Submit your Python code into your portfolio.
 
-# 11. Evaluate your own obstacle course
+# 11. Evaluate your obstacle course
 
 ## Your task/s
 
@@ -386,15 +388,3 @@ Make a video recording demonstrating the success (complete or partial) of your C
 * c) Discuss your level of success. What parts worked well? what did not? What changes would you make if given more time?
 
 Upload your video to your portfolio.
-
-# Resources & references
-
-The PyCozmo module website is [https://github.com/zayfod/pycozmo](https://github.com/zayfod/pycozmo)
-
-To install packages from IDLE, use the following two lines....
-
-```python
-from pip._internal import main as pipmain
-pipmain(['install', 'pycozmo', 'ImageTools'])
-```
-
