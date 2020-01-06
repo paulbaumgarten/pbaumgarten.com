@@ -1,4 +1,4 @@
-# Internal assessment
+# Computer Science: Internal assessment
 
 The Internal Assessment for Computer Science is an opportunity for you to showcase your algorithmic and technical prowess at developing software intended to solve a legitimate, real world problem for someone.
 
@@ -22,8 +22,6 @@ The assessed deliverables for this IA can be summarized as follows:
 | **Criterion C** | 6. Product development (complexity & ingenuity of programming techniques) | 1000 words | 12 marks |
 | **Criterion D** | 7. Video demonstrating success criteria, 8. Extensibility of the product (marked through items 4, 6, and 7) | 5-7 minutes, n/a | 4 marks |
 | **Criterion E** | 9. Evaluation, 10. Recommendations for improvement | 250 words, 250 words | 6 marks |
-
-<div class="page" />
 
 # Choice of project
 
@@ -57,14 +55,11 @@ Some ideas if you are completely stuck:
 
 Most importantly, find a meaningful, tangible project!
 
-Once you have found a client, please fill out the [Client nomination form](client-nomination.pdf) and return it to me.
+Once you have found a client, please fill out the Client nomination form and return it to me.
 
----
-
-<div class="page" />
+* https://pbaumgarten.com/ib-compsci/internal-assessment/client-nomination-2019.pdf
 
 > **IB Moderator comment / advice:** Contrived tasks and clients were routinely seen in the weaker pieces submitted, where the student decides on a product and then finds a client to match.**Some examples of trivial products include: Java programs that mainly focus on GUI and not on actual functionality, Java programs that consist of one class only, Java programs consisting of a Greenfoot template with only two methods overwritten, rudimentary versions of freely available games (like Sudoku), Access databases that contain just one or two tables or non-relational tables, websites that are template-based (Wordpress, Wix or Weebly) or that have minimal content, basic Excel projects, Scratch projects that had not been properly designed. 
-
 
 > **From the IB (May 2015 subject report):** Contrived tasks and clients were routinely seen in the weaker pieces submitted, where the student decides on a product and then finds a client to match.
 
@@ -90,10 +85,9 @@ There are 5 criteria for a total of 10 deliverable components in this assessment
 
 **The sections labelled "Extended writing" all contribute to a combined total 2000 word limit.**
 
----
-
 > From the IB (subject guide, p76): Students must produce a solution that includes supporting documentation up to a maximum of 2,000 words. If the word limit is exceeded, the teacher’s assessment of the documentation must be based on the first 2,000 words. Work that falls significantly beneath the stated word count is unlikely to fully meet the stated requirements of the task and is likely to receive low marks.
 
+---
 
 ## Identification requirements
 
@@ -108,8 +102,6 @@ The following guidelines come from the IB and must be applied.
 - Consent (preferably written) must be obtained from people who will be involved in the development of the solution before any investigation is begun.
 - All data collected must be stored securely in order to maintain confidentiality.
 - Only the data collected for the solution can be used. It must not be used for any other purpose without explicit permission.
-
-<div class="page" />
 
 # Criterion A
 
@@ -143,7 +135,7 @@ The rationale and success criteria should be developed in consultation with thei
 
 > **IB Moderator comment / advice:** The scenario: It is important to concentrate on the problem your client is facing, and how does your client currently solve the problem, and the reason the current solution is inadequate. It is highly recommended to include detailed evidence of consultation with the client (as indicated in the subject report) in an appendix that is referenced from Criterion A. However, in addition to this the candidate should also include evidence in Criterion A itself. For example, &quot;we discussed possible solutions...&quot;, &quot;The client responded by ...&quot;, &quot;we agreed on the main goals&quot; etc. **so that it is clear to the moderator that genuine consultation has taken place with a real client**.
 
-<div class="page" />
+---
 
 ## Deliverable 2: Rationale for the proposed solution
 
@@ -162,7 +154,7 @@ Some past examples that were not fully thought through:
 
 (refer subject guide, p82)
 
-<div class="page" />
+---
 
 ## Deliverable 3: Success criteria
 
@@ -179,13 +171,11 @@ Ensure you are specific! Avoid generic success criteria such as:
 
 If the student is the client, they must have an adviser who can review the success criteria and provide the validation of the product.
 
----
-
 > **IB Moderator comment / advice:** Too many students had generic success criteria – these criteria must be specific and testable. The Criteria for Success are essential to the project and must be explicitly addressed in the test plan and in the evaluation (and preferably also in the video).
 
-<div class="page" />
+---
 
-## Checklist
+## Criterion A: Checklist
 
 Scenario
 
@@ -211,7 +201,7 @@ Examples that were not fully thought through:
 * An alarm clock to wake you in the morning: does it really make sense that this would be a desktop web browser app? Surely it requires to be a background system process. If you insist on using Javascript, use Cordova to compile it to a device app, otherwise make it a native app.
 * Map based tool for use on the road, written in Java, but not made into an Android app instead only made for Desktop use.
 
-## Assessment criteria
+## Criterion A: Assessment criteria
 
 | Marks | Description |
 | --- | --- |
@@ -220,7 +210,7 @@ Examples that were not fully thought through:
 | 3-4 | An appropriate scenario for investigation for an identified client, providing evidence of consultation, is stated. The rationale for choosing the proposed product is partially explained and includes some appropriate criteria for evaluating the success of the product. |
 | 5-6 | An appropriate scenario for investigation for an identified client, providing evidence of consultation, is described. The rationale for choosing the proposed product is justified and includes a range of appropriate criteria for evaluating the success of the product. |
 
-<div class="page" />
+---
 
 # Criterion B
 
@@ -239,11 +229,9 @@ The record of tasks form addresses:
 - a chronology of the key events in planning, designing, developing, testing and implementing the solution
 - any other issues that may arise that may affect the developm
 
----
-
 > **From the IB (Subject report, May 2018):** ... many do not address the implementation stage, which should describe the client's use of the solution for its intended purpose. The occasional Record of Tasks form was preoccupied with tasks related to the writing of the criteria, which is not its purpose.
 
-<div class="page" />
+---
 
 ## Deliverable 5: Design overview
 
@@ -284,9 +272,9 @@ For your screen mockups, while it is not mandatory (you can use paper &amp; penc
 > - and a test plan that addresses all success criteria.
 > All high scoring projects included a thorough design stage.
 
-<div class="page" />
+---
 
-## Checklist
+## Criterion B: Checklist
 
 **Record of tasks**
 
@@ -328,9 +316,9 @@ For your screen mockups, while it is not mandatory (you can use paper &amp; penc
 * Test plan accounts for normal, abnormal and extreme inputs. For instance: Test for error scenarios: If an positive integer is expected, what happens? if negative, decimal or string is provided?
 * No word count applies (no extended writing expected)
 
-<div class="page" />
+---
 
-## Assessment criteria
+## Criterion B: Assessment criteria
 
 | Marks | Description |
 | --- | --- |
@@ -338,8 +326,6 @@ For your screen mockups, while it is not mandatory (you can use paper &amp; penc
 | 1-2 | The record of tasks and the design overview, including an outline test plan, are limited. From this information it is difficult to see how the product was developed. |
 | 3-4 | The record of tasks and the design overview, including an outline test plan, are partially complete. They provide a basic understanding of how the product was developed. |
 | 5-6 | The record of tasks and the design overview, including an outline test plan, are detailed and complete. From this information it is clear how the product was developed. |
-
-<div class="page" />
 
 # Criterion C
 
@@ -361,7 +347,7 @@ appendix.
 
 > From the IB (subject guide): It is essential that whatever form the solution takes it ensures the student can explicitly demonstrate and document his or her algorithmic thinking skills.
 
-<div class="page" />
+---
 
 ## Ingenuity and complexity
 
@@ -402,9 +388,9 @@ You are not expected to use all the above items. They would not all be relevant 
 
 Credit for these items is only awarded where the accompanying written work documents the use of the technique. No credit is awarded for techniques used but not described.
 
-<div class="page" />
+---
 
-## Checklist
+## Criterion C: Checklist
 
 * Product is compatible with the information in Criteria A &amp; B(ie: what you designed is what you made - automatic zero if not)
 * A list of techniques used in developing the product is identified (see list of techniques that you can draw upon)
@@ -419,10 +405,9 @@ Credit for these items is only awarded where the accompanying written work docum
 * In-text citation and end-text referencing are used
 * Extended writing of process of development: Approximately 1000 words.
 
-<div class="page" />
+---
 
-## Assessment criteria
-
+## Criterion C: Assessment criteria
 
 | Marks | Description |
 | --- | --- |
@@ -448,10 +433,7 @@ Within the range is decided by:
 - Quality of explanations including screenshots
 - Inclusion of references where appropriate
 
-<div class="page" />
-
 # Criterion D
-
 
 ## Deliverable 7: Functionality of the product (VIDEO)
 
@@ -471,7 +453,7 @@ The following points should be observed
 
 > **IB Moderator comment / advice:** The video should be about 5 minutes and should only show the proper working of the final version of the solution. The structure of the video should be scripted by the candidate. Candidates are advised to test their screencasts on different media players and devices to ensure the playback is correct.For example, the video could show the testing of the implemented solution following the test plan from criterion B. Successful videos showed comprehensive evidence of the solution&#39;s functionality with lots of data, but were edited to avoid viewing tedious data entry. 
 
-<div class="page" />
+---
 
 ## Deliverable 8: Extensibility of the product
 
@@ -489,10 +471,9 @@ The student should design the product so that it can be maintained by another pa
 
 > **IB Moderator comment / advice:** Extensibility is evidenced by a detailed design in criterion B, by a detailed description of the creation process in criterion C and, in case of a programming project, by a properly structured and annotated code listing in an appendix.
 
-<div class="page" />
+---
 
-## Checklist
-
+## Criterion D: Checklist
 
 **Functionality (assessed through the video)**
 
@@ -507,9 +488,7 @@ The student should design the product so that it can be maintained by another pa
 * Video does not document/discuss the development process (sticks to the functionality).
 * Maximum 30 seconds discussing expansion and modification of the product.
 * No written component / no word count applies
-* Product tested in more than one location under different conditions
-
-NOT RELEVANT TO THE VIDEO BUT IS RELEVANT TO ENSURING YOUR PRODUCT WILL WORK ON THE IB MARKERS COMPUTER
+* Product tested in more than one location under different conditions - Not relevant to the video per-se but it is relevant to ensuring the product will work on the IB moderators computer.
 
 **Extensibility** (assessed through the detail and clarity provided in Criterion B and C)
 
@@ -520,7 +499,7 @@ NOT RELEVANT TO THE VIDEO BUT IS RELEVANT TO ENSURING YOUR PRODUCT WILL WORK ON 
 * Design overview (Criterion B) provides evidence that the product could be further developed.
 * Comments included in the Criterion C text that indicate how the product may be maintained by a 3rd party.
 
-## Assessment criteria
+## Criterion D: Assessment criteria
 
 | Marks | Description |
 | --- | --- |
@@ -528,10 +507,9 @@ NOT RELEVANT TO THE VIDEO BUT IS RELEVANT TO ENSURING YOUR PRODUCT WILL WORK ON 
 | 1-2 | The video shows that the product **functions partially**. Some expansion and modification of the product is **possible but difficult**. |
 | 3-4 | The video shows that the product **functions well**. Some expansion and modifications of the product are **straightforward**. |
 
-<div class="page" />
+---
 
 # Criterion E
-
 
 ## Deliverable 9: Evaluation of the product
 
@@ -551,10 +529,9 @@ The student will use the feedback and the evaluation of the specific performance
 
 > **IB Moderator comment / advice:** For full marks in Criterion E evidence of client feedback must be included (in an appendix) and it must be discussed and referred to in the student&#39;s evaluation against the success criteria. Recommendations should be realistic in relation to the actual product – for example &#39;adding network capability&#39; is not a realistic improvement for a low-level product. Recommendations for improvement should go beyond the success criteria that have not been met.
 
-<div class="page" />
+---
 
-## Checklist
-
+## Criterion E: Checklist
 
 Evaluation of product
 
@@ -574,7 +551,7 @@ Criterion E Overall
 
 * Combined evaluation &amp; recommendations extended writing: 350-500 words
 
-## Assessment criteria
+## Criterion E: Assessment criteria
 
 | Marks | Description |
 | --- | --- |
@@ -583,13 +560,13 @@ Criterion E Overall
 | 3-4 | The product is partially evaluated against the success criteria identified in criterion A including feedback from the client/adviser. Recommendations for further improvement of the product are largely realistic. |
 | 5-6 | The product is fully evaluated against the success criteria identified in criterion A including feedback from the client/adviser. Recommendations for further improvement of the product are realistic. |
 
-<div class="page" />
+# Submission
 
-# Draft review
+## Review of draft
 
 > note "From the IB (subject guide): As part of the learning process, teachers can give advice to students on a first draft of the internally assessed work. This advice should be in terms of the way the work could be improved, but this first draft must not be heavily annotated or edited by the teacher. The next version handed to the teacher after the first draft must be the final one.
 
-# Final Submission
+## Final Submission
 
 **Step 1 - Get the template**
 
@@ -618,6 +595,8 @@ Your final file/folder structure should resemble the following
 If you need to give the marker special instructions on how to execute your project (passwords etc), those will be added to the HTML cover sheet.
 
 Please ensure your file/folder names are correct! It is not a good look for a Computer Science specialist to get basics such as filenames wrong.
+
+---
 
 **Step 3 - Edit the HTML coverpage**
 
@@ -649,9 +628,7 @@ All done!
 
 # Exemplars
 
-My students should speak to me to request access to some real life exemplar projects I have access to. Some are from my own former students, and others have been generously shared by a fellow teacher from another school, for me to use with my classes, on condition they are not further distributed or shared. Please express your appreciation to them for these files by respecting their wishes.
-
-<div class="page" />
+My students should speak to me to request access to some real life exemplar projects I have access to. Some are from my own former students, and others have been generously shared by fellow teachers from other schools, for me to use with my classes, on condition they are not further distributed or shared. Please express your appreciation to them for these files by respecting their wishes.
 
 # FAQ
 
@@ -788,7 +765,4 @@ No. Furthermore, clients and/or advisers can come from businesses or other sourc
 If forms, tables, bullet points or footnotes are used for extended text (for example, for explanation, analysis and evaluation), thereby trying to exclude it from the word count, this text will be included in the word count".
 
 Bullet point list, numbered list, footnotes, captions, tables, titles, annotations are not included in the word count IF they contain short phrases or statements, as this is what they are meant for. If a candidate provides an extended writing in a table or a bullet point list (such as explanations, analysis), in anticipation to exclude it from the word count, then this text will be included in the word count.
-
-In the (intentionally blurred) illustration, the red text with arrows will be counted toward the word count.
-
 
