@@ -41,6 +41,8 @@ Once you've digested the slides or video, have a go at a couple of problems of y
 
 * Additional problems: Try one of my general [programming problems](programming-problems.md).
 
+---
+
 ## 02: Systems & algorithms
 
 * Read 9.1 Introduction and 9.2 Algorithms
@@ -76,6 +78,8 @@ The overall idea here is that through a combination of an overall structure diag
 * Draw a structure diagram for the age calculator or change calculator from the previous lesson.
 * Working with a partner, pick one of the problems from my [Programming problems](programming-problems.md) page (such as Hang-person or Tic-tac-toe) and identify the sub-systems that would be involved. Draw a structure diagram for that problem.
 * For one of the above, experiment with what you think the flowchart to document each identified sub-system might look like.
+
+---
 
 ## 03: Testing algorithms
 
@@ -122,6 +126,8 @@ Example table
 | Erroneous         | -13, 500, 76%, 50.1, eighty  |   |   |   |
 | Extreme           |  0987409234097234092340922 |   |   |   |
 | Boundary          | -1, 0, 99, 100    |   |   |   |
+
+---
 
 ## 04: Validation checks
 
@@ -198,6 +204,8 @@ Activity 9.9 through 9.13 (textbook pages 123-124)
 
 If you have time remaining, and haven't completed any of the previous testing and validation coding exerciese, complete those now as well.
 
+---
+
 ## 07: Verification checks
 
 Data verification is a way of ensuring the user types in what he or she intends, in other words, to make sure the user does not make a mistake when inputting data.
@@ -232,6 +240,8 @@ Modify the `clicked()` function to implement your tests indicated above.
 ![](img/verification-demo.png)
 
 * [Tkinter verification demo app](distribute/unit-2-tkinter-verification-demo-app.pdf)
+
+---
 
 ## 08: Trace tables
 
@@ -275,6 +285,8 @@ A note about pseudo code: What it is supposed to be verses what it is in the iGC
 Syntax of pseudo code for the iGCSE course:
 
 * Chapter 10, page 134-139 of the textbook.
+
+---
 
 ## 10: Tracing pseudo code
 
@@ -400,6 +412,8 @@ OUTPUT Z
 
 Credits: [Problem 1 & 2](https://www.tes.com/teaching-resource/trace-table-activities-for-gcse-computer-science-11782527)), [problem 3 onwards](https://retrosnob.files.wordpress.com/2013/11/trace-tables-chapter.pdf)
 
+---
+
 ## 11: Writing pseudo code
 
 Time to practice writing some of your own pseudo code.
@@ -422,6 +436,8 @@ Syntax of flowcharts for the iGCSE course:
 1. Draw a flowchart that inputs 20 numbers and outputs the range between the highest and lowest number (without using `min()` or `max()`).
 2. Draw a flowchart that inputs 10 numbers and calculates the average of those that were between 0 and 100.
 3. Draw a flowchart that inputs the names of 10 people, and prints the name of the person with the longest name.
+
+---
 
 ## 13: Ethical considerations
 
@@ -494,6 +510,8 @@ https://www.abc.net.au/news/science/2019-04-14/tesla-tencent-study-humans-are-tr
 1. What is a distinguishing characteristic that differentiates between each of properitary, open source, share-ware and free-ware software?
 2. Activity 8.3: A software company offers a range of office software under a share-ware license. What benefits exist to the (a) company and the (b) customer for this?
 3. A freelance programmer is doing paid work for a client. The programmer used code found on the internet without the original authors permission. What would be the potential consequences of this action? In what way would the original license of the original software potentially affect the consequence? 
+
+---
 
 ## 14,15,16: Unit review exercises
 
