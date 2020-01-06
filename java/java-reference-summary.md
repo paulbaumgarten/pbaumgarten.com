@@ -1,6 +1,3 @@
-<!-- TITLE: Java reference/summary -->
-<!-- SUBTITLE: Because coding can be challenging enough without trying to memorise everything! -->
-
 # Java
 
 This guide is intended as a helpful reminder to some of the quirks of Java syntax and it's various libraries you need to use. Please suggest changes/improvements as you spot things. Thanks!
