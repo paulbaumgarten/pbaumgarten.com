@@ -96,6 +96,7 @@ A well designed testing regieme will consider four different types of input data
 
 Example: An alarm app that requires you to enter a time for the alarm in 24 hour format.
 
+| Data type | Examples |
 | ----------- | ----------- |
 | Normal data | 06:30, 07:00, 16:00 |
 | Erroneous data | 09:00am, Seven, -17:00, 4 o'clock, 25:00, 8:75, 5pm |
@@ -419,7 +420,7 @@ Credits: [Problem 1 & 2](https://www.tes.com/teaching-resource/trace-table-activ
 Time to practice writing some of your own pseudo code.
 
 1. User inputs the volume of sphere, the program outputs the radius.
-2. User inputs two numbers, A and B, the program will output all the powers of A, e.g. A*1, A*A, A*A*A, up to the value of B. B can't be less than 2.
+2. User inputs two numbers, A and B, the program will output all the powers of A, e.g. `A*1`, `A*A`, `A*A*A`, up to the value of B. B can't be less than 2.
 3. User inputs two positive numbers, the program counts up from the smaller of these numbers to the larger, outputting the numbers as it counts up.
 4. User inputs a number between 1 and 99. Program counts from 1 to the input number in word form (eg: one, two, three, four...).
 
@@ -454,18 +455,29 @@ As programmers, we have responsibilities to be ethical in
 * The use of existing code bases in our software
 * Respecting the licenses of code we include
 
-What are some of the common licensing options available to us as a programmer?
+There are typically several common licensing options available to programmers. Identify two advantages and two disadvanteges for each model from (a) the programmers perspective and (b) the consumers perspective.
 
 * Properitory
 * Open source (GPL, MIT, Apache, Creative commons)
 * Freeware
 * Shareware
 
+### Consequences of the software we create
+
+When the software we create is going to be used by others, that creates an ethical responsiblity onto us to do right by the user. This isn't just about intentional things we program (tracking and recording them without proper consent for example) but also unintentional issues such as bugs/security flaws that can be exploited by others due to inadequate testing of our code by us.
+
+* [Fitness tracking app Strava gives away location of secret US army bases](https://www.theguardian.com/world/2018/jan/28/fitness-tracking-app-gives-away-location-of-secret-us-army-bases)
+* [How to Track President Trump](https://www.nytimes.com/interactive/2019/12/20/opinion/location-data-national-security.html)
+* [MIT Researcher Exposing Bias in Facial Recognition Tech Triggers Amazon’s Wrath](https://www.insurancejournal.com/news/national/2019/04/08/523153.htm)
+* [Hackers tricked a Tesla, and it's a sign of things to come in the race to fool artificial intelligence - Science News - ABC News]()
+https://www.abc.net.au/news/science/2019-04-14/tesla-tencent-study-humans-are-trickable-so-are-computers/10994578)
+*  [Tracking Phones, Google Is a Dragnet for the Police - The New York Times](https://www.nytimes.com/interactive/2019/04/13/us/google-location-tracking-police.html)
+
 ### Honesty and fair attribution in the code we create
 
 **At a minimum** it is expected that code you source through independent research is properly attributed. This should take the form of a url provided as an in-code comment. I will mark you down for code that is clearly not your own that is not attributed. Where necessary it may also be referred for academic dishonesty.
 
-For example, here is some code I wrote to calculate the amplitude (volume) of an audio stream feed from a microphone. Notice there are three references provided. Those references don't just ensure fair attribution of other people's work, they also help provide documentation links that I can return to when if I need to re-learn how the algorthm works.
+For example, here is some code I wrote to calculate the amplitude (volume) of an audio stream feed from a microphone. Notice there are three references provided. Those references don't just ensure fair attribution of other people's work, they also help provide documentation links that I can return to if I need to re-learn how the algorthm works later on.
 
 ```python
 def get_amplitude_from_stream(data_stream):
@@ -492,16 +504,6 @@ def get_amplitude_from_stream(data_stream):
         return 0
     # end of function
 ```
-
-### Consequences of the software we create
-
-* [Fitness tracking app Strava gives away location of secret US army bases](https://www.theguardian.com/world/2018/jan/28/fitness-tracking-app-gives-away-location-of-secret-us-army-bases)
-* [How to Track
-President Trump](https://www.nytimes.com/interactive/2019/12/20/opinion/location-data-national-security.html)
-* [MIT Researcher Exposing Bias in Facial Recognition Tech Triggers Amazon’s Wrath](https://www.insurancejournal.com/news/national/2019/04/08/523153.htm)
-* [Hackers tricked a Tesla, and it's a sign of things to come in the race to fool artificial intelligence - Science News - ABC News]()
-https://www.abc.net.au/news/science/2019-04-14/tesla-tencent-study-humans-are-trickable-so-are-computers/10994578)
-*  [Tracking Phones, Google Is a Dragnet for the Police - The New York Times](https://www.nytimes.com/interactive/2019/04/13/us/google-location-tracking-police.html)
 
 
 

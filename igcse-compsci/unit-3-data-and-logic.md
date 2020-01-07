@@ -17,13 +17,31 @@ A transistor is a switch that controls another switch. For a great introduction 
 
 This video introduced you to logic gates. This is the level of complexity from the transistor. We use multiple transistors to build logic gates. Multiple logic gates can then be used in clever patterns to create memory and perform calculations. Once we have the ability to store values in memory, and to be able to perform calculations on those values, we then have the basic building blocks of every computer.
 
-## Truth tables
+There are 6 logic gates we will study in this course.
 
-Produce truth tables for various circuits.
+* NOT gate
+* AND gate
+* OR gate
+* NAND gate
+* NOR gate
+* XOR gate
 
-    TODO
+These gates are effectively switches, where the state of the output (whether it is on or off) is determined by the combination of the inputs and the rule of the gate.
 
----
+* The NOT gate has one input and one output. If the input is on, the output is off. If the input is off, the output will be on.
+* The AND gate has two inputs and one output. If both inputs are on, the output will be on. In all other cases, the output is off.
+* The OR gate has two inputs and one output. If either one of the inputs is on, the output will be on. If both inputs are off, the output will be off.
+* The NAND gate is a concatenation of an AND gate where the output goes through a NOT gate. This means if both inputs are on, the output will be off. In all other cases, the output is on.
+* The NOR gate is a concatenation of an OR gate where the output goes through a NOT gate. This means if either input is on, the output will be off. If both inputs are off, the output will be on.
+* The XOR gate is known as the eXclusive OR gate. With this gate if one of the inputs are on, the output is on. However, if both inputs are on, the output remains off. Likewise if both inputs are off, the output remains off.
+
+We will use combinations of these logic gates to create logic circuits. To enable us to do this easily each gate has a symbol by which it can be represented in a diagram, and there is also a couple of notations available to represent them in the form of written equations. 
+
+The logic gate symbols are shown below and are also in page 26 of your text (the XNOR gate is not part of your course but it should be an intuitive extension to determine what it is...?)
+
+![](img/logic-gate-symbols.png)
+
+As you can also see, we can simplify our understanding of rules for each gate by using a table, known as a truth table, to document the circumstances in which a gate is on or off. Rather than using the "on" and "off" terminology, we use binary where 0 represents off and 1 represents on.
 
 ## Exercise: Creating gates from transistors
 
@@ -84,11 +102,32 @@ Complete the first 6 levels:
 * Half Adder
 * Full Adder
 
-## Logic circuits
+## Produce truth tables
 
-Produce circuit diagrams from equations
+Logic gates are combined together to form logic circuits. To gain an understanding of what an individual circuit may do, we create truth tables for them as well.
 
-    TODO
+* Complete the walk through example, converting a logic diagram to a truth table, as a class (3.5.1 on page 29/30).
+* Individually produce the truth tables for the logic diagram questions in activity 3.2 on page 30.
+
+## Produce circuits from equations
+
+Any logic circuit can be expressed as a diagram or as an equation. You need to be able to convert one to the other.
+
+![](img/circuit-equation-questions.PNG)
+
+Check your answers at [http://sandbox.mc.edu/~bennet/cs110/boolalg/truthtab.html](http://sandbox.mc.edu/~bennet/cs110/boolalg/truthtab.html)
+
+We will now look at creating the diagrams from an equation.
+
+![](img/circuit-equation-questions-2.PNG)
+
+Check your answers at [http://sandbox.mc.edu/~bennet/cs110/boolalg/gate.html](http://sandbox.mc.edu/~bennet/cs110/boolalg/gate.html)
+
+You may be presented with a written scenario from which you need to discern the equation and logic circuit.
+
+* Complete the walk through example as a class 3.5.3 on page 35.
+* Individually complete the practice question in activity 3.4 on page 38.
+* Complete the remaining activities in chapter 3.
 
 ## Bits and bytes
 

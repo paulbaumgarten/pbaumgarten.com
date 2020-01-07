@@ -1,10 +1,8 @@
-# Java
+# Java reference summary
 
 This guide is intended as a helpful reminder to some of the quirks of Java syntax and it's various libraries you need to use. Please suggest changes/improvements as you spot things. Thanks!
 
-# Numeric variables and operations
-
-## Standard datatypes
+## Numeric datatypes
 
 ```java
 byte b = 1;         // 8 bits
@@ -31,14 +29,12 @@ int answer = a % b; 	            // Modulus (remainder)
 
 double answer = Math.pow(a,b);      // Exponential
 double answer = Math.sqrt(a);	    // Square root
-
 int answer = Math.round( 13.4 );    // Rounding
 int answer = Math.abs( -13 );       // Absolute value
 float random = Math.random(); 	    // Between 0 & 1
-
 ```
 
-## Integer v Float devision
+## Integer v floating point division
 
 Determined automatically based on the datatypes.
 
@@ -54,27 +50,25 @@ System.out.println( c / d );
 System.out.println( c % d );
 ```
 
-<div class="page"/>
-
 # Strings
 
 ```java
 String s1 = "hello";
 String s2 = "What does the fox say?";
 
-s1.length();           		// 5
-s1.charAt(0);          		// "h"
-s1.codePointAt(0);     		// 104 (unicode)
-s2.indexOf("fox");     		// 14
-s2.lastIndexOf("fox"); 		// 14
-s2.substring(14,17);   		// fox
-s2.replace("fox","goat");	// What does the goat say?
-s2.toUpperCase();		      // WHAT DOES THE FOX SAY?
-s2.toLowerCase();		      // what does the fox say?
+s1.length();           		    // 5
+s1.charAt(0);          		    // 'h'
+s1.codePointAt(0);     		    // 104 (unicode)
+s2.indexOf("fox");     		    // 14
+s2.lastIndexOf("fox"); 		    // 14
+s2.substring(14,17);   		    // fox
+s2.replace("fox","goat");	    // What does the goat say?
+s2.toUpperCase();		        // WHAT DOES THE FOX SAY?
+s2.toLowerCase();		        // what does the fox say?
 	
 String s3 = "Hi there! " + s2; 	// concatenation
 
-String[] words = s2.split(" ");  // ["What","does","the","fox","say?"]
+String[] words = s2.split(" "); // ["What","does","the","fox","say?"]
 ```
 
 Want to change an individual letter inside a string? Unlike other languages, you can not do `str[2] = 'x'` or similar. Java Strings are immutable (unchangeable). Most "simple" solution...
@@ -120,16 +114,10 @@ System.out.print(", the next number is ");
 System.out.println( i+1 );
 ```
 
-<div class="page"/>
-
 # Casting between primitive datatypes
-
-Casting means converting between datatypes
 
 ```java
 // Given these variables
-byte b = 1;
-short s = 2;
 int i = 3;
 long l = 4;
 float f = 5.0F;
@@ -191,8 +179,6 @@ double ratio = Math.acos( angle );
 double ratio = Math.atan( angle );
 ```
 
-<div class="page"/>
-
 # Conditional execution
 
 ## Numeric comparisons
@@ -234,7 +220,7 @@ s1.compareTo(s2)
 (! condition1 ) 				        // NOT
 ```
 
-## If
+## If statement
 
 ```java
 if ( condition ) {
@@ -249,7 +235,7 @@ if ( condition ) {
 }
 ```
 
-## For
+## For loop
 
 ```java
 for ( initialization ; comparison ; iteration ) { 
@@ -258,13 +244,14 @@ for ( initialization ; comparison ; iteration ) {
 ```
 
 Example:
+
 ```java
 for (int i=0 ; i<10 ; i=i+1 ) {
    System.out.println( i );
 }
 ```
 
-## While
+## While lop
 
 ```java
 while ( comparison ) { 
@@ -273,6 +260,7 @@ while ( comparison ) {
 ```
 
 Example:
+
 ```java
 int a = 0;
 while ( a < 10 ) {
@@ -297,8 +285,6 @@ Example:
 int largerOfTheTwo = (a>b) ? a : b;
 ```
 
-<div class="page"/>
-
 # One dimensional arrays
 
 ## Declaring static arrays: Method 1
@@ -313,8 +299,6 @@ primes[4] = 7;
 primes[5] = 11;
 primes[6] = 13;
 primes[7] = 17;
-primes[8] = 19;
-primes[9] = 23;
 ```
 
 ## Declaring static arrays: Method 2
@@ -352,11 +336,8 @@ int l = primes.length;
 Arrays.sort( primes );
 
 // Create a string listing the contents of the array
-// output: [1, 2, 3, 5, 7, 11, 13, 17, 19, 23]
-System.out.println( Arrays.toString( primes ));
+System.out.println( Arrays.toString( primes ));     // [1, 2, 3, 5, 7, 11, 13, 17, 19, 23]
 ```
-
-<div class="page"/>
 
 # Two dimensional arrays
 
@@ -390,7 +371,7 @@ for (int[] row : a ) {
 
 # Array Lists
 
-## Import
+Import statement
 
 ```java
 import java.util.ArrayList;
@@ -445,20 +426,21 @@ for (Object o : list) {
 
 ## ArrayList: Converting between static arrays
 
-**Array to ArrayList**  
+Convert an Array to ArrayList
 
 ```java
 ArrayList arrlist = new ArrayList<>(Arrays.asList(arr))
 ```
 
-**ArrayList to Array**  
+Convert an ArrayList to Array  
 
-(assuming it is String… change as appropriate)
+* (assuming it is String... change as appropriate)
+
 ```java
 String[] arr = (String[])arrlist.toArray(new String[arrlist.size()]);
 ```
 
-**Example: Load file to ArrayList**
+Example: Load file to ArrayList
 
 One line per string
 
@@ -476,9 +458,9 @@ while (reader.hasNextLine()) {
 reader.close();
 ```
 
-<div class="page"/>
+# Abstract data structures
 
-# Hash Maps
+## Hash Maps
 
 ```java
 import java.util.HashMap;
@@ -501,12 +483,9 @@ for (Object o : people.values()) {
 
 Person p = (Person)people.get("Mr B");
 System.out.println( p.toString() );
-
 ```
 
-<div class="page"/>
-
-# Linked Lists
+## Linked Lists
 
 ```java
 import java.util.LinkedList;
@@ -563,8 +542,6 @@ public static void main(String[] args) {
 }
 ```
 
-<div class="page"/>
-
 # Classes & objects
 
 ## General structure of a Java class
@@ -572,12 +549,12 @@ public static void main(String[] args) {
 ```java
 package com.example.project;
 
-import java.util.*; // or whatever
+import java.util.*;     // or whatever
 
 public class MyProject{
     private int instanceVar;
     
-    MyProject() { // Constructor
+    MyProject() {       // Constructor
         instanceVar = 0;
     }
     
@@ -734,14 +711,12 @@ public class Demo {
 }
 ```
 
-<div class="page"/>
-
 # Date & time
 
 Sooner or later every programmer needs to deal with times and dates. Knowing the appropriate functions for the task can be a mind numbing experience, so it's very handy to heep a reference guide nearby! The following is my attempt. Please suggest improvements.
 
-The following is for Java 8 onwards and comes from https://www.tutorialspoint.com/java8/java8_datetime_api.htm
-Prior to Java 8, it is recommended to use a 3rd party class such as http://www.joda.org/joda-time/
+* The following is for Java 8 onwards and comes from https://www.tutorialspoint.com/java8/java8_datetime_api.htm
+* Prior to Java 8, it is recommended to use a 3rd party class such as http://www.joda.org/joda-time/
 
 ```java
 import java.time.LocalDate;
@@ -751,37 +726,30 @@ import java.time.Month;
 
 // Get the current date and time
 LocalDateTime currentTime = LocalDateTime.now();
-System.out.println("Current DateTime: " + currentTime);     
-// Current DateTime: 2014-12-09T11:00:45.457
+System.out.println(currentTime);            // 2014-12-09T11:00:45.457
 
 LocalDate date1 = currentTime.toLocalDate();
-System.out.println("date1: " + date1);                      
-// date1: 2014-12-09
+System.out.println(date1);                  // 2014-12-09
 
 Month month = currentTime.getMonth();
-int day = currentTime.getDayOfMonth();
-int seconds = currentTime.getSecond();
-System.out.println("Month: " + month +" day: " + day +"seconds: " + seconds); 
-// Month: DECEMBER day: 9seconds: 45
+int d = currentTime.getDayOfMonth();
+int s = currentTime.getSecond();
+System.out.println(month +" "+d+" "+s);     // DECEMBER 9 45
 
 LocalDateTime date2 = currentTime.withDayOfMonth(10).withYear(2012);
-System.out.println("date2: " + date2);                      
-// date2: 2012-12-10T11:00:45.457
+System.out.println(date2);                  // 2012-12-10T11:00:45.457
 
-//12 december 2014
+// 12 december 2014
 LocalDate date3 = LocalDate.of(2014, Month.DECEMBER, 12);
-System.out.println("date3: " + date3);                      
-// date3: 2014-12-12
+System.out.println(date3);                  // 2014-12-12
 
 // 22 hour 15 minutes
 LocalTime date4 = LocalTime.of(22, 15);
-System.out.println("date4: " + date4);                      
-// date4: 22:15
+System.out.println(date4);                  // 22:15
 
 // parse a string
 LocalTime date5 = LocalTime.parse("20:15:30");
-System.out.println("date5: " + date5);                      
-// date5: 20:15:30
+System.out.println(date5);                  // 20:15:30
 ```
 
 Time zones
@@ -792,19 +760,14 @@ import java.time.ZoneId;
 
 // Get the current date and time
 ZonedDateTime date1 = ZonedDateTime.parse("2007-12-03T10:15:30+05:30[Asia/Karachi]");
-System.out.println("date1: " + date1);                      
-// date1: 2007-12-03T10:15:30+05:00[Asia/Karachi]
+System.out.println(date1);                 // 2007-12-03T10:15:30+05:00[Asia/Karachi]
 
 ZoneId id = ZoneId.of("Europe/Paris");
-System.out.println("ZoneId: " + id);                        
-/ ZoneId: Europe/Paris
+System.out.println(id);                    // Europe/Paris
 
 ZoneId currentZone = ZoneId.systemDefault();
-System.out.println("CurrentZone: " + currentZone);          
-// CurrentZone: Etc/UTC
+System.out.println(currentZone);           // Etc/UTC
 ```
-
-<div class="page"/>
 
 Difference between two dates/times
 
@@ -822,19 +785,19 @@ import java.time.Period;
 
 //Get the current date
 LocalDate date1 = LocalDate.now();
-System.out.println("Current date: " + date1);
+System.out.println(date1);
 
 //add 1 month to the current date
 LocalDate date2 = date1.plus(1, ChronoUnit.MONTHS);
-System.out.println("Next month: " + date2);
+System.out.println(date2);
 Period period = Period.between(date2, date1);
-System.out.println("Period: " + period); // P-1M
+System.out.println(period);                 // P-1M
       
 LocalTime time1 = LocalTime.now();
 Duration twoHours = Duration.ofHours(2);
 LocalTime time2 = time1.plus(twoHours);
 Duration duration = Duration.between(time1, time2);
-System.out.println("Duration: " + duration); // PT2H
+System.out.println(duration);               // PT2H
 ```
 
 Unix time / Epoch time   
@@ -882,8 +845,6 @@ ZonedDateTime zonedDateTime = ZonedDateTime.ofInstant(now, currentZone);
 System.out.println("Zoned date: " + zonedDateTime);
 ```
 
-<div class="page"/>
-
 # Unicode
 
 Unicode characters are a quick and easy way to use glyphs, emoji and other symbols in your app without having to create them yourself. Once you know the symbol codes it's just a case of using this code:
@@ -909,7 +870,6 @@ To find the required code, or to browse the available list, visit http://emojipe
 There are also other "non-emoji" symbols that could come in useful, so search sites such as: 
 https://unicode-table.com/en/#miscellaneous-symbols 
 
-<div class="page"/>
 
 # JSON
 
