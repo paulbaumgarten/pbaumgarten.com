@@ -420,6 +420,8 @@ Remember
 
 Generic try/except
 
+* Warning the generic exception catch is bad practice and hides bugs. Any unintentional error in your code (such as a mis-spelling) could cause an exception that results in hours of frustration to diagnose.
+
 ```python
 try:    
     denominator = int(input("Please enter a number: "))
@@ -440,8 +442,6 @@ except ValueError:
     print("That wasn't a number")
 except ZeroDivisionError:
     print("I can't divide by zero")
-except:
-    print("Unknown error?!?!?!")
 ```
 
 Generate your own exception
@@ -449,7 +449,7 @@ Generate your own exception
 ```python
 x = 10
 if x > 5:
-    raise Exception("Not allowed to have a number greater than 5")
+    raise ValueError("Not allowed to have a number greater than 5")
 ```
 
 ---
