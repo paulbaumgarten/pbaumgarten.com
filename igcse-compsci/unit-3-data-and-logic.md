@@ -43,6 +43,8 @@ The logic gate symbols are shown below and are also in page 26 of your text (the
 
 As you can also see, we can simplify our understanding of rules for each gate by using a table, known as a truth table, to document the circumstances in which a gate is on or off. Rather than using the "on" and "off" terminology, we use binary where 0 represents off and 1 represents on.
 
+---
+
 ## Exercise: Creating gates from transistors
 
 We are going to see how logic gates can be physically constructed from simple transitors.
@@ -102,6 +104,8 @@ Complete the first 6 levels:
 * Half Adder
 * Full Adder
 
+---
+
 ## Produce truth tables
 
 Logic gates are combined together to form logic circuits. To gain an understanding of what an individual circuit may do, we create truth tables for them as well.
@@ -109,9 +113,17 @@ Logic gates are combined together to form logic circuits. To gain an understandi
 * Complete the walk through example, converting a logic diagram to a truth table, as a class (3.5.1 on page 29/30).
 * Individually produce the truth tables for the logic diagram questions in activity 3.2 on page 30.
 
+---
+
 ## Produce circuits from equations
 
 Any logic circuit can be expressed as a diagram or as an equation. You need to be able to convert one to the other.
+
+One small but crucial detail to ask before we go any further is *order of precedence*. Intuitively from maths we may understand that backets are resolved first, but what about other situations? For instance given X = NOT A AND B... is it (NOT A) AND B.... or is it NOT (A AND B)... ?
+
+So with that in mind, you should know that the order of precedencee is 1st parenthesis, 2nd NOT, 3rd AND, 4th OR.
+
+Let's do some questions...
 
 ![](img/circuit-equation-questions.PNG)
 
@@ -128,6 +140,8 @@ You may be presented with a written scenario from which you need to discern the 
 * Complete the walk through example as a class 3.5.3 on page 35.
 * Individually complete the practice question in activity 3.4 on page 38.
 * Complete the remaining activities in chapter 3.
+
+---
 
 ## Bits and bytes
 
@@ -149,22 +163,38 @@ The answer, of course, is 256. But did you get there the easy way or the hard wa
 | 4  | 0000, 0001, 0010, 0011, 0100, 0101, 0110, 0111, 1000, 1001, 1010, 1011, 1100, 1101, 1110, 1111 | 16 | 2^4 |
 
 
-## Converting between denary and binary
+## Uses of binary numbers
 
-    Binary - How to Make a Computer: Part II (7:15)
-    https://www.youtube.com/watch?v=NRKORzi5tnM
+### The integer
 
-## Binary use in registers
+### Floating point numbers
+
+### Registers
 
 16, 32, 64 bit computing
+
+---
+
+## Converting between denary and binary
+
+Binary - How to Make a Computer: Part II (7:15)
+https://www.youtube.com/watch?v=NRKORzi5tnM
+
+    TO
+
+---
 
 ## Hexadecimal numbers
 
 Reasoning for hex notation
 
+---
+
 ## Convert hex and denary
 
 ## Convert hex and binary
+
+---
 
 ## Common uses of hex in computing
 
@@ -177,6 +207,7 @@ Reasoning for hex notation
 ### Debugging
 
 
+---
 
 ## References
 
