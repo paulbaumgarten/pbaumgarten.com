@@ -18,10 +18,10 @@ There are commonly four thinking skills associated with this.
 3. Abstraction - Can generalise this to make an overall rule?
 4. Algorithm design - Can I document the programming steps for any of this?
 
-For a walk through on using these thinking skills, make use of:
+For a walk through on using these thinking skills, make use of my introduction to Computational thinking at:
 
-* [My introductory video on Computational thinking](https://youtu.be/2bvt6PCBVPo)
-* [My introductory slides on Computational thinking](unit-2-computational-thinking-slides.pdf)
+* Video: [https://youtu.be/2bvt6PCBVPo](https://youtu.be/2bvt6PCBVPo)
+* Slides: [https://pbaumgarten.com/igcse-compsci/unit-2-computational-thinking-slides.pdf](unit-2-computational-thinking-slides.pdf)
 
 Some other general advice I would give to new programmers is:
 
@@ -179,7 +179,7 @@ One common example referred to in the textbook is the ISBN. Refer to page 122 to
 
 ![](img/luhn-demo.png)
 
-The **luhn algorithm** is another check digit algorithm. It is used by Mastercard and Visa. The last digit is calculated based on a formula that uses all the other digits as the input. I've written about the luhn algorithm [here](https://pbaumgarten.com/igcse-compsci/programming-problems.html#luhn-algorithm).
+The **luhn algorithm** is another check digit algorithm. It is used by Mastercard and Visa. The last digit is calculated based on a formula that uses all the other digits as the input. I've written about the luhn algorithm at [https://pbaumgarten.com/igcse-compsci/programming-problems.html#luhn-algorithm](https://pbaumgarten.com/igcse-compsci/programming-problems.html#luhn-algorithm).
 
 ### HKID
 
@@ -240,7 +240,7 @@ Modify the `clicked()` function to implement your tests indicated above.
 
 ![](img/verification-demo.png)
 
-* [Tkinter verification demo app](distribute/unit-2-tkinter-verification-demo-app.pdf)
+* [https://pbaumgarten.com/igcse-compsci/distribute/unit-2-tkinter-verification-demo-app.pdf](distribute/unit-2-tkinter-verification-demo-app.pdf)
 
 ---
 
@@ -442,7 +442,7 @@ Syntax of flowcharts for the iGCSE course:
 
 ## 13: Ethical considerations
 
-Video: [The Consequences of Your Code by Tom Scott](https://www.youtube.com/watch?v=LZM9YdO_QKk) (6:15m)
+Video: The Consequences of Your Code by Tom Scott (6:15m) - [https://www.youtube.com/watch?v=LZM9YdO_QKk](https://www.youtube.com/watch?v=LZM9YdO_QKk)
 
 There are real-world impacts on human lives by the software we create. We have an ethical and moral responsibility to take care with the projects we create to minimise potential harm.
 
@@ -519,7 +519,7 @@ def get_amplitude_from_stream(data_stream):
 
 * Chapter 9 review questions: Page 132-133.
 * Chapter 10 review questions: Page 144-145.
-* [70 pseudocode practice questions](distribute/pseudocode-70-questions.pdf) (I have the solutions for these for you to self-check)
+* 70 pseudocode practice questions: [https://pbaumgarten.com/igcse-compsci/distribute/pseudocode-70-questions.pdf](distribute/pseudocode-70-questions.pdf) (I have the solutions for these for you to self-check)
 
 Let me know once you have completed those. I am happy to create additional review questions as needed.
 

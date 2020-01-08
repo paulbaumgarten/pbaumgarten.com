@@ -72,6 +72,8 @@ Common strategies:
 * **Shortest job next (SJN)** - CPU scheduling algorithm looks at all processes in the ready state and dispatches the one with the smallest service time. Like FCFS, it is generally implemented as a non-preemptive algorithm.
 * **Round robin** or **time slicing** - distributes the processing time equitably among all ready processes. The algorithm establishes a particular time slice (or time quantum), which is the amount of time each process receives before being preempted and return to the ready state to allow another process its turn. Eventually the preempted process will be given another time slice on the CPU. This procedure continues until the process eventually gets all the time it needs and terminates.
 
+---
+
 ### Policies
 
 The "rules" in place to govern competing resources all wanting access to the computer’s resources.
@@ -100,6 +102,8 @@ A program is filled with references to variables and to other parts of the progr
 The solution is to use two kinds of addresses: logical addresses and physical addresses. A logical address (sometimes called a virtual or relative address) is a value that specifies a generic location, relative to the program but not to the reality of main memory. A physical address is an actual address in the main memory device − again shown in the figure.
 
 When a program is compiled, a reference to an identifier (such as a variable name) is changed to a logical address. When the program is eventually loaded into memory, each logical address finally corresponds to a specific physical address. The mapping of a logical address to a physical address is called address binding. Logical addresses allow a program to be moved around in memory or loaded in different places at different times. As long as one keeps track of where the program is stored, one is always able to determine the physical address that corresponds to any given logical address. *(pages 344-245)*
+
+---
 
 ### Virtual memory & paging
 
@@ -155,6 +159,8 @@ This is an interesting article looking at the Apollo Guidance Computer of the 19
 
 * Srikanth, V (2018): The Magic behind Apollo - [https://medium.com/delta-force/the-magic-behind-apollo-cf89aede34d4](https://medium.com/delta-force/the-magic-behind-apollo-cf89aede34d4)
 
+---
+
 ## Dedicated device operating systems
 
 Mobile devices, such as smartphones and tablet computers, run operating systems that are tailored to their needs. The memory constraints and the smaller set of peripherals involved, for example, are different than those of a typical desktop or laptop computer. Apple's iPod Touch, iPhone, and iPad all run the iOS mobile operating system which is derived from Mac OS. The Android operating system, developed by Google, is an open source project as part of the Open Handset Alliance.
@@ -187,6 +193,8 @@ Describe one way that the operating system of a networked workstation hides the 
 Define the term operating system?
 
 Outline the role of paging in the management of primary memory?
+
+---
 
 ## References
 
