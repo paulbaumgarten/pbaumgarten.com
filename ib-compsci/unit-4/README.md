@@ -799,11 +799,15 @@ With approximately 1000 transactions per day, would it be more efficient to:
 
 # Unit 4.3: Programming concepts
 
-The following is not an introduction to a programming langauge per-se, rather a discussion about the conceptual ideas involved in programming.
-
 ## Nature of programming languages
 
-Software programs are sets of instructions. For a CPU to execute these instructions, each one must first be translated into machine code – simple binary codes that activate parts of the CPU.
+The following is not an introduction to a programming langauge per-se, rather a discussion about the conceptual ideas involved in programming.
+
+Introductory video: How do computers read code? by Frame of Essence (12:00)
+
+* [https://www.youtube.com/watch?v=QXjU9qTsYCc](https://www.youtube.com/watch?v=QXjU9qTsYCc)
+
+Software programs are sets of instructions. For a CPU to execute these instructions, each one must first be translated into machine code – simple binary codes that activate parts of the CPU. 
 
 The CPU only performs a few basic functions:
 
@@ -813,19 +817,25 @@ The CPU only performs a few basic functions:
 
 A piece of software, such as a game or web browser, combines these functions to perform more complex tasks. These are known as compound operations.
 
-Do how do computers read code?
+There are two main ways that our programs are converted into this machine code: interpretation and compilation.
 
-This video is a look at the link between programming languages, compilers, assembler and machine code - [https://www.youtube.com/watch?v=QXjU9qTsYCc](https://www.youtube.com/watch?v=QXjU9qTsYCc) (12:00)
+![](img/compile-vs-interpret.png)
+
+**Compiler**  
+
+A compiler translates a human-readable program directly into an executable, machine-readable form before the program can run.
+
+**Interpreter**  
+
+An interpreter translates a human-readable program into an executable, machine-readable form, instruction by instruction. It then executes each translated instruction before moving on to the next one. A program is translated every time it is run. Python is an example of an interpreted language.
 
 ## Low level v higher level languages
 
-A computer program is a list of instructions that enable a computer to perform a specific task.
-
-Computer programs can be written in high and low level languages, depending on the task and the hardware being used.
-
-When we think about computer programmers, we are probably thinking about people who write in high-level languages.
+As we know, a computer program is a list of instructions that enable a computer to perform a specific task. The languages that we use to write our computer programs in are generally split into two categories, depending on the task and the hardware being used. These are high level languages and low level languages.
 
 **High Level Languages**  
+
+When we think about computer programmers, we are probably thinking about people who write in high-level languages.
 
 High level languages are written in a form that is close to our human language, enabling to programmer to just focus on the problem being solved.
 
@@ -869,16 +879,6 @@ Machine Code
 
 * Programmers rarely write in machine code (binary) as it is difficult to understand.
 
-## Interpretation v compilation
-
-**Compiler**  
-
-A compiler translates a human-readable program directly into an executable, machine-readable form before the program can run.
-
-**Interpreter**  
-
-An interpreter translates a human-readable program into an executable, machine-readable form, instruction by instruction. It then executes each translated instruction before moving on to the next one. A program is translated every time it is run. Python is an example of an interpreted language.
-
 ## Features of modern programming languages
 
 Regardless of the programming language you learn, there are core constructs that are generally available in all major, modern programming langauges. Be sure you are aware of the terminology involved.
@@ -892,6 +892,108 @@ Regardless of the programming language you learn, there are core constructs that
 * Arrays/lists - a subtype of collection
 * Sub routines, functions
 * Error or exception handling
+
+## A note about functions
+
+Functions or sub routines are a useful way of allowing a program to be modularised / divided into sub tasks. It is frequently the case that you will want your function to receive particular information that it acts on, and then have it return a result. The passing of information is generally referred to as passing arguments or parameters.
+
+Programming languages have two different methods of passing parameters, and the method used can significantly affect how your program behaves. These two methods are `pass by value` and `pass by reference`.
+
+```javascript
+function doubleIt( var number ) {
+    number = number * 2;
+    return( number );
+}
+
+function main() {
+    var a = 10;
+    b = doubleIt( a );
+    print( a )
+    print( b )
+}
+```
+
+What will the above program print?
+
+The answer is... it depends on if the programming langauge is using pass by reference or pass by value.
+
+* Pass by value will take the value stored within `a`, allocate new memory space for `number`, and place a copy of the number `10` into that new memory space.
+* Pass by reference will lookup the memory address used by `a`, and assign the variable `number` the same memory address.
+
+Now... what will the above program print in each case?
+
+**Java**
+
+Technically Java uses pass by value for everything. In practice, it will only seem like it behaves that way for primitive data types (integers, floats, booleans etc). For objects and complex data structures such as arrays, it will seem like it is using pass by reference. This is because internally within Java, the "value" of an array or object variable name is the memory address of where the array or object is stored.
+
+The implication of this is that this will behave like pass by reference even though it is techncially pass by value.
+
+```java
+import java.util.Arrays;
+
+public static int[] doubleIt(int[] data) {
+    for (int i=0; i<data.length; i++) {
+        data[i] = data[i] * 2;
+    }
+    return(data);
+}
+
+public static void main(String[] args) {
+    int[] numbers = { 1, 2, 3, 4, 5 };
+    int[] numbers2 = doubleIt( numbers );
+    System.out.println( Arrays.toString( numbers ));
+    System.out.println( Arrays.toString( numbers2 ));
+}
+```
+
+One solution to get around this problem in the above example would be to change the `doubleIt()` function as follows...
+
+```java
+public static int[] doubleIt(int[] data) {
+    int[] result = new int[data.length];
+    for (int i=0; i<data.length; i++) {
+        result[i] = data[i] * 2;
+    }
+    return(result);
+}
+```
+
+Some further technical detail on this is available at https://stackoverflow.com/a/40523
+
+***Other languages***
+
+It is important to be on guard for this issue and be aware of how it can impact your programming. When starting to get serious with any new programming language knowing what is treated as pass by value, and what is treated as pass by reference is a question you will need to know the answer to.
+
+## A note about collections
+
+While collections may sound like arrays, they are not limited to just arrays. They are more than just that. An array would be an example of a linear collection, where there is a recognised start point of the set of items in the collection, and you can iterate through them like a list. Also commonly used in programming languages is an associative collection (in Java this would be the HashMap, in Python this is the Dictionary) where the items in the collection are stored and retrieved as key/value pairs. In this instance you provide the lookup key to retrieve a particular value stored in the collection.
+
+The above all said, you need to be aware that the IB course syllabus adds it's own special meaning to the term collection with respect to Paper 1 pseudocode questions.
+
+The following is a pseudo code example from the Subject Guide that uses a collection
+
+```txt
+A geography teacher is searching CITIES, a collection of city names, and wants to print out the names of the
+cities beginning with D. Construct pseudocode to indicate how this may be done.
+
+// FirstLetter("CITY") will return the first letter of the word "CITY"
+loop while CITIES.HasNextItem()
+    NAME = CITIES.getNext()
+    if FirstLetter(NAME) = “D”
+        output NAME
+    end if
+end loop
+```
+
+Notice the use of `.HasNextItem()` and `.getNext()`. These are collection methods that do commonly exist, particularly with a type of collection known as a Linked List. High Level students will learn about Linked Lists in more detail in unit 5, however Standard Level students are required to be use these linked-list-style functions in their Paper 1 pseudo code responses if the question uses a collection.
+
+Specifically, there are five commands that you must be aware of for a Paper 1 pseudo code "collection".
+
+![](img/collections.png)
+
+Some past paper questions for you to practice with are here:
+
+* [collections-past-questions.pdf](assets/collections-past-questions.pdf)
 
 ---
 
