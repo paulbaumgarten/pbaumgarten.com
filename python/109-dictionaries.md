@@ -84,7 +84,7 @@ for val in countries:
 JSON is frequently used as the medium of transferring data between web servers and applications, as such knowledge of Python dictionaries can come in particularly useful for retrieving data from the internet. Take a look at my [Web requests](https://pbaumgarten.com/python/requests.html) notes for more detail.
 
 
-# Problem sets
+## Problem set
 
 > You better believe these are coming soon! :-)
 

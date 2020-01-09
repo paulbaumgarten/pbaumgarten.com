@@ -119,7 +119,7 @@ def confirm( prompt ):
     return response
 ```
 
-# Problem set
+## Problem set
 
 1. Create a function `area_right_angled_triangle(base, height)` that returns the calculated area.
 
