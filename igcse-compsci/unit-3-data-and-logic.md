@@ -167,7 +167,17 @@ The answer, of course, is 256. But did you get there the easy way or the hard wa
 
 ### The integer
 
+```python
+for n in range(256):
+    b = bin(n)
+    print(f" Decimal { n :3}, in binary is { b :>10}")
+```
+
 ### Floating point numbers
+
+* Programmatic representation. math.frexp(), 
+* https://docs.python.org/3/tutorial/floatingpoint.html
+* https://www.h-schmidt.net/FloatConverter/IEEE754.html
 
 ### Registers
 
@@ -182,17 +192,34 @@ https://www.youtube.com/watch?v=NRKORzi5tnM
 
     TO
 
+
+* Manually
+* Programmatically
+
 ---
 
 ## Hexadecimal numbers
 
 Reasoning for hex notation
 
+```python
+for n in range(256):
+    b = bin(n)
+    h = hex(n)
+    print(f" Decimal { n :3}, in binary { b :>10}, in hex { h :>4}")
+```
+
 ---
 
 ## Convert hex and denary
 
+* Manually
+* Programmatically
+
 ## Convert hex and binary
+
+* Manually
+* Programmatically
 
 ---
 
@@ -201,6 +228,11 @@ Reasoning for hex notation
 ### HTML colours
 
 ### MAC addresses
+
+```python
+import uuid
+print( hex(uuid.getnode()) )
+```
 
 ### Assembly languages
 
