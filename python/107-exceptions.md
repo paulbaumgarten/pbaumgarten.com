@@ -65,7 +65,7 @@ except ZeroDivisionError:
     print("I can't divide by zero")
 ```
 
-## Rasing exceptions
+## Raising exceptions
 
 Occassionally you might have a valid cause to want to Python to have an exception event.
 
