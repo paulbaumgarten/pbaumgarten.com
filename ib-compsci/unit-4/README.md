@@ -893,6 +893,32 @@ Regardless of the programming language you learn, there are core constructs that
 * Sub routines, functions
 * Error or exception handling
 
+## A note about floating point numbers
+
+How are floating point numbers stored internally? By storing two integers, one representing the significant figures, the other representing the exponent for the number. In this way we can store very large and very small numbers but with a limited degree of accuracy.
+
+In the same way that we might think of the the speed of light in decimal notation as being represented by the number 3 and 8.... to represent 3 x 10^8, floating point numbers use the same approach.
+
+The 64 bit floating point number uses 1 bit for the sign (positive/negative), 8 bits for the exponent, and 55 bits for the significant number.
+
+Everything is stored in binary rather than decimal. This means the first bit represents 1/2, the second bit represnts 1/4, the third will represent 1/8 and so forth. This poses some challenges for seemingly common numbers.
+
+For instance, look at the following output from Python
+
+```python
+>>> 0.3
+0.3
+>>> 0.1
+0.1
+>>> 0.1 + 0.1 + 0.1
+0.30000000000000004
+>>> 
+```
+
+The number 0.1 in binary is actually an infinitely recurring decimal, so when we add several together we are getting a rounding effect occurring. This is analogus to adding 0.3333333 (recurring) several times.
+
+* Floating point calculator... [https://www.h-schmidt.net/FloatConverter/IEEE754.html](https://www.h-schmidt.net/FloatConverter/IEEE754.html)
+
 ## A note about functions
 
 Functions or sub routines are a useful way of allowing a program to be modularised / divided into sub tasks. It is frequently the case that you will want your function to receive particular information that it acts on, and then have it return a result. The passing of information is generally referred to as passing arguments or parameters.
