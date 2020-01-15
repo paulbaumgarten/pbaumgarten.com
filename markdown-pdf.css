@@ -39,6 +39,14 @@ blockquote {
 	font-size: inherit;
 }
 
+table {
+	border: 1px solid black;
+}
+
+thead {
+	background-color: #C9AE75;
+}
+
 /* Page Break : use <div class="page"/> to insert page break
 -------------------------------------------------------- */
 h1 {
