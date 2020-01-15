@@ -1,5 +1,13 @@
 # Variables & numbers
 
+## The main ideas explained
+
+## What it looks like
+
+## Examples
+
+## Problems
+
 * Video: [Learning Python (2018 edition) 01: Your first programs](https://www.youtube.com/watch?v=dOCTDDxtv7s) (Variables, numbers, strings & casting)
 
 ## Basic calculations
