@@ -33,6 +33,8 @@ Got yourself a Microbit? Awesome! They're a great way to learn Python!
     * Create spellbinding, colour-filled light displays with an [Adafruit Neopixel](https://www.adafruit.com/category/168).
 * [Lesson 7: Communicate with bluetooth](lesson-07-communicate-with-bluetooth.md)
     * Share the love by sending messages to someone else's Microbit
+* [Bonus: Servo](servo.md)
+    * Control a servo attached to a 3d printed device to control a machine of your own creation.
 
 ## Sample game projects
 
@@ -102,6 +104,10 @@ The following links take you to the various sections of the [official Microbit P
 * [Other editors and languages you can program the Microbit with](https://microbit.org/code-alternative-editors/)
 * [Microbit API](https://microbit-micropython.readthedocs.io/en/latest/microbit.html)
 * [Awesome microbit resources list](https://github.com/carlosperate/awesome-microbit)
+
+## Other notes
+
+Generic brand neopixels can be found by searching for `ws2812b` LED strips.
 
 ## Author
 
