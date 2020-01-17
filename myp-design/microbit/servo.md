@@ -1,5 +1,7 @@
 # Controlling Servos with Microbit
 
+![](img/servo.jpg)
+
 Tested on the micro servo 9g
 
 Servo control: 
@@ -9,6 +11,8 @@ Servo control:
 * 150 = 1.5 millisecond pulse center 
 * 600 * 0.0512 = clockwise
 * 1800 * 0.0512 = anticlockwise
+
+Demo code...
 
 ```python
 from microbit import * 
