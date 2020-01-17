@@ -35,6 +35,8 @@ Got yourself a Microbit? Awesome! They're a great way to learn Python!
     * Share the love by sending messages to someone else's Microbit
 * [Bonus: Servo](servo.md)
     * Control a servo attached to a 3d printed device to control a machine of your own creation.
+* [Bonus: Joystick but](joystick.md)
+    * Use the Joystick Bit game controller
 
 ## Sample game projects
 
