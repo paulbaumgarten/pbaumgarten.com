@@ -1,6 +1,6 @@
 # Controlling Servos with Microbit
 
-![](img/servo.jpg)
+![](img/servo.JPG)
 
 Tested on the micro servo 9g
 

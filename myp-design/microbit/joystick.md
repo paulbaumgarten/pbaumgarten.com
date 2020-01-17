@@ -1,6 +1,6 @@
 # Joystick Bit
 
-![](img/joystick.jpg)
+![](img/joystick.JPG)
 
 
 For the blue and red buttons, read the `pin2.read_analog()` and check the values as follows...
