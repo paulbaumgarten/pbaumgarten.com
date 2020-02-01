@@ -917,6 +917,8 @@ For instance, look at the following output from Python
 
 The number 0.1 in binary is actually an infinitely recurring decimal, so when we add several together we are getting a rounding effect occurring. This is analogus to adding 0.3333333 (recurring) several times.
 
+So it is important to remember that floating point numbers are great, but they are not designed for highlevel precision after multiple mathematical operations. They were designed for scientific applications, not financial.
+
 * Floating point calculator... [https://www.h-schmidt.net/FloatConverter/IEEE754.html](https://www.h-schmidt.net/FloatConverter/IEEE754.html)
 
 ## A note about functions

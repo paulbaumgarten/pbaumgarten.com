@@ -1,5 +1,16 @@
 # Unit 3: Data and logic
 
+This unit aligns to the syllabus and textbook as follows:
+
+* Syllabus: 1.1.1, 1.1.2, 1.3.1
+* Textbook: Chapter 1 "Binary systems and hexadecimal" and chapter 3 "Logic gates and logic circuits"
+
+## Introductory activity
+
+Build your own logic gates
+
+* [unit-3-intro-activity](unit-3-intro-activity)
+
 ## What is data?
 
 Ultimately everything in a computer is reduced to either the presence or absence of an electrical charge. This electrical charge inside transistors is scaled up to form basic circuits that can be used to remember information (ie: act as memory) and perform calculations.
@@ -12,8 +23,7 @@ We mentioned before that at the most simple level, everything inside a microproc
 
 A transistor is a switch that controls another switch. For a great introduction to how transistors can be combined to create interesting functionality, watch this brief video...
 
-    Relays and Logic Gates - How to Make a Computer: Part I (6:30)
-    [https://www.youtube.com/watch?v=fB85NrUBBhQ](https://www.youtube.com/watch?v=fB85NrUBBhQ)
+* Relays and Logic Gates - How to Make a Computer: Part I (6:30) - [https://www.youtube.com/watch?v=fB85NrUBBhQ](https://www.youtube.com/watch?v=fB85NrUBBhQ)
 
 This video introduced you to logic gates. This is the level of complexity from the transistor. We use multiple transistors to build logic gates. Multiple logic gates can then be used in clever patterns to create memory and perform calculations. Once we have the ability to store values in memory, and to be able to perform calculations on those values, we then have the basic building blocks of every computer.
 
@@ -42,50 +52,6 @@ The logic gate symbols are shown below and are also in page 26 of your text (the
 ![](img/logic-gate-symbols.png)
 
 As you can also see, we can simplify our understanding of rules for each gate by using a table, known as a truth table, to document the circumstances in which a gate is on or off. Rather than using the "on" and "off" terminology, we use binary where 0 represents off and 1 represents on.
-
----
-
-## Exercise: Creating gates from transistors
-
-We are going to see how logic gates can be physically constructed from simple transitors.
-
-To do this we are going to use a breadboard. It is a simple device that allows us to connect the wires (terminals) of various electronic components together in a simple fashion without having to bother with soldering.
-
-![](img/breadboard.jpg)
-
-The lines marked above show you how the pin holes on the breadboard are interconnected. This means we can put two pins in the same center row and they will become electrically connected.  This allows us to combine components together to make a circuit as the following demonstrates.
-
-<img src="img/breadboard-2.png" width="50%">
-
-Follow the light green shading on the above. That is the path the electricity is travelling.
-
-Before going any further you should build the simple push-button and LED scenario sketched out above to test your understanding of how the breadboard functions.
-
-Once you have completed the LED/button exericse, it is time to attempt to wire up some logic gates.
-
-We will be using NPN transistors for our exercise. The NPN transistor is designed to pass electrons from the emitter to the collector (so conventional current flows from collector to emitter). The emitter "emits" electrons into the base, which controls the number of electrons the emitter emits. ... The transistor is kind of like an electron valve. (https://learn.sparkfun.com/tutorials/transistors/all)
-
-The following shows you how the diagram symbol for an NPN transistor correlates to it's physical appearance. You will need to get the order of the pins correct for your circuit to function.
-
-<img src="img/transistor-NPN-PN2222.png" width="50%">
-
-Finally, the following are the transistor wiring diagrams for four of the core logic gates. Can you tell which one should be which? By the way...
-
-* the zig-zag lines on the diagrams... represent your resistors.
-* The "funnel" made out of three lines at the bottom... represents the ground or negative end of the power supply.
-* The "A" and "B" points should be coming out from push buttons. The other end of those push buttons should connect to your positive power.
-* The "6V" is your positive power (6 volts in this case).
-* The "Out" should connect to the positive end of an LED. The other pin of the LED should run into your Ground / Negative. (Note: On the LED one pin is longer than the other. The long one is the positive end.)
-
-Partner up with someone, roll up your sleeves, and figure out the electronics.
-
-![](img/and-gate.gif)
-
-![](img/or-gate.gif)
-
-![](img/nand-gate.gif)
-
-![](img/nor-gate.gif)
 
 ---
 
@@ -162,6 +128,17 @@ The answer, of course, is 256. But did you get there the easy way or the hard wa
 | 3              | 000, 001, 010, 011, 100, 101, 110, 111 | 8  | 2^3           |
 | 4  | 0000, 0001, 0010, 0011, 0100, 0101, 0110, 0111, 1000, 1001, 1010, 1011, 1100, 1101, 1110, 1111 | 16 | 2^4 |
 
+## Counting in binary
+
+## Binary sizes
+
+| Memory size | Number of bits | Equivilent denary value |
+| ----------- | -------------- | ----------------------- |
+| Kilobyte    | 2^10           | 1,024  |
+| Megabyte    | 2^20           | 1,048,576  |
+| Gigabyte    | 2^30           | 1,073,741,824  |
+| Terabyte    | 2^40           | 1,099,511,627,776  |
+| Petabyte    | 2^50           | 1,125,899,906,842,624  |
 
 ## Uses of binary numbers
 
@@ -175,9 +152,31 @@ for n in range(256):
 
 ### Floating point numbers
 
-* Programmatic representation. math.frexp(), 
-* https://docs.python.org/3/tutorial/floatingpoint.html
-* https://www.h-schmidt.net/FloatConverter/IEEE754.html
+How are floating point numbers stored internally? By storing two integers, one representing the significant figures, the other representing the exponent for the number. In this way we can store very large and very small numbers but with a limited degree of accuracy.
+
+In the same way that we might think of the the speed of light in decimal notation as being represented by the number 3 and 8.... to represent 3 x 10^8, floating point numbers use the same approach.
+
+The 64 bit floating point number uses 1 bit for the sign (positive/negative), 8 bits for the exponent, and 55 bits for the significant number.
+
+Everything is stored in binary rather than decimal. This means the first bit represents 1/2, the second bit represnts 1/4, the third will represent 1/8 and so forth. This poses some challenges for seemingly common numbers.
+
+For instance, look at the following output from Python
+
+```python
+>>> 0.3
+0.3
+>>> 0.1
+0.1
+>>> 0.1 + 0.1 + 0.1
+0.30000000000000004
+>>> 
+```
+
+The number 0.1 in binary is actually an infinitely recurring decimal, so when we add several together we are getting a rounding effect occurring. This is analogus to adding 0.3333333 (recurring) several times.
+
+So it is important to remember that floating point numbers are great, but they are not designed for highlevel precision after multiple mathematical operations. They were designed for scientific applications, not financial.
+
+* Floating point calculator... [https://www.h-schmidt.net/FloatConverter/IEEE754.html](https://www.h-schmidt.net/FloatConverter/IEEE754.html)
 
 ### Registers
 
