@@ -2,6 +2,12 @@
 
 The following units have been developed for the Digital Design courses at Sha Tin College.
 
+## Book of Python
+
+Written as a teach yourself text book, rather than a "unit of work" for a course. This will walk you through all the basics of Python from the very beginning, to becoming a competent programmer in your own right.
+
+* Open the [Book of Python](https://pbaumgarten.com/python/book-of-python.pdf).
+
 ## Microbit
 
 The BBC Microbit is a simple microcontroller that allows you to learn a real programming language such as Python, while interacting with and controling physical devices such as LEDs, speakers, and motors. It has motion sensors built in, along with a couple of buttons and an LED grid.
