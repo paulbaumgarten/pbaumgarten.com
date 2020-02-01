@@ -1,10 +1,42 @@
 # MYP Digital Design
 
-The following units have been developed for the MYP Digital Design course at Sha Tin College.
+The following units have been developed for the Digital Design courses at Sha Tin College.
 
-* [Learn the Microbit](microbit)
-* [Cozmo robotics](cozmo)
-* [Images effects, memes and face filters](image-editing)
-* [Intro to artificial intelligence](intro-to-ai)
-* [Game making](game-making)
+## Microbit
+
+The BBC Microbit is a simple microcontroller that allows you to learn a real programming language such as Python, while interacting with and controling physical devices such as LEDs, speakers, and motors. It has motion sensors built in, along with a couple of buttons and an LED grid.
+
+Exercise your creativity and demonstrate your prototyping skills to create an interesting Microbit powered machine.
+
+* Open the [Microbit](microbit) unit.
+
+## Cozmo robotics
+
+The Cozmo robots are cute but capable little machines that you can program for yourself. In addition to the two track wheels, they have a lifting arm that can be used to pick up and drop various items. The Cozmo robots have a range of sensors including a video camera, that you can program to detect the scene around it and so help Cozmo determine what action it should take.
+
+Design an obstacle course to challenge your Cozmo robot. Just how clever can these little robots get?
+
+* Open the [Cozmo robotics](cozmo) unit.
+
+## Our #insta life
+
+We live in a world where it seems our every moment is captured and manipulated photographically. Photoshop can be used to alter photos in such a realistic way, and apps like Instagram and Snap can make us look like a crazy blend of cartoon animal and human. How hard is it to create these kinds of programs? This unit will have you experimenting with creating some of these tools for yourself in Python.
+
+* Open the [our #insta life](image-editing) unit.
+
+## Game making
+
+Who doesn't love a good, fun computer game? This unit will give you the opportunity to learn how it is done within Python and to have a go at creating your own.
+
+This unit isn't for complete programming beginners. Some underlying confidence with the basics of Python is recommended before proceeding.
+
+* Open the [Game making](game-making.pdf) unit.
+
+## Introduction to artificial intelligence
+
+Artificial intelligence is experiencing a massive boom in interest and investment. The FAANG companies (Facebook, Amazon, Apple, Netflix, Google) along with others such as Microsoft, Uber, Airbnb, Snap, universities, militaries and so forth are spending billions of dollars on the field. Get a tase of what all the fuss is about with this introduction to the ideas of AI. 
+
+Definitely not for beginner programmers, and there is considerable technical theory to get acquainted with. This unit is for those looking for a challenge.
+
+* Open the [Intro to artificial intelligence](intro-to-ai.pdf) unit.
 
