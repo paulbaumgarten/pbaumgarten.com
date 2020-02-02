@@ -16,13 +16,13 @@ The Cozmo robots are cute but capable little machines that you can program for y
 
 Design an obstacle course to challenge your Cozmo robot. Just how clever can these little robots get?
 
-* Open the [Cozmo robotics](cozmo) unit. You may also want the [Python basics reference](python-basics-reference.pdf).
+* Open the [Cozmo robotics](cozmo-robotics.pdf) unit. You may also want the [Python basics reference](python-basics-reference.pdf).
 
 ## Our #insta life
 
 We live in a world where it seems our every moment is captured and manipulated photographically. Photoshop can be used to alter photos in such a realistic way, and apps like Instagram and Snap can make us look like a crazy blend of cartoon animal and human. How hard is it to create these kinds of programs? This unit will have you experimenting with creating some of these tools for yourself in Python.
 
-* Open the [our #insta life](image-editing) unit. You may also want the [Python basics reference](python-basics-reference.pdf).
+* Open the [our #insta life](our-insta-life.pdf) unit. You may also want the [Python basics reference](python-basics-reference.pdf).
 
 ## Game making
 
