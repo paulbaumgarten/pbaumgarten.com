@@ -5,19 +5,24 @@ This unit aligns to the syllabus and textbook as follows:
 * Syllabus: 1.1.1, 1.1.2, 1.3.1
 * Textbook: Chapter 1 "Binary systems and hexadecimal" and chapter 3 "Logic gates and logic circuits"
 
-## Introductory activity
+## 01: Introductory activity
 
 Build your own logic gates
 
 * [unit-3-intro-activity](unit-3-intro-activity)
 
-## What is data?
+## 02: What is data?
+
+* What does data reduce to at it's simplest level?
+* How does a transistor produce logic gates?
+
+### What is data?
 
 Ultimately everything in a computer is reduced to either the presence or absence of an electrical charge. This electrical charge inside transistors is scaled up to form basic circuits that can be used to remember information (ie: act as memory) and perform calculations.
 
 At the heart of it all is the transistor which is a simple electrical switch that can be turned on or off via an electrical signal. A modern Intel CPU has about 1.75 billion transistors in a piece of silicon the size of a fingernail, or 17.185 million transistors per square millimetre. (1)
 
-## The logic gates
+### Transistors to logic gates
 
 We mentioned before that at the most simple level, everything inside a microprocessor is reduced to transistors. But what exactly is a transistor? how does it function? How can such a simple device create the seeming complexity of modern computers?
 
@@ -45,6 +50,8 @@ These gates are effectively switches, where the state of the output (whether it 
 * The NOR gate is a concatenation of an OR gate where the output goes through a NOT gate. This means if either input is on, the output will be off. If both inputs are off, the output will be on.
 * The XOR gate is known as the eXclusive OR gate. With this gate if one of the inputs are on, the output is on. However, if both inputs are on, the output remains off. Likewise if both inputs are off, the output remains off.
 
+### Logic gates to circuits
+
 We will use combinations of these logic gates to create logic circuits. To enable us to do this easily each gate has a symbol by which it can be represented in a diagram, and there is also a couple of notations available to represent them in the form of written equations. 
 
 The logic gate symbols are shown below and are also in page 26 of your text (the XNOR gate is not part of your course but it should be an intuitive extension to determine what it is...?)
@@ -53,35 +60,17 @@ The logic gate symbols are shown below and are also in page 26 of your text (the
 
 As you can also see, we can simplify our understanding of rules for each gate by using a table, known as a truth table, to document the circumstances in which a gate is on or off. Rather than using the "on" and "off" terminology, we use binary where 0 represents off and 1 represents on.
 
----
-
-## Exercise: NandGame
-
-[http://nandgame.com/](http://nandgame.com/)
-
-This website allows you to build a virtual computer beginning from just a NAND gate.
-
-Complete the first 6 levels:
-
-* Invert (not)
-* And
-* Or
-* Xor
-* Half Adder
-* Full Adder
-
----
-
-## Produce truth tables
+### Logic circuits to truth tables (execises)
 
 Logic gates are combined together to form logic circuits. To gain an understanding of what an individual circuit may do, we create truth tables for them as well.
 
 * Complete the walk through example, converting a logic diagram to a truth table, as a class (3.5.1 on page 29/30).
-* Individually produce the truth tables for the logic diagram questions in activity 3.2 on page 30.
+* Individually produce the truth tables for the logic diagram questions in activity 3.2 on page 32.
+* Complete these additional practice questions: [Logic equations to circuits](https://pbaumgarten.com/igcse-compsci/distribute/Logic-equation-to-circuits.pdf)
 
 ---
 
-## Produce circuits from equations
+## L3: Produce circuits from equations
 
 Any logic circuit can be expressed as a diagram or as an equation. You need to be able to convert one to the other.
 
@@ -107,9 +96,24 @@ You may be presented with a written scenario from which you need to discern the 
 * Individually complete the practice question in activity 3.4 on page 38.
 * Complete the remaining activities in chapter 3.
 
+## Exercise: NandGame
+
+[http://nandgame.com/](http://nandgame.com/)
+
+This website allows you to build a virtual computer beginning from just a NAND gate.
+
+Complete at least the first 6 levels, then go as far as you wish beyond that.
+
+* Invert (not)
+* And
+* Or
+* Xor
+* Half Adder
+* Full Adder
+
 ---
 
-## Bits and bytes
+## L4: Bits and bytes
 
 This presence of absence of electricity needs to be simplified for computer scientists to effectively scale it to the complexity of modern computers. For this reason we think of it as `True` and `False` which is then further simplified into `1` and `0`.
 
@@ -128,9 +132,27 @@ The answer, of course, is 256. But did you get there the easy way or the hard wa
 | 3              | 000, 001, 010, 011, 100, 101, 110, 111 | 8  | 2^3           |
 | 4  | 0000, 0001, 0010, 0011, 0100, 0101, 0110, 0111, 1000, 1001, 1010, 1011, 1100, 1101, 1110, 1111 | 16 | 2^4 |
 
-## Counting in binary
+### Counting in binary
 
-## Binary sizes
+To count up in binary, works the same as counting in decimal except we only have two values for each column. So, starting from zero, it would look like...
+
+```text
+  0
+  1
+ 10
+ 11
+100
+101
+110
+111
+```
+
+For each column, we start from zero, count up until we have hit the highest possible value, in this case 1, and in add a new significant figure.
+
+* If I wanted to add binary 100 and binary 1000, what would it be?
+* If I wanted to add binary 100 and binary 1100, what would it be?
+
+### Binary sizes
 
 | Memory size | Number of bits | Equivilent denary value |
 | ----------- | -------------- | ----------------------- |
@@ -140,9 +162,9 @@ The answer, of course, is 256. But did you get there the easy way or the hard wa
 | Terabyte    | 2^40           | 1,099,511,627,776  |
 | Petabyte    | 2^50           | 1,125,899,906,842,624  |
 
-## Uses of binary numbers
+### Uses of binary numbers
 
-### The integer
+#### The integer
 
 ```python
 for n in range(256):
@@ -150,7 +172,7 @@ for n in range(256):
     print(f" Decimal { n :3}, in binary is { b :>10}")
 ```
 
-### Floating point numbers
+#### Floating point numbers
 
 How are floating point numbers stored internally? By storing two integers, one representing the significant figures, the other representing the exponent for the number. In this way we can store very large and very small numbers but with a limited degree of accuracy.
 
@@ -178,13 +200,19 @@ So it is important to remember that floating point numbers are great, but they a
 
 * Floating point calculator... [https://www.h-schmidt.net/FloatConverter/IEEE754.html](https://www.h-schmidt.net/FloatConverter/IEEE754.html)
 
-### Registers
+#### Registers
 
-16, 32, 64 bit computing
+A register is a collection of bits within the CPU with a designated purpose. They may be a temporary holding area for an instruction about to be executed, or a value that is about to be used. They are the very short term working memory of the CPU for the exact job it is doing at that moment.
+
+You have probably heard the phrase 32 bit computing or 64 bit computing. This refers to, amongst other things, the size of the registers within the CPU. If a CPU has 32 bit registers, then it can cope with, at most 2^32 memory locations in RAM (about 4GB), and calculations on numbers of up to 4 billion. Modern computers are now 64 bit.
+
+Another example of using registers is to control the outputs of a computer system. The textbook contains an example of a computer controlling motors through setting the bits within a register.
+
+Read section 1.4, complete activity 1.3
 
 ---
 
-## Converting between denary and binary
+## L5: Converting between denary and binary
 
 Binary - How to Make a Computer: Part II (7:15)
 https://www.youtube.com/watch?v=NRKORzi5tnM
@@ -197,7 +225,7 @@ https://www.youtube.com/watch?v=NRKORzi5tnM
 
 ---
 
-## Hexadecimal numbers
+## L6,7: Hexadecimal numbers
 
 Reasoning for hex notation
 
@@ -207,20 +235,6 @@ for n in range(256):
     h = hex(n)
     print(f" Decimal { n :3}, in binary { b :>10}, in hex { h :>4}")
 ```
-
----
-
-## Convert hex and denary
-
-* Manually
-* Programmatically
-
-## Convert hex and binary
-
-* Manually
-* Programmatically
-
----
 
 ## Common uses of hex in computing
 
@@ -236,6 +250,17 @@ print( hex(uuid.getnode()) )
 ### Assembly languages
 
 ### Debugging
+
+
+## Convert hex and denary
+
+* Manually
+* Programmatically
+
+## Convert hex and binary
+
+* Manually
+* Programmatically
 
 
 ---
