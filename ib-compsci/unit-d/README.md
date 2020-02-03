@@ -201,60 +201,6 @@ For now, I don't want you to be too concerned about all the extra boiler plate a
 
 There are three core principles of object orientated programming you must be familiar with: Inheritance, encapsulation, and polymorphism.
 
-## Inheritance
-
-Inheritance is the idea that a new class can be based off an already existing class. In doing so, it can inherit the methods and attributes of the superclass without them having to be re-written. If you change the code within the superclass, that change will automatically flow through to any subclasses created based off it.
-
-For example the Dept of Transport could have an Automobile class which contains vehicle owner details, registration tag etc. They can also have a Motorcycle class, Car class, and Truck class that inherit from automobile.
-
-Some other examples:
-
-![](img/inheritance.gif)
-
-* Superclass: Pet; ... Subclasses: Dog, cat, bird, rabbit
-* Superclass: Person; ... Subclasses: Teacher, student, parent
-* Superclass: Room; ... Subclasses: Penthouse, Suite, King room, Double room, Twin room
-
-Be aware that unlike humans, classes in OOP can only have one parent!
-
-Coding example, adding to our previous code.
-
-```java
-package com.pbaumgarten.basics;
-
-public class Car extends Automobile {
-   private String color;
-
-   Car(String registration, String purchaseDate, String color) {
-      super(registration, purchaseDate);
-      System.out.println("Car constructor is executing...");
-      this.color = color;
-   }
-
-   public String getColor() {
-      return this.color;
-   }
-
-   public static void main(String[] args) {
-      Car car = new Car("VD-1234", "01/07/2010", "lime green!");
-      System.out.println("Your car is " + car.getAge() + " years old");
-      System.out.println("And it's color is " + car.getColor() );
-   }
-}
-```
-
-Key points to discuss:
-
-* The use of `extends` keyword
-* The use of `super()` in the constructor. It must be the first line.
-* Where does the `car.getAge()` function come from we are using in `main`?
-
-![](img/ExerciseOOP_PersonAndSubclasses.png)
-
-![](img/ExerciseOOP_ShapeAndSubclasses.png)
-
----
-
 ## Abstraction
 
 Not one of the "three cores of OOP" according to the IB syllabus, but in reality it is a fairly fundamental idea you need to understand. The phrase has appeared in past papers as well, so, go figure.
@@ -372,13 +318,67 @@ println( genta.getName() );
 
 ---
 
+## Inheritance
+
+Inheritance is the idea that a new class can be based off an already existing class. In doing so, it can inherit the methods and attributes of the superclass without them having to be re-written. If you change the code within the superclass, that change will automatically flow through to any subclasses created based off it.
+
+For example the Dept of Transport could have an Automobile class which contains vehicle owner details, registration tag etc. They can also have a Motorcycle class, Car class, and Truck class that inherit from automobile.
+
+Some other examples:
+
+![](img/inheritance.gif)
+
+* Superclass: Pet; ... Subclasses: Dog, cat, bird, rabbit
+* Superclass: Person; ... Subclasses: Teacher, student, parent
+* Superclass: Room; ... Subclasses: Penthouse, Suite, King room, Double room, Twin room
+
+Be aware that unlike humans, classes in OOP can only have one parent!
+
+Coding example, adding to our previous code.
+
+```java
+package com.pbaumgarten.basics;
+
+public class Car extends Automobile {
+   private String color;
+
+   Car(String registration, String purchaseDate, String color) {
+      super(registration, purchaseDate);
+      System.out.println("Car constructor is executing...");
+      this.color = color;
+   }
+
+   public String getColor() {
+      return this.color;
+   }
+
+   public static void main(String[] args) {
+      Car car = new Car("VD-1234", "01/07/2010", "lime green!");
+      System.out.println("Your car is " + car.getAge() + " years old");
+      System.out.println("And it's color is " + car.getColor() );
+   }
+}
+```
+
+Key points to discuss:
+
+* The use of `extends` keyword
+* The use of `super()` in the constructor. It must be the first line.
+* Where does the `car.getAge()` function come from we are using in `main`?
+
+![](img/ExerciseOOP_PersonAndSubclasses.png)
+
+![](img/ExerciseOOP_ShapeAndSubclasses.png)
+
+---
+
 ## Polymorphism
 
-Polymorphism is the concept that allows our object to have multiple implementations of the same behaviour depending on the data it receives. There are two types of polymorphism that can be used within Java OOP: Overloading, and Overriding
+Polymorphism is the concept that allows our object to have multiple implementations of the same behaviour depending on the data it receives. There are two types of polymorphism that can be used within Java OOP: Overloading, and Overriding.
 
 <img src="img/polymorphism.png" width="40%" style="float: right">
 
-## Polymorphism by overloading
+### Polymorphism by overloading
 
 Overloading means we will have two methods with the identical name, but expecting different input parameters. Which one is executed depends on the parameters that are provided at run time. 
 
@@ -437,7 +437,7 @@ System.out.println( demo.getAge() );
 
 Overloading polymorphism is a very handy tool as it means we don't have to continually remember "what did I call that method for this circumstance?". It comes in particularly useful when we are usually going to want our program to assume a default value, so we don't want to have to manually specify it every time, but also allowing us the possibility to override the default – such as the above example with the speed of the vehicle.
 
-## Polymorphism by overriding
+### Polymorphism by overriding
 
 Overriding means a subclass is implementing a method of the same name as exists in the superclass.
 
@@ -473,9 +473,7 @@ public class Demo {
 }
 ```
 
----
-
-## Questions on Polymorphism
+### Questions on Polymorphism
 
 Examine the following codes and draw the class diagram.
 
@@ -731,9 +729,9 @@ public class Sphere extends Circle {
 
 * Caution: For the above Sphere to work, you will need to make one change to Circle. The access modifier for radius will not allow Sphere to compile. What access modifier should be used instead of `private`? Check your access modifier notes.
 
-# Problem set
+## Problem set
 
-## Q0: Warm up
+### Q0: Warm up
 
 Create a Cylinder class such that the following `main()` will execute as expected. Notice you need an overloaded constructor!
 
@@ -764,7 +762,7 @@ Create a Cylinder class such that the following `main()` will execute as expecte
    }
 ```
 
-## Q1: Student's books
+### Q1: Student's books
 
 Create a class for `Student` and a class for `Book`.
 
@@ -787,7 +785,7 @@ Book fields should include: title, author, isbn.
 
 If it helps, I have a CSV file of book data available at [https://github.com/paulbaumgarten/data-sets](https://github.com/paulbaumgarten/data-sets) (but it is not required for the question)
 
-## Q3: Hotel reservations
+### Q3: Hotel reservations
 
 Create a simple Hotel reservation system.
 
@@ -798,11 +796,11 @@ Classes required include:
 * `Booking` class.  Keep it simple, one customer can only reserve one room per booking.
 * Create a booking interface that maintains an array of bookings, allows for new bookings, viewing bookings for a room, viewing bookings for a customer etc.
 
-## Q4: Employee
+### Q4: Employee
 
 ![](img/ExerciseOOP_Employee.png)
 
-## Q5: Province animal registrations
+### Q5: Province animal registrations
 
 Create a simple animal registration system for your local government authority.
 
@@ -810,7 +808,7 @@ Create a simple animal registration system for your local government authority.
 
 ---
 
-## Q6. Contacts information system
+### Q6. Contacts information system
 
 Create a contacts information system, along the lines of the one in my Java tutorials
 
@@ -818,7 +816,7 @@ Create a contacts information system, along the lines of the one in my Java tuto
 
 ![](img/swing-demo-2.jpg)
 
-## Credits
+### Credits
 
 Some exercies from http://www.ntu.edu.sg/home/ehchua/programming/java/J3f_OOPExercises.html
 
