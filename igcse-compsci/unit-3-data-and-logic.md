@@ -70,25 +70,41 @@ Logic gates are combined together to form logic circuits. To gain an understandi
 
 ---
 
-## L3: Produce circuits from equations
+## 03: Produce circuits from equations
 
 Any logic circuit can be expressed as a diagram or as an equation. You need to be able to convert one to the other.
 
-One small but crucial detail to ask before we go any further is *order of precedence*. Intuitively from maths we may understand that backets are resolved first, but what about other situations? For instance given X = NOT A AND B... is it (NOT A) AND B.... or is it NOT (A AND B)... ?
+If we review this table again, we'll see that there were arithmetic symbols provided for gate operation.
 
-So with that in mind, you should know that the order of precedencee is 1st parenthesis, 2nd NOT, 3rd AND, 4th OR.
+![](img/logic-gate-symbols.png)
+
+This means instead of having to draw a circuit, we can write an equation that represents a circuit.
+
+For instance:
+
+* to have an `AND` gate with inputs `A` and `B` that outputs to `X`, we could write this as either `X = A AND B`, or even just `X = AB`.
+* to have an `OR` gate with inputs `A` and `B` that outputs to `X`, we could write this as either `X = A OR B`, or `X = A + B`.
+* to have a `NOT` gate with input `A` and output `X`, that could be written as `X = NOT A`, or `X = !A`, or `X = Ā` (notice the line over the A).
+
+Once we start writing equations, one small but crucial detail to known is the *order of precedence*. Intuitively from maths we may understand that backets are resolved first, but what about other situations? For instance given X = NOT A AND B... is it (NOT A) AND B.... or is it NOT (A AND B)... ? The order of precedencee is 1st parenthesis, 2nd NOT, 3rd AND, 4th OR.
 
 Let's do some questions...
+
+Creating circuit diagrams from these logic equations, then produce the truth tables.
+
+![](img/circuit-equation-questions-2.PNG)
+
+Check your answers at [http://sandbox.mc.edu/~bennet/cs110/boolalg/gate.html](http://sandbox.mc.edu/~bennet/cs110/boolalg/gate.html)
+
+Now go direct from logic equation to truth table without the circuit diagram step.
 
 ![](img/circuit-equation-questions.PNG)
 
 Check your answers at [http://sandbox.mc.edu/~bennet/cs110/boolalg/truthtab.html](http://sandbox.mc.edu/~bennet/cs110/boolalg/truthtab.html)
 
-We will now look at creating the diagrams from an equation.
+---
 
-![](img/circuit-equation-questions-2.PNG)
-
-Check your answers at [http://sandbox.mc.edu/~bennet/cs110/boolalg/gate.html](http://sandbox.mc.edu/~bennet/cs110/boolalg/gate.html)
+## 04: Written scenarios
 
 You may be presented with a written scenario from which you need to discern the equation and logic circuit.
 
@@ -113,7 +129,7 @@ Complete at least the first 6 levels, then go as far as you wish beyond that.
 
 ---
 
-## L4: Bits and bytes
+## 05: Bits and bytes
 
 This presence of absence of electricity needs to be simplified for computer scientists to effectively scale it to the complexity of modern computers. For this reason we think of it as `True` and `False` which is then further simplified into `1` and `0`.
 
@@ -212,7 +228,7 @@ Read section 1.4, complete activity 1.3
 
 ---
 
-## L5: Converting between denary and binary
+## 06: Converting between denary and binary
 
 Binary - How to Make a Computer: Part II (7:15)
 https://www.youtube.com/watch?v=NRKORzi5tnM
