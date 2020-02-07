@@ -91,7 +91,7 @@ Here are a few of the more commonly known recursive situations.
 
 ### Fractal tree
 
-![MathFractalTree](MathFractalTree.png)
+![](img/MathFractalTree.png)
 
 The recursive steps for a fractal tree could be described as
 
