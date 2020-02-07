@@ -2,53 +2,7 @@
 
 As there is considerable overlap between Unit 5 and Unit D4, it makes more practical sense to teach the two units together.  In actual fact, both can also be subdivided into two subparts that also work well together, firstly recursion, and secondly abstract data structures themselves, so I have actually organised these two units into those two sub-parts. I have indicated the syllabus alignment for each part.
 
----
-
-# Part 1: Abstract data structures
-
-The key content of this section is
-
-* 2 dimensional arrays (static only)
-* Dynamic collections (conceptual)
-* Stacks
-* Queues
-* Linked lists (singly linked, doubly linked, circularly linked)
-* Binary trees
-
-## Syllabus alignment
-
-* 5.1.4 Describe the characteristics of a two-dimensional array.
-* 5.1.5 Construct algorithms using two-dimensional arrays.
-* 5.1.6 Describe the characteristics and applications of a stack. *(Last in, first out (LIFO); Examples may include running recursive processes, return memory addresses)*
-* 5.1.7 Construct algorithms using the access methods of a stack. *(push; pop; isEmpty)*
-* 5.1.8 Describe the characteristics and applications of a queue. *(First in, first out (FIFO); Examples applications print queues, computer modelling of physical queues; linear and circular implementation required)*
-* 5.1.9 Construct algorithms using the access methods of a queue. *(enqueue; dequeue; isEmpty)*
-* 5.1.10 Explain the use of arrays as static stacks and queues. *(using static arrays to push & pop; test empty/full stack; enqueue & dequeue; test empty/full queue)*
-* 5.1.11 Describe the features and characteristics of a dynamic data structure. *(nodes, pointers)*
-* 5.1.12 Describe how linked lists operate logically.
-* 5.1.13 Sketch linked lists (single, double and circular). *(diagram adding item, deleting specified item, modifying data, searching for an item)*
-* 5.1.14 Describe how trees operate logically (both binary and non-binary).
-* 5.1.15 Define the terms: parent, left-child, right-child, subtree, root and leaf.
-* 5.1.16 State the result of inorder, postorder and preorder tree traversal.
-* 5.1.17 Sketch binary trees. *(diagram adding new item, add one or more nodes, remove one or more nodes)*
-* 5.1.18 Define the term dynamic data structure.
-* 5.1.19 Compare the use of static and dynamic data structures.
-* 5.1.20 Suggest a suitable structure for a given situation.
-* D.4.5 Define the term object reference. *(typified by simple classes that are self-referential)*
-* D.4.6 Construct algorithms that use reference mechanisms.
-* D.4.7 Identify the features of the abstract data type (ADT) list. *(understand the nature of an ADT—where no implementation details are known but the actions/methods are standard)*
-* D.4.8 Describe applications of lists. *(lists can be used to represent stacks and queues)*
-* D.4.9 Construct algorithms using a static implementation of a list. *(singly linked lists only. Methods: add (head and tail), insert (in order), delete, list, isEmpty, isFull)*
-* D.4.10 Construct list algorithms using object references. *(singly linked lists only. Methods: add (head and tail), insert (in order), delete, list, isEmpty, isFull)*
-* D.4.11 Construct algorithms using the standard library collections included in JETS. *(ArrayList and LinkedList; understanding of operation and methods yes, internal structure no)*
-* D.4.12 Trace algorithms using the implementations described in assessment statements D.4.9–D.4.11. *(In exams, definitions of ArrayList and LinkedList methods will be given where necessary)*
-* D.4.13 Explain the advantages of using library collections. *(libraries provide convenient and reliable implementations of common programming tasks)*
-* D.4.14 Outline the features of ADT’s stack, queue and binary tree. *(diagram, example applications and descriptions of these ADTs. eg: binary tree can be used to efficiently store and retrieve unique keys)*
-* D.4.15 Explain the importance of style and naming conventions in code. *(meaningful identifiers, proper indentation and adequate comments all improve the readability of code for humans and thus save money, time and effort in programming teams)*
-
----
-
-## Programming conventions
+# Preamble: Programming conventions
 
 Before we proceed any further, as our programs are now becoming more complex, it is time to address the issue of programming conventions. *(D.4.15)*
 
@@ -70,7 +24,208 @@ Please follow these conventions! Not only will it make life a lot easier for you
 
 ---
 
-## Dynamic v static data structures
+# Part 1: Recursion
+
+> To understand recursion,one must first understand recursion.
+
+Definition:
+
+* Recursion defines the solution to a problem in terms of itself.
+
+We use it to create looping behaviour without actually using a loop construct in our code. 
+
+![](img/xkcd-recursion.png)
+
+Any recursive algorithm could be solved iteratively, and vice-versa. Here is a simple algorithm shown with both it's iterative and recursive versions.
+
+```text
+// Iteration
+function goHome()
+    while (I am not home) then
+        face the direction of home
+        take one step
+    end while
+end function
+
+// Recursion
+function goHome()
+    if (I am not home) then
+        face the direction of home
+        take one step
+        goHome()
+    end if
+end function
+```
+
+## Requirements for recursion
+
+Every recursive algorithm has
+
+* A **base case**: a point at which the recursion will stop because the most basic end point has been reached, so a simple answer can be given.
+* A **test** (an "if"): to determine if we have reached the base case. If we don't have a test, our recursive loop could go for infinity.
+
+In a recursive algorithm, the computer "remembers" every previous state of the problem. This information is "held" by the computer on the "activation stack" (i.e., inside each function's memory workspace). Every function has its own workspace for every call of the function.
+
+Recursive functionality really suits some problems – makes it a lot simpler / more elegant than the iterative equivalent. However, stack space is limited and the computer will only be able to recurse so many times before it runs out of memory.
+
+1. Identify the base case – and write the procedure for it
+2. Identify the recurring case – and write the procedure for it
+3. Identify the test for determining whether the present case is base or recurring
+4. Code it
+5. Trace test
+6. Test on a small scale
+7. Test on a larger scale
+
+## Recursive situations
+
+Here are a few of the more commonly known recursive situations.
+
+### Factorial number sequence
+
+![](img/factorials.png)
+
+* What is the base case?
+* What is the test?
+* What is the recursive call?
+* How would we trace this algorithm?
+
+### Fractal tree
+
+![MathFractalTree](MathFractalTree.png)
+
+The recursive steps for a fractal tree could be described as
+
+* Draw the trunk
+* At the end of the trunk, split by some angle and draw two branches
+* Repeat at the end of each branch until a sufficient level of branching is reached
+
+Without worrying about the programming, focusing just on the pseudo code logic, how would you create a fractal drawing algorithm? Manually test it for for depths 1, 2 and 3.
+
+Image credit: https://rosettacode.org/mw/images/8/8a/MathFractalTree.png
+
+### Snowflake
+
+The humble snowflake, is very similar to fractals and is recursive in nature.
+
+Here is a Python implementation of a snowflake drawing algorithm
+
+```python
+from turtle import *
+
+def drawFlake(length, depth):
+    hideturtle()
+    if depth > 0:
+        for i in range(6):
+            forward(length)
+            drawFlake(length // 3, depth - 1)
+            backward(length)
+            left(60)
+
+if __name__ == "__main__":
+    drawFlake(200,4)
+```
+
+See the live demo at https://repl.it/@PaulBaumgarten/SnowflakeRecursion
+
+### Others
+
+What other other real-world recursive situations can you identifty?
+
+## Construct & trace recursive algorithms
+
+### Exercise: Factorials
+
+We looked at the factorial algorithm earlier. Did you obtain this solution? Have a go at implementing it if you haven't done so yet.
+
+```java
+public static long factorial(int n) { 
+    if (n == 1) {                   // test
+       return 1;                    // base case
+    } else {
+       return n * factorial(n-1);   // recursive call
+    }
+} 
+```
+
+### Exercise: Fibonacci
+
+The fibonacci sequence is 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, ...
+
+Determine the pseudo code, do a trace table test of your algorithm, then code it in Java.
+
+[Solution](teacher)
+
+### Exercise: Fractal tree
+
+Can you implement the fractal tree algorithm you came up with earlier?
+
+* You can see code samples for common languages at [https://rosettacode.org/wiki/Fractal_tree](https://rosettacode.org/wiki/Fractal_tree).
+
+### Exercise: Snowflake
+
+Can you implement the snowflake algorithm you came up with earlier?
+
+Here is a good stack overflow discussion of creating a snowflake algorithm with Python.
+
+* [https://stackoverflow.com/questions/32303391/drawing-a-snowflake-using-recursion](https://stackoverflow.com/questions/32303391/drawing-a-snowflake-using-recursion)
+
+### Exercise: Tower of hanoi
+
+The Tower of Hanoi is a straight forward game that requires recursion to solve. In this puzzle, we have three pegs and several disks, initially stacked from largest to smallest on the left peg. The rules are simple:
+
+* We are finished when the entire tower has been moved to another peg.
+* We can only move one disk at a time.
+* We can never place a larger disk on a smaller one.
+
+![](img/tower-of-hanoi-1.png)
+
+An example of how it works with 3 disks.
+
+![](img/tower-of-hanoi-2.png)
+
+You don't need to create a graphical output, a printed set of instructions is fine. Eg:
+
+![](img/tower-of-hanoi-3.png)
+
+(note: you'd very quickly find solutions online... while I can't stop you, I emphasis this would deprive yourself of the learning experience the problem solving brings)
+
+### Exercise: Binary search
+
+By now we should all know and love the binary search algorithm, but did you realise there is a recursive version of the algorithm?
+
+Can you create a recursive version of the algorithm? (no cheating with google)
+
+Here is an array of 50 sorted names you can use for your binary search.
+
+```java
+String[] names = {"Aaliyah","Abigail","Adalyn","Aiden","Alexander","Amelia","Aria","Aubrey","Ava","Avery","Benjamin","Caden","Caleb","Carter","Charlotte","Chloe","Daniel","Elijah","Emily","Emma","Ethan","Evelyn","Grayson","Harper","Isabella","Jack","Jackson","Jacob","James","Jayden","Kaylee","Layla","Liam","Lily","Logan","Lucas","Luke","Madelyn","Madison","Mason","Mia","Michael","Noah","Oliver","Olivia","Riley","Ryan","Sophia","William","Zoe"};
+```
+
+## Exercises & review
+
+Textbooks
+
+* Computer Science Illuminated by Nell Dale & John Lewis (page numbers based on 6th edition): Programming concepts: End of chapter 4 (page 240), some recursion questions
+* AQA A-level Computer Science by Bob Reeves (2015 edition)
+
+Programming exercises for recursion:
+
+* [Codingbat Recursion-1](http://codingbat.com/java/Recursion-1) 
+* [GeeksForGeeks Recursion practice](https://www.geeksforgeeks.org/recursion-practice-problems-solutions/)
+* If you’ve completed a number of the above and are looking for a challenge, the popular numbers game of Sodoku is actually a recursive puzzle. Can you write an algorithm that will solve it? Check the [Sudoku algorithms explainer on wikipedia](https://en.wikipedia.org/wiki/Sudoku_solving_algorithms)
+
+---
+
+# Part 2: Abstract data structures
+
+The key content of this section is
+
+* 2 dimensional arrays (static only)
+* Dynamic collections (conceptual)
+* Stacks
+* Queues
+* Linked lists (singly linked, doubly linked, circularly linked)
+* Binary trees
 
 An abstract data structure:
 
@@ -665,9 +820,9 @@ Can you make your own simple hash table class?
 
 ---
 
-# Part 1: Recursion
+# Syllabus alignments
 
-## Syllabus alignment
+Recursion
 
 * 5.1.1 Identify a situation that requires the use of recursive thinking. *(eg: snowflakes, fractals, towers of Hanoi)*
 * 5.1.2 Identify recursive thinking in a specified problem solution.
@@ -677,193 +832,36 @@ Can you make your own simple hash table class?
 * D.4.3 Construct algorithms that use recursion. *(limited to 1 result, and 1 or 2 recursive calls)*
 * D.4.4 Trace recursive algorithms. *(all steps and calls to be shown clearly)*
 
-## Thinking recursively
-
-> To understand recursion,one must first understand recursion.
-
-Definition:
-
-* Recursion defines the solution to a problem in terms of itself.
-
-We use it to create looping behaviour without actually using a loop construct in our code. 
-
-![](img/xkcd-recursion.png)
-
-Any recursive algorithm could be solved iteratively, and vice-versa. Here is a simple algorithm shown with both it's iterative and recursive versions.
-
-```text
-// Iteration
-function goHome()
-    while (I am not home) then
-        face the direction of home
-        take one step
-    end while
-end function
-
-// Recursion
-function goHome()
-    if (I am not home) then
-        face the direction of home
-        take one step
-        goHome()
-    end if
-end function
-```
-
-## Requirements for recursion
-
-Every recursive algorithm has
-
-* A **base case**: a point at which the recursion will stop because the most basic end point has been reached, so a simple answer can be given.
-* A **test** (an "if"): to determine if we have reached the base case. If we don't have a test, our recursive loop could go for infinity.
-
-In a recursive algorithm, the computer "remembers" every previous state of the problem. This information is "held" by the computer on the "activation stack" (i.e., inside each function's memory workspace). Every function has its own workspace for every call of the function.
-
-Recursive functionality really suits some problems – makes it a lot simpler / more elegant than the iterative equivalent. However, stack space is limited and the computer will only be able to recurse so many times before it runs out of memory.
-
-1. Identify the base case – and write the procedure for it
-2. Identify the recurring case – and write the procedure for it
-3. Identify the test for determining whether the present case is base or recurring
-4. Code it
-5. Trace test
-6. Test on a small scale
-7. Test on a larger scale
-
-## Recursive situations
-
-Here are a few of the more commonly known recursive situations.
-
-### Factorial number sequence
-
-![](img/factorials.png)
-
-* What is the base case?
-* What is the test?
-* What is the recursive call?
-* How would we trace this algorithm?
-
-### Fractal tree
-
-![MathFractalTree](MathFractalTree.png)
-
-The recursive steps for a fractal tree could be described as
-
-* Draw the trunk
-* At the end of the trunk, split by some angle and draw two branches
-* Repeat at the end of each branch until a sufficient level of branching is reached
-
-Without worrying about the programming, focusing just on the pseudo code logic, how would you create a fractal drawing algorithm? Manually test it for for depths 1, 2 and 3.
-
-Image credit: https://rosettacode.org/mw/images/8/8a/MathFractalTree.png
-
-### Snowflake
-
-The humble snowflake, is very similar to fractals and is recursive in nature.
-
-Here is a Python implementation of a snowflake drawing algorithm
-
-```python
-from turtle import *
-
-def drawFlake(length, depth):
-    hideturtle()
-    if depth > 0:
-        for i in range(6):
-            forward(length)
-            drawFlake(length // 3, depth - 1)
-            backward(length)
-            left(60)
-
-if __name__ == "__main__":
-    drawFlake(200,4)
-```
-
-See the live demo at https://repl.it/@PaulBaumgarten/SnowflakeRecursion
-
-### Others
-
-What other other real-world recursive situations can you identifty?
-
-## Construct & trace recursive algorithms
-
-### Exercise: Factorials
-
-We looked at the factorial algorithm earlier. Did you obtain this solution? Have a go at implementing it if you haven't done so yet.
-
-```java
-public static long factorial(int n) { 
-    if (n == 1) {                   // test
-       return 1;                    // base case
-    } else {
-       return n * factorial(n-1);   // recursive call
-    }
-} 
-```
-
-### Exercise: Fibonacci
-
-The fibonacci sequence is 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, ...
-
-Determine the pseudo code, do a trace table test of your algorithm, then code it in Java.
-
-[Solution](teacher)
-
-### Exercise: Fractal tree
-
-Can you implement the fractal tree algorithm you came up with earlier?
-
-* You can see code samples for common languages at [https://rosettacode.org/wiki/Fractal_tree](https://rosettacode.org/wiki/Fractal_tree).
-
-### Exercise: Snowflake
-
-Can you implement the snowflake algorithm you came up with earlier?
-
-Here is a good stack overflow discussion of creating a snowflake algorithm with Python.
-
-* [https://stackoverflow.com/questions/32303391/drawing-a-snowflake-using-recursion](https://stackoverflow.com/questions/32303391/drawing-a-snowflake-using-recursion)
-
-### Exercise: Tower of hanoi
-
-The Tower of Hanoi is a straight forward game that requires recursion to solve. In this puzzle, we have three pegs and several disks, initially stacked from largest to smallest on the left peg. The rules are simple:
-
-* We are finished when the entire tower has been moved to another peg.
-* We can only move one disk at a time.
-* We can never place a larger disk on a smaller one.
-
-![](img/tower-of-hanoi-1.png)
-
-An example of how it works with 3 disks.
-
-![](img/tower-of-hanoi-2.png)
-
-You don't need to create a graphical output, a printed set of instructions is fine. Eg:
-
-![](img/tower-of-hanoi-3.png)
-
-(note: you'd very quickly find solutions online... while I can't stop you, I emphasis this would deprive yourself of the learning experience the problem solving brings)
-
-### Exercise: Binary search
-
-By now we should all know and love the binary search algorithm, but did you realise there is a recursive version of the algorithm?
-
-Can you create a recursive version of the algorithm? (no cheating with google)
-
-Here is an array of 50 sorted names you can use for your binary search.
-
-```java
-String[] names = {"Aaliyah","Abigail","Adalyn","Aiden","Alexander","Amelia","Aria","Aubrey","Ava","Avery","Benjamin","Caden","Caleb","Carter","Charlotte","Chloe","Daniel","Elijah","Emily","Emma","Ethan","Evelyn","Grayson","Harper","Isabella","Jack","Jackson","Jacob","James","Jayden","Kaylee","Layla","Liam","Lily","Logan","Lucas","Luke","Madelyn","Madison","Mason","Mia","Michael","Noah","Oliver","Olivia","Riley","Ryan","Sophia","William","Zoe"};
-```
-
-## Exercises & review
-
-Textbooks
-
-* Computer Science Illuminated by Nell Dale & John Lewis (page numbers based on 6th edition): Programming concepts: End of chapter 4 (page 240), some recursion questions
-* AQA A-level Computer Science by Bob Reeves (2015 edition)
-
-Programming exercises for recursion:
-
-* [Codingbat Recursion-1](http://codingbat.com/java/Recursion-1) 
-* [GeeksForGeeks Recursion practice](https://www.geeksforgeeks.org/recursion-practice-problems-solutions/)
-* If you’ve completed a number of the above and are looking for a challenge, the popular numbers game of Sodoku is actually a recursive puzzle. Can you write an algorithm that will solve it? Check the [Sudoku algorithms explainer on wikipedia](https://en.wikipedia.org/wiki/Sudoku_solving_algorithms)
-
+Two dimensional arrays
+
+* 5.1.4 Describe the characteristics of a two-dimensional array.
+* 5.1.5 Construct algorithms using two-dimensional arrays.
+
+Abstract data structures
+
+* 5.1.6 Describe the characteristics and applications of a stack. *(Last in, first out (LIFO); Examples may include running recursive processes, return memory addresses)*
+* 5.1.7 Construct algorithms using the access methods of a stack. *(push; pop; isEmpty)*
+* 5.1.8 Describe the characteristics and applications of a queue. *(First in, first out (FIFO); Examples applications print queues, computer modelling of physical queues; linear and circular implementation required)*
+* 5.1.9 Construct algorithms using the access methods of a queue. *(enqueue; dequeue; isEmpty)*
+* 5.1.10 Explain the use of arrays as static stacks and queues. *(using static arrays to push & pop; test empty/full stack; enqueue & dequeue; test empty/full queue)*
+* 5.1.11 Describe the features and characteristics of a dynamic data structure. *(nodes, pointers)*
+* 5.1.12 Describe how linked lists operate logically.
+* 5.1.13 Sketch linked lists (single, double and circular). *(diagram adding item, deleting specified item, modifying data, searching for an item)*
+* 5.1.14 Describe how trees operate logically (both binary and non-binary).
+* 5.1.15 Define the terms: parent, left-child, right-child, subtree, root and leaf.
+* 5.1.16 State the result of inorder, postorder and preorder tree traversal.
+* 5.1.17 Sketch binary trees. *(diagram adding new item, add one or more nodes, remove one or more nodes)*
+* 5.1.18 Define the term dynamic data structure.
+* 5.1.19 Compare the use of static and dynamic data structures.
+* 5.1.20 Suggest a suitable structure for a given situation.
+* D.4.5 Define the term object reference. *(typified by simple classes that are self-referential)*
+* D.4.6 Construct algorithms that use reference mechanisms.
+* D.4.7 Identify the features of the abstract data type (ADT) list. *(understand the nature of an ADT—where no implementation details are known but the actions/methods are standard)*
+* D.4.8 Describe applications of lists. *(lists can be used to represent stacks and queues)*
+* D.4.9 Construct algorithms using a static implementation of a list. *(singly linked lists only. Methods: add (head and tail), insert (in order), delete, list, isEmpty, isFull)*
+* D.4.10 Construct list algorithms using object references. *(singly linked lists only. Methods: add (head and tail), insert (in order), delete, list, isEmpty, isFull)*
+* D.4.11 Construct algorithms using the standard library collections included in JETS. *(ArrayList and LinkedList; understanding of operation and methods yes, internal structure no)*
+* D.4.12 Trace algorithms using the implementations described in assessment statements D.4.9–D.4.11. *(In exams, definitions of ArrayList and LinkedList methods will be given where necessary)*
+* D.4.13 Explain the advantages of using library collections. *(libraries provide convenient and reliable implementations of common programming tasks)*
+* D.4.14 Outline the features of ADT’s stack, queue and binary tree. *(diagram, example applications and descriptions of these ADTs. eg: binary tree can be used to efficiently store and retrieve unique keys)*
+* D.4.15 Explain the importance of style and naming conventions in code. *(meaningful identifiers, proper indentation and adequate comments all improve the readability of code for humans and thus save money, time and effort in programming teams)*
