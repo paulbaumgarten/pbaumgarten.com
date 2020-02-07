@@ -105,6 +105,8 @@ Image credit: https://rosettacode.org/mw/images/8/8a/MathFractalTree.png
 
 ### Snowflake
 
+![](snowflake.png)
+
 The humble snowflake, is very similar to fractals and is recursive in nature.
 
 Here is a Python implementation of a snowflake drawing algorithm
@@ -121,8 +123,7 @@ def drawFlake(length, depth):
             backward(length)
             left(60)
 
-if __name__ == "__main__":
-    drawFlake(200,4)
+drawFlake(200,4)
 ```
 
 See the live demo at https://repl.it/@PaulBaumgarten/SnowflakeRecursion
@@ -161,13 +162,47 @@ Can you implement the fractal tree algorithm you came up with earlier?
 
 * You can see code samples for common languages at [https://rosettacode.org/wiki/Fractal_tree](https://rosettacode.org/wiki/Fractal_tree).
 
+```java
+import java.awt.Color;
+import java.awt.Graphics;
+import javax.swing.JFrame;
+ 
+public class FractalTree extends JFrame {
+ 
+    public FractalTree() {
+        super("Fractal Tree");
+        setBounds(100, 100, 800, 600);
+        setResizable(false);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+    }
+ 
+    private void drawTree(Graphics g, int x1, int y1, double angle, int depth) {
+        if (depth == 0) return;
+        int x2 = x1 + (int) (Math.cos(Math.toRadians(angle)) * depth * 10.0);
+        int y2 = y1 + (int) (Math.sin(Math.toRadians(angle)) * depth * 10.0);
+        g.drawLine(x1, y1, x2, y2);
+        drawTree(g, x2, y2, angle - 20, depth - 1);
+        drawTree(g, x2, y2, angle + 20, depth - 1);
+    }
+ 
+    @Override
+    public void paint(Graphics g) {
+        g.setColor(Color.BLACK);
+        drawTree(g, 400, 500, -90, 9);
+    }
+ 
+    public static void main(String[] args) {
+        new FractalTree().setVisible(true);
+    }
+}
+```
+
+sourced: https://rosettacode.org/wiki/Fractal_tree#Java
+
 ### Exercise: Snowflake
 
-Can you implement the snowflake algorithm you came up with earlier?
+Can you implement the snowflake algorithm? It would be an adaptation of the Fractal Tree.
 
-Here is a good stack overflow discussion of creating a snowflake algorithm with Python.
-
-* [https://stackoverflow.com/questions/32303391/drawing-a-snowflake-using-recursion](https://stackoverflow.com/questions/32303391/drawing-a-snowflake-using-recursion)
 
 ### Exercise: Tower of hanoi
 
