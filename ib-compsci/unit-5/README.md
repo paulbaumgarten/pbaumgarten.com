@@ -276,149 +276,6 @@ An abstract data structure:
 
 ---
 
-## Two dimensional arrays
-
-As the name suggests, a two dimensional array will allow us to model data that is two dimensional in nature. Programming uses for this include spreadsheets, databases and 2D games.
-
-![](img/2d-array-illustration.png)
-
-As with one dimensional arrays, we have a couple of methods of declaring static 2D arrays with Java.
-
-Method 1
-
-```java
-int numbers[][]= { {25,10, 5}, 	//row 0
-                   { 4, 6,13},	//row 1
-                   {45,90,78}	//row 2
-                 };
-for (int row=0; row<numbers.length; row++) {
-    for (int col=0; col<numbers[row].length; col++) {
-        int val = numbers[row][col];
-        System.out.println("numbers["+row+"]["+col+"] = "+val);
-    }
-}
-```
-
-Method 2
-
-```java
-int numbers[][] = new int[3][3];
-
-numbers[0][0] = 25;
-numbers[0][1] = 10;
-numbers[0][2] = 5;
-numbers[1][0] = 4;
-numbers[1][1] = 6;
-numbers[1][2] = 13;
-numbers[2][0] = 45;
-numbers[2][1] = 90;
-numbers[2][2] = 78;
-
-// using the other for-loop method
-for (int[] row : numbers) {
-    for (int cell : row) {
-        System.out.println( cell );
-    }
-}
-```
-
----
-
-### Exercise 1
-
-A teacher has decided to use a 2D array to store the marks for one of their classes. The grade book takes the following form:
-
-| Marksbook | Test 1 | Test 2 | Test 3 | Test 4 | Test 5 |
-| --------- | ------ | ------ | ------ | ------ | ------ |
-| Student A | 67% | 50% | 93% | 83% | 43% |
-| Student B | 70% | 52% | 96% | 85% | 48% |
-| Student C | 90% | 81% | 100% | 93% | 68% |
-| Student D | 55% | 32% | 71% | 72% | 58% |
-| Student E | 60% | 47% | 65% | 74% | 61% |
-
-Convert the above into a suitable 2D array then write code to determine the following
-
-1. Determine the overall average mark
-2. Determine the average mark for each individual student
-3. Determine the average mark for each individual assessment
-4. Given the following grade cut offs, determine the grade for each student: A = 85%, B = 70%, C = 55%, D = 40%, F < 40%
-
-
-[Solution](teacher)
-
----
-
-### Exercises: 2D array patterns
-
-Given the following template code, can you solve the algorithm that creates each given pattern?
-
-```java
-package com.pbaumgarten.teachingnotes;
-
-public class TwoDimensionArrayReview {
-
-    public static void printArray(int[][] arr) {
-        for (int i=0; i<arr.length; i++) {
-            for (int j=0; j<arr[i].length; j++) {
-                System.out.print(arr[i][j]+" ");
-            }
-            System.out.println();
-        }
-    }
-
-    public static void main(String[] args) {
-        int[][] arr = new int[9][9];
-
-        System.out.println("Example");
-        arr = example(arr);
-        printArray(arr);
-
-        System.out.println("Q1");
-        arr = question1(arr);
-        printArray(arr);
-    }
-```
-
-Example problem: Create the following number sequence
-
-![](img/2d-array-problems-example.png)
-
-```java
-    public static int[][] example(int[][] arr) {
-        int counter = 1;
-        for (int i=0; i<arr.length; i++) {
-            for (int j=0; j<arr[i].length; j++) {
-                arr[i][j] = counter++;
-            }
-        }
-        return (arr);
-    }
-
-```
-
-Questions 1 through 12
-
-![](img/2d-array-problems-1-to-12.png)
-
-(note: for problem 12 you can assume the array length will always be an odd integer)
-
-```java
-    public static int[][] question1(int[][] arr) {
-        for (int i=0; i<arr.length; i++) {
-            for (int j=0; j<arr[i].length; j++) {
-                arr[i][j] = j;
-            }
-        }
-        return (arr);
-    }
-}
-```
-
-Question 13
-
-![](img/2d-array-problems-13.png)
-
-(Questions adapted for Java by P Baumgarten. Original C++ version by Brian Choi 2011)
 
 ---
 
@@ -846,6 +703,152 @@ The commonly used data structure known as hash tables, key-value pairs, or a dic
 * [Hash Tables and Hash Functions](https://www.youtube.com/watch?v=KyUTuwz_b7Q)
 
 Can you make your own simple hash table class?
+
+---
+
+## Two dimensional arrays
+
+As the name suggests, a two dimensional array will allow us to model data that is two dimensional in nature. Programming uses for this include spreadsheets, databases and 2D games.
+
+![](img/2d-array-illustration.png)
+
+As with one dimensional arrays, we have a couple of methods of declaring static 2D arrays with Java.
+
+Method 1
+
+```java
+int numbers[][]= { {25,10, 5}, 	//row 0
+                   { 4, 6,13},	//row 1
+                   {45,90,78}	//row 2
+                 };
+for (int row=0; row<numbers.length; row++) {
+    for (int col=0; col<numbers[row].length; col++) {
+        int val = numbers[row][col];
+        System.out.println("numbers["+row+"]["+col+"] = "+val);
+    }
+}
+```
+
+Method 2
+
+```java
+int numbers[][] = new int[3][3];
+
+numbers[0][0] = 25;
+numbers[0][1] = 10;
+numbers[0][2] = 5;
+numbers[1][0] = 4;
+numbers[1][1] = 6;
+numbers[1][2] = 13;
+numbers[2][0] = 45;
+numbers[2][1] = 90;
+numbers[2][2] = 78;
+
+// using the other for-loop method
+for (int[] row : numbers) {
+    for (int cell : row) {
+        System.out.println( cell );
+    }
+}
+```
+
+---
+
+### Exercise 1
+
+A teacher has decided to use a 2D array to store the marks for one of their classes. The grade book takes the following form:
+
+| Marksbook | Test 1 | Test 2 | Test 3 | Test 4 | Test 5 |
+| --------- | ------ | ------ | ------ | ------ | ------ |
+| Student A | 67% | 50% | 93% | 83% | 43% |
+| Student B | 70% | 52% | 96% | 85% | 48% |
+| Student C | 90% | 81% | 100% | 93% | 68% |
+| Student D | 55% | 32% | 71% | 72% | 58% |
+| Student E | 60% | 47% | 65% | 74% | 61% |
+
+Convert the above into a suitable 2D array then write code to determine the following
+
+1. Determine the overall average mark
+2. Determine the average mark for each individual student
+3. Determine the average mark for each individual assessment
+4. Given the following grade cut offs, determine the grade for each student: A = 85%, B = 70%, C = 55%, D = 40%, F < 40%
+
+
+[Solution](teacher)
+
+---
+
+### Exercises: 2D array patterns
+
+Given the following template code, can you solve the algorithm that creates each given pattern?
+
+```java
+package com.pbaumgarten.teachingnotes;
+
+public class TwoDimensionArrayReview {
+
+    public static void printArray(int[][] arr) {
+        for (int i=0; i<arr.length; i++) {
+            for (int j=0; j<arr[i].length; j++) {
+                System.out.print(arr[i][j]+" ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void main(String[] args) {
+        int[][] arr = new int[9][9];
+
+        System.out.println("Example");
+        arr = example(arr);
+        printArray(arr);
+
+        System.out.println("Q1");
+        arr = question1(arr);
+        printArray(arr);
+    }
+```
+
+Example problem: Create the following number sequence
+
+![](img/2d-array-problems-example.png)
+
+```java
+    public static int[][] example(int[][] arr) {
+        int counter = 1;
+        for (int i=0; i<arr.length; i++) {
+            for (int j=0; j<arr[i].length; j++) {
+                arr[i][j] = counter++;
+            }
+        }
+        return (arr);
+    }
+
+```
+
+Questions 1 through 12
+
+![](img/2d-array-problems-1-to-12.png)
+
+(note: for problem 12 you can assume the array length will always be an odd integer)
+
+```java
+    public static int[][] question1(int[][] arr) {
+        for (int i=0; i<arr.length; i++) {
+            for (int j=0; j<arr[i].length; j++) {
+                arr[i][j] = j;
+            }
+        }
+        return (arr);
+    }
+}
+```
+
+Question 13
+
+![](img/2d-array-problems-13.png)
+
+(Questions adapted for Java by P Baumgarten. Original C++ version by Brian Choi 2011)
 
 ---
 
