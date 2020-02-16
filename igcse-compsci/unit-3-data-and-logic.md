@@ -170,13 +170,13 @@ For each column, we start from zero, count up until we have hit the highest poss
 
 ### Binary sizes
 
-| Memory size | Number of bits | Equivilent denary value |
-| ----------- | -------------- | ----------------------- |
-| Kilobyte    | 2^10           | 1,024  |
-| Megabyte    | 2^20           | 1,048,576  |
-| Gigabyte    | 2^30           | 1,073,741,824  |
-| Terabyte    | 2^40           | 1,099,511,627,776  |
-| Petabyte    | 2^50           | 1,125,899,906,842,624  |
+| Memory size | Number of bits | Equivilent denary value | Memory size | Number of bits | Equivilent denary value |
+| ----------- | -------------- | ----------------------- | ----------- | -------------- | ----------------------- |
+| Kilobyte (kB)   | 10^3 | 1,000                 | Kibibyte (KiB)    | 2^10  | 1,024  |
+| Megabyte (MB)   | 10^6 | 1,000,000             | Mebibyte (MiB)    | 2^20  | 1,048,576  |
+| Gigabyte (GB)   | 10^9 | 1,000,000,000         | Gibibyte (GiB)    | 2^30  | 1,073,741,824  |
+| Terabyte (TB)  | 10^12 | 1,000,000,000,000     | Tebibyte (TiB)    | 2^40  | 1,099,511,627,776  |
+| Petabyte (PB)  | 10^15 | 1,000,000,000,000,000 | Pebibyte (PiB)    | 2^50  | 1,125,899,906,842,624  |
 
 ### Uses of binary numbers
 
@@ -196,7 +196,7 @@ In the same way that we might think of the the speed of light in decimal notatio
 
 The 64 bit floating point number uses 1 bit for the sign (positive/negative), 8 bits for the exponent, and 55 bits for the significant number.
 
-Everything is stored in binary rather than decimal. This means the first bit represents 1/2, the second bit represnts 1/4, the third will represent 1/8 and so forth. This poses some challenges for seemingly common numbers.
+Everything is stored in binary rather than decimal. For the significant figures portion, this means the first bit represents 1/2, the second bit represnts 1/4, the third will represent 1/8 and so forth. This poses some challenges for seemingly common numbers.
 
 For instance, look at the following output from Python
 
@@ -212,7 +212,7 @@ For instance, look at the following output from Python
 
 The number 0.1 in binary is actually an infinitely recurring decimal, so when we add several together we are getting a rounding effect occurring. This is analogus to adding 0.3333333 (recurring) several times.
 
-So it is important to remember that floating point numbers are great, but they are not designed for highlevel precision after multiple mathematical operations. They were designed for scientific applications, not financial.
+It is important to remember that floating point numbers are useful, but they are not designed for highlevel precision after multiple mathematical operations. They were designed for scientific applications, not financial.
 
 * Floating point calculator... [https://www.h-schmidt.net/FloatConverter/IEEE754.html](https://www.h-schmidt.net/FloatConverter/IEEE754.html)
 
@@ -230,14 +230,29 @@ Read section 1.4, complete activity 1.3
 
 ## 06: Converting between denary and binary
 
-Binary - How to Make a Computer: Part II (7:15)
-https://www.youtube.com/watch?v=NRKORzi5tnM
+Lesson intro: Watch video Binary - How to Make a Computer: Part II (7:15)
 
-    TO
+* [https://www.youtube.com/watch?v=NRKORzi5tnM](https://www.youtube.com/watch?v=NRKORzi5tnM)
 
+Lesson outline:
 
-* Manually
-* Programmatically
+* Converting binary to decimal
+* Converting decimal to binary
+
+Practice questions:
+
+* Deciaml 98 is what in binary?
+* Deciaml 195 is what in binary?
+* Deciaml 156 is what in binary?
+* Deciaml 245 is what in binary?
+* Deciaml 116 is what in binary?
+
+* Binary 00000100 is what in decimal?
+* Binary 11001100 is what in decimal?
+* Binary 01110001 is what in decimal?
+* Binary 00101001 is what in decimal?
+* Binary 01110101 is what in decimal?
+
 
 ---
 
