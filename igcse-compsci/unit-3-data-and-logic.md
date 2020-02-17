@@ -50,6 +50,8 @@ These gates are effectively switches, where the state of the output (whether it 
 * The NOR gate is a concatenation of an OR gate where the output goes through a NOT gate. This means if either input is on, the output will be off. If both inputs are off, the output will be on.
 * The XOR gate is known as the eXclusive OR gate. With this gate if one of the inputs are on, the output is on. However, if both inputs are on, the output remains off. Likewise if both inputs are off, the output remains off.
 
+*Clarification: While it is possible to have 3 input AND and OR gates, the iGCSE course is limited to gates of 2 inputs*
+
 ### Logic gates to circuits
 
 We will use combinations of these logic gates to create logic circuits. To enable us to do this easily each gate has a symbol by which it can be represented in a diagram, and there is also a couple of notations available to represent them in the form of written equations. 
@@ -112,11 +114,21 @@ You may be presented with a written scenario from which you need to discern the 
 * Individually complete the practice question in activity 3.4 on page 38.
 * Complete the remaining activities in chapter 3.
 
-## Exercise: NandGame
+## Use of logic circuits
+
+So we've been building these things called logic circuits. So what do they have to do with computers?
+
+The internal operations of your CPU is reduced down to transistors that form logic gates that form logic circuits.
+
+For an example, this is a circuit known as a d-latch. It will "store" one bit of "memory". What ever value is on the data wire when the set wire is activated, will be "remembered" until the next time you activate the set wire.
+
+![](img/d-latch-4.JPG)
+
+## Optional exercise: NandGame
+
+To demonstrate just how an entire computer system is built from nothing but logic gates, this website allows you to build a virtual computer beginning from nothing but a NAND gate.
 
 [http://nandgame.com/](http://nandgame.com/)
-
-This website allows you to build a virtual computer beginning from just a NAND gate.
 
 Complete at least the first 6 levels, then go as far as you wish beyond that.
 
