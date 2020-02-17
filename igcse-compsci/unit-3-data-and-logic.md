@@ -193,7 +193,7 @@ Once you scale this to 8 bits, how many possible values are there?
 | Terabyte (TB)  | 10^12 | 1,000,000,000,000     | Tebibyte (TiB)    | 2^40  | 1,099,511,627,776  |
 | Petabyte (PB)  | 10^15 | 1,000,000,000,000,000 | Pebibyte (PiB)    | 2^50  | 1,125,899,906,842,624  |
 
-## 06: Converting between denary and binary
+## Converting between denary and binary
 
 Lesson intro: Watch video Binary - How to Make a Computer: Part II (7:15)
 
@@ -206,17 +206,34 @@ Lesson outline:
 
 Practice questions:
 
-* Deciaml 98 is what in binary?
-* Deciaml 195 is what in binary?
-* Deciaml 156 is what in binary?
-* Deciaml 245 is what in binary?
-* Deciaml 116 is what in binary?
+* Activity 1.1, page 3, Convert binary to decimal
+* Activity 1.2, page 3, convert decimal to binary
 
-* Binary 00000100 is what in decimal?
-* Binary 11001100 is what in decimal?
-* Binary 01110001 is what in decimal?
-* Binary 00101001 is what in decimal?
-* Binary 01110101 is what in decimal?
+Some additional questions:
+
+* Binary 0000 0100 is what in decimal?
+* Binary 1100 1100 is what in decimal?
+* Binary 0111 0001 is what in decimal?
+* Binary 0010 1001 is what in decimal?
+* Binary 0111 0101 is what in decimal?
+* Binary 0111 0101 is what in decimal?
+* Binary 1010 1010 0111 0101 is what in decimal?
+* Binary 0011 1011 0000 0101 is what in decimal?
+* Binary 1100 0111 1100 1100 is what in decimal?
+* Binary 1001 0110 1010 1010 is what in decimal?
+* Binary 1100 0011 1100 0011 is what in decimal?
+* Decimal 98 is what in binary?
+* Decimal 195 is what in binary?
+* Decimal 156 is what in binary?
+* Decimal 245 is what in binary?
+* Decimal 116 is what in binary?
+* Decimal 1160 is what in binary?
+* Decimal 2235 is what in binary?
+* Decimal 2424 is what in binary?
+* Decimal 12235 is what in binary?
+* Decimal 54321 is what in binary?
+
+*Course expectations is to be able to do the conversions using up to 16 bits*
 
 ---
 
