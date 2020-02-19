@@ -188,6 +188,26 @@ for n in range(256):
     print(f" Decimal { n :3}, in binary is { b :>10}")
 ```
 
+There are two different ways that integers might be stored with binary numbers - signed and unsigned - referring to whether or not to have a positive/negative sign as part of the number.
+
+For instance, if we were to use an 8bit binary number to store integers. Without storing the sign, we can store 2^8 possible numbers giving a range of 0 to 256. If we used 1bit to store positive/negative, that means our positive range is reduced to 2^7. We'd actually still end up with 2^8 possiblities, it's just that half of them would be negative numbers, so the range would be -128 to +127. When using a signed integer, the first bit is used to indicate sign and is set to 0 for positive, 1 for negative.
+
+To see how it works, let's count down ward...
+
+```
+0000 0100 = 4
+0000 0011 = 3
+0000 0010 = 2
+0000 0001 = 1
+0000 0000 = 0
+1111 1111 = -1
+1111 1110 = -2
+1111 1101 = -3
+1111 1100 = -4
+```
+
+Having said all that - this course only requires you to understand positive integers.
+
 #### Floating point numbers
 
 How are floating point numbers stored internally? By storing two integers, one representing the significant figures, the other representing the exponent for the number. In this way we can store very large and very small numbers but with a limited degree of accuracy.
@@ -211,6 +231,8 @@ For instance, look at the following output from Python
 ```
 
 The number 0.1 in binary is actually an infinitely recurring decimal, so when we add several together we are getting a rounding effect occurring. This is analogus to adding 0.3333333 (recurring) several times.
+
+Think about it... how would you get to the value of 0.1 from binary fractions? 1/2, 1/4 and 1/8 are too high. 1/16 + 1/32 gets you close, but adding 1/64 or 1/128 takes you over. The recurring pattern is actually 0001100110011001100...
 
 It is important to remember that floating point numbers are useful, but they are not designed for highlevel precision after multiple mathematical operations. They were designed for scientific applications, not financial.
 
