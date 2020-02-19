@@ -50,6 +50,8 @@ These gates are effectively switches, where the state of the output (whether it 
 * The NOR gate is a concatenation of an OR gate where the output goes through a NOT gate. This means if either input is on, the output will be off. If both inputs are off, the output will be on.
 * The XOR gate is known as the eXclusive OR gate. With this gate if one of the inputs are on, the output is on. However, if both inputs are on, the output remains off. Likewise if both inputs are off, the output remains off.
 
+*Clarification: While it is possible to have 3 input AND and OR gates, the iGCSE course is limited to gates of 2 inputs*
+
 ### Logic gates to circuits
 
 We will use combinations of these logic gates to create logic circuits. To enable us to do this easily each gate has a symbol by which it can be represented in a diagram, and there is also a couple of notations available to represent them in the form of written equations. 
@@ -112,11 +114,21 @@ You may be presented with a written scenario from which you need to discern the 
 * Individually complete the practice question in activity 3.4 on page 38.
 * Complete the remaining activities in chapter 3.
 
-## Exercise: NandGame
+## Use of logic circuits
+
+So we've been building these things called logic circuits. So what do they have to do with computers?
+
+The internal operations of your CPU is reduced down to transistors that form logic gates that form logic circuits.
+
+For an example, this is a circuit known as a d-latch. It will "store" one bit of "memory". What ever value is on the data wire when the set wire is activated, will be "remembered" until the next time you activate the set wire.
+
+![](img/d-latch-4.JPG)
+
+## Optional exercise: NandGame
+
+To demonstrate just how an entire computer system is built from nothing but logic gates, this website allows you to build a virtual computer beginning from nothing but a NAND gate.
 
 [http://nandgame.com/](http://nandgame.com/)
-
-This website allows you to build a virtual computer beginning from just a NAND gate.
 
 Complete at least the first 6 levels, then go as far as you wish beyond that.
 
@@ -133,24 +145,13 @@ Complete at least the first 6 levels, then go as far as you wish beyond that.
 
 This presence of absence of electricity needs to be simplified for computer scientists to effectively scale it to the complexity of modern computers. For this reason we think of it as `True` and `False` which is then further simplified into `1` and `0`.
 
-This most simple form of data, that is a `1` or `0` is known as a bit.
-
-Again, dealing with thousands of bits at a time isn't practical, so we scale again. The first level of complexity introduced is to group 8 bits together into a `byte`.
-
-If a bit has two possible values, 0 and 1, and a byte consists of 8 bits, how many possible values does a byte have?
-
-The answer, of course, is 256. But did you get there the easy way or the hard way? How long until you worked out the pattern?
-
-| Number of bits | All possible values | Total possiblities | Also known as |
-| -------------- | --------------- | ------------------ | ------------- |
-| 1              | 0, 1             | 2                  | 2^1           |
-| 2              | 00, 01, 10, 11     | 4                  | 2^2           |
-| 3              | 000, 001, 010, 011, 100, 101, 110, 111 | 8  | 2^3           |
-| 4  | 0000, 0001, 0010, 0011, 0100, 0101, 0110, 0111, 1000, 1001, 1010, 1011, 1100, 1101, 1110, 1111 | 16 | 2^4 |
+This most simple form of data, that is a `1` or `0` is known as a bit. The number system based on using `0` and `1` is known as the binary number system.
 
 ### Counting in binary
 
-To count up in binary, works the same as counting in decimal except we only have two values for each column. So, starting from zero, it would look like...
+To count up in binary, works the same as counting in decimal except we only have two values for each place. For each column, we start from zero, count up until we have hit the highest possible value, in this case 1, and in add a new significant figure.
+
+Starting from zero, it would look like...
 
 ```text
   0
@@ -163,12 +164,26 @@ To count up in binary, works the same as counting in decimal except we only have
 111
 ```
 
-For each column, we start from zero, count up until we have hit the highest possible value, in this case 1, and in add a new significant figure.
-
 * If I wanted to add binary 100 and binary 1000, what would it be?
 * If I wanted to add binary 100 and binary 1100, what would it be?
 
+### The byte
+
+Dealing with lots of bits at a time isn't always practical from our human perspective, so we create an abstraction to allow us to simplify the process. The first level of complexity we introduce is to group 8 bits together into a `byte`.
+
+If a bit has two possible values, 0 and 1, and a byte consists of 8 bits, how many possible values does a byte have?
+
+| Number of bits | All possible values | Total possiblities | Also known as |
+| -------------- | --------------- | ------------------ | ------------- |
+| 1              | 0, 1             | 2                  | 2^1           |
+| 2              | 00, 01, 10, 11     | 4                  | 2^2           |
+| 3              | 000, 001, 010, 011, 100, 101, 110, 111 | 8  | 2^3           |
+| 4  | 0000, 0001, 0010, 0011, 0100, 0101, 0110, 0111, 1000, 1001, 1010, 1011, 1100, 1101, 1110, 1111 | 16 | 2^4 |
+
+Once you scale this to 8 bits, how many possible values are there?
+
 ### Binary sizes
+
 
 | Memory size | Number of bits | Equivilent denary value | Memory size | Number of bits | Equivilent denary value |
 | ----------- | -------------- | ----------------------- | ----------- | -------------- | ----------------------- |
@@ -178,7 +193,51 @@ For each column, we start from zero, count up until we have hit the highest poss
 | Terabyte (TB)  | 10^12 | 1,000,000,000,000     | Tebibyte (TiB)    | 2^40  | 1,099,511,627,776  |
 | Petabyte (PB)  | 10^15 | 1,000,000,000,000,000 | Pebibyte (PiB)    | 2^50  | 1,125,899,906,842,624  |
 
-### Uses of binary numbers
+## Converting between denary and binary
+
+Lesson intro: Watch video Binary - How to Make a Computer: Part II (7:15)
+
+* [https://www.youtube.com/watch?v=NRKORzi5tnM](https://www.youtube.com/watch?v=NRKORzi5tnM)
+
+Lesson outline:
+
+* Converting binary to decimal
+* Converting decimal to binary
+
+Practice questions:
+
+* Activity 1.1, page 3, Convert binary to decimal
+* Activity 1.2, page 3, convert decimal to binary
+
+Some additional questions:
+
+* Binary 0000 0100 is what in decimal?
+* Binary 1100 1100 is what in decimal?
+* Binary 0111 0001 is what in decimal?
+* Binary 0010 1001 is what in decimal?
+* Binary 0111 0101 is what in decimal?
+* Binary 0111 0101 is what in decimal?
+* Binary 1010 1010 0111 0101 is what in decimal?
+* Binary 0011 1011 0000 0101 is what in decimal?
+* Binary 1100 0111 1100 1100 is what in decimal?
+* Binary 1001 0110 1010 1010 is what in decimal?
+* Binary 1100 0011 1100 0011 is what in decimal?
+* Decimal 98 is what in binary?
+* Decimal 195 is what in binary?
+* Decimal 156 is what in binary?
+* Decimal 245 is what in binary?
+* Decimal 116 is what in binary?
+* Decimal 1160 is what in binary?
+* Decimal 2235 is what in binary?
+* Decimal 2424 is what in binary?
+* Decimal 12235 is what in binary?
+* Decimal 54321 is what in binary?
+
+*Course expectations is to be able to do the conversions using up to 16 bits*
+
+---
+
+## Uses of binary numbers
 
 #### The integer
 
@@ -247,34 +306,6 @@ You have probably heard the phrase 32 bit computing or 64 bit computing. This re
 Another example of using registers is to control the outputs of a computer system. The textbook contains an example of a computer controlling motors through setting the bits within a register.
 
 Read section 1.4, complete activity 1.3
-
----
-
-## 06: Converting between denary and binary
-
-Lesson intro: Watch video Binary - How to Make a Computer: Part II (7:15)
-
-* [https://www.youtube.com/watch?v=NRKORzi5tnM](https://www.youtube.com/watch?v=NRKORzi5tnM)
-
-Lesson outline:
-
-* Converting binary to decimal
-* Converting decimal to binary
-
-Practice questions:
-
-* Deciaml 98 is what in binary?
-* Deciaml 195 is what in binary?
-* Deciaml 156 is what in binary?
-* Deciaml 245 is what in binary?
-* Deciaml 116 is what in binary?
-
-* Binary 00000100 is what in decimal?
-* Binary 11001100 is what in decimal?
-* Binary 01110001 is what in decimal?
-* Binary 00101001 is what in decimal?
-* Binary 01110101 is what in decimal?
-
 
 ---
 
