@@ -13,7 +13,16 @@
 "A computer processor does moronically simple things — it moves a byte from memory to register, adds a byte to another byte, moves the result back to memory. The only reason anything substantial gets completed is that these operations occur very quickly. To quote Robert Noyce, ‘After you become reconciled to the nanosecond, computer operations are conceptually fairly simple.’” [*](Code: The Hidden Language of Computer Hardware and Software by Charles Petzold)
 
 * Watch [Tom Scott's exellcent explainer into the Fetch-decode-execute cycle](https://www.youtube.com/watch?v=Z5JC9Ve1sfI) (9:03m).
-* Do some basic assembler to understand the architecture better?
+* [Simple 8-bit Assembler Simulator](http://schweigi.github.io/assembler-simulator/)
+
+* Von Neumann model for a computer system
+
+* Immediate access store (IAS)
+* Register
+* Control Unit (CU)
+* Accumulator (ACC)
+* Arithmetic logic unit (ALU)
+* Bus
 
 ## Input devices (1.3.3)
 
@@ -138,10 +147,23 @@ and text files
 
 ### Different storage formats
 
+* Web camera data formats
+1920x1080
+720
+480
+8 bit colour depth
+24 bit colour depth
+Calculate the size of the image (in bytes). Without a calculator, you must show working.
+
 ### Error detection and correction
+
+* even and odd parity
 
 ### Some common file formats
 
 ### Compression
 
 [How Computers Compress Text: Huffman Coding and Huffman Trees - Tom Scott (6:30)](https://www.youtube.com/watch?v=JsTptu56GM8)
+
+* lossy compression
+* lossless compression
