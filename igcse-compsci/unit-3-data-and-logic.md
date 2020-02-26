@@ -311,41 +311,74 @@ Read section 1.4, complete activity 1.3
 
 ## L6,7: Hexadecimal numbers
 
-Reasoning for hex notation
+Binary is great, it's the language our computers function in, but it's not exactly human friendly. They quickly become overwhelmningly long, especially now in the days of 64 bit computing.
+
+For instance, this is the "Mac address" of the laptop I'm writing this on in binary... 111001001011001100011000101111011111001110011111. If humans had to deal with these numbers regularly there would be too many errors.
+
+Sure, we can convert between base-2 and base-10 numbers but it's not particularly convenient, and it disguises binary patterns. Due to the linkage with logic gates specific bits might have particular significance. For instance, you can't quickly tell just by looking at these nunmbers which bit they all have in common can you... 124, 68, 30?
+
+The solution is to come up with another number system. One that is relatively human friendly and binary friendly at the same time. What computer scientists came up with is the Hexadecimal number system. Hexadecimal is base-16, meaning there are 16 different values per significant figure. 16 is useful for binary because it is 4 bits. This means a full byte can be represented with just 2 characters instead of 8.
+
+Obviously our number system only has 10 symbols, but we now require 16, so what to do? We use letters.
+
+```
+Decimal     Hexadecimal     Binary
+0           0               0000
+1           1               0001
+2           2               0010
+3           3               0011
+4           4               0100
+5           5               0101
+6           6               0110
+7           7               0111
+8           8               1000
+9           9               1001
+10          A               1010
+11          B               1011
+12          C               1100
+13          D               1101
+14          E               1110
+15          F               1111
+```
+
+The following is some simple Python code that will generate all the binary, decimal and hexadecimal values from 0 to 255.
 
 ```python
 for n in range(256):
     b = bin(n)
     h = hex(n)
-    print(f" Decimal { n :3}, in binary { b :>10}, in hex { h :>4}")
+    print(f" Decimal { n :3 }, in binary { b :>10 }, in hex { h :>4 }")
 ```
 
 ## Common uses of hex in computing
 
-### HTML colours
+Because it is a convenient way of grouping 4 bits together, hexadecimal is used a lot in the computer industry to represent binary data.
 
-### MAC addresses
+One usage you will have seen before is hexadecimal colour codes. Modern computers run RGB (red-blue-green) pixel displays where each of the three colours can be set to a range from 0 (off) to 255 (fully on). So, every pixel requires 3 bytes of colour information. But rather than describing red as `111111110000000000000000`, we commonly see things like `ff0000` instead. This is hexadecimal at work.
+
+Network addresses are another common place you will see Hexadecimal values being used. Earlier I said my computer Mac address was `111001001011001100011000101111011111001110011111` but you would normally see it written as `e4b318bdf39f` instead.  If you are curious to know your computer's Mac address...
+
+* On Windows, press Windows key + X at the same time. Select the Command Prompt or PowerShell. In the terminal that opens, enter `ipconfig /all`.
+* Or try this little bit of Python...
 
 ```python
 import uuid
 print( hex(uuid.getnode()) )
 ```
 
-### Assembly languages
-
-### Debugging
-
-
-## Convert hex and denary
-
-* Manually
-* Programmatically
+Hexadecimal numbers are also commonly used in other places such as assembly programming, and when we are debugging output from a program. We could, for instance, have the computer "dump* the contents of memroy to a file so we can inspect it and diagnose faulty behaviour. This dump would typically get written out into hexadecimal.
 
 ## Convert hex and binary
 
-* Manually
-* Programmatically
+Converting between binary and hex is quite straight foward, as each group of 4 bits and be substituted with a hex number. 
 
+The only trick is to make sure you start with the least significant digits first, or put enough leading zeros in place you are working with a number of bits that is divisible by 4. For instance, `101100` should convert to `2C` rather than `B0`.
+
+* Complete practice conversions
+
+## Convert hex and denary
+
+* TO DO
 
 ---
 
