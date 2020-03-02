@@ -5,8 +5,6 @@ Teaching resources and programming projects for Paul Baumgarten
 
 ## Teaching resources
 
-<img src="img/Year-Of-The-Rat-2020.png" width="30%" align="right">
-
 * [IB Diploma Computer Science](https://pbaumgarten.com/ib-compsci)
 * [iGCSE Computer Science](https://pbaumgarten.com/igcse-compsci)
 * [MYP Digital Design](https://pbaumgarten.com/myp-design/)
