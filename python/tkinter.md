@@ -32,19 +32,16 @@ import tkinter as tk
 from tkinter import ttk
 ```
 
-Main code
-Withdrawing the default
-
-Creating the class
+Template code to create a Tkinter window class.
 
 ```python
 class AppWindow():
     def __init__(self, parent):
         # Create the window
-        self.parent = parent
-        self.window = tk.Toplevel()
-        self.window.geometry("400x200")     # Create a screen 400 wide by 200 high
-        self.window.title("Test app")
+        self.parent = parent                # Save a reference to our parent object
+        self.window = tk.Toplevel()         # Create a window
+        self.window.geometry("400x200")     # Set pixel dimensions 400 wide by 200 high
+        self.window.title("Test app")       # Set window title text
         self.window.protocol("WM_DELETE_WINDOW", self.window.quit) # Enable the close icon
         # Add all your widgets here...
 ```
@@ -59,25 +56,26 @@ if __name__ == "__main__":
     root.mainloop()         # Start the program loop until all windows exit
 ```
 
-Execute a function (in this case, `self.window.quit()`) when the window close icon is clicked
+To execute a function (in this case, `self.window.quit()`) when the window close icon is clicked
 
 ```python
 self.window.protocol("WM_DELETE_WINDOW", self.window.quit)
 ```
 
-Make the window partially transparent
+To make the window partially transparent
 
 ```python
 self.window.attributes('-alpha', 0.8)
 ```
 
-Force the window to stay visibly on top of all other programs
+To force the window to stay visibly on top of all other programs
 
 ```python
+root = tk.Tk()
 root.wm_attributes("-topmost", 1)
 ```
 
-Opening a second window
+To open a second window
 
 ```python
 # Create login window        
@@ -85,16 +83,17 @@ login_window = LoginWindow()
 # Wait until the login window is closed
 self.window.wait_window(login_window.window)  
 print("Finished waiting")
-uid, pwd = login_window.get_info()
+# Execute a function on the login window object to retrieve data entered
+data = login_window.get_data_entered()
 ```
 
-Closing the second window
+To close a window, leaving the program (and any underlying window) running
 
 ```python
 self.window.destroy()  
 ```
 
-Closing your main window
+To close your entire program
 
 ```python
 self.window.quit()
@@ -133,125 +132,145 @@ In order to fill a label with an image, see the *Image* section.
 
 ### Text (Entry) box
 
-* Creating a text entry box
+Creating a text entry box
 
 ```python
-# Create a text entry box
 self.name_entry = tk.Entry(self.window)
 self.name_entry.place(x=20, y=50)
 ```
+
+To put the cursor in the text box
 
 ```python
 self.name_entry.focus()   # Put the cursor in the text box
 ```
 
-* Get the text value
+Get the text content of the entry box
 
 ```python
 person = self.name_entry.get()
 ```
 
-* Set/change the text value
+Set/change the text value
 
 ```python
 self.name_text.delete(0, tk.END)
 self.name_text.insert(0, contact["name"])
 ```
 
-* Set style and formatting parameters (color, font, etc)
-
-To disable the text entry box (so text can't be modified)
+Set style and formatting parameters (color, font, etc)
 
 ```python
-self.name_text["state"] = "disabled"    # set to "normal" to re-enable
+self.name_text["state"] = "disabled"            # set to "normal" to re-enable
 self.name_text["font"] = ("Arial", 16)
 self.name_text["background"] = (255,255,0)      # Yellow
 self.name_text["foreground"] = (128,128,128)    # Grey
 self.name_text["width"] = 20                    # Width in number of characters. Does not limit number that can be typed
 ```
 
-* Mask the user input for use as a password entry box
-
-Use the `show=` parameter.
+Mask the user input for use as a password entry box
 
 ```python
-self.widget = Entry(parent, show="*", width=15)
+self.widget = Entry(parent, show="*", width=15) # Show **** instead of the text entered
 ```
 
 ### Button
 
-* Creating a button
+Creating a button
 
 ```python
+# Set to execute self.greetings() when clicked...
 self.submit_button = tk.Button(self.window, text="Submit", command=self.greetings)
 self.submit_button.place(x=20, y=100)
 ```
 
-* Set style parameters (color, font, etc)
+Set style parameters (color, font, etc)
 
 ```python
 self.button["text"] = "New description"
-self.name_text["state"] = "disabled"    # set to "normal" to re-enable
+self.name_text["state"] = "disabled"            # set to "normal" to re-enable
 self.name_text["font"] = ("Arial", 16)
 self.name_text["background"] = (255,255,0)      # Yellow
 self.name_text["foreground"] = (128,128,128)    # Grey
 self.name_text["width"] = 20                    # Width in number of characters. Does not limit number that can be typed
 ```
 
-* Execute a function when clicked
+To pass parameters along to the execute command use a lambda function
+
+```python
+# Set to execute self.greetings() when clicked...
+self.submit_button = tk.Button(self.window, text="Submit", command=lambda: self.greetings(some_data))
+self.submit_button.place(x=20, y=100)
+
+# The corresponding function call header would then look like...
+def greetings(self, data):
+```
+
 
 ### Listbox
 
-* Creating a listbox
+Creating a listbox
 
 ```python
 # Create a list box
 # -- width is characters, height is lines
 self.list = tk.Listbox(self.window, width=10, height=10)    
-for item in items:
-    # Add each item to the end of the list
-    self.list.insert(tk.END, item)                     
 self.list.place(x=20, y=20)
-# -- When an item in the list is selected, execute the list_clicked function
-self.list.bind('<<ListboxSelect>>', self.list_clicked) 
+
+# Add items into your list box
+for item in items:
+    self.list.insert(tk.END, item)      # Add each item to the end of the list
+
 # -- Give `selected` a default of -1
 self.selected = -1                                     
 ```
 
-* Add item to list
+Add item to list
 
 ```python
 self.list.insert(0, answer)
 self.list.insert(tk.END, answer)
 ```        
 
-* Delete item from list
+Delete item from list
 
 ```python
 self.list.delete(self.selected)
-# Empty list
-self.contact_list.delete(0, tk.END)
+# Empty everything from the list
+self.list.delete(0, tk.END)
 ```
 
-* Get currently selected item in list
+Get number of items in list
 
 ```python
-self.selected = int(self.list.curselection()[0])      # item number selected in list
-item = self.list.get(self.selected)                   # text of selected item
+count = self.list.size()
 ```
 
-* Set currently selected item in list
+Get currently selected item in list
 
 ```python
-self.listbox.select_set(0) #This only sets focus on the first item.
+if len(self.list.curselection()) > 0:                 # If an item is selected
+    self.selected = int(self.list.curselection()[0])  # index number of selected item
+    item = self.list.get(self.selected)               # text of selected item
+```
+
+Set currently selected item in list
+
+```python
+self.listbox.select_set(0) # This sets focus on the first item.
 self.listbox.event_generate("<<ListboxSelect>>")
 ```
 
-* Execute a function when selection changed
+Execute a function when selection changed
+
+```python
+# -- When an item in the list is selected, execute the list_clicked function
+self.list.bind('<<ListboxSelect>>', self.list_clicked) 
+```
 
 ```python
 def list_clicked(self, e): # requires the 2nd parameter even though it doesn't tell you anything useful
-    pass
+    print("You clicked on the list")
 ```
 
 ### Menu
@@ -261,63 +280,67 @@ def list_clicked(self, e): # requires the 2nd parameter even though it doesn't t
 ```python
 # Create a menu bar
 menubar = tk.Menu(self.window)
+# Create a sub menu
 filemenu = tk.Menu(menubar, tearoff=0)
 filemenu.add_command(label="Open file", command=self.file_open)
 filemenu.add_command(label="Save file as", command=self.file_saveas)
 filemenu.add_command(label="Set default folder", command=self.select_folder)
 filemenu.add_separator()
 filemenu.add_command(label="Exit", command=self.window.quit)
+# Create a sub menu
 helpmenu = tk.Menu(menubar, tearoff=0)
 helpmenu.add_command(label="About", command=self.about)
+# Link the sub menus to the menu bar
 menubar.add_cascade(label="File", menu=filemenu)
 menubar.add_cascade(label="Help", menu=helpmenu)
+# Set menu to the window
 self.window.config(menu=menubar)
 ```
-
-* Respond to menu item selected/clicked
 
 ### Tab
 
 * Create a tab system
 
 ```python
-# Create 3 tabs
+# Create tab containers & notebook
 self.tab_container = tk.Frame(self.window)
 self.tab_container.place(x=0,y=0,width=400,height=400)
 self.tabs = ttk.Notebook(self.tab_container)
+self.tabs.place(x=0,y=0,height=400,width=400)
+
+# Create 3 tabs and add them to the notebook
 self.tab_1 = tk.Frame(self.tabs)
 self.tab_2 = tk.Frame(self.tabs)
 self.tab_3 = tk.Frame(self.tabs)
 self.tabs.add(self.tab_1, text="Tab 1")
 self.tabs.add(self.tab_2, text="Tab 2")
 self.tabs.add(self.tab_3, text="Tab 3")
-self.tabs.place(x=0,y=0,height=400,width=400)
+
 # Define what function to run when current tab is changed
 self.tabs.bind("<<NotebookTabChanged>>", self.on_tab_selected)
 ```
 
-* Add content to a tab
+Add content to a tab
 
 ```python
-# Content for tab 1
+# Use the tab object as the first parameter of your widgets instead of the window
 self.label1 = tk.Label(self.tab_1, text="I am the content of tab 1")
-self.label1.place(x=20, y=20) # Coordinates are relative to within the tab area    
+# Coordinates are relative to within the tab area    
+self.label1.place(x=20, y=20) 
 ```
 
 ### Image
 
-* Add an image to a label
+Add an image to a label
 
 ```python
 from PIL import Image, ImageTk
 ```
 
 ```python
-# Open the image file
+# Open as a PIL image
 img = Image.open(filename)
-# (optional) resize the image
-img = img.resize((300, 300))        
-# 1. Reformat the image into tk compatible form, and
+# 1. Convert the image into tk compatible form, and
 # 2. Save a copy of the image to self otherwise it will be cleared from memory when this function closes
 self.tkimg = ImageTk.PhotoImage(img)
 # Display the image in the label
@@ -342,7 +365,9 @@ from tkinter import simpledialog
 ```
 
 ```python
-answer = simpledialog.askstring("Add item","What item would you like to add?")
+answer = simpledialog.askstring("Title","Please type a string...")
+answer = simpledialog.askinteger("Title","Please type an integer...")
+answer = simpledialog.askfloat("Title","Please type a float...")
 ```
 
 ### File Dialog box
@@ -351,8 +376,11 @@ answer = simpledialog.askstring("Add item","What item would you like to add?")
 from tkinter import filedialog
 ```
 
+There are different dialogs available for file open, file save as, and choose folder.
+
 ```python
-filename = filedialog.askopenfilename(title="Select image", filetypes=ALLOWED_FILES)
+ALLOWED_FILES = (("JPEG files","*.jpg"),("PNG files","*.png"),("all files","*.*"))
+filename = filedialog.askopenfilename(title="Select file", filetypes=ALLOWED_FILES)
 filename = filedialog.askopenfilename(initialdir=self.default_folder, title="Select file", filetypes=ALLOWED_FILES)
 filename = filedialog.asksaveasfilename(initialdir=self.default_folder, title="Select file", filetypes=ALLOWED_FILES)
 folder = filedialog.askdirectory(initialdir=self.default_folder, title = "Select folder containing student photos")
