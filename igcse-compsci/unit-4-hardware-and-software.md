@@ -8,23 +8,42 @@
 * 1.3.5 Memory, storage devices & media
 * 1.1.3 Data storage
 
-## Computer architecture and the fetch-execute cycle (1.3.2)
+## Lesson 1: Computer architecture and the fetch-execute cycle (1.3.2)
 
 "A computer processor does moronically simple things — it moves a byte from memory to register, adds a byte to another byte, moves the result back to memory. The only reason anything substantial gets completed is that these operations occur very quickly. To quote Robert Noyce, ‘After you become reconciled to the nanosecond, computer operations are conceptually fairly simple.’” [*](Code: The Hidden Language of Computer Hardware and Software by Charles Petzold)
 
+Take notes on these two videos to introduce this topic:
+
 * Watch [Tom Scott's exellcent explainer into the Fetch-decode-execute cycle](https://www.youtube.com/watch?v=Z5JC9Ve1sfI) (9:03m).
+* Watch [GCSE Computer Architecture 1 - Von Neumann Architecture](https://www.youtube.com/watch?v=ckDb_W72__c) (13:00).
+
+There is an online simulator you can use to experiment with assembler if you are keen:
+
 * [Simple 8-bit Assembler Simulator](http://schweigi.github.io/assembler-simulator/)
 
-* Von Neumann model for a computer system
+Key terms you should be comfortable with:
 
-* Immediate access store (IAS)
-* Register
-* Control Unit (CU)
-* Accumulator (ACC)
+* Von Neumann model for a computer system
+* Control Unit (CU), 
 * Arithmetic logic unit (ALU)
+* Registers
+    * Accumulator (ACC)
+    * Program counter (PC)
+    * Current instruction register (CIR)
+    * Memory address register (MAR) & Memory data register (MDR)
+* Random access memory (RAM)
 * Bus
 
-## Input devices (1.3.3)
+Test yourself
+
+* [https://quizlet.com/9917997/test](https://quizlet.com/9917997/test)
+* [https://www.bbc.co.uk/bitesize/guides/zbfny4j/test](https://www.bbc.co.uk/bitesize/guides/zbfny4j/test)
+
+## Lesson 2: Computer architecture and the fetch-execute cycle (1.3.2)
+
+... coming
+
+## Lesson 3: Input devices (1.3.3)
 
 GPIO
 
