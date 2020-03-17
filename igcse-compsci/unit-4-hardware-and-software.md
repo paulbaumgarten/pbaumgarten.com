@@ -100,12 +100,12 @@ You are required to teach your classmates on:
 Time & submission requirements:
 
 * You will be provided 6 periods of class time. Fridays will remain reserved for programming lessons during this time. That means the following lessons will be workinng time:
-   * Wednesday 18 March
-   * Wednesday 25 March
-   * Monday 30 March
-   * Wednesday 1 April (April fools day!!!)
-   * Wednesday 22 April
-   * Monday 27 April
+   * Wednesday 18 March (research)
+   * Wednesday 25 March (research)
+   * Monday 30 March (research)
+   * Wednesday 1 April (organise your notes)
+   * Wednesday 22 April (prepare presentations)
+   * Monday 27 April (prepare handouts)
 * Submit by Google Classroom assignment
    * Please attach your Google Docs etc to the assignment straight away (without clicking submit) so I can check your progress as we go.
 * Assuming we are back in school, you will start presenting on Wednesday 29 April.
