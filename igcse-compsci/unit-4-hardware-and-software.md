@@ -39,150 +39,93 @@ Test yourself
 * [https://quizlet.com/9917997/test](https://quizlet.com/9917997/test)
 * [https://www.bbc.co.uk/bitesize/guides/zbfny4j/test](https://www.bbc.co.uk/bitesize/guides/zbfny4j/test)
 
-## Lesson 2: Computer architecture and the fetch-execute cycle (1.3.2)
+## Lesson 2: Input devices (1.3.3)
 
-... coming
+### Research task
 
-## Lesson 3: Input devices (1.3.3)
+Working in pairs, you will be allocated an input device and an output device for you to become an expert in, so you can teach your classmates about it.
 
-GPIO
+You should be aiming to produce three artifacts per device:
 
-describe the principles of operation (how each device works) of these input devices
+* A 3 minute presentation to be followed by a brief question & answer
+* A summary cheat sheet to distribute (1 double sided page)
+* Kahoot quiz to test your classmates with
+
+Input devices list
 
 * 2D scanner
 * 3D scanner
 * Bar code reader
 * QR code reader
-* Digital camera https://www.youtube.com/watch?v=B7Dopv6kzJA (5:20m onward)
+* Digital camera
 * Keyboard
 * Mouse
-* Touch screen (resistive v capacitive) https://www.youtube.com/watch?v=cFvh7qM6LdA
+* Touch screen (resistive)
+* Touch screen (capacitive)
 * Interactive whiteboard
 * Microphone
 
-```python
-# Create a QR code
-# pip install pyqrcode pypng
-# pyqrcode library @ https://github.com/mnooner256/pyqrcode
-import pyqrcode
-qr = pyqrcode.create('https://pbaumgarten.com/')
-qr.png("cool website.png", scale=5)
-```
+You are required to teach your classmates on:
 
-```python
-# Decode a QR code
-# Install zbar as per https://github.com/NaturalHistoryMuseum/pyzbar/#installation
-# pip install zbar Pillow ImageToolsMadeEasy
-from pyzbar.pyzbar import decode
-from PIL import Image
-import ImageTools
+* The principles of operation (how each device works)
+   * For example: How does a camera (a) capture an image, (b) convert it into a digital file
+   * For example: How does a touch screen (a) detect a finger press, (b) determine where the finger press occurred
+   * For example: How does a microphone (a) detect sound waves, (b) convert it into a digital signal
+* Include discussion of what sensors are used, and how they function
+* Real life scenarios where the devices are used in industry (eg: scanning passports at airport, barcode reader at supermarkets, touch screen information kiosks)
+* Compare and contrast the advantages and disadvantages of your device to an alternative (at least 3).
 
-camera = ImageTools.Camera()
-while True:
-    input("Press ENTER to take a photo")
-    img = camera.take_photo()
-    img.show()
-    barcodes = decode(img)
-    if len(barcodes) > 0:
-        print("The following barcodes or qrcodes were found...")
-        for i in range(len(barcodes)):
-            print(barcodes[i].data.decode())
-    else:
-        print("No barcode or qrcode")
-```
+Output devices list
 
-describe how these principles are applied to real-life scenarios, for example: 
+* Inkjet printer
+* Laser printer
+* 3D printer
+* 2D laser cutter
+* 3D cutter
+* Speakers and headphones
+* Actuators
+* LCD display
+* LED display
+* LCD projector
+* DLP projector
 
-* scanning of passports at airports, 
-* barcode readers at supermarket checkouts
-* touch screens on mobile devices
+You are required to teach your classmates on:
 
-describe how a range of sensors can be used to input data into a computer system, including:
+* The principles of operation (how the device works)
+    * including what are the key components of each device and the role they play in creating the output?
+    * including how is the digital signal from the computer converted into the physical output?
+* Describe how these are used in real-life scenarios such as industry.
+* Compare and contrast the advantages and disadvantages of your device to an alternative.
 
-* light, 
-* temperature, 
-* magnetic field, 
-* gas, 
-* pressure, 
-* moisture, 
-* humidity, 
-* pH and 
-* motion
+Time & submission requirements:
 
-describe how these sensors are used in real-life scenarios, for example: 
-
-* street lights, 
-* security devices, 
-* pollution control, 
-* games, and 
-* household and industrial applications
-
-## Output devices (1.3.4)
-
-describe the principles of operation of the following output devices: 
-
-* inkjet, 
-* laser and 
-* 3D printers; 
-* 2D and 3D cutters; 
-* speakers and headphones; 
-* actuators; 
-* flat-panel display screens, such as Liquid Crystal Display (LCD) and Light-Emitting Diodes (LED) display; LCD projectors and Digital Light Projectors (DLP)
-
-describe how these principles are applied to real-life scenarios, for example: 
-
-* printing single items on demand or in large volumes; 
-* use of small screens on mobile devices
+* You will be provided 6 periods of class time. Fridays will remain reserved for programming lessons during this time. That means the following lessons will be workinng time:
+   * Wednesday 18 March
+   * Wednesday 25 March
+   * Monday 30 March
+   * Wednesday 1 April (April fools day!!!)
+   * Wednesday 22 April
+   * Monday 27 April
+* Submit by Google Classroom assignment
+   * Please attach your Google Docs etc to the assignment straight away (without clicking submit) so I can check your progress as we go.
+* Assuming we are back in school, you will start presenting on Wednesday 29 April.
+* You may use a brief clip from a relevant video not of your own creation (but I'll waive a maximum of 30 seconds of your presentation time for it)
+* While I expect most will probably present in person, if you use to pre-record your presentation as a video, you may.
 
 
 ## Memory, storage devices and media (1.3.5)
 
-* show understanding of the difference between: primary, secondary and off-line storage and provide examples of each, such as: primary: Read Only Memory (ROM) and Random Access Memory (RAM) secondary: hard disk drive (HDD) and Solid State Drive (SSD); off-line: Digital Versatile Disc (DVD), Compact Disc (CD), Blu-ray disc, USB flash memory and removable
-HDD
-* describe the principles of operation of a range of types of storage device and media including magnetic, optical and solid state
-* describe how these principles are applied to currently available storage solutions, such as SSDs, HDDs, USB flash memory, DVDs, CDs and Blu-ray discs
-* calculate the storage requirement of a file
-
 ## High and low-level languages and their translators (1.3.7)
-
-* high and low level languages
-* compilers, interpreters, assemblers
-* pi tiein - assemblier, c, c++, python, java
 
 ## Operating systems (1.3.6)
 
-purpose; need for interrupts
-
 ## Data Storage (1.1.3)
-
-Candidates should be able to:
-• show understanding that sound (music), pictures, video, text and numbers are stored in different formats
-• identify and describe methods of error detection and correction, such as parity checks, check digits,
-checksums and Automatic Repeat reQuests (ARQ)
-• show understanding of the concept of Musical Instrument Digital Interface (MIDI) files, JPEG files, MP3 and
-MP4 files
-• show understanding of the principles of data compression (lossless and lossy) applied to music/video, photos
-and text files
 
 ### Different storage formats
 
-* Web camera data formats
-1920x1080
-720
-480
-8 bit colour depth
-24 bit colour depth
-Calculate the size of the image (in bytes). Without a calculator, you must show working.
-
 ### Error detection and correction
-
-* even and odd parity
 
 ### Some common file formats
 
 ### Compression
 
-[How Computers Compress Text: Huffman Coding and Huffman Trees - Tom Scott (6:30)](https://www.youtube.com/watch?v=JsTptu56GM8)
-
-* lossy compression
-* lossless compression

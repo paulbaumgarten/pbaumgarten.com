@@ -218,11 +218,11 @@ def task4b():
     img.show()
 
 def task4c():
-    img = Image.open("./myp-design/face-filters/test-pic.png")
-    face_filter = Image.open("./myp-design/face-filters/filters/demo2.png")
+    img = Image.open("./test-pic.png")
+    face_filter = Image.open("./filters/demo2.png")
     print(img.mode, face_filter.mode)
     draw = ImageDraw.Draw(img)
-    faces_coordinates = ImageTools.get_faces(img, "./myp-design/face-filters/assets/haarcascade_frontalface_default.xml")
+    faces_coordinates = ImageTools.get_faces(img, "./assets/haarcascade_frontalface_default.xml")
     if len(faces_coordinates) > 0:
         print("Faces found at the following locations")
         for face_location in faces_coordinates:
@@ -233,7 +233,7 @@ def task4c():
             img.paste(adjusted_face_filter, (x,y), mask=adjusted_face_filter)
     img.show()
 
-#task4c()
+task4c()
 
 #im = Image.open("/users/pbaumgarten/desktop/orig.jpg")
 #altered = im.crop((0,100,3000,2100))
@@ -259,9 +259,13 @@ def task2():
     compiled.paste(img3, (320,0))
     compiled.show()
 
+"""
+
 img = Image.new("HSV", (255, 255))
 width, height = img.size
 for x in range(width):
     for y in range(height):
         img.putpixel((x,y), (x,y,255))
 img.show()
+"""
+

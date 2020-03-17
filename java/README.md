@@ -37,6 +37,10 @@ This section is mostly consisting of sample "code recipes" of how to perform com
 * [Web servers](jetty.md)
 * [20 Useful open source libraries](https://dzone.com/articles/20-useful-open-source-libraries-for-java-programme)
 
+Tips: 
+
+* Importing a JAR into an IntelliJ project: File / Project Structure / Modules / Dependencies / Add icon
+
 # Other resources
 
 Online exercises
