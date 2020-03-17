@@ -39,7 +39,7 @@ Test yourself
 * [https://quizlet.com/9917997/test](https://quizlet.com/9917997/test)
 * [https://www.bbc.co.uk/bitesize/guides/zbfny4j/test](https://www.bbc.co.uk/bitesize/guides/zbfny4j/test)
 
-## Lesson 2: Input devices (1.3.3)
+## Lesson 2: Input devices (1.3.3) and Output devices (1.3.4)
 
 ### Research task
 
