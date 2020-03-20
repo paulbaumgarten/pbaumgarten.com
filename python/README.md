@@ -4,7 +4,7 @@
 
 This represents my extensive and continually growing set of notes for learning the Python programming language. I use these notes extensively with my students and they are frequently updated. I welcome your feedback or suggestions on how they may be improved.
 
-Supplemental to these notes, I have a range of Python videos on Youtube at [https://youtube.com/pbaumgarten](https://youtube.com/pbaumgarten).
+Supplemental to these notes, I have a range of [Python videos on Youtube](videos.md).
 
 ## Get Python
 
