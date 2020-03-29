@@ -38,6 +38,7 @@ If you know the basics of Python and wish to experiement with a new package or t
 * [Databases](databases.md)
 * [Excel reading & chart generation](excel.md) (pandas, matplotlib)
 * [Flask webserver](flask.md)
+  * [Flask add Google Auth](flask-google-auth.md)
 * [Google searching](google-searching.md) (through the API)
 * [Graphs, generate](excel#matplotlib.md)
 * [GUI with TKinter](tkinter.md)

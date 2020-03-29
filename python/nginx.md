@@ -35,13 +35,19 @@ As a guide, my `requirements.txt` typically includes the following:
 uwsgi
 Flask
 flask_session
-flask_socketio
-flask_htmlmin
-Flask-OAuthlib
 pymysql
 exifread
 Pillow
 bcrypt
+```
+
+If you are using the Google OAuth authentication then you will also want:
+
+```
+google-api-python-client
+google-auth
+google-auth-oauthlib
+google-auth-httplib2
 ```
 
 ## Check wsgi.py
@@ -114,6 +120,7 @@ User=userid
 Group=groupid
 WorkingDirectory=</path/to/project>
 Environment="PATH=</path/to/project>/projectenv/bin"
+Environment="CLIENT_SECRETS=/folder/folder/client_secrets.json"
 ExecStart=</path/to/project>/projectenv/bin/uwsgi --ini project.ini
 
 [Install]
@@ -160,6 +167,7 @@ server {
  
     location / { 
         include uwsgi_params;
+        uwsgi_param     CLIENT_SECRETS_FILE     '/folder/folder/client_secrets.json';
         uwsgi_pass unix:/srv/online.islpics/app/project.sock;
         access_log on;
         error_log on;
