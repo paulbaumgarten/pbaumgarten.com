@@ -11,7 +11,7 @@ Fortunately, Jetbrains make a community edition version of the product the relea
 * Start Pycharms and create a new project (I recommend creating a new folder for all your Python programs)
 * Install the Pygame library following the instructions I provide in class. I won't include it in this handbook as the instructions might change when Pycharm updates, and are also slightly different for Windows vs Macs.
 
-# Coordinate system
+## Coordinate system
 
 Pygame is a graphics system for Python. The screen is divided into pixels. You use sets of pixel coordinates to tell Python where to draw shapes, place text or images etc.
 
@@ -25,7 +25,7 @@ The y-axis increases as you move down – this is different to the way you do it
 
 ---
 
-# Hello Pygame!
+## Hello Pygame!
 
 All Pygames in my tutorials are built from this basic template. Please divide your games into these sections to make it easier to build and for me to assist you with any problems.
 
@@ -83,7 +83,7 @@ To briefly explain a few commands:
 
 ---
 
-# Drawing basic shapes
+## Drawing basic shapes
 
 The following are the basic commands for drawing simple geometric shapes.
 
@@ -143,13 +143,13 @@ pygame.draw.ellipse(window, PINK, (220, 100, 80, 40) )
 pygame.draw.polygon(window, RED, ((20,20), (52,60), (172,60), (200,20)), 5)
 ```
 
-## Exercise
+### Exercise
 
 Can you draw a simple landscape scene? Perhaps a house with a triangle shaped roof, or a stick person?
 
 ---
 
-# Using colour
+## Using colour
 
 Colours are created using a 3 number variable, COLORNAME = (red, green, blue), where each colour value is between 0 and 255.
 
@@ -179,7 +179,7 @@ A good online resource for picking colours is [https://htmlcolorcodes.com](https
 
 ---
 
-# Displaying text
+## Displaying text
 
 There are two steps to displaying text within a Pygame Python program:
 
@@ -212,7 +212,7 @@ Rendering text is not as friendly as the old `print()` command you are used to. 
 
 ---
 
-# Keyboard events
+## Keyboard events
 
 We have already been using the Pygame event handler without really looking too much at it. It is the `for event in pygame.event.get()`. Just like items in a list, the `for` loop will run through all the events that have occurred since the last time the program checked through them. This is how the program detects and processes keyboard and mouse events.
 
@@ -224,7 +224,7 @@ For a full list of the event.key codes, see https://www.pygame.org/docs/ref/key.
 
 The ones we are going to be concerned with primarily are: `K_ESCAPE, K_RETURN, K_SPACE, K_UP, K_DOWN, K_LEFT, and K_RIGHT`.
 
-## Demo exercise 1: Space bar
+### Demo exercise 1: Space bar
 
 Get your template code and add to it as shown in the demo code.
 
@@ -281,7 +281,7 @@ pygame.quit()
 
 ---
 
-## Demo exercise 2: Arrow keys
+### Demo exercise 2: Arrow keys
 
 Let's move onto something more useful for a game. This demo will use the arrow keys to move an object on the screen. While the arrow key is pressed, the object will move; once the key(s) are released, the movement will stop.
 
@@ -344,7 +344,7 @@ pygame.quit()
 
 ---
 
-# Mouse events
+## Mouse events
 
 Mouse events work very similar to keyboard events. They are stored in the same queue to be processed by the `for` event in `pygame.events.get()` loop.
 
@@ -356,7 +356,7 @@ There are three types of events we can check for:
 
 In all three cases, there will be an `event.pos` value that will indicate the `(x,y)` location of the mouse pointer when the event occurred. To illustrate the use of mousemotion, lets make a very simple pong game where the paddle will be controlled by the mouse. The sections relevant to the mouse motion event will be highlighted with comments.
 
-## Evercise: Really basic "pong" using mousemotion
+### Evercise: Really basic "pong" using mousemotion
 
 ```python
 import pygame, time, random
@@ -413,11 +413,11 @@ pygame.quit()
 
 ---
 
-# Playing a sound
+## Playing a sound
 
 Like images, this will assume all your sound files are in your project folder. You can only have one track of "background" music playing at a time. You can, however, have multiple sound effects at once. 
 
-## Background music
+### Background music
 
 Playing a background song is dead easy... one command to load it, one command to play. Don’t put this in your loop! It should go where colours are declared etc.
 
@@ -428,7 +428,7 @@ pygame.mixer.music.play(-1) 		# 0 = play once, -1 = loop
 
 **It really is important that your pygame.mixer.music.load is not in your game loop. Every time you run it you are reloading the file into memory, slowing your sstem down!**
 
-## Sound effects
+### Sound effects
 
 Make sure you only load the sound effect once. You can use it multiple times, but it will chew up your system memory very quickly if you put the load inside your game loop!
 
@@ -448,9 +448,9 @@ BOUNCE_SOUND.play()
 
 ---
 
-# Using Images in Pygame
+## Using Images in Pygame
 
-## Draw an image
+### Draw an image
 
 Drawing an image file (jpeg or png) is really easy! Only two lines of code needed. The following assumes your image files are located in your PyCharms project folder.
 
@@ -466,7 +466,7 @@ To draw the full image onto the screen, use the `blit()` command. The coordinate
 window.blit(IMAGE, (x, y))
 ```
 
-## Resize an image
+### Resize an image
 
 To resize an image before drawing it onto the screen.
 
@@ -475,7 +475,7 @@ picture = pygame.image.load(filename)
 picture = pygame.transform.scale(picture, (newWidth, newHeight))
 ```
 
-## Rotate an image
+### Rotate an image
 
 * Will rotate counter-clockwise. Use a negative number to rotate clockwise.
 * Unless rotating by 90 degree increments, the image will be padded larger to hold the new size. If the image has pixel alphas, the padded area will be transparent. Otherwise pygame will pick a color that matches the Surface colorkey or the topleft pixel value.
@@ -485,13 +485,13 @@ originalPicture = pygame.image.load(filename)
 rotatedPicture = pygame.transform.rotate(originalPicture, 90)
 ```
 
-## Get a colour at a given pixel
+### Get a colour at a given pixel
 
 ```python
 pixel_colour = window.get_at(( x , y ))
 ```
 
-## Draw part of an image
+### Draw part of an image
 
 To only render part of an image onto the screen, you can supply the coordinates of the rectangle within the image you want to use.
 
@@ -506,7 +506,7 @@ Where
 * image-x, image-y: within the image file, this is the top left of the part of the image to include
 * image-width, image-height: the number of pixels wide and high to include
 
-## Animated sprites or sprite maps
+### Animated sprites or sprite maps
 
 A sprite map is where one image has several icons drawn on it. The idea is you rotate through the icons to give the appearance of animation.
 
@@ -536,7 +536,7 @@ Use `object.next_frame()` to return the next frame as an image that is ready to 
 window.blit(animation.next_frame(), (x, y))
 ```
 
-## Walking mario example
+### Walking mario example
 
 The following exercise creates a simple Mario walking scene where his "walk" is animated through a series of cells for the left and right walking as shown
 
@@ -665,11 +665,11 @@ pygame.quit()
 
 ---
 
-# Detecting collisions
+## Detecting collisions
 
 Pygame has a couple of really handy built in collision detection functions you can use:  `colliderect` and `collidelist` are the main two I'll discuss here.
 
-## Collide with a rectangle
+### Collide with a rectangle
 
 It works by providing the coordinates to two sets of rectangles, and if there is any overlap it will trigger the collision. We've drawn rectangles using `pygame.draw.rect` but you can also create rectangle variables. These can then be used for collision detection as well as drawing on screen (though once you start using images/sprites you probably won't even draw them).
 
@@ -729,9 +729,9 @@ To see this in use properly, look at Space Invaders in the project starters sect
 
 ---
 
-# Part 3 - Pygame project starters
+## Part 3 - Pygame project starters
 
-## About the project starters
+### About the project starters
 
 All of these projects are provided with only basic functionality. Your goal is to take one and turn it into something special.
 
@@ -750,7 +750,7 @@ Some of the code in these projects uses aspects of programming you haven't been 
 
 ---
 
-# Pong
+## Pong
 
 ```python
 import pygame, time, random
@@ -828,7 +828,7 @@ pygame.quit()
 
 ---
 
-# Snake
+## Snake
 
 ```python
 import pygame, sys, random
@@ -907,7 +907,7 @@ print("Good bye!")
 
 ---
 
-# Simple platformer
+## Simple platformer
 
 ```python
 import pygame, sys, random
@@ -987,7 +987,7 @@ pygame.quit()
 
 ---
 
-# Space invaders
+## Space invaders
 
 ```python
 import pygame, sys, random
@@ -1087,7 +1087,7 @@ print("Good bye!")
 
 ---
 
-# 1942
+## 1942
 
 ```python
 import pygame, time, random
@@ -1187,7 +1187,7 @@ pygame.quit()
 
 ---
 
-# Candy crush (basic)
+## Candy crush (basic)
 
 ```python
 import pygame, sys, random
@@ -1339,7 +1339,7 @@ print("Good bye")
 
 ---
 
-# Candy crush (better)
+## Candy crush (better)
 
 With images, background music and sound effects
 
@@ -1572,7 +1572,7 @@ print("Good bye")
 
 ---
 
-# More complex platformer
+## More complex platformer
 
 One frquent request from students in 2017/18 was that the sample platformer (included earlier) was fine, but a real platformer involved a large scene that the player moved through. This is me answering that call. I have a video on my youtube channel that walks through the full process of making this and explaining the logic at key parts: [https://youtube.com/pbaumgarten](https://youtube.com/pbaumgarten) 
 
@@ -1582,7 +1582,7 @@ That said, I've still left plenty for you to do to complete this game. I've only
 
 ---
 
-## Step 1: Design
+### Step 1: Design
 
 In creating a more complex platformer the first step was to design the level that I wanted. To do this I turned to traditional paper and pen. I taped 5 A3 sheets together and spent am hour and half drawing my scene. The result can be sseen below.
 
@@ -1594,7 +1594,7 @@ Just to show the level of detail, every platform, wall and firepit had their ind
 
 ---
 
-## Step 2: Code the level
+### Step 2: Code the level
 
 I took all the coordinates from the drawing and created a file called `levels.py` and created several lists containing the coordinates of all the platforms, firepits, walls and coins.  An excerpt of that file is below ... You'll have to create your own equivilant of this before you can move onto step 3.
 
@@ -1643,7 +1643,7 @@ goal = [[1580,  30,  10,  10]]
 
 ---
 
-## Step 3: Main game code
+### Step 3: Main game code
 
 With the hard work done, it was now simply a matter of writing some Pygame code that used the coordinates. Because all the coordinates are based on rectangles, it makes it really easy to see if the player is touching a wall, firepit or platform.
 
