@@ -27,7 +27,7 @@ Assessment outline:
 </tr>
 <tr>
     <td>Design<br>(½ lesson)</td>
-    <td>Sketch screen wireframe mockups, detailing key functions and flow between screens. See [example](https://github.com/CMPUT301F13T11/Team11AdventureBook/wiki/User-Interface-Mockup-and-Storyboard) but only draw a maximum of 4 screens. The idea is to show what the program will look like and how it will behave.</td>
+    <td>Sketch screen wireframe mockups, detailing key functions and flow between screens. See <a href="https://github.com/CMPUT301F13T11/Team11AdventureBook/wiki/User-Interface-Mockup-and-Storyboard" target="_blank">example</a> but only draw a maximum of 4 screens. The idea is to show what the program will look like and how it will behave.</td>
     <td>/3</td>
 </tr>
 <tr>
@@ -45,7 +45,7 @@ Assessment outline:
 <li>Persistent storage / filesystem incorporated and functional</li>
 <li>Overall, the project is functional</li></ul>
     </td>
-    <td><br>/2<br>/2<br>/2<br>/4<br>/2<br>/2<br>/2<br>/2<br>/2</td>
+    <td><br>/2<br>/2<br>/4<br>/2<br>/2<br>/2<br>/2</td>
 </tr>
 <tr>
     <td>Demonstration<br>(1 lesson)</td>
