@@ -67,7 +67,7 @@ Submission dates:
 * Creation - Final checkin - Due Friday 5 June
 * Demonstration - Video - Due Friday 12 June
 
-All submissions are via Google classroom.
+All submissions are via Google classroom: https://classroom.google.com/w/NDExNjYxNTExOTJa/tc/NzEzNzI5NDI2NjZa
 
 Some project ideas:
 
