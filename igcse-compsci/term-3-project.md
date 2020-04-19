@@ -53,15 +53,21 @@ Assessment outline:
     <td>/4</td>
 </tr>
 <tr>
-    <td>Evaluation<br>(1 lesson)</td>
-    <td>Critically reflect on your success against each of your original success criteria. Maximum 300 words.</td>
-    <td>/3</td>
-</tr>
-<tr>
     <td colspan="2">Total</td>
-    <td>/30</td>
+    <td>/27</td>
 </tr>
 </table>
+
+Submission dates:
+
+* Success criteria - Due Friday 24 April
+* Design - Due Friday 24 April
+* Creation - First checkin - Due Friday 8 May
+* Creation - Second checkin - Due Friday 22 May
+* Creation - Final checkin - Due Friday 5 June
+* Demonstration - Video - Due Friday 12 June
+
+All submissions are via Google classroom.
 
 Some project ideas:
 
