@@ -56,11 +56,13 @@ It is inevitable that a project scope will change over time. When that occurs, b
 * Changes to the scope that make it more clear / less vague = Scope discovery
 * Changes that make the scope less clear / more vague = Scope creep
 
+![](img/scope-creep.jpg)
+
 ---
 
 ### Stakeholder consultation
 
-Identifying stakeholders
+> Identifying stakeholders
 
 * Who is relevant? Employers, employees, customers…?
 * Who will use the system?
@@ -86,13 +88,14 @@ Be aware of privacy issues – being able to get honest, frank information from 
 ### Exercise
 
 Split off into pairs - one taking the role of customer, one taking the role of developer. Customer comes up with an app/software project they want the developer to "design". Developer must ask questions to ascertain:
+
  * A scope document: Eexplicitly list "in scope" and "out of scope" items
  * Identify stakeholders
  * Requirement specification: Functional and non-functional items
 
 Reverse roles when ready.
 
-Save these project outlines as we will continue to use them.
+Save these project outlines as we will use them later.
 
 ---
 
@@ -117,7 +120,7 @@ When researching your project, don't forget to account for international factors
 
 ### Requirements planning
 
-Your requirements are generally split into functional and non-functional requirements.
+Turn your project scope into a detailed set of requirements that you can give to your engineering team. Your requirements are generally split into functional and non-functional requirements.
 
 * Functional: What will the program actually do? For example:
   * Store hours worked per employee per day
@@ -148,7 +151,7 @@ There are a range of diagrams that may be useful when designing a new software p
 
 ### Gantt charts
 
-**TODO: INSERT**
+* [What is a Gantt Chart?](https://www.youtube.com/watch?v=fB0wsdmV3Sw) (5:21)
 
 ### Data flow diagrams
 
@@ -223,9 +226,7 @@ For example, here is a level 0 DFD from a student dreamed up "Party Finder" app.
 
 Not to be confused with the logic flow chart.
 
-The main difference between system flowchart and program flowchart is that a system flowchart represents an entire system while a program flowchart represents a single program. 
-
-Software development is a complex task. It is not possible to write programs for the entire system directly. Therefore, it is necessary to model the system to get a better understanding of the system. Furthermore, there are different diagrams that help to understand the functionality of the system. One such diagram is a flowchart. It is a diagrammatic representation that illustrates a solution model to a given problem. System flowchart and program flowchart are two types of flowcharts.
+The main difference between system flowchart and program flowchart is that a system flowchart represents an entire system and the data flows within it, while a program flowchart represents a single program or algorithm.
 
 A system flowchart is a diagram that describes how an entire system operates. It helps to recognize the flow of operations in the system. It also helps in preparing the required documents of the system.
 
