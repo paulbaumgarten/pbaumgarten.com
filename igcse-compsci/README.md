@@ -8,6 +8,7 @@ My teaching notes for the Cambridge iGCSE Computer Science course. *These notes 
 * [Unit 2 Algorithms](unit-2-algorithms.md)
 * [Unit 3 Data & logic](unit-3-data-and-logic.md)
 * [Unit 4 Hardware & software](unit-4-hardware-and-software.md)
+* [Term 3 programming project](term-3-project.md)
 * [Unit 5 Databases](unit-5-databases.md)
 * [Unit 6 Networks](unit-6-networks.md)
 * [Unit 7 Pre-release material](unit-7-pre-release-material.md)
