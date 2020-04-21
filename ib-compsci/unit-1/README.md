@@ -172,7 +172,7 @@ An example of the two diagrams for a lemonade stand might look like:
 
 **Level 0 diagram**  
 
-<img src="dfd0-lemonadestand.png" style="height:50%; width:50%">
+<img src="img/dfd0-lemonadestand.png" style="height:50%; width:50%">
 
 Source: https://www.slideshare.net/mohit4192/dfd-examples
 
