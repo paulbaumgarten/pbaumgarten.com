@@ -162,17 +162,17 @@ Dataflow diagrams (DFDs) come in two flavours:
 
 **Symbols for DFDs**  
 
-![](img/dfd-symbols.png)
+<img src="img/dfd-symbols.png" style="height:50%; width:50%">
 
 An example of the two diagrams for a lemonade stand might look like:
 
 **Context diagram**  
 
-![](img/dfdc-lemonadestand.png)
+<img src="img/dfdc-lemonadestand.png" style="height:50%; width:50%">
 
 **Level 0 diagram**  
 
-![](img/dfd0-lemonadestand.png)
+<img src="dfd0-lemonadestand.png" style="height:50%; width:50%">
 
 Source: https://www.slideshare.net/mohit4192/dfd-examples
 
