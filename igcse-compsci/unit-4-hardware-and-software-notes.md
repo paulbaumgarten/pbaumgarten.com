@@ -99,6 +99,13 @@ MP4 files
 • show understanding of the principles of data compression (lossless and lossy) applied to music/video, photos
 and text files
 
+Memory & Storage: Crash Course Computer Science #19 (12;16)
+https://www.youtube.com/watch?v=TQCr9RV7twk
+
+How do hard drives work? - Kanawat Senanan (5:11)
+https://www.youtube.com/watch?v=wteUW2sL7bc
+
+
 ### Different storage formats
 
 * Web camera data formats
