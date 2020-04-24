@@ -78,6 +78,8 @@ HDD
 * describe how these principles are applied to currently available storage solutions, such as SSDs, HDDs, USB flash memory, DVDs, CDs and Blu-ray discs
 * calculate the storage requirement of a file
 
+https://www.reddit.com/r/explainlikeimfive/comments/g5nc9w/eli5_how_do_solid_state_drives_ssd_store_and/
+
 ## High and low-level languages and their translators (1.3.7)
 
 * high and low level languages
