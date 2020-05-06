@@ -85,7 +85,34 @@ Some project ideas:
 * Cozmo robot project?
 * Video game: Some options [here](http://inventwithpython.com/blog/2012/02/20/i-need-practice-programming-49-ideas-for-game-clones-to-code/) (remember the rules about citing)
 
+---
+
+## Update 24/04/2020
+
+At present only half the class have put in their success criteria and sketches, I feel I need to clarify a couple of things.
+
+Regarding the success criteria and sketches: The main purpose of this information is just to communicate to me what it is that you are proposing to create. If I can read what you submit and know what you plan to make - mission accomplished. Please don't make it more complicated than it needs to be.
+
+Regarding the project choice: I realise in hindsight that I got a little carried away with the project ideas I wrote on the project page. Foremost in mind when I read your project proposal is that you only have 6 or 7 lessons of class time to work on the project. Please design a project that keeps this timeframe in mind. The project is not intended to be a stressful assessment. It is actually supposed to be the opposite - instead of assigning a new piece of programming homework every week, the idea of this was to simplify things by assigning you just one programming task that you could work on throughout the term.
+
+For those who are less confident with your programming skills, remember the only two requirements I've set is to (a) use a GUI such as tkinter/pygame/flask and to (b) have persistent data storage such as a file. Here are some additional project ideas that may help you:
+
+* Convert the class president voting project into a GUI screen based app that could actually be used with students voting for school leadership positions.
+* Convert the task to-do project into a GUI screen based app. If you have time, perhaps add reminders or priority ranks to your tasks.
+* A simple text file editor (your own version of Notepad)
+* A simple image editor (mini Photoshop style... easier than you might think... check https://pbaumgarten.com/myp-design/our-insta-life.pdf)
+* Convert the hangperson app into a GUI game
+* Pong game
+* Snake game
+* Simple platform game (Mario style)
+You could start with a simple project and then if time allows, add extra features. For instance with the games you can build the basic game, and then if time allows add extra features high-schools, multiple-levels, sound effects, sparkly animations etc
+
+If you are not sure of your idea yet, please feel free to email me to ask my thoughts on your idea.
+
+I hope that helps. Please don't let this project add to your stress burden.
+
+---
+
 Last updated:
 
-19 April 2020
-
+24 April 2020
