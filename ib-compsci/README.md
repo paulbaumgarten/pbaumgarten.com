@@ -6,7 +6,7 @@ Welcome to my teaching notes for the International Baccalaureate Diploma Compute
 
 ## Units & key resources
 
-* [Unit 1: Systems design](unit-1)
+* [Unit 1: Systems design](unit-1-sdlc.pdf)
 * [Unit 2: Computer architecture](unit-2)
 * [Unit 3: Networks](unit-3)
 * [Unit 4: Computational thinking, problem solving, & programming](unit-4)
