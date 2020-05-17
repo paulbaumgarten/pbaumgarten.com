@@ -34,6 +34,7 @@ If you know the basics of Python and wish to experiement with a new package or t
 
 * [Arduino](arduino.md)
 * [Audio](audio.md) (recording, playback, detect frequency etc)
+* [Circuit Python](circuitpython.md) for Adafruit Circuit Playground Express and compatible boards
 * [Classes](classes.md) (object orientated programming)
 * [Databases](databases.md)
 * [Excel reading & chart generation](excel.md) (pandas, matplotlib)
