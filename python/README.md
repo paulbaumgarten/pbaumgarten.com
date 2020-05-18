@@ -40,6 +40,7 @@ If you know the basics of Python and wish to experiement with a new package or t
 * [Excel reading & chart generation](excel.md) (pandas, matplotlib)
 * [Flask webserver](flask.md)
   * [Flask add Google Auth](flask-google-auth.md)
+  * [Deploy Flask to Google App Engine](https://medium.com/@dmahugh_70618/deploying-a-flask-app-to-google-app-engine-faa883b5ffab) (external article)
 * [Google searching](google-searching.md) (through the API)
 * [Graphs, generate](excel#matplotlib.md)
 * [GUI with TKinter](tkinter.md)
