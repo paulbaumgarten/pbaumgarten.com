@@ -279,11 +279,13 @@ Your Cozmo has a camera. Admittedly the resolution isn't great, but at least get
 
 ```python
 # Setup the camera
-cozmo.conn.send(pycozmo.protocol_encoder.EnableCamera(enable=True))
+cozmo.conn.send(pycozmo.protocol_encoder.EnableCamera()) # See note below
 cozmo.conn.send(pycozmo.protocol_encoder.EnableColorImages(enable=True))
 # Instruct the camera to take a photo
 cozmo.add_handler(pycozmo.event.EvtNewRawCameraImage, process_photo, one_shot=True)
 ```
+
+* Note: Older versions of the pycozmo library required `.EnableCamera(enable=True)` so depending on what version of the library you have you may need that.
 
 An example event handling function could look like...
 
@@ -331,7 +333,7 @@ cozmo.wait_for_robot()
 # Look straight ahead
 cozmo.set_head_angle(0.0)
 # Take photos continually. Run the process_photo() function on each image.
-cozmo.conn.send(pycozmo.protocol_encoder.EnableCamera(enable=True))
+cozmo.conn.send(pycozmo.protocol_encoder.EnableCamera())
 cozmo.conn.send(pycozmo.protocol_encoder.EnableColorImages(enable=True))
 cozmo.add_handler(pycozmo.event.EvtNewRawCameraImage, process_photo, one_shot=False)
 # Loop for 60 seconds
