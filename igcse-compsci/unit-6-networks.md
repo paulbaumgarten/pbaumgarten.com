@@ -10,6 +10,9 @@
 
 ## 1.2.2 Security aspects
 
+* VPN Companies Are Lying To You [https://www.youtube.com/watch?v=CNRdHQJ9AMk](https://www.youtube.com/watch?v=CNRdHQJ9AMk)
+
+
 ## 1.2.3 Internet principles of operation	
 
 Exercise: Raspberry Pi 

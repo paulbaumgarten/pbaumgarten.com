@@ -190,6 +190,8 @@ What is a VPN? We'll let Linux explain,
 
 * Linus' Techquickie, 2015, VPNs or Virtual Private Networks as Fast As Possible [https://www.youtube.com/watch?v=DhYeqgufYss](https://www.youtube.com/watch?v=DhYeqgufYss)
 * Text: p145-148
+* VPN Companies Are Lying To You [https://www.youtube.com/watch?v=CNRdHQJ9AMk](https://www.youtube.com/watch?v=CNRdHQJ9AMk)
+* https://amiunique.org/
 
 VPN properties
 
