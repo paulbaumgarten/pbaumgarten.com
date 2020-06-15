@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dots</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Righteous' rel='stylesheet'>
+	<style type="text/css">
+		body {
+			background-image:url("bg.jpg");
+		}
+
+		canvas {
+			border:5px solid #ffffff;
+			position:absolute;
+			top:70px;bottom:0;right:0;left:0;
+			margin:auto;
+		}
+
+		.text {
+			text-align: center;
+			color:#ffffff;
+			margin: 2px;
+			font-family: "Righteous";
+	
+	</style>
+</head>
+<body>
+	<h3 id="hi" class="text">Target:</h3>
+	<h3 id="hi2" class="text">Score:</h3>
+	<h3 id="hi3" class="text"></h3><br><br>
+	<canvas height="500" width="500" id="canvas1" ></canvas>
+	<br><br>
+	<img id="dot" src="dots3.png" width="1px" height="1px" style="visibility: hidden;text-align: center;">
+	<img id="dot2" src="DOTS2.png" width="1px" height="1px" style="visibility: hidden;">
+	<img id="we" src="we.png" width="1px" height="1px" style="visibility: hidden;">
+	<img id="need" src="need.png" width="1px" height="1px" style="visibility: hidden;">
+	<img id="your" src="your.png" width="1px" height="1px" style="visibility: hidden;">
+	<img id="help" src="help.png" width="1px" height="1px" style="visibility: hidden;">
+	<img id="text1" src="text1.png" width="1px" height="1px" style="visibility: hidden;">
+</body>
+
+<script type="text/javascript" src="game.js"></script>
+</html>
