@@ -8,6 +8,7 @@ Teaching resources and programming projects for Paul Baumgarten
 * [IB Diploma Computer Science](https://pbaumgarten.com/ib-compsci)
 * [iGCSE Computer Science](https://pbaumgarten.com/igcse-compsci)
 * [MYP Digital Design](https://pbaumgarten.com/myp-design/)
+* [Coding club](https://pbaumgarten.com/codingclub/)
 * [Learn Python](https://pbaumgarten.com/python)
 * [Learn Java](https://pbaumgarten.com/java)
 * [Learn Javascript](https://pbaumgarten.com/javascript)
