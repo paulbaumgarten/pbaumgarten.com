@@ -253,7 +253,7 @@ For instance, if we were to use an 8bit binary number to store integers. Without
 
 To see how it works, let's count down ward...
 
-```
+```text
 0000 0100 = 4
 0000 0011 = 3
 0000 0010 = 2
@@ -321,7 +321,7 @@ The solution is to come up with another number system. One that is relatively hu
 
 Obviously our number system only has 10 symbols, but we now require 16, so what to do? We use letters.
 
-```
+```text
 Decimal     Hexadecimal     Binary
 0           0               0000
 1           1               0001

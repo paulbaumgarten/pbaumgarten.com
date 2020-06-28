@@ -1,4 +1,4 @@
-# Java: Basics
+# Learn Java
 
 <img src="img/java-logo.jpg" style="float:right">
 

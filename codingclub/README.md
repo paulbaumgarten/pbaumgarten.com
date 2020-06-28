@@ -1,4 +1,4 @@
-# Coding club
+# Sha Tin College coding club
 
 ## Term 3, 2019-2020
 

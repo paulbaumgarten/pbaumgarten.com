@@ -87,23 +87,27 @@ Both TCP and UDP are protocols used for sending bits of data — known as packet
 
 **UDP (User Datagram Protocol)** just sends packets to the recipient. The sender will not wait to make sure the recipient received the packet — it will just continue sending the next packets. If you are the recipient and you miss some UDP packets, too bad — you can not ask for those packets again. There is no guarantee you are getting all the packets and there is no way to ask for a packet again if you miss it, but losing all this overhead means the computers can communicate more quickly. UDP is used when speed is desirable and error correction is not necessary. For example, UDP is frequently used for live broadcasts and online games.
 
-![Packet switching animation](packet_switching.gif)
+![Packet switching animation](img/packet_switching.gif)
 
 A TCP joke:
 
-    Hello, would you like to hear a TCP joke?
-    Yes, I'd like to hear a TCP joke.
-    OK, I'll tell you a TCP joke.
-    OK, I'll hear a TCP joke.
-    Are you ready to hear a TCP joke?
-    Yes, I am ready to hear a TCP joke.
-    OK, I'm about to send the TCP joke. It will last 10 seconds, it has two characters, it does not have a setting, it ends with a punchline.
-    OK, I'm ready to hear the TCP joke that will last 10 seconds, has two characters, does not have a setting and will end with a punchline.
-    I'm sorry, your connection has timed out... ...Hello, would you like to hear a TCP joke?
+```text
+Hello, would you like to hear a TCP joke?
+Yes, I'd like to hear a TCP joke.
+OK, I'll tell you a TCP joke.
+OK, I'll hear a TCP joke.
+Are you ready to hear a TCP joke?
+Yes, I am ready to hear a TCP joke.
+OK, I'm about to send the TCP joke. It will last 10 seconds, it has two characters, it does not have a setting, it ends with a punchline.
+OK, I'm ready to hear the TCP joke that will last 10 seconds, has two characters, does not have a setting and will end with a punchline.
+I'm sorry, your connection has timed out... ...Hello, would you like to hear a TCP joke?
+```
 
 A UDP joke:
 
-    I know a UDP joke, but you might not get it.
+```text
+I know a UDP joke, but you might not get it.
+```
 
 Credits:
 

@@ -232,9 +232,9 @@ print(truthy)
 
 2) Suppose you ask the user what the temperature is. Create a program that will respond as follows:
 
-    * If the temperature is between 20 and 27, say that it is "Just right"
-    * If the temperature is below 20, say that it is "too cold"
-    * If the temperature is above 27, say that it is "too hot"
+* If the temperature is between 20 and 27, say that it is "Just right"
+* If the temperature is below 20, say that it is "too cold"
+* If the temperature is above 27, say that it is "too hot"
 
 3) Create a program that allows the user to input the sides of any triangle, and then return True/False to indicate if the triangle is a Pythagorean Triple or not.
 
@@ -244,7 +244,7 @@ print(truthy)
 
 6) Write a program to construct the following pattern, using a nested for loop.
 
-```
+```text
 * 
 * * 
 * * * 

@@ -9,7 +9,7 @@ Python supports all the basic arithmetic calculations
 ```python
 print( 2 + 2 )
 print( 1.5 + 2.25 )
-print( 7 – 2 )
+print( 7 - 2 )
 print( 3 * 4 )
 print( 10 / 2 )
 print( 4 ** 3 )    # Exponent operator

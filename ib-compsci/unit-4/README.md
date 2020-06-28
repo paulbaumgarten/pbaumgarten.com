@@ -52,13 +52,13 @@ Decisions may be multi faceted. Compare these two:
 
 The question we ask ourselves in the "if" statement is known as the condition. We can use "boolean logic" to create multiple conditions for a single "if". Both of these do the same thing:
 
-```
+```text
 if (time is 6:00am) and (day is weekday) then
     wake up for school
 end if
 ```
 
-```
+```text
 if (time is 6:00am) and ((day is Monday) or (day is Tuesday) or 
     (day is Wednesday) or (day is Thursday) or (day is Friday)) then
     wake up for school
@@ -67,14 +67,14 @@ end if
 
 Logical decisions can also be applied to things of a repetitive nature
 
-```
+```text
 while (hungry) then  
     raid pantry 
     eat 
 end 
 ```
 
-```
+```text
 for (each episode of Game Of Thrones) 
     watch the episode 
 end 
@@ -355,7 +355,7 @@ Q4. Design an algorithm... where the user inputs three numbers, and then outputs
 
 You need to be able to create as well as interpret/analyse pseudo code.
 
-    Where answers are to be written in pseudocode, the examiners will be looking for clear algorithmic thinking to be demonstrated. In examinations, this type of question will be written in the approved notation, so a familiarity with it is expected. It is accepted that under exam conditions candidates may, in their solutions, use pseudocode similar to a programming language with which they are familiar. This is acceptable. The markscheme will be written using the approved notation. Provided the examiners can see the logic in the candidate’s response, regardless of language, it will be credited. No marks will be withheld for syntax errors ... for answers to be written in pseudo code
+*Where answers are to be written in pseudocode, the examiners will be looking for clear algorithmic thinking to be demonstrated. In examinations, this type of question will be written in the approved notation, so a familiarity with it is expected. It is accepted that under exam conditions candidates may, in their solutions, use pseudocode similar to a programming language with which they are familiar. This is acceptable. The markscheme will be written using the approved notation. Provided the examiners can see the logic in the candidate’s response, regardless of language, it will be credited. No marks will be withheld for syntax errors ... for answers to be written in pseudo code*
 
 Given the statements made above about there not being a "correct" way to write it, there is a set syntax that the IB will use when they write pseudo code questions for you in the exam. As per the expectations comments above, you are not obligied to follow their syntax in your responses, and you will not lose credit for doing so, but you should be familiar enough with their syntax to be able to properly interpret the questions they give you.
 
@@ -440,7 +440,7 @@ Trace the following algorithmic fragment for N = 6.
 
 Show all working in a trace table. 
 
-```
+```text
 SUM = 0
 loop COUNT from 1 to (N div 2)
     if N mod COUNT = 0 then
@@ -478,7 +478,7 @@ Any algorithm not defined as a "standard algorithm" can be considered a "novel a
 
 Search through a set of data sequentially until you find the item you are looking for.
 
-```
+```javascript
 function sequential( haystack, needle ) {
     for (var i=0; i<haystack.length; i++) {
         if (needle == haystack[i]) {
@@ -495,7 +495,7 @@ One interesting thing to note with the sequential search is it does not require 
 
 A binary search divides a range of values into halves, and continues to narrow down the field of search until the unknown value is found. It is the classic example of a "divide and conquer" algorithm. Your data must be pre-sorted!
 
-```
+```javascript
 function binary( haystack, needle ) {
     var max = haystack.length-1;
     var min = 0;
@@ -543,7 +543,7 @@ Use the 7 step process to devise an algorithm for this and have a go at implemen
 
 Bubble sort: The highest value "bubbles" to the top each round.
 
-```
+```javascript
 function bubbleSort( data ) {
     var done = false;
     while (!done) {
@@ -567,7 +567,7 @@ function bubbleSort( data ) {
 
 The pseudo code for a selection sort
 
-```
+```javascript
 function selectionSort( data ) {
     for (var i=0; i<data.length; i++) {
         var indexOfLowest = i;
@@ -641,7 +641,7 @@ We have compared the efficiency of our sorting algorithms. Studying algorithm ef
 
 From the IB CS syllabus:
 
-    Students should understand and explain the difference in efficiency between a single loop, nested loops, a loop that ends when a condition is met or questions of similar complexity. Students should also be able to suggest changes in an algorithm that would improve efficiency, for example, using a flag to stop a search immediately when an item is found, rather than continuing the search through the entire list. Examination questions will involve specific algorithms (in pseudocode/flowcharts), and students may be expected to give an actual number (or range of numbers) of iterations that a step will execute.
+*Students should understand and explain the difference in efficiency between a single loop, nested loops, a loop that ends when a condition is met or questions of similar complexity. Students should also be able to suggest changes in an algorithm that would improve efficiency, for example, using a flag to stop a search immediately when an item is found, rather than continuing the search through the entire list. Examination questions will involve specific algorithms (in pseudocode/flowcharts), and students may be expected to give an actual number (or range of numbers) of iterations that a step will execute.*
 
 As you can see from the above, it is important to understand the efficiency of different algorithms. One measure used in industry is called Big O notation.
 
@@ -668,7 +668,7 @@ There were four important rules from the video:
 
 1. If you have two important steps in your algorithm, you add those steps.
 
-```
+```js
 function something() {
     doTask1()       // O(a)
     doTask2()       // O(b)
@@ -680,7 +680,7 @@ function something() {
 
 2. Drop constants.
 
-```
+```js
 function something() {
     for each item in array:     // O(n)
         min = MIN(item, min)
@@ -692,7 +692,7 @@ function something() {
 
 3. Different inputs usually use different variables to represent them in the O() relationship.
 
-```
+```js
 function something() {
     for each item in A:
        total = total + item
@@ -724,10 +724,10 @@ What is the Big O in the following?
 
 **Question 1**
 
-```
+```java
 boolean containsValue(int[] list, int val) {
    for (int item : list) {
-      if item==val {
+      if (item==val) {
          return true;
       }
    }
@@ -737,8 +737,8 @@ boolean containsValue(int[] list, int val) {
 
 **Question 2**
 
-```
-Boolean containsDuplicates(int[] a, int[] b) {
+```java
+boolean containsDuplicates(int[] a, int[] b) {
    for (int x : a) {
       for (int y : b) {
          if (x==y) { return true; }
@@ -750,7 +750,7 @@ Boolean containsDuplicates(int[] a, int[] b) {
 
 **Question 3**
 
-```
+```java
 int fibonacci(int n) {
    if (n <= 1) { return n; }
    int fib = 1;
@@ -765,7 +765,7 @@ int fibonacci(int n) {
 
 **Question 4**
 
-```
+```java
 boolean isFirstElementZero(int[] a) {
    if (a[0] == 0) {
       return true;
@@ -1000,7 +1000,7 @@ The above all said, you need to be aware that the IB course syllabus adds it's o
 
 The following is a pseudo code example from the Subject Guide that uses a collection
 
-```txt
+```text
 A geography teacher is searching CITIES, a collection of city names, and wants to print out the names of the
 cities beginning with D. Construct pseudocode to indicate how this may be done.
 

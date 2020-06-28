@@ -16,7 +16,7 @@ c = "This is not a string'
 
 ## Concatenating strings & f-strings
 
-> f-Strings require a minimum of Python version 3.6
+*Note: f-Strings require a minimum of Python version 3.6*
 
 Strings can be concatenated together with the `+` operator.
 
@@ -158,7 +158,7 @@ print(f"Double your number is: {result}")
 8. How would you print the following? `All "good" men should come to the aid of their country.` (ie: how to print the double quote character)
 9. Write code that will produce the following printout using only a single print() function call. 
 
-```txt
+```text
 Hello
 Hello again
 ```

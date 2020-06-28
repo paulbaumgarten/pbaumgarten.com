@@ -1,4 +1,4 @@
-# Learning Python notes
+# Learn Python
 
 <img src="img/python-logo.png" style="float:right">
 

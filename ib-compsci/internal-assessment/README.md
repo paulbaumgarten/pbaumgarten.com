@@ -563,7 +563,7 @@ The IB provides an offical template ZIP file that contains the file/folder struc
 
 Your final file/folder structure should resemble the following
 
-```
+```text
  |----> Documentation
  |      |----> Crit_A_Planning.pdf
  |      |----> Crit_B_Record_of_tasks.pdf

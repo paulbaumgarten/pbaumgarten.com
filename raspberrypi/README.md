@@ -1,4 +1,4 @@
-# Introduction
+# Learn Raspberry Pi
 
 <img src="img/rpi-logo-web.png" style="float:right">
 

@@ -1,4 +1,4 @@
-# iGCSE CompSci notes
+# iGCSE Computer Science
 
 My teaching notes for the Cambridge iGCSE Computer Science course. *These notes will be updated over the 2019-2021 period, unit by unit as they are taught.*
 
