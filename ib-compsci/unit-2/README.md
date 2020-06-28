@@ -80,7 +80,7 @@ Sourced from: Weiman, D 2010: ASCII Conversion Chart http://web.alfredstate.edu/
 
 Convert the following ASCII to it's binary representation.
 
-```
+```text
 01110100 - 01101000 - 01101001 - 01110011
 00100000 - 01101001 - 01110011 - 00100000
 01110011 - 01101100 - 01101111 - 01110111
@@ -220,7 +220,7 @@ By using twos complement, binary addition and subtraction work quite simply. Som
 
 * Addition of 68 + 12
 
-```
+```text
      1 1    (carry over row)
   0100 0100 (68)
 + 0000 1100 (12)
@@ -229,7 +229,7 @@ By using twos complement, binary addition and subtraction work quite simply. Som
 
 * Subtraction of 68 - 12, which is really 68 + (-12)
 
-```
+```text
   1    1    (carry over row)
   0100 0100 (+68)
 + 1111 0100 (-12)
@@ -238,7 +238,7 @@ By using twos complement, binary addition and subtraction work quite simply. Som
 
 * Subtraction of 12 - 68, which is really 12 + (-68)
 
-```
+```text
    111 1    (carry over row)
   0000 1100 (+12)
 + 1011 1100 (-68)
