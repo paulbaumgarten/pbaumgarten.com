@@ -269,7 +269,7 @@ So pseudo-code is pretend-code. It is not a geunine, real programming language. 
 
 The following is an example of pseudo-code you will see in this course. You should be able to read it, understand what it is conveying and convert it into your own programming language without difficulty.
 
-```txt
+```text
 PRINT "I can count! What number should I count up to?"
 INPUT Target
 N ← 1
