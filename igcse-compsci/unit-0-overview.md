@@ -2,6 +2,7 @@
 
 We are studying the **iGCSE Computer Science (9-1)** course as follows...
 
+| key | value |
 | ---- | ---- |
 | Course title | iGCSE Computer Science (9-1) |
 | Course code  | 0984 |

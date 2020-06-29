@@ -30,15 +30,19 @@ Programming concepts (high/low level, compilers, floating point, collections)
 
 ## Unit D1-3: Object orientated programming: Concepts, features & programming]
 
-Objects & classes
-UML
-Relationships
-Abstraction
-Encapsulation
-Inheritance
-Polymorphism
-Access modifiers
-Advantages & disadvantages
+OOP ideas
+* Objects & classes
+* UML
+* Relationships
+* Abstraction
+* Encapsulation
+* Inheritance
+* Polymorphism
+
+OOP programming
+* Access modifiers
+
+OOP advantages & disadvantages
 Problems
 
 ## Unit 5 & D4: Abstract data structures (HL)
@@ -65,5 +69,6 @@ Autonomous
 
 ## Extended essay 
 
+# iGCSE
 
 
