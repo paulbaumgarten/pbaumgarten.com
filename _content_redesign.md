@@ -72,3 +72,87 @@ Autonomous
 # iGCSE
 
 
+## Unit 1: Programming
+
+## Unit 2: Computational thinking
+
+## Unit 3: Logic & numbers
+
+## Unit 4: I/O hardware
+
+## Unit 5: Computer architecture
+
+## Unit 6: Networks
+
+## Unit 7: Security
+
+## Unit 8: Databases
+
+## Unit 9: Pre-release
+
+## Lesson openers reviewing previous lesson!
+
+Multi choice or quick answer question
+
+## Reading code
+
+What will output?
+
+a = 5
+a = 7
+print(a)
+
+What will output?
+
+a = 3
+b = a * 5
+print(a, b)
+
+What will output?
+
+a = 4
+a = a * 5
+print(a)
+
+What will output?
+
+a = 123
+b = a // 10
+c = a % 10
+print(b, c)
+
+What will output?
+
+a = 2
+if a > 2:
+    print("a")
+print("b")
+
+What will output?
+
+a = 2
+if a >= 2:
+    print("a")
+print("b")
+
+What will output?
+
+a = 13
+if a % 2 == 0:
+    print("a")
+else:
+    print("b")
+
+What will never print?
+
+if a % 2 == 0:
+    print("a")
+elif a % 2 == 1:
+    print("b")
+elif a % 2 == 2:
+    print("c")
+else:
+    print("d")
+
+
+

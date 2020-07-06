@@ -533,6 +533,23 @@ while True:
         time.sleep(0.05)
 ```
 
+```python
+# This worked on the Metro M0 Express
+import pulseio
+
+# Metro M0 Express has PWM on the following pins: A2, A3, A4, D0, RX, D1, TX, D2, D3, D4, D5, D6, D7, D8, D9, D10, D11, D12, D13, SDA, SCL, NEOPIXEL, SCK, MOSI, MISO.
+
+s = pulseio.PWMOut(board.D0, frequency=50, duty_cycle=0)
+
+while True:
+    s.duty_cycle = 10
+    sleep(1000)
+    s.duty_cycle = 120
+    sleep(1000)
+    s.duty_cycle = 0
+    sleep(1000)
+```
+
 ### Serial communication over USB
 
 * Source: https://stackoverflow.com/a/61739338
