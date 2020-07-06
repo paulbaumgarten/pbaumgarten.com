@@ -14,7 +14,7 @@ Welcome to my teaching notes for the International Baccalaureate Diploma Compute
 * [Unit 5 & D4: Abstract data structures](unit-5) (high level only)
 * [Unit 6: Resource management](unit-6) (high level only)
 * [Unit 7: Control systems](unit-7) (high level only)
-* [Internal assessment](internal-assessment) ([pdf version](internal-assessment/internal-assessment-pdf-version.pdf))
+* [Internal assessment](internal-assessment) 
 * [Case study](case-study.md) (high level only)
 * [Extended essay](extended-essay.md) (optional)
 
