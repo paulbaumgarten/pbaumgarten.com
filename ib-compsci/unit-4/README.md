@@ -15,27 +15,50 @@ This is a large unit that will take all of semester 1 of Year 12. The unit is br
 
 ## Introduction to Java programming skills
 
-* [Introduction to Java programming notes](unit-4-java.pdf)
+An introduction to programming with Java. Includes:
+
+* Hello world
+* Variables & data types
+* Numbers & the Math library
+* Strings & casting
+* Selection
+* Repetition
+* Functions
+* Arrays
+* Exceptions
+* Files
 
 Each topic contains a problem set that will be submitted via Google Classroom as home learning. 
 
+* Get the [Introduction to Java programming notes](unit-4-java.pdf)
+
 ## Computational thinking
+
+Thinking procedurally, logically, abstractly, ahead, concurrently, and recursively.
 
 * [Computational thinking notes](unit-4-1-computational-thinking.pdf)
 
-## Program design using pseudo code, flow charts and trace tables
+## Program design
+
+Includes using pseudo code, flow charts and trace tables
 
 * [Program design notes](unit-4-2-program-design.pdf)
 
 ## Searching & sorting alogorithms
 
+Include analysis of binary v linear search and bubble v selection sort
+
 * [Search & sort algorithms notes](unit-4-3-search-sort-algorithms.pdf)
 
-## Algorithm efficiency & Big O
+## Algorithm efficiency
+
+Includes a look at big-o notation
 
 * [Algorithm efficiency notes](unit-4-4-algorithm-efficiency.pdf)
 
 ## Programming concepts
 
-* [Programming concepts notes](unit-4-5-programming-concepts)
+High and low level programming languages, and the difference between compilers and interpretors, amongst other items.
+
+* [Programming concepts notes](unit-4-5-programming-concepts.pdf)
 

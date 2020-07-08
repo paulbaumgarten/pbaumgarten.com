@@ -1,40 +1,6 @@
 # Unit 7: Control systems (HL)
 
-## Syllabus
-
-7.1.1 Discuss a range of control systems.
-
-* A variety of control systems should be examined such as automatic doors, heating systems, taxi meters, elevators, washing machines, process control, device drivers, domestic robots, GPS systems, traffic lights and other common devices.
-* Technical knowledge of specific systems is not expected but students should be able to analyse a specified system.
-* AIM 9 Develop an appreciation of the possibilities for control systems with developments in computer systems.
-
-7.1.2 Outline the uses of microprocessors and sensor input in control systems.
-
-* These should be related to the examples suggested above.
-
-7.1.3 Evaluate different input devices for the collection of data in specified situations.
-
-* Scenarios will be based on familiar situations to students.
-
-7.1.4 Explain the relationship between a sensor, the processor and an output transducer.
-
-* Technical hardware details are not expected.
-
-7.1.5 Describe the role of feedback in a control system.
-
-* LINK Connecting computational thinking and program design.
-
-7.1.6 Discuss the social impacts and ethical considerations associated with the use of embedded systems.
-
-* S/E For example, tagging prisoners, surveillance, CCTV, improved safety systems.
-
-7.1.7 Compare a centrally controlled system with a distributed system.
-
-* Technical hardware details are not expected.
-
-7.1.8 Outline the role of autonomous agents acting within a larger system.
-
-* Technical hardware details are not expected.
+**Not yet updates for 2020/21**
 
 ## Introducing control systems
 

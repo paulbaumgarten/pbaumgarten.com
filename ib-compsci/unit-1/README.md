@@ -1,8 +1,7 @@
 # Unit 1: Systems design
 
+<img src="img/sdlc.png" style="float:right">
 This unit considers the equivalent of the old MYP Design cycle. At university level for a Computer Science course, the design cycle is known as the SDLC: System development life cycle (some books substitute "system" with "software").
-
-![](img/sdlc.png)
 
 The major sections of the SDLC are:
 
