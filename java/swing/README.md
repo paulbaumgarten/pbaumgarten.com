@@ -86,6 +86,8 @@ Here is the JSON data you can save to a file. I suggested at the end of video 7 
 ]
 ```
 
+An alternative to JSON would be to use object serialisation to save/load the data direct into an ArrayList.
+
 ## Extension task: Photos
 
 Here's a [tutorial](https://www.geeksforgeeks.org/jlabel-java-swing/) that's a helpful tip on how to get started.

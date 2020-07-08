@@ -26,7 +26,7 @@ This section is mostly consisting of sample "code recipes" of how to perform com
 * [Camera](http://webcam-capture.sarxos.pl/) : Capture photos, video with attached webcam
 * [Databases](databases.md)
 * [Files and folders](files-and-folders.md)
-* [GUIs with Swing](swing.md)
+* [GUIs with Swing](swing)
 * [Hashmaps](hashmaps.md)
 * [JSON](json-data.md) : org.json library
 * [Linked lists](linkedlists.md) : note java.util.LinkedList is not compliant to an actual LinkedList data structure
