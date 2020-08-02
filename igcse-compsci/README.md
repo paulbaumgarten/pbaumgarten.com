@@ -1,8 +1,6 @@
 # iGCSE Computer Science
 
-My teaching notes for the Cambridge iGCSE Computer Science course. *These notes will be updated over the 2019-2021 period, unit by unit as they are taught.*
-
-Our course is the **Cambrdige iGCSE Computer Science (9-1)** course (code 0984).
+My teaching notes for  **Cambridge iGCSE Computer Science (9-1)** course (code 0984).
 
 ## Overview
 
