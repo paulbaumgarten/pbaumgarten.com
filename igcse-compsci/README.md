@@ -6,10 +6,14 @@ Our course is the **Cambrdige iGCSE Computer Science (9-1)** course (code 0984).
 
 ## Overview
 
-* Course syllabus: [2021 exams](distribute/syllabus-2021.pdf), and [2022 exams](distribute/syllabus-2022.pdf)
-* Teaching schedule: [Year 10, 2020/21](planner-2020-20201-y10.pdf) and [Year 11, 2020/21](planner-2020-20201-y10.pdf)
-* Texts:
-   * Cambridge IGCSE Computer Science (Watson and Williams) ISBN: 9781471809309. [Publisher store](https://www.hoddereducation.co.uk/subjects/ict/products/14-16/cambridge-igcse-computer-science) or [Amazon](https://www.amazon.com/Cambridge-IGCSE-Computer-Science-Watson/dp/1471809307) |
+* Course syllabus: 
+    * [Syllabus for students sitting the 2021 exams](distribute/syllabus-2021.pdf)
+    * [Syllabus for students sitting the 2022 exams](distribute/syllabus-2022.pdf)
+* Planned teaching schedule: 
+    * [Year 10, 2020/21](planner-2020-2021-y10.pdf)
+    * [Year 11, 2020/21](planner-2020-2021-y10.pdf)
+* Textbooks:
+   * Cambridge IGCSE Computer Science (Watson and Williams) ISBN: 9781471809309. [Publisher store](https://www.hoddereducation.co.uk/subjects/ict/products/14-16/cambridge-igcse-computer-science) or [Amazon](https://www.amazon.com/Cambridge-IGCSE-Computer-Science-Watson/dp/1471809307)
    * Python Programming for Secondary school students (Baumgarten). [Lulu store](http://www.lulu.com/shop/paul-baumgarten/python-programming-for-secondary-school-students/paperback/product-24448947.html)
 
 ## Course materials
@@ -22,10 +26,10 @@ Our course is the **Cambrdige iGCSE Computer Science (9-1)** course (code 0984).
 * [Unit 4 Input/output hardware](igcse-4-io-hardware.pdf)
     * [Additional slides](igcse-4-io-hardware-2019-slides.pdf)
 * [Unit 5 Computer architecture](igcse-5-computer-architecture.pdf)
-* [Unit 6 Networks](igcse-6-networks.pdf)
-* [Unit 7 Security](igcse-7-security.pdf)
-* [Unit 8 Databases](igcse-5-databases.pdf)
-* [Unit 9 Pre-release material](igcse-9-pre-release.pdf)
+* [Unit 6 Networks](igcse-6-networks.pdf) (not yet ready)
+* [Unit 7 Security](igcse-7-security.pdf) (not yet ready)
+* [Unit 8 Databases](igcse-5-databases.pdf) (not yet ready)
+* [Unit 9 Pre-release material](igcse-9-pre-release.pdf) (not yet ready)
 
 ## Programming practice/resources
 
@@ -40,5 +44,5 @@ Our course is the **Cambrdige iGCSE Computer Science (9-1)** course (code 0984).
 
 ## End of course review
 
-* [Practice past exam papers](https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-igcse-9-1-computer-science-0984/past-papers/) |
+* [Practice past exam papers](https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-igcse-9-1-computer-science-0984/past-papers/)
 
