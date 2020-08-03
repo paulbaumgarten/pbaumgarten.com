@@ -10,12 +10,12 @@ Welcome to my teaching notes for the International Baccalaureate Diploma Compute
 * [Unit 2: Computer architecture](unit-2)
 * [Unit 3: Networks](unit-3)
 * [Unit 4: Computational thinking, problem solving, & programming](unit-4)
-* [Unit 5 (& D4): Abstract data structures](unit-5) (high level only)
-* [Unit 6: Resource management](unit-6) (high level only)
-* [Unit 7: Control systems](unit-7) (high level only)
+* [Unit 5 (& D4): Abstract data structures](unit-5) (HL only)
+* [Unit 6: Resource management](unit-6) (HL only)
+* [Unit 7: Control systems](unit-7) (HL only)
 * [Unit D: Object orientated programming: Concepts, features & programming](unit-d)
 * [Internal assessment](internal-assessment) 
-* [Case study](case-study.md) (high level only)
+* [Case study](case-study) (HL only)
 * [Extended essay](extended-essay.md) (optional)
 
 ## Programming practice
