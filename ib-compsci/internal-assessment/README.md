@@ -10,7 +10,7 @@ My IA handbook is a thorough 30 page guide through each deliverable, filled with
 
 Past exam IA's with feedback comments are available for STC students here.
 
-* [Past IA's](https://drive.google.com/drive/folders/1UM3FP3ZoKxVGvQV5VUzhlpT6-ex-0Tl3?usp=sharing) (you must be logged in to your STC google account to access)
+* [Past IA's](https://drive.google.com/drive/folders/1W8hzep6SnjHKay3i_A0lIBhgCrB7ZNs3?usp=sharing) (you must be logged in to your STC google account to access)
 
 The following supplemental resources will also be required.
 
