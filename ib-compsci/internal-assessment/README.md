@@ -6,7 +6,7 @@ Approximately 30 hours of class time will be devoted to the Internal Assessment.
 
 My IA handbook is a thorough 30 page guide through each deliverable, filled with valuable notes from moderators and past experience of things students did well / not so well. Read it carefully...
 
-* [Internal assessment handbook (pdf)](internal-assessment-pdf-version.pdf)
+* [Internal assessment handbook (2020 version)](internal-assessment-2020version.pdf)
 
 Past exam IA's with feedback comments are available for STC students here.
 
