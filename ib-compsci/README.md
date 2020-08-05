@@ -4,6 +4,12 @@ Welcome to my teaching notes for the International Baccalaureate Diploma Compute
 
 *Everybody in this country should learn how to program a computer… because it teaches you how to think. - Steve Jobs*
 
+## Overview
+
+* [Course syllabus](https://drive.google.com/drive/folders/1_-CMEiY1TEcvBt29xWtJF9dL-VQ8GBeR?usp=sharing)
+* [Schedule for Year 12, 2020/21](planner-2020-2021-y12.pdf)
+* [Schedule fpr Year 13, 2020/21](planner-2020-2021-y13.pdf)
+
 ## Units & key resources
 
 * [Unit 1: Systems design](unit-1)
@@ -24,13 +30,6 @@ Welcome to my teaching notes for the International Baccalaureate Diploma Compute
 * [CodingBat for Java](https://codingbat.com/java)
 * [Daily programmer challenge](https://www.reddit.com/r/dailyprogrammer/)
 * [Code Abbey (213 problems)](http://www.codeabbey.com/index/task_list)
-
-## IB course documents
-
-* [IB syllabus for Computer Science](https://drive.google.com/drive/folders/1_-CMEiY1TEcvBt29xWtJF9dL-VQ8GBeR?usp=sharing) (available to STC students only)
-* [IB Notation for pseudocode (exam version)](ib-compsci-pseudocode-flowcharts.pdf)
-* [IB Notation for pseudocode (additional detail)](ib-compsci-pseudocode-in-detail.pdf)
-* [IB Java Exam Tool Subset (JETS)](ib-compsci-jets.pdf) (previous syllabus but still very relevant)
 
 ## IB assessment outline
 
