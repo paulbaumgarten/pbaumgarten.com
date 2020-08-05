@@ -8,7 +8,7 @@ Welcome to my teaching notes for the International Baccalaureate Diploma Compute
 
 * [Course syllabus](https://drive.google.com/drive/folders/1_-CMEiY1TEcvBt29xWtJF9dL-VQ8GBeR?usp=sharing)
 * [Schedule for Year 12, 2020/21](planner-2020-2021-y12.pdf)
-* [Schedule fpr Year 13, 2020/21](planner-2020-2021-y13.pdf)
+* [Schedule for Year 13, 2020/21](planner-2020-2021-y13.pdf)
 
 ## Units & key resources
 
