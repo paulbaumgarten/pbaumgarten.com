@@ -9,7 +9,7 @@ My teaching notes for  **Cambridge iGCSE Computer Science (9-1)** course (code 0
     * [Syllabus for students sitting the 2022 exams](distribute/syllabus-2022.pdf)
 * Planned teaching schedule: 
     * [Year 10, 2020/21](planner-2020-2021-y10.pdf)
-    * [Year 11, 2020/21](planner-2020-2021-y10.pdf)
+    * [Year 11, 2020/21](planner-2020-2021-y11.pdf)
 * Textbooks:
     * Cambridge IGCSE Computer Science (Watson and Williams) ISBN: 9781471809309. [Publisher store](https://www.hoddereducation.co.uk/subjects/ict/products/14-16/cambridge-igcse-computer-science) or [Amazon](https://www.amazon.com/Cambridge-IGCSE-Computer-Science-Watson/dp/1471809307)
     * Python Programming for Secondary school students (Baumgarten). [Lulu store](http://www.lulu.com/shop/paul-baumgarten/python-programming-for-secondary-school-students/paperback/product-24448947.html)
