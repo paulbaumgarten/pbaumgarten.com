@@ -30,6 +30,7 @@ Welcome to my teaching notes for the International Baccalaureate Diploma Compute
 * [CodingBat for Java](https://codingbat.com/java)
 * [Daily programmer challenge](https://www.reddit.com/r/dailyprogrammer/)
 * [Code Abbey (213 problems)](http://www.codeabbey.com/index/task_list)
+* [Little book of algorithms](http://www.mrlaulearning.com/2019/04/LBOA.html)
 
 ## IB assessment outline
 

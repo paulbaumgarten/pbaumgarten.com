@@ -34,6 +34,7 @@ My teaching notes for  **Cambridge iGCSE Computer Science (9-1)** course (code 0
 * [Repl.it auto-graded Python exercises](https://repl.it/data/classrooms/share/9d68c5288e184810f61b489d14ccfa54)
 * [Past pre-release scenarios for practice](distribute/past-pre-release-scenarios.pdf)
 * [Programming & algorthmic thinking problems](https://pbaumgarten.com/problems)
+* [Little book of algorithms](http://www.mrlaulearning.com/2019/04/LBOA.html)
 
 ## Other resources
 
