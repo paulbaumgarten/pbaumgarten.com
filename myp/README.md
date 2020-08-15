@@ -23,6 +23,7 @@ Design an obstacle course to challenge your Cozmo robot. Just how clever can the
 We live in a world where it seems our every moment is captured and manipulated photographically. Photoshop can be used to alter photos in such a realistic way, and apps like Instagram and Snap can make us look like a crazy blend of cartoon animal and human. How hard is it to create these kinds of programs? This unit will have you experimenting with creating some of these tools for yourself in Python.
 
 * Open the [our #insta life](our-insta-life.pdf) unit. You may also want the [Python basics reference](python-basics-reference.pdf).
+* Link to the [videos and downloads](instalife)
 
 ## Game making
 
