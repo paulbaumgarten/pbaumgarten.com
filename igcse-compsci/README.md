@@ -28,6 +28,7 @@ My teaching notes for  **Cambridge iGCSE Computer Science (9-1)** course (code 0
 * [Unit 7 Security](igcse-7-security.pdf) (not yet ready)
 * [Unit 8 Databases](igcse-5-databases.pdf) (not yet ready)
 * [Unit 9 Pre-release material](igcse-9-pre-release.pdf) (not yet ready)
+    * [Past pre-release scenarios](https://drive.google.com/drive/folders/19Jy6zoJB3sjAWNPmGRRjx5P-5nKJ3ApQ?usp=sharing) (only available to STC students due to copyright)
 
 ## Programming practice/resources
 
