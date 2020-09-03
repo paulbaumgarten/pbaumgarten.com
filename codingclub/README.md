@@ -2,8 +2,11 @@
 
 ## Term 1, 2020-2021
 
-* [Pygame games programming: Slides](https://docs.google.com/presentation/d/15wNYVzeBw1qGoASlwGHBJvKgqGSufp08lTziuVXDGFU/view)
-* [Pygame games programming: Shared files](https://drive.google.com/drive/folders/12moRHNkbM52jgOQtsfMnO8cH5_cJTHvr?usp=sharing) (must be logged in with your STC account)
+Python games programming (Pygame) 
+
+* [Slides](https://docs.google.com/presentation/d/15wNYVzeBw1qGoASlwGHBJvKgqGSufp08lTziuVXDGFU/view)
+* [Shared files](https://drive.google.com/drive/folders/12moRHNkbM52jgOQtsfMnO8cH5_cJTHvr?usp=sharing) (must be logged in with your STC account)
+* [Youtube playlist](https://www.youtube.com/playlist?list=PLM-syYolLbsz5paY9gafMzMpWgv-h4ac6) (a video recap of each lesson will be posted the weekend after the live lesson)
 
 ## Term 3, 2019-2020
 
