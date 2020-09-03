@@ -7,10 +7,15 @@ Python games programming (Pygame)
 * [Slides](https://docs.google.com/presentation/d/15wNYVzeBw1qGoASlwGHBJvKgqGSufp08lTziuVXDGFU/view)
 * [Shared files](https://drive.google.com/drive/folders/12moRHNkbM52jgOQtsfMnO8cH5_cJTHvr?usp=sharing) (must be logged in with your STC account)
 * [Youtube playlist](https://www.youtube.com/playlist?list=PLM-syYolLbsz5paY9gafMzMpWgv-h4ac6) (a video recap of each lesson will be posted the weekend after the live lesson)
+* [Pygame website notes](https://pbaumgarten.com/python/pygame.html)
 
 ## Term 3, 2019-2020
 
-* [Intro to coding: Slides](https://docs.google.com/presentation/d/1auaxg0y9F9mICePAL5WdUbcWmCHZANhwYRi5jlrppEY/view)
+Intro to programming with Python
+
+* [Slides](https://docs.google.com/presentation/d/1auaxg0y9F9mICePAL5WdUbcWmCHZANhwYRi5jlrppEY/view)
+* [Python basics reference PDF](https://pbaumgarten.com/python/000-python-basics-reference.pdf)
+* [Turtle website notes](https://pbaumgarten.com/python/turtle.html)
 
 ## Software setup
 
