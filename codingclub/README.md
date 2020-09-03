@@ -2,13 +2,12 @@
 
 ## Term 1, 2020-2021
 
-<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTf8HOI-37t_zo5Xe6iGKFxPP1enVmf3pYC1kYI39a-vA8_sH_Nc9qwgwT2WOJgclG14x17oGIp3NZH/embed?start=false&loop=false" frameborder="0" width="320" height="190" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-
-* [Shared files](https://drive.google.com/drive/folders/12moRHNkbM52jgOQtsfMnO8cH5_cJTHvr?usp=sharing) (must be logged in with your STC account)
+* [Pygame games programming: Slides](https://docs.google.com/presentation/d/15wNYVzeBw1qGoASlwGHBJvKgqGSufp08lTziuVXDGFU/view)
+* [Pygame games programming: Shared files](https://drive.google.com/drive/folders/12moRHNkbM52jgOQtsfMnO8cH5_cJTHvr?usp=sharing) (must be logged in with your STC account)
 
 ## Term 3, 2019-2020
 
-<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQywweDAVi6k7xNHUNC-v2yBdA3fu6m9fXhWRrxuZzaeXjeO87T3O_tmR5-NkXuh4gu7_4ipi-DGyaY/embed?start=false&loop=false" frameborder="0" width="320" height="190" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+* [Intro to coding: Slides](https://docs.google.com/presentation/d/1auaxg0y9F9mICePAL5WdUbcWmCHZANhwYRi5jlrppEY/view)
 
 ## Software setup
 
