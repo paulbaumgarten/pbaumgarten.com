@@ -24,7 +24,7 @@ My teaching notes for  **Cambridge iGCSE Computer Science (9-1)** course (code 0
 * [Unit 4 Input/output hardware](igcse-4-io-hardware.pdf)
     * [Additional slides](igcse-4-io-hardware-2019-slides.pdf)
 * [Unit 5 Computer architecture](igcse-5-computer-architecture-r2.pdf)
-* [Unit 6 Networks](igcse-6-networks.pdf) (not yet ready)
+* [Unit 6 Networks](igcse-6-networks.pdf)
 * [Unit 7 Security](igcse-7-security.pdf) (not yet ready)
 * [Unit 8 Databases](igcse-5-databases.pdf) (not yet ready)
 * [Unit 9 Pre-release material](igcse-9-pre-release.pdf) (not yet ready)
