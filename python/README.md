@@ -53,7 +53,7 @@ If you know the basics of Python and wish to experiement with a new package or t
 * [OpenCV face detection](opencv.md)
 * [PIL](pillow.md) (Python image library)
 * [Publish a package to PyPi](pypi.md)
-* [Pygame](pygame.md)
+* [Pygame](https://pbaumgarten.com/pygame/)
 * [PyInstaller](pyinstaller.md) (create EXE files)
 * [QR Codes](qr-codes.md)
 * [Requests](requests.md)
