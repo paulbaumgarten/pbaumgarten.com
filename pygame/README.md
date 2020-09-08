@@ -29,6 +29,7 @@ Video: [https://youtu.be/HGdmuylI56I](https://youtu.be/HGdmuylI56I)
 Resources required:
 
 * [Kenney sprite collection](https://www.kenney.nl/assets/platformer-art-deluxe)
+* [PiskelApp sprite creator/editor website](https://www.piskelapp.com/)
 
 ### 3. Scene design
 
