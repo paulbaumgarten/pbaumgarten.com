@@ -89,18 +89,18 @@ In file `index.html`
 
 The following information is available from the request object:
 
-* `request.args` ... the arguments passed via a url (ie: the bit after the `?` in a get)
-* `request.form` ... data passed via a form post (like the above example)
-* `request.values` ... this is .args and .form combined
-* `request.files` ... any files uploaded? see next heading for how to use this
-* `request.json` ... check the `.is_json()` or the `.mimetype` to tell if this is set
-* `request.headers`
-* `request.cookies`
-* `request.authorization`
-* `request.method` ... eg: GET or POST
-* `request.remote_user`
-* `request.user_agent` ... what web browser are they using?
-* `request.mimetype`
+* request.args ... the arguments passed via a url (ie: the bit after the ? in a get)
+* request.form ... data passed via a form post (like the above example)
+* request.values ... this is .args and .form combined
+* request.files ... any files uploaded? see next heading for how to use this
+* request.json ... check the .is_json() or the .mimetype to tell if this is set
+* request.headers
+* request.cookies
+* request.authorization
+* request.method ... eg: GET or POST
+* request.remote_user
+* request.user_agent ... what web browser are they using?
+* request.mimetype
 
 <div class="page"/>
 
