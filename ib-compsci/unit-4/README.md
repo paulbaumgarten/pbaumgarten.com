@@ -31,7 +31,7 @@ Teaching notes:
 
 IB documents:
 
-* [Notation for pseudocode (exam version)](ib-compsci-pseudocode-flowcharts.pdf)
-* [Notation for pseudocode (additional detail)](ib-compsci-pseudocode-in-detail.pdf)
+* [Notation for pseudocode (exam version)](/ib-compsci/ib-compsci-pseudocode-flowcharts.pdf)
+* [Notation for pseudocode (additional detail)](/ib-compsci/ib-compsci-pseudocode-in-detail.pdf)
 * [Java Exam Tool Subset (JETS)](ib-compsci-jets.pdf) (previous syllabus but still very relevant)
 
