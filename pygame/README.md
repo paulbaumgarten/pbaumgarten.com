@@ -16,31 +16,59 @@ If you are new to pygame and are looking for a step-by-step introduction to usin
 
 ### 1. Basic template, drawing on screen, movement
 
-Video: [https://youtu.be/StJNBwpJmVs](https://youtu.be/StJNBwpJmVs)
-
-Resources required:
-
-* [Template file](template.py)
+* Video: [https://youtu.be/StJNBwpJmVs](https://youtu.be/StJNBwpJmVs)
+* Initial template code: [template.py](template.py)
+* End of lesson code: [video1-rectangles-movement.py](video1-rectangles-movement.py)
 
 ### 2. Animated sprites
 
-Video: [https://youtu.be/HGdmuylI56I](https://youtu.be/HGdmuylI56I)
+* Video: [https://youtu.be/HGdmuylI56I](https://youtu.be/HGdmuylI56I)
+* Download the [Kenney sprite collection](https://www.kenney.nl/assets/platformer-art-deluxe)
+* Alternatively create your own sprites with [PiskelApp](https://www.piskelapp.com/)
+* End of lesson code: [video2-player-sprites.py](video2-player-sprites.py)
 
-Resources required:
+### 3. Simple gravity
 
-* [Kenney sprite collection](https://www.kenney.nl/assets/platformer-art-deluxe)
-* [PiskelApp sprite creator/editor website](https://www.piskelapp.com/)
+* Video: [https://youtu.be/yufmuxkN7yY](https://youtu.be/yufmuxkN7yY)
+* End of lesson code: [video3-simple-gravity.py](video3-simple-gravity.py)
 
-### 3. Scene design
+### 4. Tiled map editor
 
-### 4. Obstacles, enemies, objectives
+* Video: [https://youtu.be/cWtyxv4i-fQ](https://youtu.be/cWtyxv4i-fQ)
+* Download and install the [Tiled map editor software](https://www.mapeditor.org/)
 
-### 5. Sounds, music, scoring/health/power-ups
+### 5. Pytmx
 
-### 6. Levels, saving/loading games
+* Video: [https://youtu.be/1ruj8v3_ydM](https://youtu.be/1ruj8v3_ydM)
+* End of lesson code: [video5-pytmx.py](video5-pytmx.py)
+
+### 6. Change our world view
+
+* Video: [https://youtu.be/AFO7J75ktks](https://youtu.be/AFO7J75ktks)
+* End of lesson code: [video6-worldoffset.py](video6-worldoffset.py)
+
+### 7. Standing on solid ground
+
+* Video: [https://youtu.be/lww89U1yZ6c](https://youtu.be/lww89U1yZ6c)
+* End of lesson code: [video7-ground.py](video7-ground.py)
+
+### 8. Solid walls and ceilings
+
+* Video: [https://youtu.be/XWsnIup4XlY](https://youtu.be/XWsnIup4XlY)
+* End of lesson code: [video8-walls-ceilings.py](video8-walls-ceilings.py)
+
+### 9. Health and points
+
+### 10. Objectives
+
+### 11. Sounds, music
+
+### 12. Levels, saving/loading games
+
+### 13. Enemies
 
 ## Reference notes
 
-If you don't really need a tutorial, you just need a lookup reference to remind yourself how to use a particular pygame feature.
+If you don't really need a tutorial, just need a lookup reference to remind yourself how to use a particular pygame feature, then refer to the following document:
 
 * [Pygame reference](pygame-reference.md)
