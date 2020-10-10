@@ -59,6 +59,9 @@ If you are new to pygame and are looking for a step-by-step introduction to usin
 
 ### 9. Health and points
 
+* Video: [https://youtu.be/oqMqU1hB9xE](https://youtu.be/oqMqU1hB9xE)
+* End of lesson code: [video9-health-points.py](video9-health-points.py)
+
 ### 10. Objectives
 
 ### 11. Sounds, music
