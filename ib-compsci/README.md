@@ -59,6 +59,7 @@ Online programming courses & lectures
 * [Video lectures from various universities](https://github.com/Developer-Y/cs-video-courses) **highly recommended and comprehensive**
 * [edX: Introduction to Java Programming – Part 1](https://www.edx.org/course/introduction-to-java-programming-part-1-3) (25 hours)
 * [coursera: Object Oriented Programming in Java Specialization](https://www.coursera.org/specializations/object-oriented-programming) (13 hours for course 1, 24 hours for course 2, 25 hours for course 3, don't worry about course 4)
+* [Introduction to Programming Using Java, Eighth Edition (online, free edition) by David Eck](http://math.hws.edu/javanotes/)
 
 Non-Java programming resources
 
