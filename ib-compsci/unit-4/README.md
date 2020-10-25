@@ -13,23 +13,19 @@ This is a large unit that will take all of semester 1 of Year 12. The unit is br
 * Algorithm efficiency & Big O
 * Programming concepts
 
-## Java programming
+## Part 1 - Java programming
 
 An introduction to the fundamentals of programming with Java. Each topic contains a problem set that will be submitted via Google Classroom as home learning. 
 
-* Introduction to [Java programming](unit-4-java.pdf)
+* [Introduction to Java programming](unit-4-java.pdf)
 
-## Computational thinking, program design and problem solving
+## Part 2 - Computational thinking, program design and problem solving
 
-Teaching notes:
+A look at computational thinking strategies, program design tools (pseudo code, flow charts and trace tables), search & sort algorithms, measuring algorithm efficiency (big-o notation) and some incidential programming concepts.
 
-* Part 1: [Computational thinking](unit-4-1-computational-thinking.pdf)
-* Part 2: [Program design](unit-4-2-program-design.pdf) (pseudo code, flow charts and trace tables)
-* Part 3: [Search & sort algorithms](unit-4-3-search-sort-algorithms.pdf)
-* Part 4: [Algorithm efficiency notes](unit-4-4-algorithm-efficiency.pdf) (big-o notation)
-* Part 5: [Programming concepts notes](unit-4-5-programming-concepts.pdf) (programming languages, compilers, etc)
+* [Teaching notes 2020](unit-4-teaching-notes-2020.pdf)
 
-IB documents:
+## IB documents:
 
 * [Notation for pseudocode (exam version)](/ib-compsci/ib-compsci-pseudocode-flowcharts.pdf)
 * [Notation for pseudocode (additional detail)](/ib-compsci/ib-compsci-pseudocode-in-detail.pdf)
