@@ -62,13 +62,23 @@ If you are new to pygame and are looking for a step-by-step introduction to usin
 * Video: [https://youtu.be/oqMqU1hB9xE](https://youtu.be/oqMqU1hB9xE)
 * End of lesson code: [video9-health-points.py](video9-health-points.py)
 
-### 10. Objectives
+### 10. Ladders
 
-### 11. Sounds, music
+* Video: [https://youtu.be/nK3ayRh0-8s](https://youtu.be/nK3ayRh0-8s)
 
-### 12. Levels, saving/loading games
+### 11. Achievements/objectives
 
-### 13. Enemies
+* Video: [https://youtu.be/uz8Jx1S8cW4](https://youtu.be/uz8Jx1S8cW4)
+
+### 12. Portals
+
+* Video: [https://youtu.be/p5ixHSnvp5I](https://youtu.be/p5ixHSnvp5I)
+
+### 13. Sounds, music
+
+### 14. Levels, saving/loading games
+
+### 15. Enemies
 
 ## Reference notes
 
