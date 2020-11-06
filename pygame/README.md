@@ -89,6 +89,6 @@ If you don't really need a tutorial, just need a lookup reference to remind your
 ## Other tutorials, digital books
 
 * [Build your own first person shooter in unity](Build_your_own_first_person_shooter-book.pdf) 140 pages, 11 MB
-* [Code the classics volumne 1](Code_the_Classics-book.pdf) 224 pages, 38 MB - Includes Tennis games (eg: Pong), Action Platformer (eg: Bubble Bobble), Top-Down platformer (eg: Frogger), Fixed Shooter (eg: Centipede), Football (eg: Sensible Soccor).
+* [Code the classics volume 1](Code_the_Classics-book.pdf) 224 pages, 38 MB - Includes Tennis games (eg: Pong), Action Platformer (eg: Bubble Bobble), Top-Down platformer (eg: Frogger), Fixed Shooter (eg: Centipede), Football (eg: Sensible Soccer).
 
 
