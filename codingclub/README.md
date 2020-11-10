@@ -8,6 +8,8 @@ Python games programming (Pygame)
 * [Shared files](https://drive.google.com/drive/folders/12moRHNkbM52jgOQtsfMnO8cH5_cJTHvr?usp=sharing) (must be logged in with your STC account)
 * [Youtube playlist](https://www.youtube.com/playlist?list=PLM-syYolLbsz5paY9gafMzMpWgv-h4ac6) (a video recap of each lesson will be posted the weekend after the live lesson)
 * [Pygame website notes](https://pbaumgarten.com/pygame)
+* [Build your own first person shooter in unity](/codingclub/Build_your_own_first_person_shooter-book.pdf) 140 pages, 11 MB
+* [Code the classics volume 1](/codingclub/Code_the_Classics-book.pdf) 224 pages, 38 MB - Includes Tennis games (eg: Pong), Action Platformer (eg: Bubble Bobble), Top-Down platformer (eg: Frogger), Fixed Shooter (eg: Centipede), Football (eg: Sensible Soccer).
 
 ## Term 3, 2019-2020
 
