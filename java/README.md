@@ -54,7 +54,7 @@ Software
 * [Leetcode online Java IDE](https://leetcode.com/playground/new)
 * [Blue J](http://www.bluej.org)
 * [Greenfoot](https://www.greenfoot.org)
-* [Processing](http://www.processing.org)
+* [Processing](http://www.processing.org) (guide to [convert Processing into regular Java app](https://stackoverflow.com/a/35018156/10971929))
 * [IntelliJ IDEA](https://www.jetbrains.com/idea/)
 * [Android studio](https://developer.android.com/studio/index.html)
 
