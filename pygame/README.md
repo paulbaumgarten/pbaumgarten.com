@@ -76,9 +76,14 @@ If you are new to pygame and are looking for a step-by-step introduction to usin
 
 ### 13. Sounds, music
 
-### 14. Levels, saving/loading games
+* Video: [https://youtu.be/1tDbZZid6l0](https://youtu.be/1tDbZZid6l0)
 
-### 15. Enemies
+Resources for creative commons music and sound effects:
+
+* https://soundcloud.com/
+* http://freesound.org/
+* https://www.buildbox.com/13-places-to-find-free-game-sound-effects/
+* https://creativecommons.org/about/program-areas/arts-culture/arts-culture-resources/legalmusicforvideos/
 
 ## Reference notes
 

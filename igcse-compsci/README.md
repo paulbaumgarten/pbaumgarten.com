@@ -19,6 +19,7 @@ My teaching notes for  **Cambridge iGCSE Computer Science (9-1)** course (code 0
 * [Unit 1 Programming](igcse-1-programming.pdf)
 * [Unit 2 Computational thinking](igcse-2-computational-thinking.pdf)
     * [Lesson 1 walkthrough slides](igcse-2-computational-thinking-slides.pdf)
+    * [Official igcse pseudocode guide](0984_Pseudocode_Guide_for_Teachers_(for_examination_from_2019).pdf)
 * [Unit 3 Logic & numbers](igcse-3-logic-and-numbers.pdf)
     * [Lesson 1 intro activity](igcse-3-intro-activity.pdf)
 * [Unit 4 Input/output hardware](igcse-4-io-hardware.pdf)
