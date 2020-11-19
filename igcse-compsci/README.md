@@ -26,7 +26,7 @@ My teaching notes for  **Cambridge iGCSE Computer Science (9-1)** course (code 0
     * [Additional slides](igcse-4-io-hardware-2019-slides.pdf)
 * [Unit 5 Computer architecture](igcse-5-computer-architecture-r2.pdf)
 * [Unit 6 Networks](igcse-6-networks.pdf)
-* [Unit 7 Security](igcse-7-security.pdf) (not yet ready)
+* [Unit 7 Security](igcse-7-security.pdf)
 * [Unit 8 Databases](igcse-5-databases.pdf) (not yet ready)
 * [Unit 9 Pre-release material](igcse-9-pre-release.pdf) (not yet ready)
     * [Past pre-release scenarios](https://drive.google.com/drive/folders/19Jy6zoJB3sjAWNPmGRRjx5P-5nKJ3ApQ?usp=sharing) (only available to STC students due to copyright)

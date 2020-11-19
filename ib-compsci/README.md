@@ -6,6 +6,7 @@ Welcome to my teaching notes for the International Baccalaureate Diploma Compute
 
 ## Overview
 
+* [Course introduction](Computer_Science_introduction_(Nov2020).pdf) (November 2020)
 * [Course syllabus](ib-syllabus-computer-science.pdf)
 * [Schedule for Year 12, 2020/21](planner-2020-2021-y12.pdf)
 * [Schedule for Year 13, 2020/21](planner-2020-2021-y13.pdf)
