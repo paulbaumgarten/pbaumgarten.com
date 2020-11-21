@@ -44,6 +44,7 @@ My teaching notes for  **Cambridge iGCSE Computer Science (9-1)** course (code 0
 * My [Youtube channel](https://youtube.com/pbaumgarten), also check the dedicated [iGCSE CompSci playlist](https://www.youtube.com/playlist?list=PLM-syYolLbsxQPkjCUOwNAugoldsLyFr2) that I'm curating.
 * [Little man computer (assembler siumulator)](https://peterhigginson.co.uk/lmc/)
    * [Tutorial & instruction set](http://www.teachingcomputing.com/coding.php?s=LMC), [Examples](https://www.vivaxsolutions.com/web/lmc.aspx), [Larger examples](https://teachcomputerscience.com/little-man-computer/)
+* [Python for Beginners](https://www.youtube.com/playlist?list=PLlrxD0HtieHhS8VzuMCfQD4uJ9yne1mE6) (44 video course by Microsoft)
 
 ## End of course review
 
