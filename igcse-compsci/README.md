@@ -27,8 +27,9 @@ My teaching notes for  **Cambridge iGCSE Computer Science (9-1)** course (code 0
 * [Unit 5 Computer architecture](igcse-5-computer-architecture-r2.pdf)
 * [Unit 6 Networks](igcse-6-networks.pdf)
 * [Unit 7 Security](igcse-7-security.pdf)
-* [Unit 8 Databases](igcse-5-databases.pdf) (not yet ready)
-* [Unit 9 Pre-release material](igcse-9-pre-release.pdf) (not yet ready)
+* [Unit 8 Databases](igcse-5-databases.pdf)
+* [Unit 9 Pre-release material](igcse-9-pre-release.pdf)
+    * [June 2021 pre-release scenario](pre-release/0478_s21_pm_22_Mountain_trains.pdf)
     * [Past pre-release scenarios](https://drive.google.com/drive/folders/19Jy6zoJB3sjAWNPmGRRjx5P-5nKJ3ApQ?usp=sharing) (only available to STC students due to copyright)
 
 ## Programming practice/resources
