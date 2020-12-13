@@ -26,6 +26,7 @@ For the class of 2021
 
 ## Project ideas
 
+* [App project ideas](https://github.com/florinpop17/app-ideas) - **NEW FOR CLASS OF 2022**
 * [Mega Project List - 110 problems](https://github.com/karan/Projects)
 * [I Need Practice Programming - 49 Ideas for Game Clones to Code](http://inventwithpython.com/blog/2012/02/20/i-need-practice-programming-49-ideas-for-game-clones-to-code/)
 
