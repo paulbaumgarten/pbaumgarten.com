@@ -30,4 +30,4 @@ For the class of 2021
 * [Mega Project List - 110 problems](https://github.com/karan/Projects)
 * [I Need Practice Programming - 49 Ideas for Game Clones to Code](http://inventwithpython.com/blog/2012/02/20/i-need-practice-programming-49-ideas-for-game-clones-to-code/)
 * [Awesome Deep Learning Project Ideas](https://github.com/NirantK/awesome-project-ideas)
-
+* [40 Side Project Ideas for Software Engineers](https://www.codementor.io/@npostolovski/40-side-project-ideas-for-software-engineers-g8xckyxef)
