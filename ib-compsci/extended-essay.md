@@ -35,6 +35,7 @@ Certainly the flavour of the month. Be aware that means the markers will receive
 * Branches of ML: Computational learning theory, Adversarial Machine Learning, Quantum Machine Learning, Predictive Analysis, Robot Learning, Grammar Induction, Meta-Learning
 * Available tools: ai-one, Protege, IBM Watson, TensorFlow, Amazon Web Services, OpenNN, Apache Spark, Caffe, Veles
 * Topics: Machine Learning Algorithms, Computer Vision, Supervised Machine Learning, Unsupervised Machine Learning, Deep Learning, Neural Networks, Reinforcement Learning, Predictive Learning, Bayesian Network, Data Mining
+* Some good ideas here: [Awesome Deep Learning Project Ideas](https://github.com/NirantK/awesome-project-ideas)
 
 ## Experiment structure
 

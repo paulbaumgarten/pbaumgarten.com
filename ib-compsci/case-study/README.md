@@ -10,3 +10,8 @@
 But how does bitcoin actually work? (3Blue1Brown)
 
 ![](https://imgs.xkcd.com/comics/2010_and_2020.png)
+
+
+## May 2021:
+
+* [CodingTrain: Traveling Salesperson with Genetic Algorithm](https://www.youtube.com/watch?v=M3KTWnTrU_c)
