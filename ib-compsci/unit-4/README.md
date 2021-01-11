@@ -24,6 +24,7 @@ An introduction to the fundamentals of programming with Java. Each topic contain
 A look at computational thinking strategies, program design tools (pseudo code, flow charts and trace tables), search & sort algorithms, measuring algorithm efficiency (big-o notation) and some incidential programming concepts.
 
 * [Teaching notes 2020](unit-4-teaching-notes-2020.pdf)
+* [Why My Teenage Code Was Terrible: Sorting Algorithms and Big O Notation](https://www.youtube.com/embed/RGuJga2Gl_k?start=90&end=435) (Tom Scott) watch from 1:30 to 7:15
 
 ## IB documents:
 
