@@ -1,18 +1,21 @@
 # iGCSE Computer Science
 
-My teaching notes for  **Cambridge iGCSE Computer Science (9-1)** course (code 0984).
+My teaching notes for  **Cambridge iGCSE Computer Science** course (code 0478).
 
 ## Overview
 
 * Course syllabus: 
-    * [Syllabus for students sitting the 2021 exams](distribute/syllabus-2021.pdf)
-    * [Syllabus for students sitting the 2022 exams](distribute/syllabus-2022.pdf)
+    * [Syllabus: 2021 exams](distribute/syllabus-2021.pdf) (Year 11s of 2020/21)
+    * [Syllabus: 2022 exams](distribute/syllabus-2022.pdf) (Year 10s of 2020/21)
+    * [Syllabus: 2023 exams](distribute/syllabus-2023-to-2025.pdf.pdf) (Year 9s of 2020/21)
 * Planned teaching schedule: 
     * [Year 10, 2020/21](planner-2020-2021-y10.pdf)
     * [Year 11, 2020/21](planner-2020-2021-y11.pdf)
 * Textbooks:
-    * Cambridge IGCSE Computer Science (Watson and Williams) ISBN: 9781471809309. [Publisher store](https://www.hoddereducation.co.uk/subjects/ict/products/14-16/cambridge-igcse-computer-science) or [Amazon](https://www.amazon.com/Cambridge-IGCSE-Computer-Science-Watson/dp/1471809307)
+    * Cambridge IGCSE Computer Science (Watson and Williams) ISBN 9781471809309. [Publisher store](https://www.hoddereducation.co.uk/subjects/ict/products/14-16/cambridge-igcse-computer-science) or [Amazon](https://www.amazon.com/Cambridge-IGCSE-Computer-Science-Watson/dp/1471809307) **FOR CURRENT STUDENTS**
+    * Cambridge IGCSE and O Level Computer Science Second Edition (Watson and Williams) ISBN 9781398318281. [Publisher store](https://www.hoddereducation.co.uk/subjects/general/products/14-16/cambridge-igcse-and-o-level-computer-science-secon) or [Amazon](https://www.amazon.com/Cambridge-IGCSE-Computer-Science-Second-dp-1398318280/dp/1398318280/) **FOR YEAR 10s OF AUGUST 2021**
     * Python Programming for Secondary school students (Baumgarten). [Lulu store](http://www.lulu.com/shop/paul-baumgarten/python-programming-for-secondary-school-students/paperback/product-24448947.html)
+* Sha Tin College is in exam zone 5. For CS, students will sit papers 12 and 22.
 
 ## Course materials
 
