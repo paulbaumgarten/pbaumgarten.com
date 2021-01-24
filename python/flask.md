@@ -51,8 +51,6 @@ if __name__ == "__main__":
 * The `@app.route("/location")` is how you specify all the file/folder locations that will be accessible. Each of these must be immediately followed by a function declaration. That function is what will be executed when the relevant web address is visited.
 * The `send_file()` function will look for the named file in your project root and send it to the web browser.
 
-<div class="page"/>
-
 ## Receiving form data
 
 Web servers receive the information a user types into the forms on webpages. They then process that data and decide what to do with it, and generate some kind of response to send to the user. This is a basic example of receiving data from web form. As an added bonus I've included a couple of extras:
@@ -102,8 +100,6 @@ The following information is available from the request object:
 * request.user_agent ... what web browser are they using?
 * request.mimetype
 
-<div class="page"/>
-
 ## File uploads
 
 A rather common task is to have the user upload a file to the web server. Fortunately Flask makes it really easy.
@@ -145,8 +141,6 @@ With the following HTML
 </body>
 </html>
 ```
-
-<div class="page"/>
 
 ## Using a HTML template
 
@@ -201,8 +195,6 @@ Good overview tutorial:
 Official docs:
 
 * http://jinja.pocoo.org/docs/2.10/templates/
-
-<div class="page"/>
 
 ## Demo Exercise: Chat app
 
@@ -267,8 +259,6 @@ if __name__ == "__main__":
     app.run(host='0.0.0.0', port=8080)
 ```
 
-<div class="page"/>
-
 In the file `main.html`
 
 ```html
@@ -306,8 +296,6 @@ In the file `main.html`
     <script language="JavaScript" src="/static/main.js"></script>
 </html>
 ```
-
-<div class="page"/>
 
 In the file `static/main.js`
 
@@ -364,9 +352,7 @@ function app() {
 window.onload=app;
 ```
 
-<div class="page"/>
-
-# Flask sessions
+## Flask sessions
 
 The last section to mention with Flask is the idea of a "session". A session is effectively a dictionary object you can use to store key-values about a person browsing your website. It is so named, as (generally) once they close their browser window, their "session" has ended and the data is lost. Sessions are a commonly used way to keep track of the username of someone who has logged into your website, without having to obtain and re-verify their password on every page laod.
 
