@@ -64,7 +64,7 @@ If you know the basics of Python and wish to experiement with a new package or t
 * [Turtle](turtle.md)
 * [venv](venv.md) (Virtual Environments)
 * [Web scraping](web-scraping.md) with beautifulsoap4
-* [Windows services howto](windows-service.docx)
+* [Windows services howto](windows.md)
 * [Youtube downloading](youtube.md)
 
 ## Installing packages
