@@ -43,6 +43,8 @@ Not everything is machine learning. Here are some ideas...
 * Compare two ways of designing a computer network for a particular narrow requirement
 * Compare two database systems for a particular narrow requirement
 
+If you are keen to investigate something with a social implication and have it qualify as computer science, you would need to investigate it from a technical perspective. For example: Compare the efficacy of Haar and Dlib face recognition algorithms for racially diverse faces.
+
 ## Experiment structure
 
 While not a requirement, and should be customised to the needs of your EE, you should draw guidance from the traditional structure for a science experiment. This is particularly the case if you are doing a comparison analysis of two algorithms, or two technologies, etc.
