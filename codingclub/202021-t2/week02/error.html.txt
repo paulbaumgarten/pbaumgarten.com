@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Whatsthat</title>
+    <link rel="stylesheet" type="text/css" href="/static/index.css" media="screen"/>
+</head>
+<body>
+    <div class="banner"><img src="/static/icon.png"><span>Whatsthat</span></div>
+    <div class="container">
+        <div class="middle600">
+            <h1>{{error.title}}</h1>
+            <div>{{error.description}}</div>
+            <div><input type='button' id='next' value='Continue'></div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function next(e) { document.location = '{{error.next}}';}
+        let button = document.querySelector('#next').addEventListener('click', next);
+    </script>
+</body>
+</html>

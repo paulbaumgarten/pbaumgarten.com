@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Whatsthat</title>
+    <link rel="stylesheet" type="text/css" href="/static/index.css" media="screen"/>
+</head>
+<body>
+    <div class="banner"><img src="/static/icon.png"><span>Whatsthat</span></div>
+    <div class="container">
+        <div class="hello">
+        </div>
+        <div class="chats" id="chatcontent">
+        </div>
+    </div>
+    <div class="messagebox">
+        <input type="text" name="messagetext" id="messagetext" placeholder="Your message...">
+        <input type="button" name="messagebutton" id="messagebutton" value="Send">
+    </div>
+<script type="text/javascript" src="/static/main.js"></script>
+</body>
+</html>

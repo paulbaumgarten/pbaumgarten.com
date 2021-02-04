@@ -1,0 +1,125 @@
+html, body {
+    margin: 0;
+    background-color: #ddd;
+    font-family: 'Roboto', sans-serif;
+}
+.banner {
+    height: 64px;
+    color: #2ECC71;
+    width: 100%;
+    background-color: #fff;
+    vertical-align: middle;
+    position: fixed;
+    top: 0;
+}
+.banner span {
+    margin-left: 20px; 
+    font-size: 32px;
+    vertical-align: top;
+    top:16px;
+    position: relative;
+}
+.container {
+    top: 64px;
+    width: 100%;
+    padding: 0;
+    position: fixed;
+    overflow-y: scroll;
+    height: calc(100% - 164px)
+}
+.middle600 {
+    width: 600px;
+    padding: 5px;
+    margin: 0 auto 0 auto;
+}
+.chats {
+    width: 600px;
+    padding: 5px;
+    margin: 0 auto 0 auto;
+}
+.hello {
+    width: 600px;
+    padding: 5px;
+    margin: 0 auto 0 auto;
+    font-size: 20pt;
+}
+.messagebox {
+    width: 100%;
+    padding: 10px;
+    background-color: #eee;
+    position: fixed;
+    bottom: 0;
+}
+@media only screen and (hover: none) and (pointer: coarse){
+    .container {
+        padding: 0;
+    }
+    .container div {
+        width: 100%;
+        padding: 5px;
+        margin: 0 0 0 0;
+    }
+}
+input {
+    font-size: 14pt;
+    border: none;
+    border-radius: 5px;
+}
+input[type='text'] {
+    width: 70vw;
+}
+input[type='button'], input[type='submit'] {
+    background-color: #1e90ff;
+    color: #fff;
+    padding: 5px;
+}
+input[type='button']:hover {
+    background-color: #0000cd;
+}
+
+.messageGrid {
+    background-color: #eee;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    display: grid;
+    grid-template-columns: 42px 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "messageAvatar messageName"
+      "messageAvatar messageContent";
+  }
+  
+.messageAvatar { 
+    grid-area: messageAvatar; 
+    width: 32px;
+    height: 32px;
+    background-color: #fff;
+    display: block;
+}
+
+.messageName { 
+    grid-area: messageName; 
+    font-size: xx-small;
+}
+
+.messageContent { grid-area: messageContent; }
+
+.form label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    float: left;
+    width: 25%;
+}
+
+.form input {
+    float: left;
+    width: 75%;
+}
+
+.form .row::after {
+    content: "";
+    display: table;
+    clear: both;
+}

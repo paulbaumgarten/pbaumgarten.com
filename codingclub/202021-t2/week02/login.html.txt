@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Whatsthat</title>
+    <link rel="stylesheet" type="text/css" href="/static/index.css" media="screen"/>
+</head>
+<body>
+    <div class="banner"><img src="/static/icon.png"><span>Whatsthat</span></div>
+    <div class="container">
+        <div class="middle600">
+            <h1>Login</h1>
+            <div>
+                <p>If you don't have an account, you should <a href='/static/register.html'>register</a>.</p>
+            </div>
+            <form method="POST" action="/login" enctype="multipart/form-data" class="form" id="loginForm">
+                <label for="userName">Username: </label><input type="text" name="userid">
+                <label for="password">Password: </label><input type="password" name="password">
+                <input type="submit" value="Log in">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

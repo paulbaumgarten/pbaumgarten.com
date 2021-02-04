@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Whatsthat</title>
+    <link rel="stylesheet" type="text/css" href="/static/index.css" media="screen"/>
+</head>
+<body>
+    <div class="banner"><img src="/static/icon.png"><span>Whatsthat</span></div>
+    <div class="container">
+        <div class="middle600">
+            <h1>Register</h1>
+            <form method="POST" action="/register" enctype="multipart/form-data" class="form" id="registrationForm">
+                <label for="userName">Username: </label><input type="text" name="userid">
+                <label for="displayName">Display name: </label><input type="text" name="displayName">
+                <label for="email">Email: </label><input type="email" name="email">
+                <label for="password">Password: </label><input type="password" name="password">
+                <label for="password2">Repeat password: </label><input type="password" name="password2">
+                <label for="avatar">Profile picture: </label><input type="file" name="avatar">
+                <input type="submit" value="Register">
+                </form>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="/static/register.js"></script>
+</html>
