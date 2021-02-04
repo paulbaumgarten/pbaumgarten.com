@@ -25,6 +25,11 @@ Download a [zip file](202021-t2/week02files.zip) containing the week 2 files, or
 * [register.html](202021-t2/week02/register.txt) - Save into the `static/` folder.
 * [index.css](202021-t2/week02/index.css) - Save into the `static/` folder.
 
+Code written during the session:
+
+* [week2.py](202021-t2/week02/week2.py)
+* [static/register.js](202021-t2/week02/register-js.txt)
+
 ## Term 1, 2020/21: Pygame
 
 Python games programming (Pygame) 
