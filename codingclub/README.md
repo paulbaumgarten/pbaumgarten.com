@@ -1,6 +1,23 @@
 # Sha Tin College coding club
 
-## Term 1, 2020-2021
+## Term 2, 2020/21: Web sites
+
+Building websites with Python Flask + HTML, CSS and Javascript
+
+Getting organised
+
+* [Instal Python and VS Code](codingclub\python_setup_instructions.pdf)
+
+Week 1 - 28 Jan 21
+
+* [main.py](codingclub\202021-t2\week01\main.py)
+* [page1.html](codingclub\202021-t2\week01\page1.txt)
+
+Week 2 - 4 Feb 21
+
+* Will be updated after the club session
+
+## Term 1, 2020/21: Pygame
 
 Python games programming (Pygame) 
 
@@ -11,7 +28,7 @@ Python games programming (Pygame)
 * [Build your own first person shooter in unity](/codingclub/Build_your_own_first_person_shooter-book.pdf) 140 pages, 11 MB
 * [Code the classics volume 1](/codingclub/Code_the_Classics-book.pdf) 224 pages, 38 MB - Includes Tennis games (eg: Pong), Action Platformer (eg: Bubble Bobble), Top-Down platformer (eg: Frogger), Fixed Shooter (eg: Centipede), Football (eg: Sensible Soccer).
 
-## Term 3, 2019-2020
+## Term 3, 2019/20: Python intro
 
 Intro to programming with Python
 
