@@ -6,12 +6,12 @@ Building websites with Python Flask + HTML, CSS and Javascript
 
 Getting organised
 
-* [Instal Python and VS Code](codingclub\python_setup_instructions.pdf)
+* [Instal Python and VS Code](python_setup_instructions.pdf)
 
 Week 1 - 28 Jan 21
 
-* [main.py](codingclub\202021-t2\week01\main.py)
-* [page1.html](codingclub\202021-t2\week01\page1.txt)
+* [main.py](202021-t2/week01/main.py)
+* [page1.html](202021-t2/week01/page1.txt)
 
 Week 2 - 4 Feb 21
 
