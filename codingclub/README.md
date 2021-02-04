@@ -11,19 +11,19 @@ Getting organised
 Week 1 - 28 Jan 21
 
 * [main.py](202021-t2/week01/main.py)
-* [page1.html](202021-t2/week01/page1.html.txt)
+* [page1.html](202021-t2/week01/page1.txt)
 
 Week 2 - 4 Feb 21
 
 Download a [zip file](202021-t2/week02files.zip) containing the week 2 files, or get the individual files...
 
 * Create a `static/` folder and a `template/` folder inside your project folder.
-* [error.html](202021-t2/week02/error.html.txt) - Save into the `template/` folder.
+* [error.html](202021-t2/week02/error.txt) - Save into the `template/` folder.
 * [icon.png](202021-t2/week02/icon.png) - Save into the `static/` folder.
-* [login.html](202021-t2/week02/login.html.txt) - Save into the `static/` folder.
-* [main.html](202021-t2/week02/main.html.txt) - Save into the `static/` folder.
-* [register.html](202021-t2/week02/register.html.txt) - Save into the `static/` folder.
-* [index.css](202021-t2/week02/index.css.txt) - Save into the `static/` folder.
+* [login.html](202021-t2/week02/login.txt) - Save into the `static/` folder.
+* [main.html](202021-t2/week02/main.txt) - Save into the `static/` folder.
+* [register.html](202021-t2/week02/register.txt) - Save into the `static/` folder.
+* [index.css](202021-t2/week02/index.css) - Save into the `static/` folder.
 
 ## Term 1, 2020/21: Pygame
 
