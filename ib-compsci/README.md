@@ -47,6 +47,7 @@ Welcome to my teaching notes for the International Baccalaureate Diploma Compute
 
 Other IB CS teacher websites. Feel free to check them out!
 
+* [bwagner](http://bwagner.org)
 * [Chris Coetzee, Dartford Grammar School, UK](http://ib.compscihub.net/) 
 * [Michael Brooke, St Julian’s School](http://www.emjbe.net/moodle/course/view.php?id=2)
 * [Bill MacKenty, American School of Warsaw](https://computersciencewiki.org/)
