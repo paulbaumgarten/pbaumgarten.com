@@ -7,6 +7,8 @@ Notes to be further developed as the unit is taught.
 * [Coding Train: Genetic algorithms playlist](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6bJM3VgzjNV5YxVxUwzALHV)
 * [Case study: Genetic algorithms and the travelling salesman problem](case-study-travelling-salesman-2022.pdf)
 
+![](https://imgs.xkcd.com/comics/travelling_salesman_problem.png)
+
 ## May 2021: A local economy driven by blockchain
 
 * [Case study teaching plan](case-study-plan.pdf)
