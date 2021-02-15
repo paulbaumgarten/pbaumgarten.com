@@ -1,6 +1,13 @@
 # Case study
 
-## May 2020: A local economy driven by blockchain
+## May 2022: Genetic algorithms
+
+Notes to be further developed as the unit is taught.
+
+* [Coding Train: Genetic algorithms playlist](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6bJM3VgzjNV5YxVxUwzALHV)
+* [Case study: Genetic algorithms and the travelling salesman problem](case-study-travelling-salesman-2022.pdf)
+
+## May 2021: A local economy driven by blockchain
 
 * [Case study teaching plan](case-study-plan.pdf)
 * [Case study 2020: A local economy driven by blockchain](case-study-a-local-economy-driven-by-blockchain.pdf)
@@ -12,6 +19,3 @@ But how does bitcoin actually work? (3Blue1Brown)
 ![](https://imgs.xkcd.com/comics/2010_and_2020.png)
 
 
-## May 2021:
-
-* [CodingTrain: Traveling Salesperson with Genetic Algorithm](https://www.youtube.com/watch?v=M3KTWnTrU_c)
