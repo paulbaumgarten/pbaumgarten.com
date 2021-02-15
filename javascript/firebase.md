@@ -22,7 +22,7 @@ To illustrate how Firebase works, we'll create a couple of demo projects.
 
 These notes have been prepared and tested on Firebase v5.4.1. Firebase changes it's SDK libraries frequently, often in ways that "break" old code. If you are using a version newer than this (particularly if it is v6 or higher) it is likely some of these instructions will be out of date.
 
-<div class="page"/>
+
 
 # Firebase authentication
 
@@ -74,7 +74,7 @@ The intention behind structuring these functions this way is so you can create y
 
 ![](img/authdemo.png)
 
-<div class="page"/>
+
 
 ```html
 <!doctype html>
@@ -129,7 +129,7 @@ The intention behind structuring these functions this way is so you can create y
 </html>
 ```
 
-<div class="page"/>
+
 
 ```js
 "use strict;"
@@ -207,7 +207,7 @@ function main(status, userData) {
 window.onload = requireSignIn;
 ```
 
-<div class="page"/>
+
 
 # Firebase database
 
@@ -230,7 +230,7 @@ To build this:
 * For the Javascript, again start with a copy of the file you used in `AuthDemo`. Add the new functions and replace the `main()` with those provided.
 * Make sure you get the CSS from section 5.4 (I will have a copy of the this CSS file available at [pbaumgarten.com/javascript](https://pbaumgarten.com/javascript) so you don't have to write it all out).
 
-<div class="page"/>
+
 
 ## Understanding the Firebase database
 
@@ -289,7 +289,7 @@ firebase.database().ref( "/users/" + account.uid + "/" + _id).remove();
 
 By now this should hopefully be familiar. This function obtains a reference to a location in the Firebase database, and simply runs the `remove()` function to delete the data.
 
-<div class="page"/>
+
 
 ```html
 <!doctype html>
@@ -461,7 +461,7 @@ function main(status, userInfoProvided) {
 }
 ```
 
-<div class="page"/>
+
 
 # Firebase file storage
 
@@ -506,7 +506,7 @@ reference.getDownloadURL().then(function (url) {
 
 Nup. Can't do it. Firebase doesn't have a function to give you a list of the files you've uploaded. Because of this, it is generally a good idea to record the names of uploaded files in your database somewhere, so you can extract them later. That's what the `filesList` is doing in the attachment functions below.
 
-<div class="page"/>
+
 
 ## Finishing the Notekeeper project
 
@@ -586,7 +586,7 @@ function main(status, userInfoProvided) {
 window.onload = requireSignIn;
 ```
 
-<div class="page"/>
+
 
 Find the `<div class="layout_note style_box">` section of your **Notekeeper** HTML and modify it to add the `<div>` with `id=noteattachments` and it's contents:
 
@@ -605,7 +605,7 @@ Find the `<div class="layout_note style_box">` section of your **Notekeeper** HT
     </div>
 ```
 
-<div class="page"/>
+
 
 # CSS for Firebase projects
 

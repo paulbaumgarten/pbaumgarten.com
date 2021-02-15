@@ -40,7 +40,7 @@ for (let element of elements) {
 }
 ```
 
-<div class="page"/>
+
 
 ### element.setAttribute()
 
@@ -245,8 +245,6 @@ function main() {
 window.onload=main;
 ```
 
-<div class="page"/>
-
 ## Javascript: First exercise manipulating the HTML
 
 Hopefully a simple program to begin our journey with manipulating the HTML: Some text, a input textbox, and a button. Type your name into the textbox, click the button, and your name will appear in the greeting header.
@@ -298,7 +296,7 @@ The `window.onload=main;` is quite important. This will result in our javascript
 
 The function `addEventListener()` is described in the next section.
 
-<div class="page"/>
+
 
 # 4.2 - Javascript: Event handlers
 
@@ -360,7 +358,7 @@ You should have the console print out the `this` object that is automatically cr
 
 If you were to have clicked on the actual text of one of the paragraphs, the outputs could have been *You triggered the event on main by clicking on para-1*. In other words, `this` will be the element you attached the event to (in this case the 'div'), where as the parameter variable `event` will contain the child element that actually got clicked.
 
-<div class="page"/>
+
 
 ## Exercise: Javascript events 2
 
@@ -441,7 +439,7 @@ function main() {
 window.onload=main;
 ```
 
-<div class="page"/>
+
 
 ## Exercise: Show/hide items 1
 
@@ -496,7 +494,7 @@ HTML
 </html>
 ```
 
-<div class="page"/>
+
 
 CSS `my-project.css`:
 
@@ -569,7 +567,7 @@ function main() {
 window.onload = main;
 ```
 
-<div class="page"/>
+
 
 ## Exercise: Show/hide items 2
 
@@ -611,7 +609,7 @@ HTML:
 </html>
 ```
 
-<div class="page"/>
+
 
 CSS file `my-project.css`:
 
@@ -677,7 +675,7 @@ label {
 }
 ```
 
-<div class="page"/>
+
 
 Javascript file `my-project.js`:
 
@@ -751,7 +749,7 @@ function main() {
 window.onload=main;
 ```
 
-<div class="page"/>
+
 
 # 4.3 - Javascript: Basic form tasks
 
@@ -763,7 +761,7 @@ This is a little gimmiky but will get you to practice numerous functions we have
 
 ![](img/js-forms-2.png)
 
-<div class="page"/>
+
 
 ```html
 <!doctype html>
@@ -818,7 +816,7 @@ This is a little gimmiky but will get you to practice numerous functions we have
 ```
 
 
-<div class="page"/>
+
 
 ```javascript
 "use strict;"
@@ -960,7 +958,7 @@ input[type="button"], input[type="submit"] {
 }
 ```
 
-<div class="page"/>
+
 
 # 4.4 - Javascript: Uploading files
 
@@ -1069,7 +1067,7 @@ function uploadPhotoToServer(e) {
 Note: fetch will automatically add a Content-Type: multipart/form-data. Do not manually set a Content-Type (even to the correct one) or you will break the upload. See https://stanko.github.io/uploading-files-using-fetch-multipart-form-data/ for more information.
 
 
-<div class="page"/>
+
 
 # 4.5 - Javascript: local storage
 
@@ -1128,7 +1126,7 @@ function main() {
 window.onload = main;
 ```
 
-<div class="page"/>
+
 
 ```html
 <!doctype html>
@@ -1196,7 +1194,7 @@ label {
 .right {   grid-area: right; }
 ```
 
-<div class="page"/>
+
 
 # 4.6 - Javascript: Hang-person again
 
@@ -1233,7 +1231,7 @@ HTML:
 </html>
 ```
 
-<div class="page"/>
+
 
 ```javascript
 "use strict;"
@@ -1367,7 +1365,7 @@ function main() {
 window.onload = main;
 ```
 
-<div class="page"/>
+
 
 CSS: 
 

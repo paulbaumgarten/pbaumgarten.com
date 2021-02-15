@@ -39,7 +39,7 @@ div.fields {
 
 This would set the foreground color to yellow for all `<div>` tags with the attribute `class="fields"`.
 
-<div class="page"/>
+
 
 # 3.2 - CSS Boiler plate
 
@@ -64,7 +64,7 @@ html, body {
 
 The above sets the padding and margins between all elements to zero, sets the background color to white, sets the default font as 'Roberto' (with the others as fallbacks if the first font is unavailable), and then creates a set of variables for the main colours that I want my site to be based on. By using variables for colours, it means I can just change the value here once, and it will auto change where-ever i've used that variable name later in the CSS.
 
-<div class="page"/>
+
 
 # 3.3 - CSS Basic styling
 
@@ -100,7 +100,7 @@ p {
 }
 ```
 
-<div class="page"/>
+
 
 ## Text properties
 
@@ -161,7 +161,7 @@ Example usage:
 **It is highly recommended that you use the grid layout instead of trying to do manual positioning**.  It tends to cause unforeseeing problems. If you must use it, be sure to test your code on multiple web browsers (Chrome, Firefox, Safari) and operating systems (Windows, Mac, Android, iPhone, iPad).
 
 
-<div class="page"/>
+
 
 # 3.4 - CSS Showing/hiding items
 
@@ -184,7 +184,7 @@ One useful example that I commonly use is a class `dont-print` with the followin
 }
 ```
 
-<div class="page"/>
+
 
 # 3.5 - CSS Grid layout
 
@@ -286,7 +286,7 @@ HTML:
 </html>
 ```
 
-<div class="page"/>
+
 
 # 3.6 - CSS Drop down menus
 
@@ -384,7 +384,7 @@ nav.drop-down-menu ul li ul li {
 }
 ```
 
-<div class="page"/>
+
 
 # 3.7 - CSS Stlying form elements
 
@@ -449,7 +449,7 @@ textarea {
 }
 ```
 
-<div class="page"/>
+
 
 ## Checkbox
 
@@ -520,7 +520,7 @@ input:checked + .slider:before {
 ```
 From https://www.w3schools.com/howto/howto_css_switch.asp
 
-<div class="page"/>
+
 
 # 3.8 - CSS Icons
 
@@ -554,7 +554,7 @@ Example:
 
 ![](img/css-icons.png)
 
-<div class="page"/>
+
 
 # 3.9 - CSS Styling tables
 
@@ -569,4 +569,4 @@ From: https://www.w3.org/Style/Examples/007/evenodd.en.html
 
 ![](img/css-tables-1.png)
 
-<div class="page"/>
+

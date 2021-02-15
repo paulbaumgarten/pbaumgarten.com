@@ -39,7 +39,7 @@ ctx.textBaseline 	= "bottom"; // middle / top
 ctx.fillText( "Hello canvas!", 20, 50 );
 ```
 
-<div class="page"/>
+
 
 # Drawing basic shapes
 
@@ -103,7 +103,7 @@ To display text, use the filltext function attached to the context.
 ctx.fillText( message, 250, 20 );
 ```
 
-<div class="page"/>
+
 
 # Keyboard events
 
@@ -177,7 +177,7 @@ e.offsetX // releative to the target element
 e.offsetY // releative to the target element
 ```
 
-<div class="page"/>
+
 
 # Drawing an image
 

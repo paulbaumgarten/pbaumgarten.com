@@ -80,7 +80,7 @@ They don't really have any special attributes, though you would usually have `id
 
 These tags might not seem like much, but `<div>` and `<span>` become incredibly important once you start adding CSS and Javascript into the mix. Because they are "generic" in nature, it means they can be used to organise page content into sections - either for styling with CSS or for attaching interactive programming through Javascript. As a result, you'll see these tags used a lot in later examples.
 
-<div class="page"/>
+
 
 # Media elements
 
@@ -122,7 +122,7 @@ Attributes for a `<audio>` tag:
 * `loop` - Keep looping after finishing if this is present
 * `src` - URL of the audio file
 
-<div class="page"/>
+
 
 # Forms & input elements
 
@@ -191,7 +191,7 @@ label {
 }
 ```
 
-<div class="page"/>
+
 
 ## 'form' tag
 
@@ -242,7 +242,7 @@ pattern=/^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}
 * `size` - Size of the input box in respect to number of visible characters
 * `width` - Size of the input box in respect to pixels
 
-<div class="page"/>
+
 
 ### 'input' attributes for type=image
 
@@ -316,7 +316,7 @@ Attributes for text area:
 * `placeholder` - Hint text to display prior to user entry
 * `maxlength` - Maximum number of characters permitted to be entered
 
-<div class="page"/>
+
 
 # Lists
 
@@ -348,7 +348,7 @@ Ordered lists
 
 It is worth mentioning that unordered lists are also used a lot as containers for a navigation system. For instance, you will notice that chapter 3.6 "CSS Drop down menus" uses unordered lists combined with CSS rules to make cool looking pop down menus. 
 
-<div class="page"/>
+
 
 # Tables
 
