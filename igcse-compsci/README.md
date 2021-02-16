@@ -7,7 +7,7 @@ My teaching notes for  **Cambridge iGCSE Computer Science** course (code 0478).
 * Course syllabus: 
     * [Syllabus: 2021 exams](distribute/syllabus-2021.pdf) (Year 11s of 2020/21)
     * [Syllabus: 2022 exams](distribute/syllabus-2022.pdf) (Year 10s of 2020/21)
-    * [Syllabus: 2023 exams](distribute/syllabus-2023-to-2025.pdf.pdf) (Year 9s of 2020/21)
+    * [Syllabus: 2023 exams](distribute/syllabus-2023-to-2025.pdf) (Year 9s of 2020/21)
 * Planned teaching schedule: 
     * [Year 10, 2020/21](planner-2020-2021-y10.pdf)
     * [Year 11, 2020/21](planner-2020-2021-y11.pdf)
