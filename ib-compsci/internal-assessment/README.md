@@ -11,6 +11,7 @@ My IA handbook is a thorough 30 page guide through each deliverable, filled with
 The following supplemental resources will also be required.
 
 * [Proposal](proposal.docx) - Complete the proposal and submit to me for review. I will have a one-to-one discussion with every student reviewing their proposal before you commence. Once approved, you must discuss with me if you wish to make major changes (such as changing your technology stack). 
+* [Technology stack recommendations](../technology-stacks.pdf)
 * [Client nomination form (pdf))](client-nomination-2019.pdf) - Have your client sign and then return to me.
 * [IB official template for your submission (zip)](Forms.zip)
 
