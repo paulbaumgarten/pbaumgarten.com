@@ -6,14 +6,14 @@ Building websites with Python Flask + HTML, CSS and Javascript
 
 Getting organised
 
-* [Instal Python and VS Code](python_setup_instructions.pdf)
+* [Install Python and VS Code](python_setup_instructions.pdf)
 
-Week 1 - 28 Jan 21
+**Week 1 - 28 Jan 21**
 
 * [main.py](202021-t2/week01/main.py)
 * [page1.html](202021-t2/week01/page1.txt)
 
-Week 2 - 4 Feb 21
+**Week 2 - 4 Feb 21**
 
 Download a [zip file](202021-t2/week02files.zip) containing the week 2 files, or get the individual files...
 
@@ -29,6 +29,11 @@ Code written during the session:
 
 * [week2.py](202021-t2/week02/week2.py)
 * [static/register.js](202021-t2/week02/register-js.txt)
+
+**Week 3 - 25 Feb 21**
+
+* [models.py](202021-t2/week03/models.txt) - Save into your project folder.
+* [whatsthat.db](202021-t2/week03/whatsthat.db) - Save into your project folder.
 
 ## Term 1, 2020/21: Pygame
 
