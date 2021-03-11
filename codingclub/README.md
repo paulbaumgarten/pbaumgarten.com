@@ -4,6 +4,10 @@
 
 Building websites with Python Flask + HTML, CSS and Javascript
 
+**Videos**
+
+All the videos for this term are [here](https://drive.google.com/drive/folders/1YfPX8DnyndoE5Sofbl6on7b_wiXS-dOg?usp=sharing)
+
 Getting organised
 
 * [Install Python and VS Code](python_setup_instructions.pdf)
